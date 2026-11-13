@@ -12,7 +12,9 @@ The upload directory and asset-scope checks passed. Roblox returned HTTP 403 bec
 
 ## Gameplay catalogs
 
-The Senda catalog builds to `assets/vehicles/sm50/exports/SendaSM50Catalog-pbr.glb` with a matching manifest and Studio installer. It contains a frame and 38 removable parts. The blue and white graphics are baked into the embedded material atlas. The front and rear axle centres are 0.700 m forward and 0.665 m back, both 0.25 m below the chassis origin. The black cast wheels have 0.296 m and 0.307 m tyre radii and chevron tread. The assembled model is 2.020 m long and 0.830 m wide. Upload and check the imported orientation and textures before adding a rideable Senda to the gameplay catalog.
+The Senda catalog builds to `assets/vehicles/sm50/exports/SendaSM50Catalog-pbr.glb` with a matching manifest and Studio installer. It contains a frame and 38 removable parts. The blue and white graphics are baked into the embedded material atlas. The front and rear axle centres are 0.700 m forward and 0.665 m back, both 0.25 m below the chassis origin. The black cast wheels have 0.296 m and 0.307 m tyre radii and chevron tread. The assembled model is 2.020 m long and 0.830 m wide.
+
+After importing the Senda GLB and running its install command, run the generated `SendaSM50Catalog.register.luau` in the Studio Command Bar. It checks all 39 asset-backed meshes before adding the vehicle and its 38 slots to the gameplay catalog. The baseline Zefir definitions remain available. The game currently spawns the Zefir by default. Senda selection, inventory delivery, texture inspection and road testing are still pending.
 
 The v9 Zefir controller now uses `EngineAudio.luau` and the changes in `bike-audio-wheelie.install.luau`. Install the audio module alongside BikeController. On the stock test bike, the tuned launch reached 48.6° and kept the rider mounted through the rear brake input. Studio also verified the engine audio RPM crossfade and cleanup.
 

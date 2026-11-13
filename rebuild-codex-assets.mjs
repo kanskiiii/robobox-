@@ -18,3 +18,5 @@ const installer=spawnSync(process.execPath,['prepare-studio-install.mjs'],{cwd:r
 if(installer.status!==0) throw installer.error ?? new Error('Studio installer generation failed');
 const colors=spawnSync(process.execPath,['prepare-catalog-colors.mjs'],{cwd:root,stdio:'inherit'});
 if(colors.status!==0) throw colors.error ?? new Error('Studio color command generation failed');
+const registration=spawnSync(process.execPath,['prepare-senda-registration.mjs'],{cwd:root,stdio:'inherit'});
+if(registration.status!==0) throw registration.error ?? new Error('Senda registration generation failed');
