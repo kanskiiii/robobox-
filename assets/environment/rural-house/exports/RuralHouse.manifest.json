@@ -1,0 +1,2648 @@
+{
+  "schemaVersion": 1,
+  "assetId": "rural-house",
+  "name": "RuralHouse",
+  "stage": "First production pass",
+  "source": "environment/rural-house/source/house.mjs",
+  "export": "environment/rural-house/exports/RuralHouse.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -4.154,
+      -0.0105,
+      -3.8005
+    ],
+    "max": [
+      4.154,
+      4.971,
+      3.299
+    ],
+    "size": [
+      8.308,
+      4.9815,
+      7.0995
+    ]
+  },
+  "datumsM": {
+    "Door": [
+      0.92,
+      0.26,
+      -2.87
+    ],
+    "Floor": [
+      0,
+      0.24,
+      0
+    ],
+    "Front": [
+      0,
+      0.24,
+      -2.83
+    ],
+    "RoofRidge": [
+      0,
+      4.55,
+      0
+    ]
+  },
+  "proxies": [
+    {
+      "name": "Foundation",
+      "center": [
+        0,
+        0.12,
+        0
+      ],
+      "size": [
+        7.7,
+        0.24,
+        5.89
+      ],
+      "target": "Foundation"
+    },
+    {
+      "name": "FrontWall_0",
+      "center": [
+        -3.24,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        0.96,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_1",
+      "center": [
+        -3.24,
+        1.545,
+        -2.83
+      ],
+      "size": [
+        0.96,
+        1.0899999999999999,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_2",
+      "center": [
+        -3.24,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        0.96,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_3",
+      "center": [
+        -3.24,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.96,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_4",
+      "center": [
+        -2.16,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        1.2000000000000002,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_5",
+      "center": [
+        -2.16,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        1.2000000000000002,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_6",
+      "center": [
+        -2.16,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        1.2000000000000002,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_7",
+      "center": [
+        -1.32,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        0.48,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_8",
+      "center": [
+        -1.32,
+        1.545,
+        -2.83
+      ],
+      "size": [
+        0.48,
+        1.0899999999999999,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_9",
+      "center": [
+        -1.32,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        0.48,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_10",
+      "center": [
+        -1.32,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.48,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_11",
+      "center": [
+        -0.55,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        1.06,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_12",
+      "center": [
+        -0.55,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        1.06,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_13",
+      "center": [
+        -0.55,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        1.06,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_14",
+      "center": [
+        0.43500000000000005,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        0.9100000000000001,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_15",
+      "center": [
+        0.43500000000000005,
+        1.545,
+        -2.83
+      ],
+      "size": [
+        0.9100000000000001,
+        1.0899999999999999,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_16",
+      "center": [
+        0.43500000000000005,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        0.9100000000000001,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_17",
+      "center": [
+        0.43500000000000005,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.9100000000000001,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_18",
+      "center": [
+        1.37,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.96,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_19",
+      "center": [
+        2.0775,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        0.45500000000000007,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_20",
+      "center": [
+        2.0775,
+        1.545,
+        -2.83
+      ],
+      "size": [
+        0.45500000000000007,
+        1.0899999999999999,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_21",
+      "center": [
+        2.0775,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        0.45500000000000007,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_22",
+      "center": [
+        2.0775,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.45500000000000007,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_23",
+      "center": [
+        2.83,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        1.0499999999999998,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_24",
+      "center": [
+        2.83,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        1.0499999999999998,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_25",
+      "center": [
+        2.83,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        1.0499999999999998,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_26",
+      "center": [
+        3.5375,
+        0.62,
+        -2.83
+      ],
+      "size": [
+        0.3650000000000002,
+        0.76,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_27",
+      "center": [
+        3.5375,
+        1.545,
+        -2.83
+      ],
+      "size": [
+        0.3650000000000002,
+        1.0899999999999999,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_28",
+      "center": [
+        3.5375,
+        2.2199999999999998,
+        -2.83
+      ],
+      "size": [
+        0.3650000000000002,
+        0.26000000000000023,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontWall_29",
+      "center": [
+        3.5375,
+        2.565,
+        -2.83
+      ],
+      "size": [
+        0.3650000000000002,
+        0.4299999999999997,
+        0.237
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "BackWall_0",
+      "center": [
+        -3.1775,
+        0.655,
+        2.83
+      ],
+      "size": [
+        1.0850000000000004,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_1",
+      "center": [
+        -3.1775,
+        1.6,
+        2.83
+      ],
+      "size": [
+        1.0850000000000004,
+        1.0599999999999998,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_2",
+      "center": [
+        -3.1775,
+        2.455,
+        2.83
+      ],
+      "size": [
+        1.0850000000000004,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_3",
+      "center": [
+        -2.05,
+        0.655,
+        2.83
+      ],
+      "size": [
+        1.17,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_4",
+      "center": [
+        -2.05,
+        2.455,
+        2.83
+      ],
+      "size": [
+        1.17,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_5",
+      "center": [
+        -0.9424999999999999,
+        0.655,
+        2.83
+      ],
+      "size": [
+        1.045,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_6",
+      "center": [
+        -0.9424999999999999,
+        1.6,
+        2.83
+      ],
+      "size": [
+        1.045,
+        1.0599999999999998,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_7",
+      "center": [
+        -0.9424999999999999,
+        2.455,
+        2.83
+      ],
+      "size": [
+        1.045,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_8",
+      "center": [
+        0.12,
+        0.655,
+        2.83
+      ],
+      "size": [
+        1.08,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_9",
+      "center": [
+        0.12,
+        2.455,
+        2.83
+      ],
+      "size": [
+        1.08,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_10",
+      "center": [
+        1.1375000000000002,
+        0.655,
+        2.83
+      ],
+      "size": [
+        0.9550000000000002,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_11",
+      "center": [
+        1.1375000000000002,
+        1.6,
+        2.83
+      ],
+      "size": [
+        0.9550000000000002,
+        1.0599999999999998,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_12",
+      "center": [
+        1.1375000000000002,
+        2.455,
+        2.83
+      ],
+      "size": [
+        0.9550000000000002,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_13",
+      "center": [
+        2.2,
+        0.655,
+        2.83
+      ],
+      "size": [
+        1.17,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_14",
+      "center": [
+        2.2,
+        2.455,
+        2.83
+      ],
+      "size": [
+        1.17,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_15",
+      "center": [
+        3.2525000000000004,
+        0.655,
+        2.83
+      ],
+      "size": [
+        0.935,
+        0.8300000000000001,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_16",
+      "center": [
+        3.2525000000000004,
+        1.6,
+        2.83
+      ],
+      "size": [
+        0.935,
+        1.0599999999999998,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "BackWall_17",
+      "center": [
+        3.2525000000000004,
+        2.455,
+        2.83
+      ],
+      "size": [
+        0.935,
+        0.6499999999999999,
+        0.237
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "GableWest",
+      "center": [
+        -3.72,
+        1.51,
+        0
+      ],
+      "size": [
+        0.237,
+        2.54,
+        5.44
+      ],
+      "target": "GableWest"
+    },
+    {
+      "name": "GableEast",
+      "center": [
+        3.72,
+        1.51,
+        0
+      ],
+      "size": [
+        0.237,
+        2.54,
+        5.44
+      ],
+      "target": "GableEast"
+    },
+    {
+      "name": "EntryStep",
+      "center": [
+        1.37,
+        0.104,
+        -3.182
+      ],
+      "size": [
+        1.19,
+        0.202,
+        0.384
+      ],
+      "target": "EntryFrame"
+    }
+  ],
+  "materials": {
+    "lime": {
+      "name": "Warm lime render",
+      "hex": "#d3c4a6",
+      "metallic": 0,
+      "roughness": 0.93,
+      "studioMaterial": "Plaster",
+      "transparency": 0
+    },
+    "stone": {
+      "name": "Grey foundation render",
+      "hex": "#777671",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "sill": {
+      "name": "Cast pale stone",
+      "hex": "#aeaa98",
+      "metallic": 0,
+      "roughness": 0.82,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "roof": {
+      "name": "Red clay roof tile",
+      "hex": "#914837",
+      "metallic": 0,
+      "roughness": 0.85,
+      "studioMaterial": "ClayRoofTiles",
+      "transparency": 0
+    },
+    "ridge": {
+      "name": "Fired ridge tile",
+      "hex": "#773e35",
+      "metallic": 0,
+      "roughness": 0.79,
+      "studioMaterial": "ClayRoofTiles",
+      "transparency": 0
+    },
+    "dark": {
+      "name": "Painted steel rainwater goods",
+      "hex": "#474944",
+      "metallic": 0.42,
+      "roughness": 0.62,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "wood": {
+      "name": "Stained pine joinery",
+      "hex": "#704b36",
+      "metallic": 0,
+      "roughness": 0.72,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "boards": {
+      "name": "Dark brown fascia boards",
+      "hex": "#53453a",
+      "metallic": 0,
+      "roughness": 0.78,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "glass": {
+      "name": "Dusty insulated window glazing",
+      "hex": "#839a97",
+      "metallic": 0.07,
+      "roughness": 0.2,
+      "studioMaterial": "Glass",
+      "transparency": 0.38
+    },
+    "curtain": {
+      "name": "Cotton curtains",
+      "hex": "#dcd2ba",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Fabric",
+      "transparency": 0
+    },
+    "metal": {
+      "name": "Brass fittings",
+      "hex": "#a18a53",
+      "metallic": 0.72,
+      "roughness": 0.43,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "brick": {
+      "name": "Red brick chimney",
+      "hex": "#9f5748",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Brick",
+      "transparency": 0
+    },
+    "rubble": {
+      "name": "Grey courtyard pavers",
+      "hex": "#908c78",
+      "metallic": 0,
+      "roughness": 0.92,
+      "studioMaterial": "Cobblestone",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "rural-house.Foundation",
+      "name": "Foundation",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "Foundation",
+      "dimensionsM": [
+        7.7,
+        0.266,
+        6.7455
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Floor": [
+          0,
+          0.24,
+          0
+        ],
+        "Entry": [
+          0.92,
+          0.26,
+          -2.87
+        ]
+      },
+      "materials": [
+        "stone",
+        "sill",
+        "rubble"
+      ],
+      "materialBoundsM": {
+        "stone": {
+          "min": [
+            -3.85,
+            0,
+            -2.945
+          ],
+          "max": [
+            3.85,
+            0.24,
+            2.945
+          ],
+          "size": [
+            7.7,
+            0.24,
+            5.89
+          ]
+        },
+        "sill": {
+          "min": [
+            -3.8,
+            0.2285,
+            -2.89
+          ],
+          "max": [
+            3.8,
+            0.2555,
+            2.89
+          ],
+          "size": [
+            7.6,
+            0.027,
+            5.78
+          ]
+        },
+        "rubble": {
+          "min": [
+            -0.056,
+            -0.0105,
+            -3.8005
+          ],
+          "max": [
+            1.896,
+            0.0385,
+            -3.0605
+          ],
+          "size": [
+            1.952,
+            0.049,
+            0.74
+          ]
+        }
+      },
+      "triangles": 2944,
+      "collision": [
+        "Foundation"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.FrontWall",
+      "name": "FrontWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "FrontWall",
+      "dimensionsM": [
+        7.44,
+        2.54,
+        0.255
+      ],
+      "pivotM": [
+        0,
+        0.24,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "Door": [
+          0.92,
+          0.02,
+          -0.04
+        ]
+      },
+      "materials": [
+        "lime",
+        "stone"
+      ],
+      "materialBoundsM": {
+        "lime": {
+          "min": [
+            -3.72,
+            0,
+            -0.1185
+          ],
+          "max": [
+            3.72,
+            2.54,
+            0.1185
+          ],
+          "size": [
+            7.44,
+            2.54,
+            0.237
+          ]
+        },
+        "stone": {
+          "min": [
+            -3.72,
+            0.0025,
+            -0.1365
+          ],
+          "max": [
+            3.72,
+            0.2095,
+            -0.1055
+          ],
+          "size": [
+            7.44,
+            0.207,
+            0.031
+          ]
+        }
+      },
+      "triangles": 2048,
+      "collision": [
+        "FrontWall_0",
+        "FrontWall_1",
+        "FrontWall_2",
+        "FrontWall_3",
+        "FrontWall_4",
+        "FrontWall_5",
+        "FrontWall_6",
+        "FrontWall_7",
+        "FrontWall_8",
+        "FrontWall_9",
+        "FrontWall_10",
+        "FrontWall_11",
+        "FrontWall_12",
+        "FrontWall_13",
+        "FrontWall_14",
+        "FrontWall_15",
+        "FrontWall_16",
+        "FrontWall_17",
+        "FrontWall_18",
+        "FrontWall_19",
+        "FrontWall_20",
+        "FrontWall_21",
+        "FrontWall_22",
+        "FrontWall_23",
+        "FrontWall_24",
+        "FrontWall_25",
+        "FrontWall_26",
+        "FrontWall_27",
+        "FrontWall_28",
+        "FrontWall_29"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.BackWall",
+      "name": "BackWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "BackWall",
+      "dimensionsM": [
+        7.44,
+        2.54,
+        0.255
+      ],
+      "pivotM": [
+        0,
+        0.24,
+        2.83
+      ],
+      "attachmentLocalM": {},
+      "materials": [
+        "lime",
+        "stone"
+      ],
+      "materialBoundsM": {
+        "lime": {
+          "min": [
+            -3.72,
+            0,
+            -0.1185
+          ],
+          "max": [
+            3.72,
+            2.54,
+            0.1185
+          ],
+          "size": [
+            7.44,
+            2.54,
+            0.237
+          ]
+        },
+        "stone": {
+          "min": [
+            -3.72,
+            0.0025,
+            0.1055
+          ],
+          "max": [
+            3.72,
+            0.2095,
+            0.1365
+          ],
+          "size": [
+            7.44,
+            0.207,
+            0.031
+          ]
+        }
+      },
+      "triangles": 1216,
+      "collision": [
+        "BackWall_0",
+        "BackWall_1",
+        "BackWall_2",
+        "BackWall_3",
+        "BackWall_4",
+        "BackWall_5",
+        "BackWall_6",
+        "BackWall_7",
+        "BackWall_8",
+        "BackWall_9",
+        "BackWall_10",
+        "BackWall_11",
+        "BackWall_12",
+        "BackWall_13",
+        "BackWall_14",
+        "BackWall_15",
+        "BackWall_16",
+        "BackWall_17"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.GableWest",
+      "name": "GableWest",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "GableWest",
+      "dimensionsM": [
+        0.2675,
+        4.255,
+        5.82
+      ],
+      "pivotM": [
+        -3.72,
+        0.24,
+        0
+      ],
+      "attachmentLocalM": {
+        "GablePeak": [
+          0,
+          4.31,
+          0
+        ]
+      },
+      "materials": [
+        "lime",
+        "stone",
+        "wood"
+      ],
+      "materialBoundsM": {
+        "lime": {
+          "min": [
+            -0.1185,
+            0,
+            -2.91
+          ],
+          "max": [
+            0.1185,
+            4.255,
+            2.91
+          ],
+          "size": [
+            0.237,
+            4.255,
+            5.82
+          ]
+        },
+        "stone": {
+          "min": [
+            -0.137,
+            0.0025,
+            -2.71
+          ],
+          "max": [
+            -0.107,
+            0.2095,
+            2.71
+          ],
+          "size": [
+            0.03,
+            0.207,
+            5.42
+          ]
+        },
+        "wood": {
+          "min": [
+            -0.149,
+            3.114,
+            -0.1995
+          ],
+          "max": [
+            -0.103,
+            3.416,
+            0.1995
+          ],
+          "size": [
+            0.046,
+            0.302,
+            0.399
+          ]
+        }
+      },
+      "triangles": 600,
+      "collision": [
+        "GableWest"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.GableEast",
+      "name": "GableEast",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "GableEast",
+      "dimensionsM": [
+        0.2675,
+        4.255,
+        5.82
+      ],
+      "pivotM": [
+        3.72,
+        0.24,
+        0
+      ],
+      "attachmentLocalM": {
+        "GablePeak": [
+          0,
+          4.31,
+          0
+        ]
+      },
+      "materials": [
+        "lime",
+        "stone",
+        "wood"
+      ],
+      "materialBoundsM": {
+        "lime": {
+          "min": [
+            -0.1185,
+            0,
+            -2.91
+          ],
+          "max": [
+            0.1185,
+            4.255,
+            2.91
+          ],
+          "size": [
+            0.237,
+            4.255,
+            5.82
+          ]
+        },
+        "stone": {
+          "min": [
+            0.107,
+            0.0025,
+            -2.71
+          ],
+          "max": [
+            0.137,
+            0.2095,
+            2.71
+          ],
+          "size": [
+            0.03,
+            0.207,
+            5.42
+          ]
+        },
+        "wood": {
+          "min": [
+            0.103,
+            3.114,
+            -0.1995
+          ],
+          "max": [
+            0.149,
+            3.416,
+            0.1995
+          ],
+          "size": [
+            0.046,
+            0.302,
+            0.399
+          ]
+        }
+      },
+      "triangles": 600,
+      "collision": [
+        "GableEast"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.FrontWindow1",
+      "name": "FrontWindow1",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "FrontWindow1",
+      "dimensionsM": [
+        1.37,
+        1.141,
+        0.338361
+      ],
+      "pivotM": [
+        -2.16,
+        1.545,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          -0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.6,
+            -0.545,
+            -0.1415
+          ],
+          "max": [
+            0.6,
+            0.545,
+            -0.0705
+          ],
+          "size": [
+            1.2,
+            1.09,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.579,
+            -0.5232,
+            -0.1175
+          ],
+          "max": [
+            0.579,
+            0.5232,
+            -0.1065
+          ],
+          "size": [
+            1.158,
+            1.0464,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.495571,
+            -0.502492,
+            -0.231861
+          ],
+          "max": [
+            0.495571,
+            0.511337,
+            0.089861
+          ],
+          "size": [
+            0.991142,
+            1.013829,
+            0.321723
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.685,
+            -0.596,
+            -0.2485
+          ],
+          "max": [
+            0.685,
+            -0.542,
+            -0.0675
+          ],
+          "size": [
+            1.37,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.FrontWindow2",
+      "name": "FrontWindow2",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "FrontWindow2",
+      "dimensionsM": [
+        1.23,
+        1.141,
+        0.338361
+      ],
+      "pivotM": [
+        -0.55,
+        1.545,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          -0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.53,
+            -0.545,
+            -0.1415
+          ],
+          "max": [
+            0.53,
+            0.545,
+            -0.0705
+          ],
+          "size": [
+            1.06,
+            1.09,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.51145,
+            -0.5232,
+            -0.1175
+          ],
+          "max": [
+            0.51145,
+            0.5232,
+            -0.1065
+          ],
+          "size": [
+            1.0229,
+            1.0464,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.446851,
+            -0.502492,
+            -0.231861
+          ],
+          "max": [
+            0.446851,
+            0.511337,
+            0.089861
+          ],
+          "size": [
+            0.893702,
+            1.013829,
+            0.321723
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.615,
+            -0.596,
+            -0.2485
+          ],
+          "max": [
+            0.615,
+            -0.542,
+            -0.0675
+          ],
+          "size": [
+            1.23,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.FrontWindow3",
+      "name": "FrontWindow3",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "FrontWindow3",
+      "dimensionsM": [
+        1.22,
+        1.141,
+        0.338361
+      ],
+      "pivotM": [
+        2.83,
+        1.545,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          -0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.525,
+            -0.545,
+            -0.1415
+          ],
+          "max": [
+            0.525,
+            0.545,
+            -0.0705
+          ],
+          "size": [
+            1.05,
+            1.09,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.506625,
+            -0.5232,
+            -0.1175
+          ],
+          "max": [
+            0.506625,
+            0.5232,
+            -0.1065
+          ],
+          "size": [
+            1.01325,
+            1.0464,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.443371,
+            -0.502492,
+            -0.231861
+          ],
+          "max": [
+            0.443371,
+            0.511337,
+            0.089861
+          ],
+          "size": [
+            0.886742,
+            1.013829,
+            0.321723
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.61,
+            -0.596,
+            -0.2485
+          ],
+          "max": [
+            0.61,
+            -0.542,
+            -0.0675
+          ],
+          "size": [
+            1.22,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.RearWindow1",
+      "name": "RearWindow1",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RearWindow1",
+      "dimensionsM": [
+        1.34,
+        1.111,
+        0.338353
+      ],
+      "pivotM": [
+        -2.05,
+        1.6,
+        2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.585,
+            -0.53,
+            0.0705
+          ],
+          "max": [
+            0.585,
+            0.53,
+            0.1415
+          ],
+          "size": [
+            1.17,
+            1.06,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.564525,
+            -0.5088,
+            0.1065
+          ],
+          "max": [
+            0.564525,
+            0.5088,
+            0.1175
+          ],
+          "size": [
+            1.12905,
+            1.0176,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.48513,
+            -0.488844,
+            -0.089853
+          ],
+          "max": [
+            0.48513,
+            0.497634,
+            0.231853
+          ],
+          "size": [
+            0.970259,
+            0.986477,
+            0.321707
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.67,
+            -0.581,
+            0.0675
+          ],
+          "max": [
+            0.67,
+            -0.527,
+            0.2485
+          ],
+          "size": [
+            1.34,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.RearWindow2",
+      "name": "RearWindow2",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RearWindow2",
+      "dimensionsM": [
+        1.25,
+        1.111,
+        0.338353
+      ],
+      "pivotM": [
+        0.12,
+        1.6,
+        2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.54,
+            -0.53,
+            0.0705
+          ],
+          "max": [
+            0.54,
+            0.53,
+            0.1415
+          ],
+          "size": [
+            1.08,
+            1.06,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.5211,
+            -0.5088,
+            0.1065
+          ],
+          "max": [
+            0.5211,
+            0.5088,
+            0.1175
+          ],
+          "size": [
+            1.0422,
+            1.0176,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.45381,
+            -0.488844,
+            -0.089853
+          ],
+          "max": [
+            0.45381,
+            0.497634,
+            0.231853
+          ],
+          "size": [
+            0.907619,
+            0.986477,
+            0.321707
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.625,
+            -0.581,
+            0.0675
+          ],
+          "max": [
+            0.625,
+            -0.527,
+            0.2485
+          ],
+          "size": [
+            1.25,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.RearWindow3",
+      "name": "RearWindow3",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RearWindow3",
+      "dimensionsM": [
+        1.34,
+        1.111,
+        0.338353
+      ],
+      "pivotM": [
+        2.2,
+        1.6,
+        2.83
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          0.021,
+          0,
+          0.137
+        ]
+      },
+      "materials": [
+        "wood",
+        "glass",
+        "curtain",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.585,
+            -0.53,
+            0.0705
+          ],
+          "max": [
+            0.585,
+            0.53,
+            0.1415
+          ],
+          "size": [
+            1.17,
+            1.06,
+            0.071
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.564525,
+            -0.5088,
+            0.1065
+          ],
+          "max": [
+            0.564525,
+            0.5088,
+            0.1175
+          ],
+          "size": [
+            1.12905,
+            1.0176,
+            0.011
+          ]
+        },
+        "curtain": {
+          "min": [
+            -0.48513,
+            -0.488844,
+            -0.089853
+          ],
+          "max": [
+            0.48513,
+            0.497634,
+            0.231853
+          ],
+          "size": [
+            0.970259,
+            0.986477,
+            0.321707
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.67,
+            -0.581,
+            0.0675
+          ],
+          "max": [
+            0.67,
+            -0.527,
+            0.2485
+          ],
+          "size": [
+            1.34,
+            0.054,
+            0.181
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Independent window assembly"
+    },
+    {
+      "assetId": "rural-house.EntryFrame",
+      "name": "EntryFrame",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "EntryFrame",
+      "dimensionsM": [
+        1.28,
+        2.351,
+        0.7
+      ],
+      "pivotM": [
+        1.37,
+        0.24,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "DoorHinge": [
+          -0.45,
+          0.02,
+          -0.04
+        ],
+        "Threshold": [
+          0,
+          0.047,
+          -0.245
+        ]
+      },
+      "materials": [
+        "wood",
+        "sill"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            -0.4885,
+            0.0015,
+            -0.1505
+          ],
+          "max": [
+            0.4885,
+            2.1115,
+            0.0105
+          ],
+          "size": [
+            0.977,
+            2.11,
+            0.161
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.64,
+            -0.2395,
+            -0.6895
+          ],
+          "max": [
+            0.64,
+            0.0485,
+            0.008
+          ],
+          "size": [
+            1.28,
+            0.288,
+            0.6975
+          ]
+        }
+      },
+      "triangles": 384,
+      "collision": [
+        "EntryStep"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.EntryDoor",
+      "name": "EntryDoor",
+      "category": "Joinery",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "EntryDoor",
+      "dimensionsM": [
+        0.844,
+        1.998,
+        0.124
+      ],
+      "pivotM": [
+        0.92,
+        0.26,
+        -2.87
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Handle": [
+          0.723,
+          1.055,
+          -0.129
+        ]
+      },
+      "materials": [
+        "wood",
+        "boards",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "wood": {
+          "min": [
+            0.028,
+            0.046,
+            -0.08
+          ],
+          "max": [
+            0.872,
+            2.044,
+            -0.016
+          ],
+          "size": [
+            0.844,
+            1.998,
+            0.064
+          ]
+        },
+        "boards": {
+          "min": [
+            0.135,
+            0.1885,
+            -0.087
+          ],
+          "max": [
+            0.765,
+            1.8705,
+            -0.075
+          ],
+          "size": [
+            0.63,
+            1.682,
+            0.012
+          ]
+        },
+        "metal": {
+          "min": [
+            0.664,
+            0.9735,
+            -0.14
+          ],
+          "max": [
+            0.799,
+            1.0825,
+            -0.081
+          ],
+          "size": [
+            0.135,
+            0.109,
+            0.059
+          ]
+        }
+      },
+      "triangles": 416,
+      "collision": [],
+      "interaction": "Pivot about +Y to open"
+    },
+    {
+      "assetId": "rural-house.RoofNorth",
+      "name": "RoofNorth",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RoofNorth",
+      "dimensionsM": [
+        8.308,
+        2.128289,
+        3.306104
+      ],
+      "pivotM": [
+        0,
+        4.55,
+        0
+      ],
+      "attachmentLocalM": {
+        "Ridge": [
+          0,
+          0,
+          0
+        ],
+        "Eave": [
+          0,
+          -1.958557,
+          3.22
+        ]
+      },
+      "materials": [
+        "roof",
+        "ridge",
+        "boards"
+      ],
+      "materialBoundsM": {
+        "roof": {
+          "min": [
+            -4.115,
+            -2.033557,
+            0
+          ],
+          "max": [
+            4.115,
+            -0.013,
+            3.22
+          ],
+          "size": [
+            8.23,
+            2.020557,
+            3.22
+          ]
+        },
+        "ridge": {
+          "min": [
+            -4.104,
+            -1.974498,
+            0.003087
+          ],
+          "max": [
+            4.104,
+            0.009649,
+            3.229832
+          ],
+          "size": [
+            8.208,
+            1.984148,
+            3.226745
+          ]
+        },
+        "boards": {
+          "min": [
+            -4.154,
+            -2.118639,
+            -0.027104
+          ],
+          "max": [
+            4.154,
+            -0.018622,
+            3.279
+          ],
+          "size": [
+            8.308,
+            2.100017,
+            3.306104
+          ]
+        }
+      },
+      "triangles": 1908,
+      "collision": [],
+      "interaction": "Hide roof half for interior inspection"
+    },
+    {
+      "assetId": "rural-house.RoofSouth",
+      "name": "RoofSouth",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RoofSouth",
+      "dimensionsM": [
+        8.308,
+        2.130065,
+        3.306104
+      ],
+      "pivotM": [
+        0,
+        4.55,
+        0
+      ],
+      "attachmentLocalM": {
+        "Ridge": [
+          0,
+          0,
+          0
+        ],
+        "Eave": [
+          0,
+          -1.958557,
+          -3.22
+        ]
+      },
+      "materials": [
+        "roof",
+        "ridge",
+        "boards"
+      ],
+      "materialBoundsM": {
+        "roof": {
+          "min": [
+            -4.115,
+            -2.033557,
+            -3.22
+          ],
+          "max": [
+            4.115,
+            -0.013,
+            0
+          ],
+          "size": [
+            8.23,
+            2.020557,
+            3.22
+          ]
+        },
+        "ridge": {
+          "min": [
+            -4.104,
+            -1.972722,
+            -3.230913
+          ],
+          "max": [
+            4.104,
+            0.011426,
+            -0.004168
+          ],
+          "size": [
+            8.208,
+            1.984148,
+            3.226745
+          ]
+        },
+        "boards": {
+          "min": [
+            -4.154,
+            -2.118639,
+            -3.279
+          ],
+          "max": [
+            4.154,
+            -0.018622,
+            0.027104
+          ],
+          "size": [
+            8.308,
+            2.100017,
+            3.306104
+          ]
+        }
+      },
+      "triangles": 1908,
+      "collision": [],
+      "interaction": "Hide roof half for interior inspection"
+    },
+    {
+      "assetId": "rural-house.RidgeCap",
+      "name": "RidgeCap",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RidgeCap",
+      "dimensionsM": [
+        8.241,
+        0.106,
+        0.106
+      ],
+      "pivotM": [
+        0,
+        4.55,
+        0
+      ],
+      "attachmentLocalM": {
+        "Ridge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "ridge"
+      ],
+      "materialBoundsM": {
+        "ridge": {
+          "min": [
+            -4.1,
+            -0.038,
+            -0.053
+          ],
+          "max": [
+            4.141,
+            0.068,
+            0.053
+          ],
+          "size": [
+            8.241,
+            0.106,
+            0.106
+          ]
+        }
+      },
+      "triangles": 768,
+      "collision": [],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.Chimney",
+      "name": "Chimney",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "Chimney",
+      "dimensionsM": [
+        0.575,
+        1.255,
+        0.604
+      ],
+      "pivotM": [
+        -1.84,
+        3.83,
+        0.95
+      ],
+      "attachmentLocalM": {
+        "Roof": [
+          0,
+          0.15,
+          0
+        ]
+      },
+      "materials": [
+        "brick",
+        "sill",
+        "dark"
+      ],
+      "materialBoundsM": {
+        "brick": {
+          "min": [
+            -0.235,
+            -0.114,
+            -0.2525
+          ],
+          "max": [
+            0.235,
+            0.99,
+            0.2525
+          ],
+          "size": [
+            0.47,
+            1.104,
+            0.505
+          ]
+        },
+        "sill": {
+          "min": [
+            -0.2875,
+            0.9125,
+            -0.302
+          ],
+          "max": [
+            0.2875,
+            1.0715,
+            0.302
+          ],
+          "size": [
+            0.575,
+            0.159,
+            0.604
+          ]
+        },
+        "dark": {
+          "min": [
+            -0.16,
+            1.07,
+            -0.05
+          ],
+          "max": [
+            0.16,
+            1.141,
+            0.05
+          ],
+          "size": [
+            0.32,
+            0.071,
+            0.1
+          ]
+        }
+      },
+      "triangles": 448,
+      "collision": [],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.RearGutter",
+      "name": "RearGutter",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "RearGutter",
+      "dimensionsM": [
+        8.200233,
+        2.320234,
+        0.368
+      ],
+      "pivotM": [
+        0,
+        2.5,
+        3.25
+      ],
+      "attachmentLocalM": {
+        "Drain": [
+          -3.7632,
+          -2.252,
+          -0.215
+        ]
+      },
+      "materials": [
+        "dark",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "dark": {
+          "min": [
+            -4.100117,
+            -2.267463,
+            -0.311983
+          ],
+          "max": [
+            4.100117,
+            0.052771,
+            0.049
+          ],
+          "size": [
+            8.200233,
+            2.320234,
+            0.360983
+          ]
+        },
+        "metal": {
+          "min": [
+            -3.8414,
+            -1.941,
+            -0.319
+          ],
+          "max": [
+            -3.7634,
+            -0.419,
+            -0.241
+          ],
+          "size": [
+            0.078,
+            1.522,
+            0.078
+          ]
+        }
+      },
+      "triangles": 464,
+      "collision": [],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "rural-house.FrontGutter",
+      "name": "FrontGutter",
+      "category": "Roof",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-house/exports/RuralHouse.glb",
+      "node": "FrontGutter",
+      "dimensionsM": [
+        8.200233,
+        2.320234,
+        0.368
+      ],
+      "pivotM": [
+        0,
+        2.5,
+        -3.25
+      ],
+      "attachmentLocalM": {
+        "Drain": [
+          3.7632,
+          -2.252,
+          0.215
+        ]
+      },
+      "materials": [
+        "dark",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "dark": {
+          "min": [
+            -4.100117,
+            -2.267463,
+            -0.049
+          ],
+          "max": [
+            4.100117,
+            0.052771,
+            0.311983
+          ],
+          "size": [
+            8.200233,
+            2.320234,
+            0.360983
+          ]
+        },
+        "metal": {
+          "min": [
+            3.7634,
+            -1.941,
+            0.241
+          ],
+          "max": [
+            3.8414,
+            -0.419,
+            0.319
+          ],
+          "size": [
+            0.078,
+            1.522,
+            0.078
+          ]
+        }
+      },
+      "triangles": 464,
+      "collision": [],
+      "interaction": "Static scenery"
+    }
+  ],
+  "stats": {
+    "triangles": 19256,
+    "components": 19,
+    "materialLayers": 56,
+    "maxTrianglesPerComponent": 2944
+  }
+}

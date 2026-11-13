@@ -1,0 +1,1073 @@
+{
+  "schemaVersion": 1,
+  "assetId": "rural-road-kit",
+  "name": "RuralRoadKit",
+  "stage": "First production pass",
+  "source": "environment/rural-road-kit/source/roads.mjs",
+  "export": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -6.1115,
+      -0.133,
+      -18
+    ],
+    "max": [
+      31.12,
+      2.0095,
+      6
+    ],
+    "size": [
+      37.2315,
+      2.1425,
+      24
+    ]
+  },
+  "datumsM": {
+    "StraightStart": [
+      0,
+      0,
+      6
+    ],
+    "StraightEnd": [
+      0,
+      0,
+      -6
+    ],
+    "CurveStart": [
+      15,
+      0,
+      4.5
+    ],
+    "CurveEnd": [
+      19.5,
+      0,
+      0
+    ],
+    "JunctionBranch": [
+      0,
+      0,
+      -18
+    ],
+    "DirtStart": [
+      29,
+      0,
+      5
+    ],
+    "DirtEnd": [
+      29,
+      0,
+      -5
+    ]
+  },
+  "proxies": [
+    {
+      "name": "StraightRoadSurface",
+      "center": [
+        0,
+        -0.064,
+        0
+      ],
+      "size": [
+        5.6,
+        0.128,
+        12
+      ],
+      "target": "AsphaltStraight"
+    },
+    {
+      "name": "JunctionThrough",
+      "center": [
+        0,
+        -0.064,
+        -12
+      ],
+      "size": [
+        12,
+        0.128,
+        5.6
+      ],
+      "target": "AsphaltTJunction"
+    },
+    {
+      "name": "JunctionBranch",
+      "center": [
+        0,
+        -0.064,
+        -16.4
+      ],
+      "size": [
+        5.6,
+        0.128,
+        3.2
+      ],
+      "target": "AsphaltTJunction"
+    },
+    {
+      "name": "DirtSurface",
+      "center": [
+        29,
+        -0.073,
+        0
+      ],
+      "size": [
+        3.23,
+        0.11,
+        10
+      ],
+      "target": "DirtLaneStraight"
+    },
+    {
+      "name": "CurbSurface",
+      "center": [
+        -4,
+        0.072,
+        0
+      ],
+      "size": [
+        0.16,
+        0.144,
+        12
+      ],
+      "target": "RaisedCurb"
+    },
+    {
+      "name": "SidewalkSurface",
+      "center": [
+        -5.12,
+        0.064,
+        0
+      ],
+      "size": [
+        1.98,
+        0.17,
+        12
+      ],
+      "target": "SidewalkStraight"
+    },
+    {
+      "name": "GuardrailContact",
+      "center": [
+        3.97,
+        0.72,
+        0
+      ],
+      "size": [
+        0.15,
+        0.13,
+        6
+      ],
+      "target": "GuardrailSegment"
+    }
+  ],
+  "materials": {
+    "asphalt": {
+      "name": "Weathered asphalt",
+      "hex": "#50504b",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Asphalt",
+      "transparency": 0
+    },
+    "gravel": {
+      "name": "Compacted gravel",
+      "hex": "#7a7363",
+      "metallic": 0,
+      "roughness": 0.97,
+      "studioMaterial": "Pebble",
+      "transparency": 0
+    },
+    "dirt": {
+      "name": "Compacted earth",
+      "hex": "#785c46",
+      "metallic": 0,
+      "roughness": 0.96,
+      "studioMaterial": "Ground",
+      "transparency": 0
+    },
+    "shoulder": {
+      "name": "Roadside turf",
+      "hex": "#647046",
+      "metallic": 0,
+      "roughness": 0.98,
+      "studioMaterial": "Grass",
+      "transparency": 0
+    },
+    "paint": {
+      "name": "Faded white road paint",
+      "hex": "#ccc7ac",
+      "metallic": 0.01,
+      "roughness": 0.81,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "concrete": {
+      "name": "Cast concrete curb",
+      "hex": "#a39d89",
+      "metallic": 0,
+      "roughness": 0.87,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "paver": {
+      "name": "Grey concrete paving blocks",
+      "hex": "#8c887b",
+      "metallic": 0,
+      "roughness": 0.86,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "paverAlt": {
+      "name": "Dark paving blocks",
+      "hex": "#737467",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "zinc": {
+      "name": "Galvanized guardrail steel",
+      "hex": "#a3a8a4",
+      "metallic": 0.8,
+      "roughness": 0.37,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Sign pole boot",
+      "hex": "#303333",
+      "metallic": 0.15,
+      "roughness": 0.74,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "white": {
+      "name": "Reflective white sign face",
+      "hex": "#e8e6d8",
+      "metallic": 0.08,
+      "roughness": 0.41,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Traffic sign red",
+      "hex": "#a73230",
+      "metallic": 0.08,
+      "roughness": 0.46,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "amber": {
+      "name": "Guardrail reflector",
+      "hex": "#df9a31",
+      "metallic": 0.05,
+      "roughness": 0.4,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "rural-road-kit.AsphaltStraight",
+      "name": "AsphaltStraight",
+      "category": "Roads",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "AsphaltStraight",
+      "dimensionsM": [
+        6.54,
+        0.136,
+        12
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          6
+        ],
+        "End": [
+          0,
+          0,
+          -6
+        ],
+        "LeftEdge": [
+          -2.8,
+          0,
+          0
+        ],
+        "RightEdge": [
+          2.8,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "asphalt",
+        "gravel",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "asphalt": {
+          "min": [
+            -2.8,
+            -0.13,
+            -6
+          ],
+          "max": [
+            2.8,
+            0,
+            6
+          ],
+          "size": [
+            5.6,
+            0.13,
+            12
+          ]
+        },
+        "gravel": {
+          "min": [
+            -3.27,
+            -0.133,
+            -6
+          ],
+          "max": [
+            3.27,
+            -0.021,
+            6
+          ],
+          "size": [
+            6.54,
+            0.112,
+            12
+          ]
+        },
+        "paint": {
+          "min": [
+            -0.0525,
+            0.0005,
+            -5.12
+          ],
+          "max": [
+            0.0525,
+            0.003,
+            5.12
+          ],
+          "size": [
+            0.105,
+            0.0025,
+            10.24
+          ]
+        }
+      },
+      "triangles": 112,
+      "collision": [
+        "StraightRoadSurface"
+      ],
+      "interaction": "Place as a modular environment asset"
+    },
+    {
+      "assetId": "rural-road-kit.AsphaltTurn90",
+      "name": "AsphaltTurn90",
+      "category": "Roads",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "AsphaltTurn90",
+      "dimensionsM": [
+        7.77,
+        0.136,
+        7.77
+      ],
+      "pivotM": [
+        15,
+        0,
+        4.5
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          0
+        ],
+        "End": [
+          4.5,
+          0,
+          -4.5
+        ],
+        "ArcCenter": [
+          4.5,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "asphalt",
+        "gravel",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "asphalt": {
+          "min": [
+            -2.8,
+            -0.13,
+            -7.3
+          ],
+          "max": [
+            4.5,
+            0,
+            0
+          ],
+          "size": [
+            7.3,
+            0.13,
+            7.3
+          ]
+        },
+        "gravel": {
+          "min": [
+            -3.27,
+            -0.133,
+            -7.77
+          ],
+          "max": [
+            4.5,
+            -0.021,
+            0
+          ],
+          "size": [
+            7.77,
+            0.112,
+            7.77
+          ]
+        },
+        "paint": {
+          "min": [
+            0.003549,
+            0.0005,
+            -4.258609
+          ],
+          "max": [
+            2.927921,
+            0.003,
+            -0.695742
+          ],
+          "size": [
+            2.924372,
+            0.0025,
+            3.562867
+          ]
+        }
+      },
+      "triangles": 912,
+      "collision": [],
+      "interaction": "Use a per-segment or mesh collision shape"
+    },
+    {
+      "assetId": "rural-road-kit.AsphaltTJunction",
+      "name": "AsphaltTJunction",
+      "category": "Roads",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "AsphaltTJunction",
+      "dimensionsM": [
+        12,
+        0.136,
+        9.31
+      ],
+      "pivotM": [
+        0,
+        0,
+        -14
+      ],
+      "attachmentLocalM": {
+        "West": [
+          -6,
+          0,
+          2
+        ],
+        "East": [
+          6,
+          0,
+          2
+        ],
+        "Branch": [
+          0,
+          0,
+          -4
+        ]
+      },
+      "materials": [
+        "asphalt",
+        "gravel",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "asphalt": {
+          "min": [
+            -6,
+            -0.13,
+            -4
+          ],
+          "max": [
+            6,
+            0,
+            4.8
+          ],
+          "size": [
+            12,
+            0.13,
+            8.8
+          ]
+        },
+        "gravel": {
+          "min": [
+            -6,
+            -0.133,
+            -4
+          ],
+          "max": [
+            6,
+            -0.024,
+            5.31
+          ],
+          "size": [
+            12,
+            0.109,
+            9.31
+          ]
+        },
+        "paint": {
+          "min": [
+            -5.15,
+            0.0005,
+            -3.745
+          ],
+          "max": [
+            5.15,
+            0.003,
+            2.051
+          ],
+          "size": [
+            10.3,
+            0.0025,
+            5.796
+          ]
+        }
+      },
+      "triangles": 320,
+      "collision": [
+        "JunctionThrough",
+        "JunctionBranch"
+      ],
+      "interaction": "Place as a modular environment asset"
+    },
+    {
+      "assetId": "rural-road-kit.DirtLaneStraight",
+      "name": "DirtLaneStraight",
+      "category": "Roads",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "DirtLaneStraight",
+      "dimensionsM": [
+        4.24,
+        0.116,
+        10
+      ],
+      "pivotM": [
+        29,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          5
+        ],
+        "End": [
+          0,
+          0,
+          -5
+        ]
+      },
+      "materials": [
+        "dirt",
+        "gravel",
+        "shoulder"
+      ],
+      "materialBoundsM": {
+        "dirt": {
+          "min": [
+            -1.755651,
+            -0.13,
+            -5
+          ],
+          "max": [
+            1.754696,
+            -0.019,
+            5
+          ],
+          "size": [
+            3.510346,
+            0.111,
+            10
+          ]
+        },
+        "gravel": {
+          "min": [
+            -0.948215,
+            -0.018,
+            -5
+          ],
+          "max": [
+            0.948215,
+            -0.014,
+            5
+          ],
+          "size": [
+            1.896431,
+            0.004,
+            10
+          ]
+        },
+        "shoulder": {
+          "min": [
+            -2.12,
+            -0.13,
+            -5
+          ],
+          "max": [
+            2.12,
+            -0.032,
+            5
+          ],
+          "size": [
+            4.24,
+            0.098,
+            10
+          ]
+        }
+      },
+      "triangles": 640,
+      "collision": [
+        "DirtSurface"
+      ],
+      "interaction": "Join on the lane axis"
+    },
+    {
+      "assetId": "rural-road-kit.RaisedCurb",
+      "name": "RaisedCurb",
+      "category": "Pedestrian",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "RaisedCurb",
+      "dimensionsM": [
+        0.166,
+        0.144,
+        11.9925
+      ],
+      "pivotM": [
+        -4,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          6
+        ],
+        "End": [
+          0,
+          0,
+          -6
+        ]
+      },
+      "materials": [
+        "concrete",
+        "gravel"
+      ],
+      "materialBoundsM": {
+        "concrete": {
+          "min": [
+            -0.082,
+            0.001,
+            -5.993
+          ],
+          "max": [
+            0.082,
+            0.145,
+            5.993
+          ],
+          "size": [
+            0.164,
+            0.144,
+            11.986
+          ]
+        },
+        "gravel": {
+          "min": [
+            -0.083,
+            0.001,
+            -5.9995
+          ],
+          "max": [
+            0.083,
+            0.132,
+            5.0075
+          ],
+          "size": [
+            0.166,
+            0.131,
+            11.007
+          ]
+        }
+      },
+      "triangles": 768,
+      "collision": [
+        "CurbSurface"
+      ],
+      "interaction": "Place as a modular environment asset"
+    },
+    {
+      "assetId": "rural-road-kit.SidewalkStraight",
+      "name": "SidewalkStraight",
+      "category": "Pedestrian",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "SidewalkStraight",
+      "dimensionsM": [
+        1.983,
+        0.169,
+        12
+      ],
+      "pivotM": [
+        -5.12,
+        0.14,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0.009,
+          6
+        ],
+        "End": [
+          0,
+          0.009,
+          -6
+        ]
+      },
+      "materials": [
+        "paver",
+        "paverAlt",
+        "concrete"
+      ],
+      "materialBoundsM": {
+        "paver": {
+          "min": [
+            -0.955,
+            -0.158,
+            -6
+          ],
+          "max": [
+            0.955,
+            0.009,
+            6
+          ],
+          "size": [
+            1.91,
+            0.167,
+            12
+          ]
+        },
+        "paverAlt": {
+          "min": [
+            -0.9405,
+            -0.01,
+            -5.9935
+          ],
+          "max": [
+            0.9325,
+            0.009,
+            5.9935
+          ],
+          "size": [
+            1.873,
+            0.019,
+            11.987
+          ]
+        },
+        "concrete": {
+          "min": [
+            -0.9915,
+            -0.16,
+            -6
+          ],
+          "max": [
+            0.9915,
+            0.004,
+            6
+          ],
+          "size": [
+            1.983,
+            0.164,
+            12
+          ]
+        }
+      },
+      "triangles": 2352,
+      "collision": [
+        "SidewalkSurface"
+      ],
+      "interaction": "Place as a modular environment asset"
+    },
+    {
+      "assetId": "rural-road-kit.GuardrailSegment",
+      "name": "GuardrailSegment",
+      "category": "Roadside",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "GuardrailSegment",
+      "dimensionsM": [
+        0.194,
+        0.84,
+        6
+      ],
+      "pivotM": [
+        4,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          3
+        ],
+        "End": [
+          0,
+          0,
+          -3
+        ],
+        "Reflector": [
+          -0.113,
+          0.751,
+          0
+        ]
+      },
+      "materials": [
+        "zinc",
+        "black",
+        "amber"
+      ],
+      "materialBoundsM": {
+        "zinc": {
+          "min": [
+            -0.107,
+            -0.055,
+            -3
+          ],
+          "max": [
+            0.057,
+            0.785,
+            3
+          ],
+          "size": [
+            0.164,
+            0.84,
+            6
+          ]
+        },
+        "black": {
+          "min": [
+            -0.0255,
+            -0.014,
+            -2.6625
+          ],
+          "max": [
+            0.0755,
+            0.009,
+            2.6625
+          ],
+          "size": [
+            0.101,
+            0.023,
+            5.325
+          ]
+        },
+        "amber": {
+          "min": [
+            -0.1185,
+            0.729,
+            -2.6255
+          ],
+          "max": [
+            -0.1075,
+            0.774,
+            2.6855
+          ],
+          "size": [
+            0.011,
+            0.045,
+            5.311
+          ]
+        }
+      },
+      "triangles": 272,
+      "collision": [
+        "GuardrailContact"
+      ],
+      "interaction": "Place as a modular environment asset"
+    },
+    {
+      "assetId": "rural-road-kit.YieldSign",
+      "name": "YieldSign",
+      "category": "Roadside",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/rural-road-kit/exports/RuralRoadKit.glb",
+      "node": "YieldSign",
+      "dimensionsM": [
+        0.656447,
+        2.0845,
+        0.21
+      ],
+      "pivotM": [
+        6.75,
+        0,
+        -11.2
+      ],
+      "attachmentLocalM": {
+        "Ground": [
+          0,
+          0,
+          0
+        ],
+        "Face": [
+          0,
+          1.82,
+          -0.065
+        ]
+      },
+      "materials": [
+        "zinc",
+        "red",
+        "white",
+        "concrete"
+      ],
+      "materialBoundsM": {
+        "zinc": {
+          "min": [
+            -0.328224,
+            -0.054,
+            -0.03
+          ],
+          "max": [
+            0.328224,
+            2.0095,
+            0.023
+          ],
+          "size": [
+            0.656447,
+            2.0635,
+            0.053
+          ]
+        },
+        "red": {
+          "min": [
+            -0.316099,
+            1.455,
+            -0.043
+          ],
+          "max": [
+            0.316099,
+            2.0025,
+            -0.031
+          ],
+          "size": [
+            0.632199,
+            0.5475,
+            0.012
+          ]
+        },
+        "white": {
+          "min": [
+            -0.231229,
+            1.553,
+            -0.054
+          ],
+          "max": [
+            0.231229,
+            1.9535,
+            -0.042
+          ],
+          "size": [
+            0.462458,
+            0.4005,
+            0.012
+          ]
+        },
+        "concrete": {
+          "min": [
+            -0.105,
+            -0.075,
+            -0.105
+          ],
+          "max": [
+            0.105,
+            0.026,
+            0.105
+          ],
+          "size": [
+            0.21,
+            0.101,
+            0.21
+          ]
+        }
+      },
+      "triangles": 100,
+      "collision": [],
+      "interaction": "Place as a modular environment asset"
+    }
+  ],
+  "stats": {
+    "triangles": 5476,
+    "components": 8,
+    "materialLayers": 24,
+    "maxTrianglesPerComponent": 2352
+  }
+}

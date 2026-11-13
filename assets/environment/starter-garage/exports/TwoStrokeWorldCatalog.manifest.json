@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "assetId": "world-catalog",
+  "name": "TwoStrokeWorldCatalog",
+  "stage": "First production pass",
+  "source": "environment/starter-garage/source/world-catalog.mjs",
+  "export": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -4.7196,
+      -0.184,
+      -4.1363
+    ],
+    "max": [
+      9.39,
+      2.771,
+      4.1363
+    ],
+    "size": [
+      14.1096,
+      2.955,
+      8.2726
+    ]
+  },
+  "datumsM": {},
+  "proxies": [],
+  "materials": {
+    "concrete": {
+      "name": "Trowelled grey concrete",
+      "hex": "#8d8c81",
+      "metallic": 0,
+      "roughness": 0.96,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "joint": {
+      "name": "Recessed expansion joints",
+      "hex": "#55574f",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "plaster": {
+      "name": "Weathered lime plaster",
+      "hex": "#c6ba9e",
+      "metallic": 0,
+      "roughness": 0.88,
+      "studioMaterial": "Plaster",
+      "transparency": 0
+    },
+    "plinth": {
+      "name": "Green oil-painted plinth",
+      "hex": "#4d6561",
+      "metallic": 0.02,
+      "roughness": 0.65,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "brick": {
+      "name": "Terracotta block",
+      "hex": "#9b503b",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Brick",
+      "transparency": 0
+    },
+    "roof": {
+      "name": "Graphite corrugated steel",
+      "hex": "#4d4e4b",
+      "metallic": 0.45,
+      "roughness": 0.62,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "enamel": {
+      "name": "Green painted steel",
+      "hex": "#405c53",
+      "metallic": 0.3,
+      "roughness": 0.44,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "metal": {
+      "name": "Zinc plated steel",
+      "hex": "#acada0",
+      "metallic": 0.75,
+      "roughness": 0.32,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Charcoal steel and molded plastic",
+      "hex": "#262a28",
+      "metallic": 0.3,
+      "roughness": 0.67,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Used rubber",
+      "hex": "#252621",
+      "metallic": 0,
+      "roughness": 0.92,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "timber": {
+      "name": "Oiled pine",
+      "hex": "#967047",
+      "metallic": 0,
+      "roughness": 0.78,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "plywood": {
+      "name": "End grain and worn timber",
+      "hex": "#745237",
+      "metallic": 0,
+      "roughness": 0.8,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Oxide red enamel",
+      "hex": "#94372e",
+      "metallic": 0.12,
+      "roughness": 0.53,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "blue": {
+      "name": "Blue tool-case polymer",
+      "hex": "#3a5b72",
+      "metallic": 0,
+      "roughness": 0.65,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "yellow": {
+      "name": "Mustard equipment paint",
+      "hex": "#cb9a45",
+      "metallic": 0.15,
+      "roughness": 0.54,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "ivory": {
+      "name": "Opaque light diffuser",
+      "hex": "#f6f0d7",
+      "metallic": 0,
+      "roughness": 0.31,
+      "studioMaterial": "Neon",
+      "transparency": 0
+    },
+    "plastic": {
+      "name": "Cream bottle polymer",
+      "hex": "#c5bba0",
+      "metallic": 0,
+      "roughness": 0.74,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "paper": {
+      "name": "Kraft cardboard",
+      "hex": "#a68a5f",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "glass": {
+      "name": "Dusty window glass",
+      "hex": "#9ab7ae",
+      "metallic": 0,
+      "roughness": 0.31,
+      "studioMaterial": "Glass",
+      "transparency": 0.64
+    },
+    "vertex": {
+      "name": "Catalog vertex colours",
+      "hex": "#ffffff",
+      "metallic": 0.14,
+      "roughness": 0.64,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "world-catalog.Garage_Bay",
+      "name": "Garage_Bay",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Garage_Bay",
+      "dimensionsM": [
+        9.4392,
+        2.955,
+        8.2726
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Entry": [
+          0,
+          0,
+          3.75
+        ],
+        "Workbench": [
+          0,
+          0.9,
+          -3.19
+        ],
+        "Stand": [
+          0,
+          0.3,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -4.7196,
+            -0.184,
+            -4.1363
+          ],
+          "max": [
+            4.7196,
+            2.771,
+            4.1363
+          ],
+          "size": [
+            9.4392,
+            2.955,
+            8.2726
+          ]
+        }
+      },
+      "triangles": 12688,
+      "collision": [],
+      "interaction": "Place as world scenery"
+    },
+    {
+      "assetId": "world-catalog.Tool_spanner_set",
+      "name": "Tool_spanner_set",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Tool_spanner_set",
+      "dimensionsM": [
+        0.221164,
+        0.008,
+        0.252167
+      ],
+      "pivotM": [
+        5,
+        0.95,
+        0
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.01672,
+            -0.004,
+            -0.239847
+          ],
+          "max": [
+            0.204444,
+            0.004,
+            0.01232
+          ],
+          "size": [
+            0.221164,
+            0.008,
+            0.252167
+          ]
+        }
+      },
+      "triangles": 768,
+      "collision": [],
+      "interaction": "Pick up workshop tool"
+    },
+    {
+      "assetId": "world-catalog.Tool_socket_set",
+      "name": "Tool_socket_set",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Tool_socket_set",
+      "dimensionsM": [
+        0.23,
+        0.0655,
+        0.124
+      ],
+      "pivotM": [
+        5.4,
+        0.95,
+        0
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.115,
+            -0.0005,
+            -0.062
+          ],
+          "max": [
+            0.115,
+            0.065,
+            0.062
+          ],
+          "size": [
+            0.23,
+            0.0655,
+            0.124
+          ]
+        }
+      },
+      "triangles": 1360,
+      "collision": [],
+      "interaction": "Pick up workshop tool"
+    },
+    {
+      "assetId": "world-catalog.Tool_screwdriver",
+      "name": "Tool_screwdriver",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Tool_screwdriver",
+      "dimensionsM": [
+        0.189754,
+        0.026626,
+        0.036702
+      ],
+      "pivotM": [
+        5.8,
+        0.95,
+        0
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.001332,
+            -0.013613,
+            -0.024777
+          ],
+          "max": [
+            0.188422,
+            0.013013,
+            0.011926
+          ],
+          "size": [
+            0.189754,
+            0.026626,
+            0.036702
+          ]
+        }
+      },
+      "triangles": 120,
+      "collision": [],
+      "interaction": "Pick up workshop tool"
+    },
+    {
+      "assetId": "world-catalog.Tool_pliers",
+      "name": "Tool_pliers",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Tool_pliers",
+      "dimensionsM": [
+        0.159197,
+        0.018724,
+        0.075237
+      ],
+      "pivotM": [
+        6.2,
+        0.95,
+        0
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.096453,
+            -0.009862,
+            -0.037882
+          ],
+          "max": [
+            0.062744,
+            0.008862,
+            0.037355
+          ],
+          "size": [
+            0.159197,
+            0.018724,
+            0.075237
+          ]
+        }
+      },
+      "triangles": 204,
+      "collision": [],
+      "interaction": "Pick up workshop tool"
+    },
+    {
+      "assetId": "world-catalog.Tool_plug_wrench",
+      "name": "Tool_plug_wrench",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Tool_plug_wrench",
+      "dimensionsM": [
+        0.098,
+        0.024,
+        0.1
+      ],
+      "pivotM": [
+        6.6,
+        0.95,
+        0
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.049,
+            -0.012,
+            -0.049
+          ],
+          "max": [
+            0.049,
+            0.012,
+            0.051
+          ],
+          "size": [
+            0.098,
+            0.024,
+            0.1
+          ]
+        }
+      },
+      "triangles": 128,
+      "collision": [],
+      "interaction": "Pick up workshop tool"
+    },
+    {
+      "assetId": "world-catalog.Prop_fuel_can",
+      "name": "Prop_fuel_can",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Prop_fuel_can",
+      "dimensionsM": [
+        0.205898,
+        0.333131,
+        0.152
+      ],
+      "pivotM": [
+        5,
+        0,
+        1.1
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.31,
+          0
+        ],
+        "Spout": [
+          0.072,
+          0.284,
+          0.039
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.102949,
+            0.007,
+            -0.075
+          ],
+          "max": [
+            0.102949,
+            0.340131,
+            0.077
+          ],
+          "size": [
+            0.205898,
+            0.333131,
+            0.152
+          ]
+        }
+      },
+      "triangles": 276,
+      "collision": [],
+      "interaction": "Carry fuel can"
+    },
+    {
+      "assetId": "world-catalog.Prop_parts_counter",
+      "name": "Prop_parts_counter",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Prop_parts_counter",
+      "dimensionsM": [
+        2.58,
+        2.193,
+        1.43
+      ],
+      "pivotM": [
+        8.1,
+        0,
+        1.8
+      ],
+      "attachmentLocalM": {
+        "Counter": [
+          0,
+          1.04,
+          -0.45
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -1.29,
+            0,
+            -0.755
+          ],
+          "max": [
+            1.29,
+            2.193,
+            0.675
+          ],
+          "size": [
+            2.58,
+            2.193,
+            1.43
+          ]
+        }
+      },
+      "triangles": 776,
+      "collision": [],
+      "interaction": "Place as world scenery"
+    },
+    {
+      "assetId": "world-catalog.Prop_fuel_pump",
+      "name": "Prop_fuel_pump",
+      "category": "World",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/TwoStrokeWorldCatalog.glb",
+      "node": "Prop_fuel_pump",
+      "dimensionsM": [
+        0.777524,
+        1.4115,
+        0.4145
+      ],
+      "pivotM": [
+        5.9,
+        0,
+        2.5
+      ],
+      "attachmentLocalM": {
+        "Nozzle": [
+          0.26,
+          1.06,
+          0.1
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.258,
+            0.026,
+            -0.227
+          ],
+          "max": [
+            0.519524,
+            1.4375,
+            0.1875
+          ],
+          "size": [
+            0.777524,
+            1.4115,
+            0.4145
+          ]
+        }
+      },
+      "triangles": 468,
+      "collision": [],
+      "interaction": "Place as world scenery"
+    }
+  ],
+  "stats": {
+    "triangles": 16788,
+    "components": 9,
+    "materialLayers": 9,
+    "maxTrianglesPerComponent": 12688
+  }
+}

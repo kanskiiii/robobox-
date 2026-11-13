@@ -1,0 +1,3778 @@
+{
+  "schemaVersion": 1,
+  "assetId": "performance-scooter",
+  "name": "PerformanceScooter",
+  "stage": "First production pass",
+  "source": "vehicles/performance-scooter/source/performance.mjs",
+  "export": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -0.334142,
+      -0.00036,
+      -0.713186
+    ],
+    "max": [
+      0.334142,
+      1.20512,
+      0.733
+    ],
+    "size": [
+      0.668284,
+      1.20548,
+      1.446186
+    ]
+  },
+  "datumsM": {
+    "FrontAxle": [
+      0,
+      0.14,
+      -0.5628
+    ],
+    "RearAxle": [
+      0,
+      0.14,
+      0.5628
+    ],
+    "FoldHinge": [
+      0,
+      0.31248000000000004,
+      -0.4056
+    ],
+    "Handlebar": [
+      0,
+      1.16144,
+      -0.264
+    ],
+    "BatteryBay": [
+      0,
+      0.11984000000000002,
+      0.0276
+    ]
+  },
+  "proxies": [
+    {
+      "name": "DeckProxy",
+      "target": "DeckFrame",
+      "center": [
+        0,
+        0.1456,
+        0.0336
+      ],
+      "size": [
+        0.24288,
+        0.08512,
+        0.6791999999999999
+      ]
+    },
+    {
+      "name": "FrontWheelProxy",
+      "target": "FrontTire",
+      "center": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "size": [
+        0.07524,
+        0.28,
+        0.3
+      ],
+      "shape": "Cylinder"
+    },
+    {
+      "name": "RearWheelProxy",
+      "target": "RearTire",
+      "center": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "size": [
+        0.07524,
+        0.28,
+        0.3
+      ],
+      "shape": "Cylinder"
+    }
+  ],
+  "materials": {
+    "paint": {
+      "name": "Black textured powder coat",
+      "hex": "#2c3335",
+      "metallic": 0.48,
+      "roughness": 0.46,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "alloy": {
+      "name": "Machined aluminium",
+      "hex": "#aab3b1",
+      "metallic": 0.76,
+      "roughness": 0.33,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "trim": {
+      "name": "Scarlet anodized aluminium",
+      "hex": "#bf3738",
+      "metallic": 0.53,
+      "roughness": 0.32,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Tire rubber",
+      "hex": "#262a29",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "tread": {
+      "name": "Tread recess and grip rubber",
+      "hex": "#171d1c",
+      "metallic": 0,
+      "roughness": 0.96,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Black nylon",
+      "hex": "#242b2a",
+      "metallic": 0,
+      "roughness": 0.68,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "steel": {
+      "name": "Brushed rotor steel",
+      "hex": "#bbc0bc",
+      "metallic": 0.86,
+      "roughness": 0.42,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "cell": {
+      "name": "Teal battery cell sleeve",
+      "hex": "#399582",
+      "metallic": 0.06,
+      "roughness": 0.54,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "pcb": {
+      "name": "Solder masked circuit board",
+      "hex": "#2b5445",
+      "metallic": 0.08,
+      "roughness": 0.74,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "copper": {
+      "name": "Tinned copper connector",
+      "hex": "#aa7450",
+      "metallic": 0.74,
+      "roughness": 0.38,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Red lamp polycarbonate",
+      "hex": "#b53037",
+      "metallic": 0.03,
+      "roughness": 0.24,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "ivory": {
+      "name": "LED diffuser",
+      "hex": "#e0e9de",
+      "metallic": 0,
+      "roughness": 0.29,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "screen": {
+      "name": "Smoked acrylic display",
+      "hex": "#263f45",
+      "metallic": 0.14,
+      "roughness": 0.24,
+      "studioMaterial": "Glass",
+      "transparency": 0.23
+    },
+    "amber": {
+      "name": "Amber reflector",
+      "hex": "#cb782a",
+      "metallic": 0.02,
+      "roughness": 0.31,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "spring": {
+      "name": "Scarlet suspension spring",
+      "hex": "#9e3432",
+      "metallic": 0.22,
+      "roughness": 0.38,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "performance-scooter.DeckFrame",
+      "name": "DeckFrame",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "DeckFrame",
+      "dimensionsM": [
+        0.27192,
+        0.10304,
+        0.7524
+      ],
+      "pivotM": [
+        0,
+        0.14448,
+        0.024
+      ],
+      "attachmentLocalM": {
+        "BatteryBay": [
+          0,
+          -0.02464,
+          0.0036
+        ],
+        "Neck": [
+          0,
+          0.0392,
+          -0.3348
+        ],
+        "RearPivot": [
+          0,
+          0.03024,
+          0.342
+        ],
+        "Floorboard": [
+          0,
+          0.0504,
+          0.0108
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "amber",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.1254,
+            -0.056,
+            -0.384
+          ],
+          "max": [
+            0.1254,
+            0.04704,
+            0.3684
+          ],
+          "size": [
+            0.2508,
+            0.10304,
+            0.7524
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.1287,
+            -0.0308,
+            -0.2946
+          ],
+          "max": [
+            0.1287,
+            -0.01624,
+            0.3138
+          ],
+          "size": [
+            0.2574,
+            0.01456,
+            0.6084
+          ]
+        },
+        "amber": {
+          "min": [
+            -0.13596,
+            -0.00112,
+            -0.2856
+          ],
+          "max": [
+            0.13596,
+            0.01904,
+            -0.2112
+          ],
+          "size": [
+            0.27192,
+            0.02016,
+            0.0744
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.12936,
+            0.01904,
+            0.2184
+          ],
+          "max": [
+            0.12936,
+            0.028,
+            0.3192
+          ],
+          "size": [
+            0.25872,
+            0.00896,
+            0.1008
+          ]
+        }
+      },
+      "triangles": 768,
+      "collision": [
+        "DeckProxy"
+      ],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.BatteryAccessPan",
+      "name": "BatteryAccessPan",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "BatteryAccessPan",
+      "dimensionsM": [
+        0.232055,
+        0.03024,
+        0.6588
+      ],
+      "pivotM": [
+        0,
+        0.0896,
+        0.0216
+      ],
+      "attachmentLocalM": {
+        "BatteryBay": [
+          0,
+          0.03024,
+          0.006
+        ]
+      },
+      "materials": [
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.116027,
+            -0.01008,
+            -0.3156
+          ],
+          "max": [
+            0.116027,
+            0.02016,
+            0.3432
+          ],
+          "size": [
+            0.232055,
+            0.03024,
+            0.6588
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.108853,
+            -0.00784,
+            -0.2376
+          ],
+          "max": [
+            0.108853,
+            -0.00336,
+            0.2856
+          ],
+          "size": [
+            0.217705,
+            0.00448,
+            0.5232
+          ]
+        }
+      },
+      "triangles": 572,
+      "collision": [],
+      "interaction": "Remove underside service panel"
+    },
+    {
+      "assetId": "performance-scooter.HeadTube",
+      "name": "HeadTube",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "HeadTube",
+      "dimensionsM": [
+        0.16368,
+        0.245563,
+        0.187572
+      ],
+      "pivotM": [
+        0,
+        0.31248,
+        -0.4056
+      ],
+      "attachmentLocalM": {
+        "SteeringLower": [
+          0,
+          -0.04032,
+          -0.012
+        ],
+        "SteeringUpper": [
+          0,
+          0.03248,
+          0.0036
+        ],
+        "FoldHinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.08184,
+            -0.20573,
+            -0.037473
+          ],
+          "max": [
+            0.08184,
+            0.039833,
+            0.150099
+          ],
+          "size": [
+            0.16368,
+            0.245563,
+            0.187572
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.03564,
+            -0.030133,
+            -0.036691
+          ],
+          "max": [
+            0.03564,
+            -0.003467,
+            0.029491
+          ],
+          "size": [
+            0.07128,
+            0.026665,
+            0.066181
+          ]
+        }
+      },
+      "triangles": 488,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.RearSwingarm",
+      "name": "RearSwingarm",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearSwingarm",
+      "dimensionsM": [
+        0.239209,
+        0.066676,
+        0.220671
+      ],
+      "pivotM": [
+        0,
+        0.17472,
+        0.366
+      ],
+      "attachmentLocalM": {
+        "Pivot": [
+          0,
+          0,
+          0
+        ],
+        "Axle": [
+          0,
+          -0.03472,
+          0.1968
+        ],
+        "Shock": [
+          0,
+          0.00224,
+          0.108
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.119605,
+            -0.048854,
+            -0.010671
+          ],
+          "max": [
+            0.119605,
+            0.017822,
+            0.200913
+          ],
+          "size": [
+            0.239209,
+            0.066676,
+            0.211583
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.08844,
+            -0.045389,
+            0.1836
+          ],
+          "max": [
+            0.08844,
+            -0.024051,
+            0.21
+          ],
+          "size": [
+            0.17688,
+            0.021339,
+            0.0264
+          ]
+        }
+      },
+      "triangles": 312,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    },
+    {
+      "assetId": "performance-scooter.ForkCrown",
+      "name": "ForkCrown",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ForkCrown",
+      "dimensionsM": [
+        0.16815,
+        0.091392,
+        0.121921
+      ],
+      "pivotM": [
+        0,
+        0.2912,
+        -0.4548
+      ],
+      "attachmentLocalM": {
+        "Steering": [
+          0,
+          0.05376,
+          0.0528
+        ],
+        "ForkL": [
+          -0.06468,
+          0,
+          -0.0384
+        ],
+        "ForkR": [
+          0.06468,
+          0,
+          -0.0384
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.084075,
+            -0.01627,
+            -0.050982
+          ],
+          "max": [
+            0.084075,
+            0.03472,
+            0.0276
+          ],
+          "size": [
+            0.16815,
+            0.05099,
+            0.078582
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0198,
+            -0.007922,
+            0.009461
+          ],
+          "max": [
+            0.0198,
+            0.075122,
+            0.070939
+          ],
+          "size": [
+            0.0396,
+            0.083043,
+            0.061479
+          ]
+        }
+      },
+      "triangles": 184,
+      "collision": [],
+      "interaction": "Steer around head tube axis"
+    },
+    {
+      "assetId": "performance-scooter.ForkSlider_L",
+      "name": "ForkSlider_L",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ForkSlider_L",
+      "dimensionsM": [
+        0.04686,
+        0.164351,
+        0.096061
+      ],
+      "pivotM": [
+        -0.06468,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "ForkAxis": [
+          0,
+          0.1512,
+          0.0696
+        ],
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "amber"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.02244,
+            -0.00619,
+            -0.015436
+          ],
+          "max": [
+            0.02244,
+            0.093886,
+            0.055804
+          ],
+          "size": [
+            0.04488,
+            0.100075,
+            0.071239
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.02244,
+            -0.00873,
+            -0.0108
+          ],
+          "max": [
+            0.0132,
+            0.155621,
+            0.080626
+          ],
+          "size": [
+            0.03564,
+            0.164351,
+            0.091426
+          ]
+        },
+        "amber": {
+          "min": [
+            -0.02442,
+            0.03416,
+            0.01248
+          ],
+          "max": [
+            -0.01782,
+            0.05656,
+            0.02928
+          ],
+          "size": [
+            0.0066,
+            0.0224,
+            0.0168
+          ]
+        }
+      },
+      "triangles": 328,
+      "collision": [],
+      "interaction": "Translate along the fork axis"
+    },
+    {
+      "assetId": "performance-scooter.ForkSlider_R",
+      "name": "ForkSlider_R",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ForkSlider_R",
+      "dimensionsM": [
+        0.04686,
+        0.164351,
+        0.096061
+      ],
+      "pivotM": [
+        0.06468,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "ForkAxis": [
+          0,
+          0.1512,
+          0.0696
+        ],
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "amber"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.02244,
+            -0.00619,
+            -0.015436
+          ],
+          "max": [
+            0.02244,
+            0.093886,
+            0.055804
+          ],
+          "size": [
+            0.04488,
+            0.100075,
+            0.071239
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0132,
+            -0.00873,
+            -0.0108
+          ],
+          "max": [
+            0.02244,
+            0.155621,
+            0.080626
+          ],
+          "size": [
+            0.03564,
+            0.164351,
+            0.091426
+          ]
+        },
+        "amber": {
+          "min": [
+            0.01782,
+            0.03416,
+            0.01248
+          ],
+          "max": [
+            0.02442,
+            0.05656,
+            0.02928
+          ],
+          "size": [
+            0.0066,
+            0.0224,
+            0.0168
+          ]
+        }
+      },
+      "triangles": 328,
+      "collision": [],
+      "interaction": "Translate along the fork axis"
+    },
+    {
+      "assetId": "performance-scooter.FoldingBase",
+      "name": "FoldingBase",
+      "category": "Steering",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FoldingBase",
+      "dimensionsM": [
+        0.099,
+        0.082759,
+        0.07309
+      ],
+      "pivotM": [
+        0,
+        0.31248,
+        -0.4056
+      ],
+      "attachmentLocalM": {
+        "FoldAxis": [
+          0,
+          0,
+          0
+        ],
+        "Steering": [
+          0,
+          0.03248,
+          0.0036
+        ]
+      },
+      "materials": [
+        "paint",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.037698,
+            -0.022751,
+            -0.031914
+          ],
+          "max": [
+            0.037698,
+            0.060008,
+            0.041176
+          ],
+          "size": [
+            0.075397,
+            0.082759,
+            0.07309
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.0495,
+            -0.014339,
+            -0.0156
+          ],
+          "max": [
+            0.0495,
+            0.014339,
+            0.0156
+          ],
+          "size": [
+            0.099,
+            0.028678,
+            0.0312
+          ]
+        }
+      },
+      "triangles": 540,
+      "collision": [],
+      "interaction": "Fold steering stem about +X"
+    },
+    {
+      "assetId": "performance-scooter.FoldLatch",
+      "name": "FoldLatch",
+      "category": "Steering",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FoldLatch",
+      "dimensionsM": [
+        0.037901,
+        0.075444,
+        0.029737
+      ],
+      "pivotM": [
+        0.03828,
+        0.33824,
+        -0.3984
+      ],
+      "attachmentLocalM": {
+        "LatchPin": [
+          0.0132,
+          0.00112,
+          0.0048
+        ]
+      },
+      "materials": [
+        "trim",
+        "steel"
+      ],
+      "materialBoundsM": {
+        "trim": {
+          "min": [
+            -0.009586,
+            -0.02555,
+            -0.007097
+          ],
+          "max": [
+            0.028315,
+            0.049895,
+            0.02264
+          ],
+          "size": [
+            0.037901,
+            0.075444,
+            0.029737
+          ]
+        },
+        "steel": {
+          "min": [
+            0.01848,
+            -0.00373,
+            -0.0012
+          ],
+          "max": [
+            0.02376,
+            0.00597,
+            0.0108
+          ],
+          "size": [
+            0.00528,
+            0.009699,
+            0.012
+          ]
+        }
+      },
+      "triangles": 132,
+      "collision": [],
+      "interaction": "Release folding latch"
+    },
+    {
+      "assetId": "performance-scooter.SteeringStem",
+      "name": "SteeringStem",
+      "category": "Steering",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "SteeringStem",
+      "dimensionsM": [
+        0.064997,
+        0.808958,
+        0.180037
+      ],
+      "pivotM": [
+        0,
+        0.31248,
+        -0.4056
+      ],
+      "attachmentLocalM": {
+        "FoldAxis": [
+          0,
+          0,
+          0
+        ],
+        "BarClamp": [
+          0,
+          0.84896,
+          0.1416
+        ],
+        "Headlight": [
+          0,
+          0.66864,
+          0.0912
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.032499,
+            0.04469,
+            -0.013743
+          ],
+          "max": [
+            0.032499,
+            0.848987,
+            0.162924
+          ],
+          "size": [
+            0.064997,
+            0.804297,
+            0.176667
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.027299,
+            0.778192,
+            0.102506
+          ],
+          "max": [
+            0.027299,
+            0.853648,
+            0.166294
+          ],
+          "size": [
+            0.054598,
+            0.075456,
+            0.063789
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.027299,
+            0.091278,
+            -0.00222
+          ],
+          "max": [
+            0.027299,
+            0.124882,
+            0.05142
+          ],
+          "size": [
+            0.054598,
+            0.033605,
+            0.053641
+          ]
+        }
+      },
+      "triangles": 324,
+      "collision": [],
+      "interaction": "Steer or fold with hinge"
+    },
+    {
+      "assetId": "performance-scooter.Handlebar",
+      "name": "Handlebar",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "Handlebar",
+      "dimensionsM": [
+        0.664978,
+        0.036417,
+        0.07416
+      ],
+      "pivotM": [
+        0,
+        1.16144,
+        -0.264
+      ],
+      "attachmentLocalM": {
+        "Clamp": [
+          0,
+          0,
+          0
+        ],
+        "GripL": [
+          -0.25212,
+          0.00784,
+          0.0336
+        ],
+        "GripR": [
+          0.25212,
+          0.00784,
+          0.0336
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.332489,
+            -0.017631,
+            -0.0144
+          ],
+          "max": [
+            0.332489,
+            0.018786,
+            0.05976
+          ],
+          "size": [
+            0.664978,
+            0.036417,
+            0.07416
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.028333,
+            0.0112,
+            -0.0036
+          ],
+          "max": [
+            0.028333,
+            0.01568,
+            0.006
+          ],
+          "size": [
+            0.056665,
+            0.00448,
+            0.0096
+          ]
+        }
+      },
+      "triangles": 340,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.LeftGrip",
+      "name": "LeftGrip",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "LeftGrip",
+      "dimensionsM": [
+        0.146884,
+        0.038642,
+        0.062854
+      ],
+      "pivotM": [
+        -0.1914,
+        1.16704,
+        -0.24
+      ],
+      "attachmentLocalM": {
+        "BarAxis": [
+          0,
+          0,
+          0
+        ],
+        "End": [
+          -0.1386,
+          0.00336,
+          0.0252
+        ]
+      },
+      "materials": [
+        "tread",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "tread": {
+          "min": [
+            -0.142742,
+            -0.017641,
+            -0.018827
+          ],
+          "max": [
+            0.004142,
+            0.021001,
+            0.044027
+          ],
+          "size": [
+            0.146884,
+            0.038642,
+            0.062854
+          ]
+        },
+        "rubber": {
+          "min": [
+            -0.117915,
+            -0.015528,
+            -0.013424
+          ],
+          "max": [
+            -0.017497,
+            0.018811,
+            0.038045
+          ],
+          "size": [
+            0.100418,
+            0.03434,
+            0.051469
+          ]
+        }
+      },
+      "triangles": 1824,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.RightGrip",
+      "name": "RightGrip",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RightGrip",
+      "dimensionsM": [
+        0.146884,
+        0.038642,
+        0.062854
+      ],
+      "pivotM": [
+        0.1914,
+        1.16704,
+        -0.24
+      ],
+      "attachmentLocalM": {
+        "BarAxis": [
+          0,
+          0,
+          0
+        ],
+        "End": [
+          0.1386,
+          0.00336,
+          0.0252
+        ]
+      },
+      "materials": [
+        "tread",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "tread": {
+          "min": [
+            -0.004142,
+            -0.017641,
+            -0.018827
+          ],
+          "max": [
+            0.142742,
+            0.021001,
+            0.044027
+          ],
+          "size": [
+            0.146884,
+            0.038642,
+            0.062854
+          ]
+        },
+        "rubber": {
+          "min": [
+            0.017497,
+            -0.015528,
+            -0.013424
+          ],
+          "max": [
+            0.117915,
+            0.018811,
+            0.038045
+          ],
+          "size": [
+            0.100418,
+            0.03434,
+            0.051469
+          ]
+        }
+      },
+      "triangles": 1824,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.BrakeLever",
+      "name": "BrakeLever",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "BrakeLever",
+      "dimensionsM": [
+        0.141603,
+        0.030245,
+        0.053927
+      ],
+      "pivotM": [
+        -0.18084,
+        1.16032,
+        -0.2628
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Cable": [
+          0.00396,
+          0.00672,
+          0.006
+        ]
+      },
+      "materials": [
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.123398,
+            -0.011967,
+            -0.028626
+          ],
+          "max": [
+            0.003888,
+            0.006475,
+            0.006246
+          ],
+          "size": [
+            0.127285,
+            0.018442,
+            0.034873
+          ]
+        },
+        "black": {
+          "min": [
+            -0.012926,
+            -0.010438,
+            -0.006101
+          ],
+          "max": [
+            0.018206,
+            0.018278,
+            0.025301
+          ],
+          "size": [
+            0.031131,
+            0.028717,
+            0.031402
+          ]
+        }
+      },
+      "triangles": 128,
+      "collision": [],
+      "interaction": "Pivot about +Y"
+    },
+    {
+      "assetId": "performance-scooter.ThumbThrottle",
+      "name": "ThumbThrottle",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ThumbThrottle",
+      "dimensionsM": [
+        0.040648,
+        0.065954,
+        0.0708
+      ],
+      "pivotM": [
+        0.16104,
+        1.1648,
+        -0.2448
+      ],
+      "attachmentLocalM": {
+        "Pivot": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "black",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.01452,
+            -0.044997,
+            -0.0228
+          ],
+          "max": [
+            0.026128,
+            0.020957,
+            0.047765
+          ],
+          "size": [
+            0.040648,
+            0.065954,
+            0.070565
+          ]
+        },
+        "trim": {
+          "min": [
+            0.009158,
+            -0.03696,
+            0.0312
+          ],
+          "max": [
+            0.025162,
+            -0.03248,
+            0.048
+          ],
+          "size": [
+            0.016004,
+            0.00448,
+            0.0168
+          ]
+        }
+      },
+      "triangles": 348,
+      "collision": [],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.Display",
+      "name": "Display",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "Display",
+      "dimensionsM": [
+        0.09394,
+        0.03683,
+        0.0852
+      ],
+      "pivotM": [
+        0,
+        1.18496,
+        -0.2616
+      ],
+      "attachmentLocalM": {
+        "Harness": [
+          0,
+          -0.01232,
+          -0.0288
+        ],
+        "Mount": [
+          0,
+          -0.02352,
+          -0.0024
+        ]
+      },
+      "materials": [
+        "black",
+        "screen",
+        "ivory"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.04697,
+            -0.01667,
+            -0.0444
+          ],
+          "max": [
+            0.04697,
+            0.015537,
+            0.0408
+          ],
+          "size": [
+            0.09394,
+            0.032208,
+            0.0852
+          ]
+        },
+        "screen": {
+          "min": [
+            -0.039051,
+            0.00336,
+            -0.0348
+          ],
+          "max": [
+            0.039051,
+            0.02016,
+            0.03
+          ],
+          "size": [
+            0.078102,
+            0.0168,
+            0.0648
+          ]
+        },
+        "ivory": {
+          "min": [
+            -0.0198,
+            0.01484,
+            -0.0054
+          ],
+          "max": [
+            0.0198,
+            0.01652,
+            0.0054
+          ],
+          "size": [
+            0.0396,
+            0.00168,
+            0.0108
+          ]
+        }
+      },
+      "triangles": 432,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.FrontTire",
+      "name": "FrontTire",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontTire",
+      "dimensionsM": [
+        0.07656,
+        0.280721,
+        0.300772
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber",
+        "tread"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.03828,
+            -0.14,
+            -0.15
+          ],
+          "max": [
+            0.03828,
+            0.14,
+            0.15
+          ],
+          "size": [
+            0.07656,
+            0.28,
+            0.3
+          ]
+        },
+        "tread": {
+          "min": [
+            -0.032562,
+            -0.14036,
+            -0.150386
+          ],
+          "max": [
+            0.032562,
+            0.14036,
+            0.150386
+          ],
+          "size": [
+            0.065124,
+            0.280721,
+            0.300772
+          ]
+        }
+      },
+      "triangles": 3600,
+      "collision": [
+        "FrontWheelProxy"
+      ],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.FrontRim",
+      "name": "FrontRim",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontRim",
+      "dimensionsM": [
+        0.06336,
+        0.19488,
+        0.2088
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.03168,
+            -0.09744,
+            -0.1044
+          ],
+          "max": [
+            0.03168,
+            0.09744,
+            0.1044
+          ],
+          "size": [
+            0.06336,
+            0.19488,
+            0.2088
+          ]
+        },
+        "paint": {
+          "min": [
+            -0.01584,
+            -0.080919,
+            -0.089186
+          ],
+          "max": [
+            0.01584,
+            0.08433,
+            0.086991
+          ],
+          "size": [
+            0.03168,
+            0.16525,
+            0.176177
+          ]
+        }
+      },
+      "triangles": 1104,
+      "collision": [],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.RearTire",
+      "name": "RearTire",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearTire",
+      "dimensionsM": [
+        0.07656,
+        0.280721,
+        0.300772
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber",
+        "tread"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.03828,
+            -0.14,
+            -0.15
+          ],
+          "max": [
+            0.03828,
+            0.14,
+            0.15
+          ],
+          "size": [
+            0.07656,
+            0.28,
+            0.3
+          ]
+        },
+        "tread": {
+          "min": [
+            -0.032562,
+            -0.14036,
+            -0.150386
+          ],
+          "max": [
+            0.032562,
+            0.14036,
+            0.150386
+          ],
+          "size": [
+            0.065124,
+            0.280721,
+            0.300772
+          ]
+        }
+      },
+      "triangles": 3600,
+      "collision": [
+        "RearWheelProxy"
+      ],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.RearRim",
+      "name": "RearRim",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearRim",
+      "dimensionsM": [
+        0.06336,
+        0.19488,
+        0.2088
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.03168,
+            -0.09744,
+            -0.1044
+          ],
+          "max": [
+            0.03168,
+            0.09744,
+            0.1044
+          ],
+          "size": [
+            0.06336,
+            0.19488,
+            0.2088
+          ]
+        }
+      },
+      "triangles": 768,
+      "collision": [],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.RearHubMotor",
+      "name": "RearHubMotor",
+      "category": "Motor",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearHubMotor",
+      "dimensionsM": [
+        0.0924,
+        0.15008,
+        0.1608
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ],
+        "PhaseCable": [
+          0.0594,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.04224,
+            -0.07504,
+            -0.0804
+          ],
+          "max": [
+            0.04224,
+            0.07504,
+            0.0804
+          ],
+          "size": [
+            0.08448,
+            0.15008,
+            0.1608
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0462,
+            -0.05779,
+            -0.0624
+          ],
+          "max": [
+            0.0462,
+            0.05779,
+            0.0624
+          ],
+          "size": [
+            0.0924,
+            0.11558,
+            0.1248
+          ]
+        }
+      },
+      "triangles": 1728,
+      "collision": [],
+      "interaction": "Driven hub housing"
+    },
+    {
+      "assetId": "performance-scooter.MotorStator",
+      "name": "MotorStator",
+      "category": "Motor",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "MotorStator",
+      "dimensionsM": [
+        0.06864,
+        0.10528,
+        0.111269
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ],
+        "PhaseCable": [
+          0.04488,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "copper",
+        "steel"
+      ],
+      "materialBoundsM": {
+        "copper": {
+          "min": [
+            -0.02112,
+            -0.05264,
+            -0.055634
+          ],
+          "max": [
+            0.02112,
+            0.05264,
+            0.055634
+          ],
+          "size": [
+            0.04224,
+            0.10528,
+            0.111269
+          ]
+        },
+        "steel": {
+          "min": [
+            -0.03432,
+            -0.02128,
+            -0.0228
+          ],
+          "max": [
+            0.03432,
+            0.02128,
+            0.0228
+          ],
+          "size": [
+            0.06864,
+            0.04256,
+            0.0456
+          ]
+        }
+      },
+      "triangles": 1152,
+      "collision": [],
+      "interaction": "Expose by removing rear hub shell"
+    },
+    {
+      "assetId": "performance-scooter.FrontBrakeDisc",
+      "name": "FrontBrakeDisc",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontBrakeDisc",
+      "dimensionsM": [
+        0.0132,
+        0.13888,
+        0.1536
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "steel",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "steel": {
+          "min": [
+            -0.05082,
+            -0.06944,
+            -0.0768
+          ],
+          "max": [
+            -0.04686,
+            0.06944,
+            0.0768
+          ],
+          "size": [
+            0.00396,
+            0.13888,
+            0.1536
+          ]
+        },
+        "paint": {
+          "min": [
+            -0.05808,
+            -0.050369,
+            -0.05341
+          ],
+          "max": [
+            -0.04488,
+            0.054338,
+            0.057329
+          ],
+          "size": [
+            0.0132,
+            0.104706,
+            0.110739
+          ]
+        }
+      },
+      "triangles": 624,
+      "collision": [],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.FrontCaliper",
+      "name": "FrontCaliper",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontCaliper",
+      "dimensionsM": [
+        0.04488,
+        0.040387,
+        0.0336
+      ],
+      "pivotM": [
+        -0.0528,
+        0.19376,
+        -0.5268
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          -0.01452,
+          0,
+          0.0048
+        ],
+        "Cable": [
+          -0.0066,
+          0.02128,
+          0.0144
+        ]
+      },
+      "materials": [
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.0198,
+            -0.01736,
+            -0.0072
+          ],
+          "max": [
+            0.0198,
+            0.023027,
+            0.0264
+          ],
+          "size": [
+            0.0396,
+            0.040387,
+            0.0336
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.02508,
+            0.00508,
+            0.0072
+          ],
+          "max": [
+            -0.0198,
+            0.01284,
+            0.0168
+          ],
+          "size": [
+            0.00528,
+            0.00776,
+            0.0096
+          ]
+        }
+      },
+      "triangles": 240,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.FrontFender",
+      "name": "FrontFender",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontFender",
+      "dimensionsM": [
+        0.101532,
+        0.067187,
+        0.247576
+      ],
+      "pivotM": [
+        0,
+        0.29344,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "FenderMount": [
+          0,
+          0,
+          0
+        ],
+        "WheelAxle": [
+          0,
+          -0.15344,
+          0
+        ]
+      },
+      "materials": [
+        "black"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.050766,
+            -0.060562,
+            -0.127634
+          ],
+          "max": [
+            0.050766,
+            0.006625,
+            0.119942
+          ],
+          "size": [
+            0.101532,
+            0.067187,
+            0.247576
+          ]
+        }
+      },
+      "triangles": 532,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.RearFender",
+      "name": "RearFender",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearFender",
+      "dimensionsM": [
+        0.137224,
+        0.162527,
+        0.271765
+      ],
+      "pivotM": [
+        0,
+        0.29344,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "FenderMount": [
+          0,
+          0,
+          0
+        ],
+        "WheelAxle": [
+          0,
+          -0.15344,
+          0
+        ]
+      },
+      "materials": [
+        "black",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.050766,
+            -0.097318,
+            -0.119942
+          ],
+          "max": [
+            0.050766,
+            0.006571,
+            0.151823
+          ],
+          "size": [
+            0.101532,
+            0.103889,
+            0.271765
+          ]
+        },
+        "paint": {
+          "min": [
+            -0.068612,
+            -0.155956,
+            -0.003972
+          ],
+          "max": [
+            0.068612,
+            -0.025484,
+            0.095172
+          ],
+          "size": [
+            0.137224,
+            0.130471,
+            0.099144
+          ]
+        }
+      },
+      "triangles": 596,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.Kickstand",
+      "name": "Kickstand",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "Kickstand",
+      "dimensionsM": [
+        0.132291,
+        0.111079,
+        0.047395
+      ],
+      "pivotM": [
+        -0.11352,
+        0.12768,
+        0.222
+      ],
+      "attachmentLocalM": {
+        "Pivot": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.1221,
+            -0.103964,
+            -0.0354
+          ],
+          "max": [
+            0.010191,
+            0.007115,
+            0.011995
+          ],
+          "size": [
+            0.132291,
+            0.111079,
+            0.047395
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.01848,
+            -0.00582,
+            -0.0072
+          ],
+          "max": [
+            -0.0132,
+            0.00582,
+            0.0072
+          ],
+          "size": [
+            0.00528,
+            0.011639,
+            0.0144
+          ]
+        }
+      },
+      "triangles": 208,
+      "collision": [],
+      "interaction": "Fold about +X"
+    },
+    {
+      "assetId": "performance-scooter.BatteryPack",
+      "name": "BatteryPack",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "BatteryPack",
+      "dimensionsM": [
+        0.1914,
+        0.06776,
+        0.3972
+      ],
+      "pivotM": [
+        0,
+        0.11984,
+        0.0276
+      ],
+      "attachmentLocalM": {
+        "Bay": [
+          0,
+          0,
+          0
+        ],
+        "Connector": [
+          0.06336,
+          0.01792,
+          -0.1992
+        ],
+        "Grip": [
+          0,
+          0.03696,
+          0.024
+        ]
+      },
+      "materials": [
+        "black",
+        "trim",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.0957,
+            -0.0252,
+            -0.189
+          ],
+          "max": [
+            0.0957,
+            0.0364,
+            0.2082
+          ],
+          "size": [
+            0.1914,
+            0.0616,
+            0.3972
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.09174,
+            0.03472,
+            -0.1608
+          ],
+          "max": [
+            0.09174,
+            0.0392,
+            0.18
+          ],
+          "size": [
+            0.18348,
+            0.00448,
+            0.3408
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.02904,
+            0.04032,
+            -0.0348
+          ],
+          "max": [
+            0.02904,
+            0.04256,
+            0.0588
+          ],
+          "size": [
+            0.05808,
+            0.00224,
+            0.0936
+          ]
+        }
+      },
+      "triangles": 256,
+      "collision": [],
+      "interaction": "Disconnect and remove battery pack"
+    },
+    {
+      "assetId": "performance-scooter.BatteryCells",
+      "name": "BatteryCells",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "BatteryCells",
+      "dimensionsM": [
+        0.17424,
+        0.026206,
+        0.3528
+      ],
+      "pivotM": [
+        0,
+        0.11984,
+        0.0276
+      ],
+      "attachmentLocalM": {
+        "BatteryBay": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "cell",
+        "steel"
+      ],
+      "materialBoundsM": {
+        "cell": {
+          "min": [
+            -0.08514,
+            -0.009743,
+            -0.162
+          ],
+          "max": [
+            0.08514,
+            0.016463,
+            0.1908
+          ],
+          "size": [
+            0.17028,
+            0.026206,
+            0.3528
+          ]
+        },
+        "steel": {
+          "min": [
+            -0.08712,
+            -0.005375,
+            -0.1572
+          ],
+          "max": [
+            0.08712,
+            0.012095,
+            0.186
+          ],
+          "size": [
+            0.17424,
+            0.017471,
+            0.3432
+          ]
+        }
+      },
+      "triangles": 15120,
+      "collision": [],
+      "interaction": "Expose cell modules by removing the pack enclosure"
+    },
+    {
+      "assetId": "performance-scooter.ControllerHousing",
+      "name": "ControllerHousing",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ControllerHousing",
+      "dimensionsM": [
+        0.17952,
+        0.05432,
+        0.1014
+      ],
+      "pivotM": [
+        0,
+        0.14784,
+        -0.2796
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0,
+          0
+        ],
+        "Motor": [
+          0.06996,
+          -0.00112,
+          0.0492
+        ],
+        "Power": [
+          0.0594,
+          0,
+          0.0552
+        ]
+      },
+      "materials": [
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.08976,
+            -0.02408,
+            -0.048
+          ],
+          "max": [
+            0.08976,
+            0.03024,
+            0.048
+          ],
+          "size": [
+            0.17952,
+            0.05432,
+            0.096
+          ]
+        },
+        "black": {
+          "min": [
+            -0.08646,
+            -0.02184,
+            0.045
+          ],
+          "max": [
+            0.08646,
+            0.01512,
+            0.0534
+          ],
+          "size": [
+            0.17292,
+            0.03696,
+            0.0084
+          ]
+        }
+      },
+      "triangles": 640,
+      "collision": [],
+      "interaction": "Remove heat sink housing"
+    },
+    {
+      "assetId": "performance-scooter.ControllerBoard",
+      "name": "ControllerBoard",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ControllerBoard",
+      "dimensionsM": [
+        0.15708,
+        0.02128,
+        0.0792
+      ],
+      "pivotM": [
+        0,
+        0.14784,
+        -0.2796
+      ],
+      "attachmentLocalM": {
+        "Connector": [
+          0.05676,
+          -0.00672,
+          0.0468
+        ]
+      },
+      "materials": [
+        "pcb",
+        "black",
+        "copper"
+      ],
+      "materialBoundsM": {
+        "pcb": {
+          "min": [
+            -0.07854,
+            -0.014,
+            -0.0396
+          ],
+          "max": [
+            0.07854,
+            -0.01064,
+            0.0396
+          ],
+          "size": [
+            0.15708,
+            0.00336,
+            0.0792
+          ]
+        },
+        "black": {
+          "min": [
+            -0.06732,
+            -0.00952,
+            -0.0252
+          ],
+          "max": [
+            0.06468,
+            0.00728,
+            0.024
+          ],
+          "size": [
+            0.132,
+            0.0168,
+            0.0492
+          ]
+        },
+        "copper": {
+          "min": [
+            -0.06336,
+            -0.01064,
+            0.0324
+          ],
+          "max": [
+            0.06336,
+            -0.00504,
+            0.0396
+          ],
+          "size": [
+            0.12672,
+            0.0056,
+            0.0072
+          ]
+        }
+      },
+      "triangles": 1264,
+      "collision": [],
+      "interaction": "Service after removing controller housing"
+    },
+    {
+      "assetId": "performance-scooter.ChargePort",
+      "name": "ChargePort",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "ChargePort",
+      "dimensionsM": [
+        0.031437,
+        0.042513,
+        0.039588
+      ],
+      "pivotM": [
+        0.13068,
+        0.13776,
+        -0.2052
+      ],
+      "attachmentLocalM": {
+        "Plug": [
+          0.01188,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "black",
+        "copper",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.01122,
+            -0.015442,
+            -0.0168
+          ],
+          "max": [
+            0.00858,
+            0.015442,
+            0.0168
+          ],
+          "size": [
+            0.0198,
+            0.030884,
+            0.0336
+          ]
+        },
+        "copper": {
+          "min": [
+            0.00264,
+            -0.00672,
+            -0.0072
+          ],
+          "max": [
+            0.01056,
+            0.00672,
+            0.0072
+          ],
+          "size": [
+            0.00792,
+            0.01344,
+            0.0144
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.000417,
+            0.00664,
+            0.012238
+          ],
+          "max": [
+            0.020217,
+            0.027071,
+            0.022788
+          ],
+          "size": [
+            0.020634,
+            0.020431,
+            0.01055
+          ]
+        }
+      },
+      "triangles": 444,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.FrontHubMotor",
+      "name": "FrontHubMotor",
+      "category": "Motor",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontHubMotor",
+      "dimensionsM": [
+        0.0924,
+        0.15008,
+        0.1608
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ],
+        "PhaseCable": [
+          0.0594,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.04224,
+            -0.07504,
+            -0.0804
+          ],
+          "max": [
+            0.04224,
+            0.07504,
+            0.0804
+          ],
+          "size": [
+            0.08448,
+            0.15008,
+            0.1608
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0462,
+            -0.05779,
+            -0.0624
+          ],
+          "max": [
+            0.0462,
+            0.05779,
+            0.0624
+          ],
+          "size": [
+            0.0924,
+            0.11558,
+            0.1248
+          ]
+        }
+      },
+      "triangles": 1728,
+      "collision": [],
+      "interaction": "Driven hub housing"
+    },
+    {
+      "assetId": "performance-scooter.FrontMotorStator",
+      "name": "FrontMotorStator",
+      "category": "Motor",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "FrontMotorStator",
+      "dimensionsM": [
+        0.06864,
+        0.10528,
+        0.111269
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        -0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ],
+        "PhaseCable": [
+          0.04488,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "copper",
+        "steel"
+      ],
+      "materialBoundsM": {
+        "copper": {
+          "min": [
+            -0.02112,
+            -0.05264,
+            -0.055634
+          ],
+          "max": [
+            0.02112,
+            0.05264,
+            0.055634
+          ],
+          "size": [
+            0.04224,
+            0.10528,
+            0.111269
+          ]
+        },
+        "steel": {
+          "min": [
+            -0.03432,
+            -0.02128,
+            -0.0228
+          ],
+          "max": [
+            0.03432,
+            0.02128,
+            0.0228
+          ],
+          "size": [
+            0.06864,
+            0.04256,
+            0.0456
+          ]
+        }
+      },
+      "triangles": 1152,
+      "collision": [],
+      "interaction": "Expose by removing rear hub shell"
+    },
+    {
+      "assetId": "performance-scooter.RearBrakeDisc",
+      "name": "RearBrakeDisc",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearBrakeDisc",
+      "dimensionsM": [
+        0.0132,
+        0.13888,
+        0.1536
+      ],
+      "pivotM": [
+        0,
+        0.14,
+        0.5628
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "steel",
+        "paint"
+      ],
+      "materialBoundsM": {
+        "steel": {
+          "min": [
+            -0.05082,
+            -0.06944,
+            -0.0768
+          ],
+          "max": [
+            -0.04686,
+            0.06944,
+            0.0768
+          ],
+          "size": [
+            0.00396,
+            0.13888,
+            0.1536
+          ]
+        },
+        "paint": {
+          "min": [
+            -0.05808,
+            -0.050369,
+            -0.05341
+          ],
+          "max": [
+            -0.04488,
+            0.054338,
+            0.057329
+          ],
+          "size": [
+            0.0132,
+            0.104706,
+            0.110739
+          ]
+        }
+      },
+      "triangles": 624,
+      "collision": [],
+      "interaction": "Rotate about +X"
+    },
+    {
+      "assetId": "performance-scooter.RearCaliper",
+      "name": "RearCaliper",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearCaliper",
+      "dimensionsM": [
+        0.04488,
+        0.040387,
+        0.0336
+      ],
+      "pivotM": [
+        -0.0528,
+        0.19376,
+        0.5988
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          -0.01452,
+          0,
+          0.0048
+        ],
+        "Cable": [
+          -0.0066,
+          0.02128,
+          0.0144
+        ]
+      },
+      "materials": [
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.0198,
+            -0.01736,
+            -0.0072
+          ],
+          "max": [
+            0.0198,
+            0.023027,
+            0.0264
+          ],
+          "size": [
+            0.0396,
+            0.040387,
+            0.0336
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.02508,
+            0.00508,
+            0.0072
+          ],
+          "max": [
+            -0.0198,
+            0.01284,
+            0.0168
+          ],
+          "size": [
+            0.00528,
+            0.00776,
+            0.0096
+          ]
+        }
+      },
+      "triangles": 240,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.AuxiliaryControllerHousing",
+      "name": "AuxiliaryControllerHousing",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "AuxiliaryControllerHousing",
+      "dimensionsM": [
+        0.17952,
+        0.05432,
+        0.1014
+      ],
+      "pivotM": [
+        0,
+        0.14784,
+        -0.1926
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0,
+          0
+        ],
+        "Motor": [
+          0.06996,
+          -0.00112,
+          0.0492
+        ],
+        "Power": [
+          0.0594,
+          0,
+          0.0552
+        ]
+      },
+      "materials": [
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.08976,
+            -0.02408,
+            -0.048
+          ],
+          "max": [
+            0.08976,
+            0.03024,
+            0.048
+          ],
+          "size": [
+            0.17952,
+            0.05432,
+            0.096
+          ]
+        },
+        "black": {
+          "min": [
+            -0.08646,
+            -0.02184,
+            0.045
+          ],
+          "max": [
+            0.08646,
+            0.01512,
+            0.0534
+          ],
+          "size": [
+            0.17292,
+            0.03696,
+            0.0084
+          ]
+        }
+      },
+      "triangles": 640,
+      "collision": [],
+      "interaction": "Remove heat sink housing"
+    },
+    {
+      "assetId": "performance-scooter.AuxiliaryControllerBoard",
+      "name": "AuxiliaryControllerBoard",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "AuxiliaryControllerBoard",
+      "dimensionsM": [
+        0.15708,
+        0.02128,
+        0.0792
+      ],
+      "pivotM": [
+        0,
+        0.14784,
+        -0.1926
+      ],
+      "attachmentLocalM": {
+        "Connector": [
+          0.05676,
+          -0.00672,
+          0.0468
+        ]
+      },
+      "materials": [
+        "pcb",
+        "black",
+        "copper"
+      ],
+      "materialBoundsM": {
+        "pcb": {
+          "min": [
+            -0.07854,
+            -0.014,
+            -0.0396
+          ],
+          "max": [
+            0.07854,
+            -0.01064,
+            0.0396
+          ],
+          "size": [
+            0.15708,
+            0.00336,
+            0.0792
+          ]
+        },
+        "black": {
+          "min": [
+            -0.06732,
+            -0.00952,
+            -0.0252
+          ],
+          "max": [
+            0.06468,
+            0.00728,
+            0.024
+          ],
+          "size": [
+            0.132,
+            0.0168,
+            0.0492
+          ]
+        },
+        "copper": {
+          "min": [
+            -0.06336,
+            -0.01064,
+            0.0324
+          ],
+          "max": [
+            0.06336,
+            -0.00504,
+            0.0396
+          ],
+          "size": [
+            0.12672,
+            0.0056,
+            0.0072
+          ]
+        }
+      },
+      "triangles": 1264,
+      "collision": [],
+      "interaction": "Service after removing controller housing"
+    },
+    {
+      "assetId": "performance-scooter.Floorboard",
+      "name": "Floorboard",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "Floorboard",
+      "dimensionsM": [
+        0.254,
+        0.037,
+        0.681
+      ],
+      "pivotM": [
+        0,
+        0.206,
+        0.031
+      ],
+      "attachmentLocalM": {
+        "CoverMount": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "tread",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.123224,
+            -0.023,
+            -0.339
+          ],
+          "max": [
+            0.123224,
+            -0.001,
+            0.342
+          ],
+          "size": [
+            0.246448,
+            0.022,
+            0.681
+          ]
+        },
+        "tread": {
+          "min": [
+            -0.1095,
+            -0.0065,
+            -0.288
+          ],
+          "max": [
+            0.1095,
+            0.014,
+            0.29
+          ],
+          "size": [
+            0.219,
+            0.0205,
+            0.578
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.127,
+            -0.005,
+            -0.236
+          ],
+          "max": [
+            0.127,
+            0.001,
+            0.264
+          ],
+          "size": [
+            0.254,
+            0.006,
+            0.5
+          ]
+        }
+      },
+      "triangles": 2164,
+      "collision": [],
+      "interaction": "Remove top plate to access battery and both controllers"
+    },
+    {
+      "assetId": "performance-scooter.RearCoilover_L",
+      "name": "RearCoilover_L",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearCoilover_L",
+      "dimensionsM": [
+        0.068432,
+        0.095296,
+        0.17878
+      ],
+      "pivotM": [
+        -0.065,
+        0.218,
+        0.333
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          0,
+          0,
+          0
+        ],
+        "Lower": [
+          -0.002,
+          -0.063,
+          0.169
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "spring",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.044598,
+            -0.050256,
+            -0.006287
+          ],
+          "max": [
+            0.017999,
+            0.016866,
+            0.095857
+          ],
+          "size": [
+            0.062597,
+            0.067122,
+            0.102145
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.011999,
+            -0.07237,
+            0.074247
+          ],
+          "max": [
+            0.009079,
+            -0.01961,
+            0.172493
+          ],
+          "size": [
+            0.021079,
+            0.05276,
+            0.098246
+          ]
+        },
+        "spring": {
+          "min": [
+            -0.025716,
+            -0.073519,
+            0.019958
+          ],
+          "max": [
+            0.023833,
+            0.010519,
+            0.149042
+          ],
+          "size": [
+            0.049549,
+            0.084038,
+            0.129083
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.025774,
+            -0.07843,
+            0.012151
+          ],
+          "max": [
+            0.023754,
+            0.0148,
+            0.158539
+          ],
+          "size": [
+            0.049528,
+            0.09323,
+            0.146387
+          ]
+        }
+      },
+      "triangles": 1512,
+      "collision": [],
+      "interaction": "Pivot at the upper eye and compress along the shaft"
+    },
+    {
+      "assetId": "performance-scooter.RearCoilover_R",
+      "name": "RearCoilover_R",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearCoilover_R",
+      "dimensionsM": [
+        0.068353,
+        0.095296,
+        0.17878
+      ],
+      "pivotM": [
+        0.065,
+        0.218,
+        0.333
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          0,
+          0,
+          0
+        ],
+        "Lower": [
+          0.002,
+          -0.063,
+          0.169
+        ]
+      },
+      "materials": [
+        "paint",
+        "alloy",
+        "spring",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.017999,
+            -0.050256,
+            -0.006287
+          ],
+          "max": [
+            0.044598,
+            0.016866,
+            0.095857
+          ],
+          "size": [
+            0.062597,
+            0.067122,
+            0.102145
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.009079,
+            -0.07237,
+            0.074247
+          ],
+          "max": [
+            0.011999,
+            -0.01961,
+            0.172493
+          ],
+          "size": [
+            0.021079,
+            0.05276,
+            0.098246
+          ]
+        },
+        "spring": {
+          "min": [
+            -0.023716,
+            -0.073519,
+            0.019958
+          ],
+          "max": [
+            0.025833,
+            0.010519,
+            0.149042
+          ],
+          "size": [
+            0.049549,
+            0.084038,
+            0.129083
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.023754,
+            -0.07843,
+            0.012151
+          ],
+          "max": [
+            0.025774,
+            0.0148,
+            0.158539
+          ],
+          "size": [
+            0.049528,
+            0.09323,
+            0.146387
+          ]
+        }
+      },
+      "triangles": 1512,
+      "collision": [],
+      "interaction": "Pivot at the upper eye and compress along the shaft"
+    },
+    {
+      "assetId": "performance-scooter.TwinHeadlamp",
+      "name": "TwinHeadlamp",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "TwinHeadlamp",
+      "dimensionsM": [
+        0.145259,
+        0.051414,
+        0.068
+      ],
+      "pivotM": [
+        0,
+        0.942,
+        -0.321
+      ],
+      "attachmentLocalM": {
+        "StemMount": [
+          0,
+          0,
+          0.019
+        ],
+        "LightL": [
+          -0.042,
+          -0.002,
+          -0.05
+        ],
+        "LightR": [
+          0.042,
+          -0.002,
+          -0.05
+        ]
+      },
+      "materials": [
+        "paint",
+        "ivory"
+      ],
+      "materialBoundsM": {
+        "paint": {
+          "min": [
+            -0.072629,
+            -0.024725,
+            -0.043
+          ],
+          "max": [
+            0.072629,
+            0.026689,
+            0.019
+          ],
+          "size": [
+            0.145259,
+            0.051414,
+            0.062
+          ]
+        },
+        "ivory": {
+          "min": [
+            -0.06672,
+            -0.021776,
+            -0.049
+          ],
+          "max": [
+            0.06672,
+            0.017776,
+            -0.041
+          ],
+          "size": [
+            0.133441,
+            0.039552,
+            0.008
+          ]
+        }
+      },
+      "triangles": 368,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.RearMarkerAssembly",
+      "name": "RearMarkerAssembly",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "RearMarkerAssembly",
+      "dimensionsM": [
+        0.151,
+        0.036,
+        0.063
+      ],
+      "pivotM": [
+        0,
+        0.238,
+        0.697
+      ],
+      "attachmentLocalM": {
+        "TailLight": [
+          0,
+          -0.001,
+          0.036
+        ]
+      },
+      "materials": [
+        "black",
+        "red",
+        "amber"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.061187,
+            -0.015,
+            -0.027
+          ],
+          "max": [
+            0.061187,
+            0.021,
+            0.029
+          ],
+          "size": [
+            0.122374,
+            0.036,
+            0.056
+          ]
+        },
+        "red": {
+          "min": [
+            -0.048406,
+            -0.013,
+            0.029
+          ],
+          "max": [
+            0.048406,
+            0.007,
+            0.036
+          ],
+          "size": [
+            0.096813,
+            0.02,
+            0.007
+          ]
+        },
+        "amber": {
+          "min": [
+            -0.0755,
+            -0.002,
+            -0.0165
+          ],
+          "max": [
+            0.0755,
+            0.008,
+            0.0085
+          ],
+          "size": [
+            0.151,
+            0.01,
+            0.025
+          ]
+        }
+      },
+      "triangles": 268,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "performance-scooter.DualMotorHarness",
+      "name": "DualMotorHarness",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "performance-scooter"
+      ],
+      "file": "vehicles/performance-scooter/exports/PerformanceScooter.glb",
+      "node": "DualMotorHarness",
+      "dimensionsM": [
+        0.262375,
+        1.038465,
+        1.129674
+      ],
+      "pivotM": [
+        0,
+        0.31248,
+        -0.4056
+      ],
+      "attachmentLocalM": {
+        "Controller": [
+          0,
+          -0.16464,
+          0.126
+        ],
+        "RearController": [
+          0,
+          -0.16464,
+          0.213
+        ],
+        "FrontMotor": [
+          -0.059,
+          -0.17248,
+          -0.1572
+        ],
+        "RearMotor": [
+          0.059,
+          -0.17248,
+          0.9684
+        ]
+      },
+      "materials": [
+        "tread",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "tread": {
+          "min": [
+            -0.166338,
+            -0.182577,
+            -0.160562
+          ],
+          "max": [
+            0.096037,
+            0.855888,
+            0.969111
+          ],
+          "size": [
+            0.262375,
+            1.038465,
+            1.129674
+          ]
+        },
+        "trim": {
+          "min": [
+            0.039061,
+            -0.16864,
+            0.126
+          ],
+          "max": [
+            0.046939,
+            -0.160881,
+            0.213
+          ],
+          "size": [
+            0.007878,
+            0.007759,
+            0.087
+          ]
+        }
+      },
+      "triangles": 342,
+      "collision": [],
+      "interaction": "Install both motor leads and controller interconnect"
+    }
+  ],
+  "stats": {
+    "triangles": 52562,
+    "components": 44,
+    "materialLayers": 102,
+    "maxTrianglesPerComponent": 15120
+  }
+}

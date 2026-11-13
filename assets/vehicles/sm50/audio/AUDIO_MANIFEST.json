@@ -1,0 +1,141 @@
+{
+  "asset": "zefir-sm50",
+  "sampleRate": 48000,
+  "channels": 1,
+  "pcmBits": 16,
+  "source": "Procedural synthesis",
+  "loops": [
+    {
+      "file": "zefir_1500_off.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -7.57,
+      "rmsDbfs": -17.2,
+      "rpm": 1500,
+      "throttle": "off",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.00031
+    },
+    {
+      "file": "zefir_1500_on.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -1.56,
+      "rmsDbfs": -12.91,
+      "rpm": 1500,
+      "throttle": "on",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.00034
+    },
+    {
+      "file": "zefir_5000_off.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -5.29,
+      "rmsDbfs": -16.66,
+      "rpm": 5000,
+      "throttle": "off",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.00212
+    },
+    {
+      "file": "zefir_5000_on.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -1.01,
+      "rmsDbfs": -12.88,
+      "rpm": 5000,
+      "throttle": "on",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.0095
+    },
+    {
+      "file": "zefir_8000_off.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -5.41,
+      "rmsDbfs": -16.4,
+      "rpm": 8000,
+      "throttle": "off",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.00934
+    },
+    {
+      "file": "zefir_8000_on.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -1.01,
+      "rmsDbfs": -11.89,
+      "rpm": 8000,
+      "throttle": "on",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.02607
+    },
+    {
+      "file": "zefir_10500_off.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -5.85,
+      "rmsDbfs": -16.27,
+      "rpm": 10500,
+      "throttle": "off",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.01587
+    },
+    {
+      "file": "zefir_10500_on.wav",
+      "samples": 115200,
+      "seconds": 2.4,
+      "peakDbfs": -1.14,
+      "rmsDbfs": -11.49,
+      "rpm": 10500,
+      "throttle": "on",
+      "loop": true,
+      "loopStartSample": 0,
+      "loopEndSample": 115200,
+      "seamStep": 0.03435
+    }
+  ],
+  "events": [
+    {
+      "file": "zefir_kickstart.wav",
+      "samples": 37440,
+      "seconds": 0.78,
+      "peakDbfs": -6.09,
+      "rmsDbfs": -23.75,
+      "loop": false
+    },
+    {
+      "file": "zefir_gear_clunk.wav",
+      "samples": 11520,
+      "seconds": 0.24,
+      "peakDbfs": -3.47,
+      "rmsDbfs": -20.81,
+      "loop": false
+    },
+    {
+      "file": "zefir_stall.wav",
+      "samples": 32160,
+      "seconds": 0.67,
+      "peakDbfs": -9.12,
+      "rmsDbfs": -25.57,
+      "loop": false
+    }
+  ],
+  "integration": "Crossfade neighbouring RPM loops. Start at a gain of zero and ramp each voice before switching. Blend on/off throttle by load.",
+  "limitation": "Synthetic development audio. Final vehicle audio requires reference recordings and in-game mixing."
+}

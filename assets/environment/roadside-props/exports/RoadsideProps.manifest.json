@@ -1,0 +1,1071 @@
+{
+  "schemaVersion": 1,
+  "assetId": "roadside-props",
+  "name": "RoadsideProps",
+  "stage": "First production pass",
+  "source": "environment/roadside-props/source/props.mjs",
+  "export": "environment/roadside-props/exports/RoadsideProps.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -5.0825,
+      -0.08,
+      -10.65101
+    ],
+    "max": [
+      12.271617,
+      6.5917,
+      1.680229
+    ],
+    "size": [
+      17.354117,
+      6.6717,
+      12.331239
+    ]
+  },
+  "datumsM": {
+    "KitOrigin": [
+      0,
+      0,
+      0
+    ],
+    "FenceStart": [
+      -5,
+      0,
+      1.5
+    ],
+    "FenceEnd": [
+      -5,
+      0,
+      -1.5
+    ]
+  },
+  "proxies": [
+    {
+      "name": "FenceBarrier",
+      "target": "WireFencePanel",
+      "center": [
+        -5,
+        0.75,
+        0
+      ],
+      "size": [
+        0.074,
+        1.22,
+        3
+      ]
+    },
+    {
+      "name": "PoleContact",
+      "target": "ConcreteUtilityPole",
+      "center": [
+        -1.8,
+        2.86,
+        0
+      ],
+      "size": [
+        0.218,
+        5.72,
+        0.228
+      ]
+    },
+    {
+      "name": "LampContact",
+      "target": "StreetLamp",
+      "center": [
+        2.1,
+        2.35,
+        0
+      ],
+      "size": [
+        0.117,
+        4.7,
+        0.117
+      ]
+    },
+    {
+      "name": "DumpsterContact",
+      "target": "WasteDumpster",
+      "center": [
+        4.2,
+        0.465,
+        0
+      ],
+      "size": [
+        1.13,
+        0.88,
+        0.83
+      ]
+    },
+    {
+      "name": "BirchTrunk",
+      "target": "BirchTree",
+      "center": [
+        7.8,
+        1.48,
+        0
+      ],
+      "size": [
+        0.29,
+        2.96,
+        0.29
+      ]
+    }
+  ],
+  "materials": {
+    "zinc": {
+      "name": "Weathered galvanized steel",
+      "hex": "#959d97",
+      "metallic": 0.7,
+      "roughness": 0.49,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "concrete": {
+      "name": "Weathered cast concrete",
+      "hex": "#888577",
+      "metallic": 0,
+      "roughness": 0.9,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "wire": {
+      "name": "Black steel wire",
+      "hex": "#303533",
+      "metallic": 0.55,
+      "roughness": 0.71,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "green": {
+      "name": "Old green paint",
+      "hex": "#495f51",
+      "metallic": 0.24,
+      "roughness": 0.68,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "wood": {
+      "name": "Oiled softwood",
+      "hex": "#877055",
+      "metallic": 0,
+      "roughness": 0.82,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "enamel": {
+      "name": "Blue painted steel",
+      "hex": "#345d70",
+      "metallic": 0.3,
+      "roughness": 0.52,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "lens": {
+      "name": "Frosted lamp lens",
+      "hex": "#dbd9ba",
+      "metallic": 0,
+      "roughness": 0.42,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "bark": {
+      "name": "Grey brown bark",
+      "hex": "#6c5b48",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "birch": {
+      "name": "Pale birch bark",
+      "hex": "#bbb4a1",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "barkMark": {
+      "name": "Birch bark fissure",
+      "hex": "#4b473e",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "leaves": {
+      "name": "Muted birch leaf green",
+      "hex": "#586d39",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Grass",
+      "transparency": 0
+    },
+    "lightLeaves": {
+      "name": "Sun-facing leaf green",
+      "hex": "#71834b",
+      "metallic": 0,
+      "roughness": 0.92,
+      "studioMaterial": "Grass",
+      "transparency": 0
+    },
+    "shadowLeaves": {
+      "name": "Hedgerow leaf green",
+      "hex": "#465b36",
+      "metallic": 0,
+      "roughness": 0.93,
+      "studioMaterial": "Grass",
+      "transparency": 0
+    },
+    "grass": {
+      "name": "Roadside grass",
+      "hex": "#687345",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Grass",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Old black rubber",
+      "hex": "#282d28",
+      "metallic": 0,
+      "roughness": 0.92,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "roadside-props.WireFencePanel",
+      "name": "WireFencePanel",
+      "category": "Fences",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "WireFencePanel",
+      "dimensionsM": [
+        0.165,
+        1.402,
+        3.165
+      ],
+      "pivotM": [
+        -5,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          1.5
+        ],
+        "End": [
+          0,
+          0,
+          -1.5
+        ]
+      },
+      "materials": [
+        "zinc",
+        "concrete",
+        "wire"
+      ],
+      "materialBoundsM": {
+        "zinc": {
+          "min": [
+            -0.035,
+            -0.045,
+            -1.535
+          ],
+          "max": [
+            0.035,
+            1.357,
+            1.535
+          ],
+          "size": [
+            0.07,
+            1.402,
+            3.07
+          ]
+        },
+        "concrete": {
+          "min": [
+            -0.0825,
+            -0.0125,
+            -1.5825
+          ],
+          "max": [
+            0.0825,
+            0.0825,
+            1.5825
+          ],
+          "size": [
+            0.165,
+            0.095,
+            3.165
+          ]
+        },
+        "wire": {
+          "min": [
+            -0.000617,
+            0.221178,
+            -1.466363
+          ],
+          "max": [
+            0.002617,
+            1.24202,
+            1.466362
+          ],
+          "size": [
+            0.003234,
+            1.020843,
+            2.932725
+          ]
+        }
+      },
+      "triangles": 1776,
+      "collision": [
+        "FenceBarrier"
+      ],
+      "interaction": "Place as modular scenery"
+    },
+    {
+      "assetId": "roadside-props.ConcreteUtilityPole",
+      "name": "ConcreteUtilityPole",
+      "category": "Utilities",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "ConcreteUtilityPole",
+      "dimensionsM": [
+        1.36,
+        6.35,
+        0.258
+      ],
+      "pivotM": [
+        -1.8,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "CableTopL": [
+          -0.62,
+          6.14,
+          0
+        ],
+        "CableTopC": [
+          0,
+          6.14,
+          0
+        ],
+        "CableTopR": [
+          0.62,
+          6.14,
+          0
+        ]
+      },
+      "materials": [
+        "concrete",
+        "zinc",
+        "wood"
+      ],
+      "materialBoundsM": {
+        "concrete": {
+          "min": [
+            -0.14,
+            -0.08,
+            -0.129
+          ],
+          "max": [
+            0.14,
+            6.27,
+            0.129
+          ],
+          "size": [
+            0.28,
+            6.35,
+            0.258
+          ]
+        },
+        "zinc": {
+          "min": [
+            -0.68,
+            5.389,
+            -0.041
+          ],
+          "max": [
+            0.68,
+            6.08,
+            0.041
+          ],
+          "size": [
+            1.36,
+            0.691,
+            0.082
+          ]
+        },
+        "wood": {
+          "min": [
+            -0.652,
+            5.5755,
+            -0.032
+          ],
+          "max": [
+            0.652,
+            6.1545,
+            0.032
+          ],
+          "size": [
+            1.304,
+            0.579,
+            0.064
+          ]
+        }
+      },
+      "triangles": 2960,
+      "collision": [
+        "PoleContact"
+      ],
+      "interaction": "Place as modular scenery"
+    },
+    {
+      "assetId": "roadside-props.OverheadWireSpan",
+      "name": "OverheadWireSpan",
+      "category": "Utilities",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "OverheadWireSpan",
+      "dimensionsM": [
+        1.24866,
+        0.449897,
+        8.00202
+      ],
+      "pivotM": [
+        -1.8,
+        6.14,
+        -2.65
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          0
+        ],
+        "End": [
+          0,
+          0,
+          -8
+        ]
+      },
+      "materials": [
+        "wire"
+      ],
+      "materialBoundsM": {
+        "wire": {
+          "min": [
+            -0.62433,
+            -0.445,
+            -8.00101
+          ],
+          "max": [
+            0.62433,
+            0.004897,
+            0.00101
+          ],
+          "size": [
+            1.24866,
+            0.449897,
+            8.00202
+          ]
+        }
+      },
+      "triangles": 612,
+      "collision": [],
+      "interaction": "Snap to overhead pole cable markers"
+    },
+    {
+      "assetId": "roadside-props.StreetLamp",
+      "name": "StreetLamp",
+      "category": "Utilities",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "StreetLamp",
+      "dimensionsM": [
+        0.258,
+        5.154,
+        1.609
+      ],
+      "pivotM": [
+        2.1,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "LightSource": [
+          0,
+          5.035,
+          -1.29
+        ],
+        "Foot": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "zinc",
+        "concrete",
+        "green",
+        "lens"
+      ],
+      "materialBoundsM": {
+        "zinc": {
+          "min": [
+            -0.064345,
+            -0.03,
+            -1.090753
+          ],
+          "max": [
+            0.064345,
+            5.123888,
+            0.066
+          ],
+          "size": [
+            0.12869,
+            5.153888,
+            1.156753
+          ]
+        },
+        "concrete": {
+          "min": [
+            -0.129,
+            -0.0095,
+            -0.129
+          ],
+          "max": [
+            0.129,
+            0.0995,
+            0.129
+          ],
+          "size": [
+            0.258,
+            0.109,
+            0.258
+          ]
+        },
+        "green": {
+          "min": [
+            -0.109461,
+            5.05,
+            -1.48
+          ],
+          "max": [
+            0.109461,
+            5.124,
+            -1.02
+          ],
+          "size": [
+            0.218921,
+            0.074,
+            0.46
+          ]
+        },
+        "lens": {
+          "min": [
+            -0.093706,
+            5.034,
+            -1.42
+          ],
+          "max": [
+            0.093706,
+            5.066,
+            -1.16
+          ],
+          "size": [
+            0.187413,
+            0.032,
+            0.26
+          ]
+        }
+      },
+      "triangles": 456,
+      "collision": [
+        "LampContact"
+      ],
+      "interaction": "Attach light at diffuser marker"
+    },
+    {
+      "assetId": "roadside-props.WasteDumpster",
+      "name": "WasteDumpster",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "WasteDumpster",
+      "dimensionsM": [
+        1.24,
+        0.967364,
+        0.89
+      ],
+      "pivotM": [
+        4.2,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "LidHinge": [
+          0,
+          0.958,
+          0.355
+        ],
+        "WheelBase": [
+          0,
+          0.072,
+          0
+        ]
+      },
+      "materials": [
+        "green",
+        "zinc",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "green": {
+          "min": [
+            -0.589902,
+            0.100126,
+            -0.42
+          ],
+          "max": [
+            0.589902,
+            0.909874,
+            0.415
+          ],
+          "size": [
+            1.179803,
+            0.809747,
+            0.835
+          ]
+        },
+        "zinc": {
+          "min": [
+            -0.62,
+            0.202,
+            -0.445
+          ],
+          "max": [
+            0.62,
+            0.970364,
+            0.445
+          ],
+          "size": [
+            1.24,
+            0.768364,
+            0.89
+          ]
+        },
+        "rubber": {
+          "min": [
+            -0.4505,
+            0.003,
+            -0.369
+          ],
+          "max": [
+            0.4505,
+            0.141,
+            0.369
+          ],
+          "size": [
+            0.901,
+            0.138,
+            0.738
+          ]
+        }
+      },
+      "triangles": 1464,
+      "collision": [
+        "DumpsterContact"
+      ],
+      "interaction": "Static bin or independent lid interaction"
+    },
+    {
+      "assetId": "roadside-props.DumpsterLid",
+      "name": "DumpsterLid",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "DumpsterLid",
+      "dimensionsM": [
+        1.210739,
+        0.139745,
+        0.812
+      ],
+      "pivotM": [
+        4.2,
+        0.958,
+        0.355
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Handle": [
+          0,
+          -0.011,
+          -0.744
+        ]
+      },
+      "materials": [
+        "enamel",
+        "zinc"
+      ],
+      "materialBoundsM": {
+        "enamel": {
+          "min": [
+            -0.60537,
+            -0.051896,
+            -0.776
+          ],
+          "max": [
+            0.60537,
+            0.087849,
+            0.036
+          ],
+          "size": [
+            1.210739,
+            0.139745,
+            0.812
+          ]
+        },
+        "zinc": {
+          "min": [
+            -0.188,
+            -0.022961,
+            -0.755
+          ],
+          "max": [
+            0.188,
+            0.000462,
+            -0.702166
+          ],
+          "size": [
+            0.376,
+            0.023423,
+            0.052834
+          ]
+        }
+      },
+      "triangles": 304,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    },
+    {
+      "assetId": "roadside-props.BirchTree",
+      "name": "BirchTree",
+      "category": "Vegetation",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "BirchTree",
+      "dimensionsM": [
+        3.988171,
+        6.664344,
+        3.243709
+      ],
+      "pivotM": [
+        7.8,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Trunk": [
+          0,
+          0,
+          0
+        ],
+        "Canopy": [
+          0,
+          5.18,
+          0
+        ]
+      },
+      "materials": [
+        "birch",
+        "bark",
+        "barkMark",
+        "lightLeaves",
+        "leaves"
+      ],
+      "materialBoundsM": {
+        "birch": {
+          "min": [
+            -0.160954,
+            -0.072644,
+            -0.180995
+          ],
+          "max": [
+            0.173913,
+            5.831929,
+            0.150988
+          ],
+          "size": [
+            0.334868,
+            5.904573,
+            0.331983
+          ]
+        },
+        "bark": {
+          "min": [
+            -1.219031,
+            2.77796,
+            -1.026188
+          ],
+          "max": [
+            1.069258,
+            5.614283,
+            0.898395
+          ],
+          "size": [
+            2.288289,
+            2.836323,
+            1.924583
+          ]
+        },
+        "barkMark": {
+          "min": [
+            -0.139825,
+            0.162697,
+            -0.136887
+          ],
+          "max": [
+            0.152835,
+            3.627779,
+            0.146934
+          ],
+          "size": [
+            0.292659,
+            3.465082,
+            0.283821
+          ]
+        },
+        "lightLeaves": {
+          "min": [
+            -2.077945,
+            4.0021,
+            -0.80769
+          ],
+          "max": [
+            1.574771,
+            6.2117,
+            1.603053
+          ],
+          "size": [
+            3.652716,
+            2.2096,
+            2.410743
+          ]
+        },
+        "leaves": {
+          "min": [
+            -0.901999,
+            4.0521,
+            -1.640655
+          ],
+          "max": [
+            1.910226,
+            6.5917,
+            0.485357
+          ],
+          "size": [
+            2.812225,
+            2.5396,
+            2.126013
+          ]
+        }
+      },
+      "triangles": 1826,
+      "collision": [
+        "BirchTrunk"
+      ],
+      "interaction": "Place as modular scenery"
+    },
+    {
+      "assetId": "roadside-props.HedgeSegment",
+      "name": "HedgeSegment",
+      "category": "Vegetation",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "HedgeSegment",
+      "dimensionsM": [
+        1.08968,
+        1.362721,
+        3.354843
+      ],
+      "pivotM": [
+        10.6,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Start": [
+          0,
+          0,
+          1.5
+        ],
+        "End": [
+          0,
+          0,
+          -1.5
+        ]
+      },
+      "materials": [
+        "shadowLeaves",
+        "leaves"
+      ],
+      "materialBoundsM": {
+        "shadowLeaves": {
+          "min": [
+            -0.504693,
+            -0.040721,
+            -1.674614
+          ],
+          "max": [
+            0.502683,
+            1.11159,
+            1.680229
+          ],
+          "size": [
+            1.007377,
+            1.152311,
+            3.354843
+          ]
+        },
+        "leaves": {
+          "min": [
+            -0.53659,
+            0.387001,
+            -1.654455
+          ],
+          "max": [
+            0.55309,
+            1.322,
+            1.5098
+          ],
+          "size": [
+            1.08968,
+            0.934999,
+            3.164256
+          ]
+        }
+      },
+      "triangles": 1980,
+      "collision": [],
+      "interaction": "Place as modular scenery"
+    },
+    {
+      "assetId": "roadside-props.GrassTuft",
+      "name": "GrassTuft",
+      "category": "Vegetation",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/roadside-props/exports/RoadsideProps.glb",
+      "node": "GrassTuft",
+      "dimensionsM": [
+        0.250693,
+        0.132129,
+        0.243609
+      ],
+      "pivotM": [
+        12.15,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Ground": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "grass",
+        "lightLeaves"
+      ],
+      "materialBoundsM": {
+        "grass": {
+          "min": [
+            -0.129076,
+            -0.006863,
+            -0.120074
+          ],
+          "max": [
+            0.121617,
+            0.125266,
+            0.122244
+          ],
+          "size": [
+            0.250693,
+            0.132129,
+            0.242318
+          ]
+        },
+        "lightLeaves": {
+          "min": [
+            -0.094567,
+            -0.005818,
+            -0.10988
+          ],
+          "max": [
+            0.095391,
+            0.124925,
+            0.123535
+          ],
+          "size": [
+            0.189958,
+            0.130743,
+            0.233415
+          ]
+        }
+      },
+      "triangles": 496,
+      "collision": [],
+      "interaction": "Place as modular scenery"
+    }
+  ],
+  "stats": {
+    "triangles": 11874,
+    "components": 9,
+    "materialLayers": 25,
+    "maxTrianglesPerComponent": 2960
+  }
+}

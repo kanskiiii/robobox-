@@ -1,0 +1,5942 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sm50",
+  "name": "SM50",
+  "stage": "Distance model",
+  "source": "vehicles/sm50/source/motorcycle.mjs",
+  "export": "vehicles/sm50/exports/SM50-distance.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -0.371085,
+      0,
+      -0.965
+    ],
+    "max": [
+      0.371085,
+      1.082,
+      0.963
+    ],
+    "size": [
+      0.74217,
+      1.082,
+      1.928
+    ]
+  },
+  "wheelbaseM": 1.328,
+  "nominalSeatHeightM": 0.891,
+  "wheelSize": "17-inch rim class",
+  "datumsM": {
+    "FrontAxle": [
+      0,
+      0.301,
+      -0.664
+    ],
+    "RearAxle": [
+      0,
+      0.299,
+      0.664
+    ],
+    "Steering": [
+      0,
+      0.876,
+      -0.384
+    ],
+    "Swingarm": [
+      0,
+      0.448,
+      0.204
+    ],
+    "Crankshaft": [
+      0,
+      0.375,
+      -0.049
+    ]
+  },
+  "proxies": [
+    {
+      "name": "ChassisProxy",
+      "center": [
+        0,
+        0.565,
+        0.02
+      ],
+      "size": [
+        0.24,
+        0.535,
+        0.665
+      ],
+      "target": "MainFrame"
+    },
+    {
+      "name": "SeatProxy",
+      "center": [
+        0,
+        0.838,
+        0.373
+      ],
+      "size": [
+        0.154,
+        0.106,
+        0.613
+      ],
+      "target": "Subframe"
+    },
+    {
+      "name": "FrontWheelProxy",
+      "center": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "size": [
+        0.105,
+        0.602,
+        0.602
+      ],
+      "target": "FrontTire",
+      "shape": "Cylinder"
+    },
+    {
+      "name": "RearWheelProxy",
+      "center": [
+        0,
+        0.299,
+        0.664
+      ],
+      "size": [
+        0.132,
+        0.598,
+        0.598
+      ],
+      "target": "RearTire",
+      "shape": "Cylinder"
+    }
+  ],
+  "materials": {
+    "frame": {
+      "name": "Graphite painted steel",
+      "hex": "#363b40",
+      "metallic": 0.55,
+      "roughness": 0.34,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "body": {
+      "name": "Petrol blue injection-moulded plastic",
+      "hex": "#067e89",
+      "metallic": 0.02,
+      "roughness": 0.36,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "trim": {
+      "name": "Warm ivory plastic",
+      "hex": "#f1e7ca",
+      "metallic": 0.02,
+      "roughness": 0.38,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Textured black nylon",
+      "hex": "#20262a",
+      "metallic": 0,
+      "roughness": 0.73,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "seat": {
+      "name": "Grained black vinyl",
+      "hex": "#272a2a",
+      "metallic": 0,
+      "roughness": 0.81,
+      "studioMaterial": "Fabric",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Road tire rubber",
+      "hex": "#27292a",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "tread": {
+      "name": "Recessed tread rubber",
+      "hex": "#131718",
+      "metallic": 0,
+      "roughness": 0.98,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "alloy": {
+      "name": "Machined aluminium",
+      "hex": "#b7c0c4",
+      "metallic": 0.8,
+      "roughness": 0.28,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "cast": {
+      "name": "Cast aluminium",
+      "hex": "#888b84",
+      "metallic": 0.67,
+      "roughness": 0.65,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "rotor": {
+      "name": "Brushed brake steel",
+      "hex": "#a9aead",
+      "metallic": 0.8,
+      "roughness": 0.46,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "chrome": {
+      "name": "Hard chromed fork tube",
+      "hex": "#c7d7df",
+      "metallic": 0.95,
+      "roughness": 0.17,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "anodized": {
+      "name": "Black anodized aluminium",
+      "hex": "#383b3c",
+      "metallic": 0.69,
+      "roughness": 0.38,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "spring": {
+      "name": "Mustard yellow powder coat",
+      "hex": "#e2ad42",
+      "metallic": 0.26,
+      "roughness": 0.34,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "pipe": {
+      "name": "Heat stained stainless steel",
+      "hex": "#896f55",
+      "metallic": 0.76,
+      "roughness": 0.43,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "weld": {
+      "name": "Stainless weld bead",
+      "hex": "#b09979",
+      "metallic": 0.72,
+      "roughness": 0.56,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "grease": {
+      "name": "Greased drive steel",
+      "hex": "#4e4940",
+      "metallic": 0.63,
+      "roughness": 0.65,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "dirty": {
+      "name": "Dusty unpainted polymer",
+      "hex": "#4a4740",
+      "metallic": 0,
+      "roughness": 0.89,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "glass": {
+      "name": "Clear polycarbonate",
+      "hex": "#dce8dd",
+      "metallic": 0,
+      "roughness": 0.12,
+      "studioMaterial": "Glass",
+      "transparency": 0.63
+    },
+    "reflector": {
+      "name": "Headlamp reflector",
+      "hex": "#e3e7d6",
+      "metallic": 0.38,
+      "roughness": 0.24,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Red tail lamp lens",
+      "hex": "#a61a21",
+      "metallic": 0.06,
+      "roughness": 0.19,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "amber": {
+      "name": "Amber reflector",
+      "hex": "#ce6020",
+      "metallic": 0.05,
+      "roughness": 0.24,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "sm50.MainFrame",
+      "name": "MainFrame",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "MainFrame",
+      "dimensionsM": [
+        0.255811,
+        0.690315,
+        0.74411
+      ],
+      "pivotM": [
+        0,
+        0.47,
+        0
+      ],
+      "attachmentLocalM": {
+        "SteeringAxis": [
+          0,
+          0.406,
+          -0.384
+        ],
+        "SwingarmAxis": [
+          0,
+          -0.022,
+          0.204
+        ],
+        "EngineFront": [
+          0,
+          -0.116,
+          -0.201
+        ],
+        "EngineRear": [
+          0,
+          -0.134,
+          0.115
+        ],
+        "ShockUpper": [
+          0,
+          0.256,
+          0.272
+        ],
+        "SubframeFront": [
+          0,
+          0.27,
+          0.238
+        ],
+        "TankMount": [
+          0,
+          0.401,
+          -0.165
+        ]
+      },
+      "materials": [
+        "frame",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "frame": {
+          "min": [
+            -0.127906,
+            -0.207954,
+            -0.46011
+          ],
+          "max": [
+            0.127906,
+            0.482361,
+            0.284
+          ],
+          "size": [
+            0.255811,
+            0.690315,
+            0.74411
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.1235,
+            -0.14266,
+            -0.211
+          ],
+          "max": [
+            0.1235,
+            0.26166,
+            0.282
+          ],
+          "size": [
+            0.247,
+            0.404321,
+            0.493
+          ]
+        }
+      },
+      "triangles": 1632,
+      "collision": [
+        "ChassisProxy"
+      ],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Subframe",
+      "name": "Subframe",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Subframe",
+      "dimensionsM": [
+        0.207999,
+        0.299564,
+        0.576415
+      ],
+      "pivotM": [
+        0,
+        0.74,
+        0.238
+      ],
+      "attachmentLocalM": {
+        "SeatCatch": [
+          0,
+          0.098,
+          0.335
+        ],
+        "TailLamp": [
+          0,
+          0.089,
+          0.593
+        ],
+        "AirboxMount": [
+          0,
+          -0.046,
+          0.133
+        ]
+      },
+      "materials": [
+        "frame",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "frame": {
+          "min": [
+            -0.104,
+            -0.192564,
+            -0.015
+          ],
+          "max": [
+            0.104,
+            0.107,
+            0.561415
+          ],
+          "size": [
+            0.207999,
+            0.299564,
+            0.576415
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.103,
+            0.001938,
+            0.003
+          ],
+          "max": [
+            0.103,
+            0.014062,
+            0.017
+          ],
+          "size": [
+            0.206,
+            0.012124,
+            0.014
+          ]
+        }
+      },
+      "triangles": 672,
+      "collision": [
+        "SeatProxy"
+      ],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Swingarm",
+      "name": "Swingarm",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Swingarm",
+      "dimensionsM": [
+        0.327684,
+        0.218271,
+        0.538293
+      ],
+      "pivotM": [
+        0,
+        0.448,
+        0.204
+      ],
+      "attachmentLocalM": {
+        "Pivot": [
+          0,
+          0,
+          0
+        ],
+        "RearAxle": [
+          0,
+          -0.149,
+          0.46
+        ],
+        "ShockLower": [
+          0,
+          -0.019,
+          0.228
+        ],
+        "ChainGuide": [
+          -0.109,
+          -0.216,
+          0.328
+        ]
+      },
+      "materials": [
+        "alloy",
+        "frame",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.163842,
+            -0.176,
+            -0.025293
+          ],
+          "max": [
+            0.163842,
+            0.042271,
+            0.513
+          ],
+          "size": [
+            0.327684,
+            0.218271,
+            0.538293
+          ]
+        },
+        "frame": {
+          "min": [
+            -0.032,
+            -0.050316,
+            0.160839
+          ],
+          "max": [
+            0.032,
+            -0.000684,
+            0.243161
+          ],
+          "size": [
+            0.064,
+            0.049632,
+            0.082322
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.1615,
+            -0.162,
+            0.433
+          ],
+          "max": [
+            0.1615,
+            -0.135,
+            0.489
+          ],
+          "size": [
+            0.323,
+            0.027,
+            0.056
+          ]
+        }
+      },
+      "triangles": 528,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    },
+    {
+      "assetId": "sm50.SteeringAssembly",
+      "name": "SteeringAssembly",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "SteeringAssembly",
+      "dimensionsM": [
+        0.274,
+        0.240032,
+        0.159723
+      ],
+      "pivotM": [
+        0,
+        0.876,
+        -0.384
+      ],
+      "attachmentLocalM": {
+        "SteeringUpper": [
+          0,
+          0.059,
+          0.031
+        ],
+        "SteeringLower": [
+          0,
+          -0.09,
+          -0.04
+        ],
+        "ForkTopL": [
+          -0.102,
+          0.085,
+          0.002
+        ],
+        "ForkTopR": [
+          0.102,
+          0.085,
+          0.002
+        ],
+        "HandlebarClamp": [
+          0,
+          0.13,
+          0.05
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.137,
+            -0.110557,
+            -0.118
+          ],
+          "max": [
+            0.137,
+            0.103557,
+            0.037
+          ],
+          "size": [
+            0.274,
+            0.214115,
+            0.155
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.124,
+            -0.127032,
+            -0.088
+          ],
+          "max": [
+            0.124,
+            0.113,
+            0.041723
+          ],
+          "size": [
+            0.248,
+            0.240032,
+            0.129723
+          ]
+        }
+      },
+      "triangles": 1752,
+      "collision": [],
+      "interaction": "Rotate about the SteeringLower-to-SteeringUpper axis"
+    },
+    {
+      "assetId": "sm50.ForkUpper_L",
+      "name": "ForkUpper_L",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ForkUpper_L",
+      "dimensionsM": [
+        0.064,
+        0.419317,
+        0.218951
+      ],
+      "pivotM": [
+        -0.102,
+        0.984,
+        -0.371
+      ],
+      "attachmentLocalM": {
+        "ForkTop": [
+          0,
+          0,
+          0
+        ],
+        "SliderAxis": [
+          0,
+          -0.38248,
+          -0.16408
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.032,
+            -0.393519,
+            -0.189812
+          ],
+          "max": [
+            0.032,
+            0.010645,
+            0.024813
+          ],
+          "size": [
+            0.064,
+            0.404163,
+            0.214625
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.026,
+            -0.014582,
+            -0.025077
+          ],
+          "max": [
+            0.026,
+            0.014582,
+            0.025077
+          ],
+          "size": [
+            0.052,
+            0.029163,
+            0.050154
+          ]
+        },
+        "black": {
+          "min": [
+            -0.027,
+            -0.404736,
+            -0.193874
+          ],
+          "max": [
+            0.027,
+            -0.365005,
+            -0.136337
+          ],
+          "size": [
+            0.054,
+            0.03973,
+            0.057537
+          ]
+        }
+      },
+      "triangles": 560,
+      "collision": [],
+      "interaction": "Steers with triple clamps"
+    },
+    {
+      "assetId": "sm50.ForkLower_L",
+      "name": "ForkLower_L",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ForkLower_L",
+      "dimensionsM": [
+        0.06,
+        0.396439,
+        0.205659
+      ],
+      "pivotM": [
+        -0.102,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "FrontAxle": [
+          0,
+          0,
+          0
+        ],
+        "ForkSlider": [
+          0,
+          0.25954,
+          0.11134
+        ]
+      },
+      "materials": [
+        "chrome",
+        "cast",
+        "body"
+      ],
+      "materialBoundsM": {
+        "chrome": {
+          "min": [
+            -0.021,
+            0.016992,
+            -0.008458
+          ],
+          "max": [
+            0.021,
+            0.363439,
+            0.171659
+          ],
+          "size": [
+            0.042,
+            0.346447,
+            0.180117
+          ]
+        },
+        "cast": {
+          "min": [
+            -0.027575,
+            -0.033,
+            -0.033
+          ],
+          "max": [
+            0.027575,
+            0.152892,
+            0.083586
+          ],
+          "size": [
+            0.055149,
+            0.185892,
+            0.116586
+          ]
+        },
+        "body": {
+          "min": [
+            -0.03,
+            0.036,
+            -0.034
+          ],
+          "max": [
+            0.03,
+            0.247,
+            0.08
+          ],
+          "size": [
+            0.06,
+            0.211,
+            0.114
+          ]
+        }
+      },
+      "triangles": 576,
+      "collision": [],
+      "interaction": "Translate along fork axis"
+    },
+    {
+      "assetId": "sm50.ForkUpper_R",
+      "name": "ForkUpper_R",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ForkUpper_R",
+      "dimensionsM": [
+        0.064,
+        0.419317,
+        0.218951
+      ],
+      "pivotM": [
+        0.102,
+        0.984,
+        -0.371
+      ],
+      "attachmentLocalM": {
+        "ForkTop": [
+          0,
+          0,
+          0
+        ],
+        "SliderAxis": [
+          0,
+          -0.38248,
+          -0.16408
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.032,
+            -0.393519,
+            -0.189812
+          ],
+          "max": [
+            0.032,
+            0.010645,
+            0.024813
+          ],
+          "size": [
+            0.064,
+            0.404163,
+            0.214625
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.026,
+            -0.014582,
+            -0.025077
+          ],
+          "max": [
+            0.026,
+            0.014582,
+            0.025077
+          ],
+          "size": [
+            0.052,
+            0.029163,
+            0.050154
+          ]
+        },
+        "black": {
+          "min": [
+            -0.027,
+            -0.404736,
+            -0.193874
+          ],
+          "max": [
+            0.027,
+            -0.365005,
+            -0.136337
+          ],
+          "size": [
+            0.054,
+            0.03973,
+            0.057537
+          ]
+        }
+      },
+      "triangles": 560,
+      "collision": [],
+      "interaction": "Steers with triple clamps"
+    },
+    {
+      "assetId": "sm50.ForkLower_R",
+      "name": "ForkLower_R",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ForkLower_R",
+      "dimensionsM": [
+        0.06,
+        0.396439,
+        0.205659
+      ],
+      "pivotM": [
+        0.102,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "FrontAxle": [
+          0,
+          0,
+          0
+        ],
+        "ForkSlider": [
+          0,
+          0.25954,
+          0.11134
+        ]
+      },
+      "materials": [
+        "chrome",
+        "cast",
+        "body"
+      ],
+      "materialBoundsM": {
+        "chrome": {
+          "min": [
+            -0.021,
+            0.016992,
+            -0.008458
+          ],
+          "max": [
+            0.021,
+            0.363439,
+            0.171659
+          ],
+          "size": [
+            0.042,
+            0.346447,
+            0.180117
+          ]
+        },
+        "cast": {
+          "min": [
+            -0.029494,
+            -0.033,
+            -0.033
+          ],
+          "max": [
+            0.027575,
+            0.152892,
+            0.083586
+          ],
+          "size": [
+            0.057069,
+            0.185892,
+            0.116586
+          ]
+        },
+        "body": {
+          "min": [
+            -0.03,
+            0.036,
+            -0.034
+          ],
+          "max": [
+            0.03,
+            0.247,
+            0.08
+          ],
+          "size": [
+            0.06,
+            0.211,
+            0.114
+          ]
+        }
+      },
+      "triangles": 624,
+      "collision": [],
+      "interaction": "Translate along fork axis"
+    },
+    {
+      "assetId": "sm50.ShockBody",
+      "name": "ShockBody",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ShockBody",
+      "dimensionsM": [
+        0.098,
+        0.19428,
+        0.127451
+      ],
+      "pivotM": [
+        0,
+        0.726,
+        0.272
+      ],
+      "attachmentLocalM": {
+        "ShockUpper": [
+          0,
+          0,
+          0
+        ],
+        "SpringSeat": [
+          0,
+          -0.07425,
+          0.04
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.03,
+            -0.17628,
+            -0.018
+          ],
+          "max": [
+            0.03,
+            0.018,
+            0.109451
+          ],
+          "size": [
+            0.06,
+            0.19428,
+            0.127451
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.037,
+            -0.12795,
+            0.004226
+          ],
+          "max": [
+            0.061,
+            -0.04005,
+            0.102349
+          ],
+          "size": [
+            0.098,
+            0.0879,
+            0.098123
+          ]
+        }
+      },
+      "triangles": 664,
+      "collision": [],
+      "interaction": "Pivot at upper shock eye"
+    },
+    {
+      "assetId": "sm50.ShockShaft",
+      "name": "ShockShaft",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ShockShaft",
+      "dimensionsM": [
+        0.07,
+        0.172213,
+        0.106404
+      ],
+      "pivotM": [
+        0,
+        0.429,
+        0.432
+      ],
+      "attachmentLocalM": {
+        "ShockLower": [
+          0,
+          0,
+          0
+        ],
+        "SpringSeat": [
+          0,
+          0.06237,
+          -0.0336
+        ]
+      },
+      "materials": [
+        "chrome",
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "chrome": {
+          "min": [
+            -0.01,
+            -0.004743,
+            -0.090404
+          ],
+          "max": [
+            0.01,
+            0.156213,
+            0.008804
+          ],
+          "size": [
+            0.02,
+            0.160956,
+            0.099208
+          ]
+        },
+        "cast": {
+          "min": [
+            -0.018,
+            -0.016,
+            -0.016
+          ],
+          "max": [
+            0.018,
+            0.016,
+            0.016
+          ],
+          "size": [
+            0.036,
+            0.032,
+            0.032
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.035,
+            0.03983,
+            -0.067613
+          ],
+          "max": [
+            0.035,
+            0.08491,
+            0.000413
+          ],
+          "size": [
+            0.07,
+            0.045079,
+            0.068026
+          ]
+        }
+      },
+      "triangles": 400,
+      "collision": [],
+      "interaction": "Translate along shock axis"
+    },
+    {
+      "assetId": "sm50.ShockSpring",
+      "name": "ShockSpring",
+      "category": "Suspension",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ShockSpring",
+      "dimensionsM": [
+        0.067175,
+        0.162771,
+        0.125534
+      ],
+      "pivotM": [
+        0,
+        0.726,
+        0.272
+      ],
+      "attachmentLocalM": {
+        "SpringUpper": [
+          0,
+          -0.08316,
+          0.0448
+        ],
+        "SpringLower": [
+          0,
+          -0.22869,
+          0.1232
+        ]
+      },
+      "materials": [
+        "spring"
+      ],
+      "materialBoundsM": {
+        "spring": {
+          "min": [
+            -0.033588,
+            -0.232539,
+            0.018245
+          ],
+          "max": [
+            0.033587,
+            -0.069768,
+            0.143779
+          ],
+          "size": [
+            0.067175,
+            0.162771,
+            0.125534
+          ]
+        }
+      },
+      "triangles": 1872,
+      "collision": [],
+      "interaction": "Compress along shock axis"
+    },
+    {
+      "assetId": "sm50.FrontTire",
+      "name": "FrontTire",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontTire",
+      "dimensionsM": [
+        0.105,
+        0.602,
+        0.602
+      ],
+      "pivotM": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.0525,
+            -0.301,
+            -0.301
+          ],
+          "max": [
+            0.0525,
+            0.301,
+            0.301
+          ],
+          "size": [
+            0.105,
+            0.602,
+            0.602
+          ]
+        }
+      },
+      "triangles": 960,
+      "collision": [
+        "FrontWheelProxy"
+      ],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.FrontRim",
+      "name": "FrontRim",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontRim",
+      "dimensionsM": [
+        0.0882,
+        0.454,
+        0.454
+      ],
+      "pivotM": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.0441,
+            -0.227,
+            -0.227
+          ],
+          "max": [
+            0.0441,
+            0.227,
+            0.227
+          ],
+          "size": [
+            0.0882,
+            0.454,
+            0.454
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.004,
+            0.173682,
+            0.074638
+          ],
+          "max": [
+            0.004,
+            0.197945,
+            0.091321
+          ],
+          "size": [
+            0.008,
+            0.024263,
+            0.016683
+          ]
+        }
+      },
+      "triangles": 928,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.FrontHub",
+      "name": "FrontHub",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontHub",
+      "dimensionsM": [
+        0.138,
+        0.096,
+        0.096
+      ],
+      "pivotM": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "cast",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.068,
+            -0.048,
+            -0.048
+          ],
+          "max": [
+            0.066,
+            0.048,
+            0.048
+          ],
+          "size": [
+            0.134,
+            0.096,
+            0.096
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.069,
+            -0.025,
+            -0.025
+          ],
+          "max": [
+            0.069,
+            0.025,
+            0.025
+          ],
+          "size": [
+            0.138,
+            0.05,
+            0.05
+          ]
+        }
+      },
+      "triangles": 1280,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.FrontSpokeSet",
+      "name": "FrontSpokeSet",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontSpokeSet",
+      "dimensionsM": [
+        0.084913,
+        0.408476,
+        0.408476
+      ],
+      "pivotM": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.042457,
+            -0.2043,
+            -0.2043
+          ],
+          "max": [
+            0.042457,
+            0.204176,
+            0.204176
+          ],
+          "size": [
+            0.084913,
+            0.408476,
+            0.408476
+          ]
+        }
+      },
+      "triangles": 432,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.FrontBrakeDisc",
+      "name": "FrontBrakeDisc",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontBrakeDisc",
+      "dimensionsM": [
+        0.02,
+        0.276,
+        0.276
+      ],
+      "pivotM": [
+        0,
+        0.301,
+        -0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rotor",
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "rotor": {
+          "min": [
+            0.081,
+            -0.138,
+            -0.138
+          ],
+          "max": [
+            0.085,
+            0.138,
+            0.138
+          ],
+          "size": [
+            0.004,
+            0.276,
+            0.276
+          ]
+        },
+        "anodized": {
+          "min": [
+            0.069,
+            -0.10493,
+            -0.102843
+          ],
+          "max": [
+            0.089,
+            0.10493,
+            0.102843
+          ],
+          "size": [
+            0.02,
+            0.209861,
+            0.205687
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.085,
+            -0.04133,
+            -0.037043
+          ],
+          "max": [
+            0.089,
+            0.04133,
+            0.037043
+          ],
+          "size": [
+            0.004,
+            0.08266,
+            0.074086
+          ]
+        }
+      },
+      "triangles": 1792,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.FrontBrakeCaliper",
+      "name": "FrontBrakeCaliper",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontBrakeCaliper",
+      "dimensionsM": [
+        0.0455,
+        0.078,
+        0.063
+      ],
+      "pivotM": [
+        0.083,
+        0.404331,
+        -0.58866
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0,
+          0
+        ],
+        "Hose": [
+          0.006,
+          0.045,
+          0.011
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.02,
+            -0.033,
+            -0.034
+          ],
+          "max": [
+            0.02,
+            0.037,
+            0.029
+          ],
+          "size": [
+            0.04,
+            0.07,
+            0.063
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.001,
+            -0.01833,
+            -0.021
+          ],
+          "max": [
+            0.0255,
+            0.045,
+            0.016
+          ],
+          "size": [
+            0.0245,
+            0.06333,
+            0.037
+          ]
+        }
+      },
+      "triangles": 320,
+      "collision": [],
+      "interaction": "Mounts to fork lower or swingarm"
+    },
+    {
+      "assetId": "sm50.RearTire",
+      "name": "RearTire",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearTire",
+      "dimensionsM": [
+        0.132,
+        0.598,
+        0.598
+      ],
+      "pivotM": [
+        0,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.066,
+            -0.299,
+            -0.299
+          ],
+          "max": [
+            0.066,
+            0.299,
+            0.299
+          ],
+          "size": [
+            0.132,
+            0.598,
+            0.598
+          ]
+        }
+      },
+      "triangles": 960,
+      "collision": [
+        "RearWheelProxy"
+      ],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.RearRim",
+      "name": "RearRim",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearRim",
+      "dimensionsM": [
+        0.11088,
+        0.454,
+        0.454
+      ],
+      "pivotM": [
+        0,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.05544,
+            -0.227,
+            -0.227
+          ],
+          "max": [
+            0.05544,
+            0.227,
+            0.227
+          ],
+          "size": [
+            0.11088,
+            0.454,
+            0.454
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.004,
+            0.173682,
+            0.074638
+          ],
+          "max": [
+            0.004,
+            0.197945,
+            0.091321
+          ],
+          "size": [
+            0.008,
+            0.024263,
+            0.016683
+          ]
+        }
+      },
+      "triangles": 928,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.RearHub",
+      "name": "RearHub",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearHub",
+      "dimensionsM": [
+        0.138,
+        0.096,
+        0.096
+      ],
+      "pivotM": [
+        0,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "cast",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.068,
+            -0.048,
+            -0.048
+          ],
+          "max": [
+            0.066,
+            0.048,
+            0.048
+          ],
+          "size": [
+            0.134,
+            0.096,
+            0.096
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.069,
+            -0.025,
+            -0.025
+          ],
+          "max": [
+            0.069,
+            0.025,
+            0.025
+          ],
+          "size": [
+            0.138,
+            0.05,
+            0.05
+          ]
+        }
+      },
+      "triangles": 1280,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.RearSpokeSet",
+      "name": "RearSpokeSet",
+      "category": "Wheels",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearSpokeSet",
+      "dimensionsM": [
+        0.084923,
+        0.408439,
+        0.408439
+      ],
+      "pivotM": [
+        0,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.042462,
+            -0.204263,
+            -0.204263
+          ],
+          "max": [
+            0.042462,
+            0.204176,
+            0.204176
+          ],
+          "size": [
+            0.084923,
+            0.408439,
+            0.408439
+          ]
+        }
+      },
+      "triangles": 432,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.RearBrakeDisc",
+      "name": "RearBrakeDisc",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearBrakeDisc",
+      "dimensionsM": [
+        0.02,
+        0.21,
+        0.21
+      ],
+      "pivotM": [
+        0,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rotor",
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "rotor": {
+          "min": [
+            0.101,
+            -0.105,
+            -0.105
+          ],
+          "max": [
+            0.105,
+            0.105,
+            0.105
+          ],
+          "size": [
+            0.004,
+            0.21,
+            0.21
+          ]
+        },
+        "anodized": {
+          "min": [
+            0.089,
+            -0.081047,
+            -0.079614
+          ],
+          "max": [
+            0.109,
+            0.081047,
+            0.079614
+          ],
+          "size": [
+            0.02,
+            0.162094,
+            0.159229
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.105,
+            -0.04133,
+            -0.037043
+          ],
+          "max": [
+            0.109,
+            0.04133,
+            0.037043
+          ],
+          "size": [
+            0.004,
+            0.08266,
+            0.074086
+          ]
+        }
+      },
+      "triangles": 1792,
+      "collision": [],
+      "interaction": "Rotate with wheel around +X"
+    },
+    {
+      "assetId": "sm50.RearBrakeCaliper",
+      "name": "RearBrakeCaliper",
+      "category": "Brakes",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearBrakeCaliper",
+      "dimensionsM": [
+        0.0455,
+        0.078,
+        0.063
+      ],
+      "pivotM": [
+        0.103,
+        0.380033,
+        0.609744
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0,
+          0
+        ],
+        "Hose": [
+          0.006,
+          0.045,
+          0.011
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.02,
+            -0.033,
+            -0.034
+          ],
+          "max": [
+            0.02,
+            0.037,
+            0.029
+          ],
+          "size": [
+            0.04,
+            0.07,
+            0.063
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.001,
+            -0.01833,
+            -0.021
+          ],
+          "max": [
+            0.0255,
+            0.045,
+            0.016
+          ],
+          "size": [
+            0.0245,
+            0.06333,
+            0.037
+          ]
+        }
+      },
+      "triangles": 320,
+      "collision": [],
+      "interaction": "Mounts to fork lower or swingarm"
+    },
+    {
+      "assetId": "sm50.Crankcase_L",
+      "name": "Crankcase_L",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Crankcase_L",
+      "dimensionsM": [
+        0.1005,
+        0.195,
+        0.389
+      ],
+      "pivotM": [
+        0,
+        0.375,
+        -0.049
+      ],
+      "attachmentLocalM": {
+        "CrankAxis": [
+          0,
+          0,
+          0
+        ],
+        "Deck": [
+          0,
+          0.114,
+          -0.024
+        ],
+        "OutputShaft": [
+          -0.109,
+          0.027,
+          0.223
+        ],
+        "MountFront": [
+          0,
+          -0.021,
+          -0.152
+        ],
+        "MountRear": [
+          0,
+          -0.039,
+          0.164
+        ]
+      },
+      "materials": [
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.102,
+            -0.084,
+            -0.165
+          ],
+          "max": [
+            -0.0015,
+            0.111,
+            0.224
+          ],
+          "size": [
+            0.1005,
+            0.195,
+            0.389
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0875,
+            -0.062936,
+            -0.1217
+          ],
+          "max": [
+            -0.0825,
+            0.091936,
+            0.1947
+          ],
+          "size": [
+            0.005,
+            0.154873,
+            0.3164
+          ]
+        }
+      },
+      "triangles": 616,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Crankcase_R",
+      "name": "Crankcase_R",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Crankcase_R",
+      "dimensionsM": [
+        0.1005,
+        0.195,
+        0.389
+      ],
+      "pivotM": [
+        0,
+        0.375,
+        -0.049
+      ],
+      "attachmentLocalM": {
+        "CrankAxis": [
+          0,
+          0,
+          0
+        ],
+        "Deck": [
+          0,
+          0.114,
+          -0.024
+        ],
+        "OutputShaft": [
+          -0.109,
+          0.027,
+          0.223
+        ],
+        "MountFront": [
+          0,
+          -0.021,
+          -0.152
+        ],
+        "MountRear": [
+          0,
+          -0.039,
+          0.164
+        ]
+      },
+      "materials": [
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            0.0015,
+            -0.084,
+            -0.165
+          ],
+          "max": [
+            0.102,
+            0.111,
+            0.224
+          ],
+          "size": [
+            0.1005,
+            0.195,
+            0.389
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.0825,
+            -0.062936,
+            -0.1217
+          ],
+          "max": [
+            0.0875,
+            0.091936,
+            0.1947
+          ],
+          "size": [
+            0.005,
+            0.154873,
+            0.3164
+          ]
+        }
+      },
+      "triangles": 616,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.GearboxHousing",
+      "name": "GearboxHousing",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "GearboxHousing",
+      "dimensionsM": [
+        0.195,
+        0.147,
+        0.182
+      ],
+      "pivotM": [
+        0,
+        0.378,
+        0.057
+      ],
+      "attachmentLocalM": {
+        "InputShaft": [
+          0,
+          0,
+          0
+        ],
+        "OutputShaft": [
+          -0.109,
+          0.024,
+          0.117
+        ],
+        "ShiftAxis": [
+          -0.108,
+          -0.026,
+          0.055
+        ]
+      },
+      "materials": [
+        "cast",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.0905,
+            -0.077,
+            -0.02
+          ],
+          "max": [
+            0.0905,
+            0.07,
+            0.162
+          ],
+          "size": [
+            0.181,
+            0.147,
+            0.182
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.1045,
+            -0.003,
+            0.09
+          ],
+          "max": [
+            -0.0835,
+            0.051,
+            0.144
+          ],
+          "size": [
+            0.021,
+            0.054,
+            0.054
+          ]
+        }
+      },
+      "triangles": 360,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.ClutchCover",
+      "name": "ClutchCover",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ClutchCover",
+      "dimensionsM": [
+        0.0515,
+        0.154,
+        0.211
+      ],
+      "pivotM": [
+        0,
+        0.371,
+        0.053
+      ],
+      "attachmentLocalM": {
+        "ClutchAxis": [
+          0,
+          0,
+          0
+        ],
+        "OilFill": [
+          0.121,
+          0.064,
+          0.018
+        ]
+      },
+      "materials": [
+        "anodized",
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            0.077,
+            -0.072,
+            -0.117
+          ],
+          "max": [
+            0.124,
+            0.082,
+            0.094
+          ],
+          "size": [
+            0.047,
+            0.154,
+            0.211
+          ]
+        },
+        "cast": {
+          "min": [
+            0.1195,
+            -0.044,
+            -0.044
+          ],
+          "max": [
+            0.1285,
+            0.044,
+            0.044
+          ],
+          "size": [
+            0.009,
+            0.088,
+            0.088
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.11275,
+            -0.063196,
+            -0.102
+          ],
+          "max": [
+            0.1245,
+            0.077196,
+            0.078
+          ],
+          "size": [
+            0.01175,
+            0.140392,
+            0.18
+          ]
+        }
+      },
+      "triangles": 1272,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.IgnitionCover",
+      "name": "IgnitionCover",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "IgnitionCover",
+      "dimensionsM": [
+        0.0415,
+        0.132,
+        0.132
+      ],
+      "pivotM": [
+        0,
+        0.375,
+        -0.049
+      ],
+      "attachmentLocalM": {
+        "CrankAxis": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.1175,
+            -0.066,
+            -0.066
+          ],
+          "max": [
+            -0.076,
+            0.066,
+            0.066
+          ],
+          "size": [
+            0.0415,
+            0.132,
+            0.132
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.109,
+            -0.058292,
+            -0.058895
+          ],
+          "max": [
+            -0.103,
+            0.058292,
+            0.058895
+          ],
+          "size": [
+            0.006,
+            0.116584,
+            0.11779
+          ]
+        }
+      },
+      "triangles": 1056,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Cylinder",
+      "name": "Cylinder",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Cylinder",
+      "dimensionsM": [
+        0.122,
+        0.150023,
+        0.132393
+      ],
+      "pivotM": [
+        0,
+        0.489,
+        -0.073
+      ],
+      "attachmentLocalM": {
+        "BoreBase": [
+          0,
+          0,
+          0
+        ],
+        "BoreTop": [
+          0,
+          0.124743,
+          -0.028691
+        ],
+        "Intake": [
+          0,
+          0.036,
+          0.069
+        ],
+        "Exhaust": [
+          0.013,
+          0.049,
+          -0.06
+        ]
+      },
+      "materials": [
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.061,
+            -0.016314,
+            -0.076084
+          ],
+          "max": [
+            0.061,
+            0.133709,
+            0.05631
+          ],
+          "size": [
+            0.122,
+            0.150023,
+            0.132393
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.01647,
+            0.025072,
+            -0.064766
+          ],
+          "max": [
+            0.02947,
+            0.065834,
+            -0.004872
+          ],
+          "size": [
+            0.045941,
+            0.040762,
+            0.059895
+          ]
+        }
+      },
+      "triangles": 2320,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.CylinderHead",
+      "name": "CylinderHead",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "CylinderHead",
+      "dimensionsM": [
+        0.106,
+        0.056992,
+        0.105915
+      ],
+      "pivotM": [
+        0,
+        0.622514,
+        -0.103708
+      ],
+      "attachmentLocalM": {
+        "BoreTop": [
+          0,
+          -0.008771,
+          0.002017
+        ],
+        "SparkPlug": [
+          0,
+          0.031186,
+          -0.007173
+        ],
+        "CoolantOut": [
+          0.035,
+          0.011486,
+          -0.000292
+        ]
+      },
+      "materials": [
+        "cast",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.053,
+            -0.022834,
+            -0.052246
+          ],
+          "max": [
+            0.053,
+            0.034158,
+            0.053669
+          ],
+          "size": [
+            0.106,
+            0.056992,
+            0.105915
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.036196,
+            0.015447,
+            -0.036227
+          ],
+          "max": [
+            0.036196,
+            0.025485,
+            0.026813
+          ],
+          "size": [
+            0.072392,
+            0.010038,
+            0.06304
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.SparkPlug",
+      "name": "SparkPlug",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "SparkPlug",
+      "dimensionsM": [
+        0.012124,
+        0.042949,
+        0.018936
+      ],
+      "pivotM": [
+        0,
+        0.6537,
+        -0.110881
+      ],
+      "attachmentLocalM": {
+        "Thread": [
+          0,
+          0,
+          0
+        ],
+        "Cap": [
+          0,
+          0.036059,
+          -0.008293
+        ]
+      },
+      "materials": [
+        "alloy",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.006062,
+            -0.004269,
+            -0.00996
+          ],
+          "max": [
+            0.006062,
+            0.015963,
+            0.00727
+          ],
+          "size": [
+            0.012124,
+            0.020232,
+            0.01723
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.004875,
+            0.008625,
+            -0.011665
+          ],
+          "max": [
+            0.004875,
+            0.03868,
+            0.002631
+          ],
+          "size": [
+            0.009749,
+            0.030055,
+            0.014297
+          ]
+        }
+      },
+      "triangles": 240,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.IntakeManifold",
+      "name": "IntakeManifold",
+      "category": "Intake",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "IntakeManifold",
+      "dimensionsM": [
+        0.035453,
+        0.044481,
+        0.068493
+      ],
+      "pivotM": [
+        0,
+        0.525,
+        -0.004
+      ],
+      "attachmentLocalM": {
+        "ReedBlock": [
+          0,
+          0,
+          0
+        ],
+        "CarbOutlet": [
+          0,
+          0.01,
+          0.063
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.017727,
+            -0.016555,
+            -0.003863
+          ],
+          "max": [
+            0.017727,
+            0.027926,
+            0.06463
+          ],
+          "size": [
+            0.035453,
+            0.044481,
+            0.068493
+          ]
+        }
+      },
+      "triangles": 108,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Carburetor",
+      "name": "Carburetor",
+      "category": "Intake",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Carburetor",
+      "dimensionsM": [
+        0.064801,
+        0.092191,
+        0.096194
+      ],
+      "pivotM": [
+        0,
+        0.532,
+        0.095
+      ],
+      "attachmentLocalM": {
+        "Intake": [
+          0,
+          0.011,
+          0.05
+        ],
+        "Outlet": [
+          0,
+          0.003,
+          -0.036
+        ],
+        "ThrottleCable": [
+          0,
+          0.039,
+          0.004
+        ]
+      },
+      "materials": [
+        "cast",
+        "alloy",
+        "weld"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.026536,
+            -0.053691,
+            -0.040894
+          ],
+          "max": [
+            0.026536,
+            0.03132,
+            0.055301
+          ],
+          "size": [
+            0.053072,
+            0.085011,
+            0.096194
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.015,
+            0.0215,
+            -0.011
+          ],
+          "max": [
+            0.015,
+            0.0385,
+            0.019
+          ],
+          "size": [
+            0.03,
+            0.017,
+            0.03
+          ]
+        },
+        "weld": {
+          "min": [
+            0.015735,
+            -0.013464,
+            -0.006898
+          ],
+          "max": [
+            0.038265,
+            0.024256,
+            0.021
+          ],
+          "size": [
+            0.022531,
+            0.03772,
+            0.027898
+          ]
+        }
+      },
+      "triangles": 608,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.AirboxBoot",
+      "name": "AirboxBoot",
+      "category": "Intake",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "AirboxBoot",
+      "dimensionsM": [
+        0.066,
+        0.144603,
+        0.193946
+      ],
+      "pivotM": [
+        0,
+        0.636,
+        0.32
+      ],
+      "attachmentLocalM": {
+        "Carburetor": [
+          0,
+          -0.093,
+          -0.175
+        ],
+        "Airbox": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.033,
+            -0.113748,
+            -0.182242
+          ],
+          "max": [
+            0.033,
+            0.030855,
+            0.011704
+          ],
+          "size": [
+            0.066,
+            0.144603,
+            0.193946
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Airbox",
+      "name": "Airbox",
+      "category": "Intake",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Airbox",
+      "dimensionsM": [
+        0.137403,
+        0.145108,
+        0.189
+      ],
+      "pivotM": [
+        0,
+        0.636,
+        0.32
+      ],
+      "attachmentLocalM": {
+        "Boot": [
+          0,
+          0,
+          0
+        ],
+        "ServiceCover": [
+          -0.073,
+          0.055,
+          0.067
+        ]
+      },
+      "materials": [
+        "dirty"
+      ],
+      "materialBoundsM": {
+        "dirty": {
+          "min": [
+            -0.068702,
+            -0.028295,
+            -0.034
+          ],
+          "max": [
+            0.068702,
+            0.116813,
+            0.155
+          ],
+          "size": [
+            0.137403,
+            0.145108,
+            0.189
+          ]
+        }
+      },
+      "triangles": 96,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Radiator_L",
+      "name": "Radiator_L",
+      "category": "Cooling",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Radiator_L",
+      "dimensionsM": [
+        0.081413,
+        0.144,
+        0.072
+      ],
+      "pivotM": [
+        -0.077,
+        0.701,
+        -0.24
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          0.001,
+          0.05,
+          0.032
+        ],
+        "Lower": [
+          0.001,
+          -0.068,
+          -0.014
+        ],
+        "FrameMount": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.038706,
+            -0.081,
+            -0.027
+          ],
+          "max": [
+            0.042706,
+            0.063,
+            0.045
+          ],
+          "size": [
+            0.081413,
+            0.144,
+            0.072
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.029,
+            -0.063397,
+            -0.013994
+          ],
+          "max": [
+            0.033,
+            0.045397,
+            0.031994
+          ],
+          "size": [
+            0.062,
+            0.108794,
+            0.045988
+          ]
+        }
+      },
+      "triangles": 592,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Radiator_R",
+      "name": "Radiator_R",
+      "category": "Cooling",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Radiator_R",
+      "dimensionsM": [
+        0.081413,
+        0.144,
+        0.072
+      ],
+      "pivotM": [
+        0.077,
+        0.701,
+        -0.24
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          -0.001,
+          0.05,
+          0.032
+        ],
+        "Lower": [
+          -0.001,
+          -0.068,
+          -0.014
+        ],
+        "FrameMount": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.042706,
+            -0.081,
+            -0.027
+          ],
+          "max": [
+            0.038706,
+            0.063,
+            0.045
+          ],
+          "size": [
+            0.081413,
+            0.144,
+            0.072
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.033,
+            -0.063397,
+            -0.013994
+          ],
+          "max": [
+            0.029,
+            0.045397,
+            0.031994
+          ],
+          "size": [
+            0.062,
+            0.108794,
+            0.045988
+          ]
+        }
+      },
+      "triangles": 592,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.CoolantHoses",
+      "name": "CoolantHoses",
+      "category": "Cooling",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "CoolantHoses",
+      "dimensionsM": [
+        0.185962,
+        0.33698,
+        0.162624
+      ],
+      "pivotM": [
+        0,
+        0.6537,
+        -0.110881
+      ],
+      "attachmentLocalM": {
+        "Head": [
+          0.035,
+          -0.0197,
+          0.006881
+        ],
+        "Pump": [
+          -0.077,
+          -0.2317,
+          -0.042119
+        ]
+      },
+      "materials": [
+        "rubber",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.100979,
+            -0.233891,
+            -0.151126
+          ],
+          "max": [
+            0.084983,
+            0.103089,
+            0.011498
+          ],
+          "size": [
+            0.185962,
+            0.33698,
+            0.162624
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.033162,
+            -0.021643,
+            -0.027869
+          ],
+          "max": [
+            0.057838,
+            0.004243,
+            -0.002369
+          ],
+          "size": [
+            0.024676,
+            0.025886,
+            0.0255
+          ]
+        }
+      },
+      "triangles": 288,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.FrontSprocket",
+      "name": "FrontSprocket",
+      "category": "Drivetrain",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontSprocket",
+      "dimensionsM": [
+        0.012,
+        0.058,
+        0.058
+      ],
+      "pivotM": [
+        -0.109,
+        0.402,
+        0.174
+      ],
+      "attachmentLocalM": {
+        "SprocketAxis": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "grease",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "grease": {
+          "min": [
+            -0.003,
+            -0.029,
+            -0.029
+          ],
+          "max": [
+            0.003,
+            0.029,
+            0.029
+          ],
+          "size": [
+            0.006,
+            0.058,
+            0.058
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.009,
+            -0.010392,
+            -0.012
+          ],
+          "max": [
+            -0.003,
+            0.010392,
+            0.012
+          ],
+          "size": [
+            0.006,
+            0.020785,
+            0.024
+          ]
+        }
+      },
+      "triangles": 456,
+      "collision": [],
+      "interaction": "Rotate around +X in the left chain plane"
+    },
+    {
+      "assetId": "sm50.RearSprocket",
+      "name": "RearSprocket",
+      "category": "Drivetrain",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearSprocket",
+      "dimensionsM": [
+        0.018151,
+        0.18,
+        0.18
+      ],
+      "pivotM": [
+        -0.109,
+        0.299,
+        0.664
+      ],
+      "attachmentLocalM": {
+        "SprocketAxis": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "grease",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "grease": {
+          "min": [
+            -0.003,
+            -0.09,
+            -0.09
+          ],
+          "max": [
+            0.003,
+            0.09,
+            0.09
+          ],
+          "size": [
+            0.006,
+            0.18,
+            0.18
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0085,
+            -0.056897,
+            -0.050399
+          ],
+          "max": [
+            0.009651,
+            0.056897,
+            0.050399
+          ],
+          "size": [
+            0.018151,
+            0.113794,
+            0.100799
+          ]
+        }
+      },
+      "triangles": 1056,
+      "collision": [],
+      "interaction": "Rotate around +X in the left chain plane"
+    },
+    {
+      "assetId": "sm50.Chain",
+      "name": "Chain",
+      "category": "Drivetrain",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Chain",
+      "dimensionsM": [
+        0.01,
+        0.226764,
+        0.612895
+      ],
+      "pivotM": [
+        -0.109,
+        0.402,
+        0.174
+      ],
+      "attachmentLocalM": {
+        "FrontSprocket": [
+          0,
+          0,
+          0
+        ],
+        "RearSprocket": [
+          0,
+          -0.103,
+          0.49
+        ]
+      },
+      "materials": [
+        "grease"
+      ],
+      "materialBoundsM": {
+        "grease": {
+          "min": [
+            -0.005,
+            -0.195264,
+            -0.029955
+          ],
+          "max": [
+            0.005,
+            0.0315,
+            0.58294
+          ],
+          "size": [
+            0.01,
+            0.226764,
+            0.612895
+          ]
+        }
+      },
+      "triangles": 432,
+      "collision": [],
+      "interaction": "Animate along the pitch path in the left drive plane"
+    },
+    {
+      "assetId": "sm50.ChainGuide",
+      "name": "ChainGuide",
+      "category": "Drivetrain",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ChainGuide",
+      "dimensionsM": [
+        0.044693,
+        0.12828,
+        0.099
+      ],
+      "pivotM": [
+        -0.109,
+        0.231,
+        0.542
+      ],
+      "attachmentLocalM": {
+        "SwingarmMount": [
+          -0.025,
+          0.089,
+          0
+        ]
+      },
+      "materials": [
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.019,
+            -0.013,
+            -0.049
+          ],
+          "max": [
+            0.018,
+            0.029,
+            0.05
+          ],
+          "size": [
+            0.037,
+            0.042,
+            0.099
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.026693,
+            0.02572,
+            -0.005862
+          ],
+          "max": [
+            -0.009307,
+            0.11528,
+            0.024862
+          ],
+          "size": [
+            0.017387,
+            0.08956,
+            0.030724
+          ]
+        }
+      },
+      "triangles": 120,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Header",
+      "name": "Header",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Header",
+      "dimensionsM": [
+        0.120376,
+        0.193756,
+        0.148147
+      ],
+      "pivotM": [
+        0.013,
+        0.538,
+        -0.133
+      ],
+      "attachmentLocalM": {
+        "ExhaustPort": [
+          0,
+          0,
+          0
+        ],
+        "ChamberInlet": [
+          0.081,
+          -0.169,
+          -0.118
+        ]
+      },
+      "materials": [
+        "pipe",
+        "weld"
+      ],
+      "materialBoundsM": {
+        "pipe": {
+          "min": [
+            -0.013791,
+            -0.174432,
+            -0.138847
+          ],
+          "max": [
+            0.101417,
+            0.012711,
+            0.006255
+          ],
+          "size": [
+            0.115208,
+            0.187143,
+            0.145103
+          ]
+        },
+        "weld": {
+          "min": [
+            -0.018959,
+            -0.023325,
+            -0.016299
+          ],
+          "max": [
+            0.021959,
+            0.019325,
+            0.009299
+          ],
+          "size": [
+            0.040917,
+            0.042649,
+            0.025598
+          ]
+        }
+      },
+      "triangles": 336,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.ExpansionChamber",
+      "name": "ExpansionChamber",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ExpansionChamber",
+      "dimensionsM": [
+        0.133431,
+        0.361111,
+        0.61457
+      ],
+      "pivotM": [
+        0.094,
+        0.369,
+        -0.251
+      ],
+      "attachmentLocalM": {
+        "Header": [
+          0,
+          0,
+          0
+        ],
+        "SilencerInlet": [
+          0.057,
+          0.28,
+          0.588
+        ],
+        "FrameStay": [
+          0.064,
+          0.091,
+          0.342
+        ]
+      },
+      "materials": [
+        "pipe",
+        "weld"
+      ],
+      "materialBoundsM": {
+        "pipe": {
+          "min": [
+            -0.015524,
+            -0.071599,
+            -0.018455
+          ],
+          "max": [
+            0.116613,
+            0.28884,
+            0.596115
+          ],
+          "size": [
+            0.132137,
+            0.360439,
+            0.61457
+          ]
+        },
+        "weld": {
+          "min": [
+            0.001751,
+            -0.072271,
+            0.024882
+          ],
+          "max": [
+            0.117907,
+            0.237424,
+            0.538686
+          ],
+          "size": [
+            0.116156,
+            0.309696,
+            0.513803
+          ]
+        }
+      },
+      "triangles": 1976,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Silencer",
+      "name": "Silencer",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Silencer",
+      "dimensionsM": [
+        0.087873,
+        0.181336,
+        0.435893
+      ],
+      "pivotM": [
+        0.151,
+        0.649,
+        0.337
+      ],
+      "attachmentLocalM": {
+        "Inlet": [
+          0,
+          0,
+          0
+        ],
+        "Outlet": [
+          -0.023,
+          0.158,
+          0.426
+        ],
+        "Mount": [
+          -0.021,
+          0.133,
+          0.319
+        ]
+      },
+      "materials": [
+        "alloy",
+        "pipe",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.056936,
+            0.053033,
+            0.131846
+          ],
+          "max": [
+            0.030937,
+            0.168031,
+            0.392521
+          ],
+          "size": [
+            0.087873,
+            0.114998,
+            0.260675
+          ]
+        },
+        "pipe": {
+          "min": [
+            -0.036527,
+            -0.009744,
+            -0.007004
+          ],
+          "max": [
+            0.011976,
+            0.171592,
+            0.42889
+          ],
+          "size": [
+            0.048503,
+            0.181336,
+            0.435893
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.055907,
+            0.056459,
+            0.126026
+          ],
+          "max": [
+            0.029,
+            0.167503,
+            0.403686
+          ],
+          "size": [
+            0.084907,
+            0.111044,
+            0.27766
+          ]
+        }
+      },
+      "triangles": 636,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.ExhaustMounts",
+      "name": "ExhaustMounts",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ExhaustMounts",
+      "dimensionsM": [
+        0.103786,
+        0.27584,
+        0.450556
+      ],
+      "pivotM": [
+        0.112,
+        0.556,
+        0.237
+      ],
+      "attachmentLocalM": {
+        "MidPipe": [
+          0.04,
+          0.002,
+          -0.004
+        ],
+        "Silencer": [
+          0.018,
+          0.226,
+          0.419
+        ]
+      },
+      "materials": [
+        "frame",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "frame": {
+          "min": [
+            -0.049786,
+            -0.006073,
+            -0.011017
+          ],
+          "max": [
+            0.046245,
+            0.269767,
+            0.43954
+          ],
+          "size": [
+            0.096031,
+            0.27584,
+            0.450556
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.044,
+            -0.005196,
+            -0.01
+          ],
+          "max": [
+            0.054,
+            0.233196,
+            0.422
+          ],
+          "size": [
+            0.01,
+            0.238392,
+            0.432
+          ]
+        }
+      },
+      "triangles": 224,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.FuelTank",
+      "name": "FuelTank",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FuelTank",
+      "dimensionsM": [
+        0.242493,
+        0.158179,
+        0.52
+      ],
+      "pivotM": [
+        0,
+        0.865,
+        -0.07
+      ],
+      "attachmentLocalM": {
+        "FrameMount": [
+          0,
+          0.006,
+          -0.095
+        ],
+        "FuelCap": [
+          0,
+          0.097,
+          -0.084
+        ],
+        "FuelOutlet": [
+          -0.058,
+          -0.051,
+          0.165
+        ]
+      },
+      "materials": [
+        "black",
+        "body",
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.121247,
+            -0.058679,
+            -0.222
+          ],
+          "max": [
+            0.121247,
+            0.077704,
+            0.298
+          ],
+          "size": [
+            0.242493,
+            0.136383,
+            0.52
+          ]
+        },
+        "body": {
+          "min": [
+            -0.103358,
+            0.009074,
+            -0.211
+          ],
+          "max": [
+            0.103358,
+            0.087895,
+            0.237
+          ],
+          "size": [
+            0.206716,
+            0.078821,
+            0.448
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.027,
+            0.0845,
+            -0.111
+          ],
+          "max": [
+            0.027,
+            0.0955,
+            -0.057
+          ],
+          "size": [
+            0.054,
+            0.011,
+            0.054
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.010392,
+            0.0945,
+            -0.096
+          ],
+          "max": [
+            0.010392,
+            0.0995,
+            -0.072
+          ],
+          "size": [
+            0.020785,
+            0.005,
+            0.024
+          ]
+        }
+      },
+      "triangles": 880,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Seat",
+      "name": "Seat",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Seat",
+      "dimensionsM": [
+        0.164893,
+        0.0912,
+        0.782
+      ],
+      "pivotM": [
+        0,
+        0.848,
+        0.348
+      ],
+      "attachmentLocalM": {
+        "FrontTongue": [
+          0,
+          0.041,
+          -0.269
+        ],
+        "Latch": [
+          0,
+          -0.01,
+          0.225
+        ]
+      },
+      "materials": [
+        "seat",
+        "black",
+        "anodized"
+      ],
+      "materialBoundsM": {
+        "seat": {
+          "min": [
+            -0.082447,
+            -0.00484,
+            -0.366
+          ],
+          "max": [
+            0.082447,
+            0.08594,
+            0.416
+          ],
+          "size": [
+            0.164893,
+            0.09078,
+            0.782
+          ]
+        },
+        "black": {
+          "min": [
+            -0.077036,
+            -0.00526,
+            -0.322
+          ],
+          "max": [
+            0.077036,
+            0.0561,
+            0.416
+          ],
+          "size": [
+            0.154071,
+            0.06136,
+            0.738
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.080217,
+            0.010941,
+            -0.322342
+          ],
+          "max": [
+            0.080217,
+            0.057696,
+            0.362173
+          ],
+          "size": [
+            0.160434,
+            0.046754,
+            0.684514
+          ]
+        }
+      },
+      "triangles": 660,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.RadiatorShroud_L",
+      "name": "RadiatorShroud_L",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RadiatorShroud_L",
+      "dimensionsM": [
+        0.08473,
+        0.234,
+        0.536
+      ],
+      "pivotM": [
+        -0.111,
+        0.826,
+        -0.148
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          -0.005,
+          0.056,
+          -0.031
+        ],
+        "Lower": [
+          0.002,
+          -0.138,
+          -0.064
+        ]
+      },
+      "materials": [
+        "body",
+        "trim",
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "body": {
+          "min": [
+            -0.034647,
+            -0.154,
+            -0.163
+          ],
+          "max": [
+            0.045873,
+            0.08,
+            0.373
+          ],
+          "size": [
+            0.08052,
+            0.234,
+            0.536
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.038857,
+            -0.029,
+            -0.103
+          ],
+          "max": [
+            -0.002086,
+            0.052,
+            0.282
+          ],
+          "size": [
+            0.036771,
+            0.081,
+            0.385
+          ]
+        },
+        "black": {
+          "min": [
+            -0.034857,
+            -0.11,
+            -0.066
+          ],
+          "max": [
+            -0.014115,
+            -0.035,
+            0.096
+          ],
+          "size": [
+            0.020742,
+            0.075,
+            0.162
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.026,
+            0.00167,
+            -0.091
+          ],
+          "max": [
+            -0.014,
+            0.055464,
+            0.238
+          ],
+          "size": [
+            0.012,
+            0.053794,
+            0.329
+          ]
+        }
+      },
+      "triangles": 548,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.SidePanel_L",
+      "name": "SidePanel_L",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "SidePanel_L",
+      "dimensionsM": [
+        0.070953,
+        0.193016,
+        0.548
+      ],
+      "pivotM": [
+        -0.088,
+        0.785,
+        0.412
+      ],
+      "attachmentLocalM": {
+        "Front": [
+          -0.008,
+          0.018,
+          -0.141
+        ],
+        "Rear": [
+          0.008,
+          0.035,
+          0.236
+        ]
+      },
+      "materials": [
+        "trim",
+        "body",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "trim": {
+          "min": [
+            -0.03382,
+            -0.128139,
+            -0.195
+          ],
+          "max": [
+            0.029953,
+            0.064877,
+            0.353
+          ],
+          "size": [
+            0.063773,
+            0.193016,
+            0.548
+          ]
+        },
+        "body": {
+          "min": [
+            -0.038876,
+            -0.041,
+            -0.112
+          ],
+          "max": [
+            0.013901,
+            0.06,
+            0.304
+          ],
+          "size": [
+            0.052777,
+            0.101,
+            0.416
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.041,
+            -0.00633,
+            -0.043
+          ],
+          "max": [
+            -0.037,
+            0.00233,
+            -0.033
+          ],
+          "size": [
+            0.004,
+            0.00866,
+            0.01
+          ]
+        }
+      },
+      "triangles": 396,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.RadiatorShroud_R",
+      "name": "RadiatorShroud_R",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RadiatorShroud_R",
+      "dimensionsM": [
+        0.08473,
+        0.234,
+        0.536
+      ],
+      "pivotM": [
+        0.111,
+        0.826,
+        -0.148
+      ],
+      "attachmentLocalM": {
+        "Upper": [
+          0.005,
+          0.056,
+          -0.031
+        ],
+        "Lower": [
+          -0.002,
+          -0.138,
+          -0.064
+        ]
+      },
+      "materials": [
+        "body",
+        "trim",
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "body": {
+          "min": [
+            -0.045873,
+            -0.154,
+            -0.163
+          ],
+          "max": [
+            0.034647,
+            0.08,
+            0.373
+          ],
+          "size": [
+            0.08052,
+            0.234,
+            0.536
+          ]
+        },
+        "trim": {
+          "min": [
+            0.002086,
+            -0.029,
+            -0.103
+          ],
+          "max": [
+            0.038857,
+            0.052,
+            0.282
+          ],
+          "size": [
+            0.036771,
+            0.081,
+            0.385
+          ]
+        },
+        "black": {
+          "min": [
+            0.014115,
+            -0.11,
+            -0.066
+          ],
+          "max": [
+            0.034857,
+            -0.035,
+            0.096
+          ],
+          "size": [
+            0.020742,
+            0.075,
+            0.162
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.014,
+            0.00167,
+            -0.091
+          ],
+          "max": [
+            0.026,
+            0.055464,
+            0.238
+          ],
+          "size": [
+            0.012,
+            0.053794,
+            0.329
+          ]
+        }
+      },
+      "triangles": 548,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.SidePanel_R",
+      "name": "SidePanel_R",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "SidePanel_R",
+      "dimensionsM": [
+        0.070953,
+        0.193016,
+        0.548
+      ],
+      "pivotM": [
+        0.088,
+        0.785,
+        0.412
+      ],
+      "attachmentLocalM": {
+        "Front": [
+          0.008,
+          0.018,
+          -0.141
+        ],
+        "Rear": [
+          -0.008,
+          0.035,
+          0.236
+        ]
+      },
+      "materials": [
+        "trim",
+        "body",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "trim": {
+          "min": [
+            -0.029953,
+            -0.128139,
+            -0.195
+          ],
+          "max": [
+            0.03382,
+            0.064877,
+            0.353
+          ],
+          "size": [
+            0.063773,
+            0.193016,
+            0.548
+          ]
+        },
+        "body": {
+          "min": [
+            -0.013901,
+            -0.041,
+            -0.112
+          ],
+          "max": [
+            0.038876,
+            0.06,
+            0.304
+          ],
+          "size": [
+            0.052777,
+            0.101,
+            0.416
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.037,
+            -0.00633,
+            -0.043
+          ],
+          "max": [
+            0.041,
+            0.00233,
+            -0.033
+          ],
+          "size": [
+            0.004,
+            0.00866,
+            0.01
+          ]
+        }
+      },
+      "triangles": 396,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.RearFender",
+      "name": "RearFender",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearFender",
+      "dimensionsM": [
+        0.152188,
+        0.0586,
+        0.414
+      ],
+      "pivotM": [
+        0,
+        0.836,
+        0.679
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0,
+          0
+        ],
+        "TailLamp": [
+          0,
+          -0.009,
+          0.182
+        ],
+        "PlateBracket": [
+          0,
+          -0.028,
+          0.212
+        ]
+      },
+      "materials": [
+        "body",
+        "black"
+      ],
+      "materialBoundsM": {
+        "body": {
+          "min": [
+            -0.076094,
+            -0.021882,
+            -0.165
+          ],
+          "max": [
+            0.076094,
+            0.028824,
+            0.249
+          ],
+          "size": [
+            0.152188,
+            0.050706,
+            0.414
+          ]
+        },
+        "black": {
+          "min": [
+            -0.054055,
+            -0.029777,
+            0.029
+          ],
+          "max": [
+            0.054055,
+            0.002725,
+            0.211
+          ],
+          "size": [
+            0.10811,
+            0.032502,
+            0.182
+          ]
+        }
+      },
+      "triangles": 264,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.FrontFender",
+      "name": "FrontFender",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontFender",
+      "dimensionsM": [
+        0.148379,
+        0.108795,
+        0.606
+      ],
+      "pivotM": [
+        0,
+        0.754,
+        -0.483
+      ],
+      "attachmentLocalM": {
+        "Mount": [
+          0,
+          0.01,
+          -0.003
+        ]
+      },
+      "materials": [
+        "body",
+        "black"
+      ],
+      "materialBoundsM": {
+        "body": {
+          "min": [
+            -0.07419,
+            -0.099924,
+            -0.447
+          ],
+          "max": [
+            0.07419,
+            0.00887,
+            0.159
+          ],
+          "size": [
+            0.148379,
+            0.108795,
+            0.606
+          ]
+        },
+        "black": {
+          "min": [
+            -0.059952,
+            -0.037931,
+            -0.112
+          ],
+          "max": [
+            0.059952,
+            -0.009103,
+            0.081
+          ],
+          "size": [
+            0.119903,
+            0.028828,
+            0.193
+          ]
+        }
+      },
+      "triangles": 328,
+      "collision": [],
+      "interaction": "Steers with lower triple clamp"
+    },
+    {
+      "assetId": "sm50.HeadlightMask",
+      "name": "HeadlightMask",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "HeadlightMask",
+      "dimensionsM": [
+        0.205473,
+        0.16991,
+        0.107
+      ],
+      "pivotM": [
+        0,
+        0.887,
+        -0.464
+      ],
+      "attachmentLocalM": {
+        "SteeringMount": [
+          0,
+          0,
+          0.039
+        ],
+        "Lamp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "body",
+        "trim"
+      ],
+      "materialBoundsM": {
+        "body": {
+          "min": [
+            -0.102737,
+            -0.057955,
+            -0.042
+          ],
+          "max": [
+            0.102737,
+            0.111955,
+            0.065
+          ],
+          "size": [
+            0.205473,
+            0.16991,
+            0.107
+          ]
+        },
+        "trim": {
+          "min": [
+            -0.081291,
+            0.047391,
+            -0.034
+          ],
+          "max": [
+            0.081291,
+            0.106403,
+            0.011
+          ],
+          "size": [
+            0.162583,
+            0.059012,
+            0.045
+          ]
+        }
+      },
+      "triangles": 232,
+      "collision": [],
+      "interaction": "Steers with the fork assembly"
+    },
+    {
+      "assetId": "sm50.Headlight",
+      "name": "Headlight",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Headlight",
+      "dimensionsM": [
+        0.134556,
+        0.075225,
+        0.052
+      ],
+      "pivotM": [
+        0,
+        0.887,
+        -0.464
+      ],
+      "attachmentLocalM": {
+        "Mask": [
+          0,
+          0,
+          0
+        ],
+        "Connector": [
+          0,
+          0.004,
+          -0.017
+        ]
+      },
+      "materials": [
+        "black",
+        "reflector",
+        "glass"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.067278,
+            -0.039607,
+            -0.062
+          ],
+          "max": [
+            0.067278,
+            0.035618,
+            -0.021
+          ],
+          "size": [
+            0.134556,
+            0.075225,
+            0.041
+          ]
+        },
+        "reflector": {
+          "min": [
+            -0.053313,
+            -0.025669,
+            -0.0666
+          ],
+          "max": [
+            0.053313,
+            0.026682,
+            -0.06
+          ],
+          "size": [
+            0.106626,
+            0.052351,
+            0.0066
+          ]
+        },
+        "glass": {
+          "min": [
+            -0.054374,
+            -0.024704,
+            -0.073
+          ],
+          "max": [
+            0.054374,
+            0.026704,
+            -0.064
+          ],
+          "size": [
+            0.108748,
+            0.051408,
+            0.009
+          ]
+        }
+      },
+      "triangles": 384,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.TailLight",
+      "name": "TailLight",
+      "category": "Electrical",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "TailLight",
+      "dimensionsM": [
+        0.102996,
+        0.03168,
+        0.065
+      ],
+      "pivotM": [
+        0,
+        0.824,
+        0.86
+      ],
+      "attachmentLocalM": {
+        "Fender": [
+          0,
+          0.003,
+          0.001
+        ]
+      },
+      "materials": [
+        "red",
+        "black"
+      ],
+      "materialBoundsM": {
+        "red": {
+          "min": [
+            -0.051498,
+            -0.013913,
+            -0.013
+          ],
+          "max": [
+            0.051498,
+            0.009903,
+            0.029
+          ],
+          "size": [
+            0.102996,
+            0.023817,
+            0.042
+          ]
+        },
+        "black": {
+          "min": [
+            -0.051106,
+            -0.021777,
+            -0.036
+          ],
+          "max": [
+            0.051106,
+            0.004811,
+            0
+          ],
+          "size": [
+            0.102213,
+            0.026588,
+            0.036
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.NumberPlate",
+      "name": "NumberPlate",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "NumberPlate",
+      "dimensionsM": [
+        0.158702,
+        0.126135,
+        0.058466
+      ],
+      "pivotM": [
+        0,
+        0.754,
+        0.891
+      ],
+      "attachmentLocalM": {
+        "Bracket": [
+          0,
+          0.054,
+          0
+        ]
+      },
+      "materials": [
+        "trim",
+        "black",
+        "alloy",
+        "amber"
+      ],
+      "materialBoundsM": {
+        "trim": {
+          "min": [
+            -0.076613,
+            -0.024869,
+            0.012
+          ],
+          "max": [
+            0.076613,
+            0.026869,
+            0.019
+          ],
+          "size": [
+            0.153225,
+            0.051738,
+            0.007
+          ]
+        },
+        "black": {
+          "min": [
+            -0.079351,
+            -0.026765,
+            -0.035966
+          ],
+          "max": [
+            0.079351,
+            0.077272,
+            0.014
+          ],
+          "size": [
+            0.158702,
+            0.104037,
+            0.049966
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.051,
+            0.015402,
+            0.0195
+          ],
+          "max": [
+            0.051,
+            0.020598,
+            0.0225
+          ],
+          "size": [
+            0.102,
+            0.005196,
+            0.003
+          ]
+        },
+        "amber": {
+          "min": [
+            -0.033416,
+            -0.048863,
+            0.016
+          ],
+          "max": [
+            0.033416,
+            -0.033137,
+            0.021
+          ],
+          "size": [
+            0.066831,
+            0.015725,
+            0.005
+          ]
+        }
+      },
+      "triangles": 456,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.Handlebar",
+      "name": "Handlebar",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Handlebar",
+      "dimensionsM": [
+        0.728018,
+        0.10559,
+        0.121079
+      ],
+      "pivotM": [
+        0,
+        1.006,
+        -0.334
+      ],
+      "attachmentLocalM": {
+        "Clamp": [
+          0,
+          0,
+          0
+        ],
+        "GripL": [
+          -0.313,
+          0.043,
+          0.051
+        ],
+        "GripR": [
+          0.313,
+          0.043,
+          0.051
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.364009,
+            -0.05159,
+            -0.044499
+          ],
+          "max": [
+            0.364009,
+            0.054,
+            0.07658
+          ],
+          "size": [
+            0.728018,
+            0.10559,
+            0.121079
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.047897,
+            0.0125,
+            -0.0205
+          ],
+          "max": [
+            0.047897,
+            0.0175,
+            0.0135
+          ],
+          "size": [
+            0.095794,
+            0.005,
+            0.034
+          ]
+        }
+      },
+      "triangles": 704,
+      "collision": [],
+      "interaction": "Steers with the triple clamps"
+    },
+    {
+      "assetId": "sm50.LeftGrip",
+      "name": "LeftGrip",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "LeftGrip",
+      "dimensionsM": [
+        0.118973,
+        0.043998,
+        0.069504
+      ],
+      "pivotM": [
+        -0.258,
+        1.049,
+        -0.297
+      ],
+      "attachmentLocalM": {
+        "HandlebarAxis": [
+          0,
+          0,
+          0
+        ],
+        "BarEnd": [
+          -0.108,
+          -0.001,
+          0.03
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.113085,
+            -0.021999,
+            -0.021197
+          ],
+          "max": [
+            0.005888,
+            0.021999,
+            0.048307
+          ],
+          "size": [
+            0.118973,
+            0.043998,
+            0.069504
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Remove grip"
+    },
+    {
+      "assetId": "sm50.ClutchLever",
+      "name": "ClutchLever",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ClutchLever",
+      "dimensionsM": [
+        0.13112,
+        0.035338,
+        0.051349
+      ],
+      "pivotM": [
+        -0.244,
+        1.039,
+        -0.336
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Perch": [
+          0.006,
+          0.009,
+          0.034
+        ]
+      },
+      "materials": [
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.113293,
+            -0.014657,
+            -0.01398
+          ],
+          "max": [
+            0.002098,
+            0.005432,
+            0.01497
+          ],
+          "size": [
+            0.115391,
+            0.020089,
+            0.02895
+          ]
+        },
+        "black": {
+          "min": [
+            -0.011827,
+            -0.010681,
+            -0.003369
+          ],
+          "max": [
+            0.017827,
+            0.020681,
+            0.037369
+          ],
+          "size": [
+            0.029654,
+            0.031362,
+            0.040738
+          ]
+        }
+      },
+      "triangles": 148,
+      "collision": [],
+      "interaction": "Pivot about local +Y"
+    },
+    {
+      "assetId": "sm50.ThrottleGrip",
+      "name": "ThrottleGrip",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ThrottleGrip",
+      "dimensionsM": [
+        0.118973,
+        0.043998,
+        0.069504
+      ],
+      "pivotM": [
+        0.258,
+        1.049,
+        -0.297
+      ],
+      "attachmentLocalM": {
+        "HandlebarAxis": [
+          0,
+          0,
+          0
+        ],
+        "BarEnd": [
+          0.108,
+          -0.001,
+          0.03
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.005888,
+            -0.021999,
+            -0.021197
+          ],
+          "max": [
+            0.113085,
+            0.021999,
+            0.048307
+          ],
+          "size": [
+            0.118973,
+            0.043998,
+            0.069504
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Rotate around the local bar axis"
+    },
+    {
+      "assetId": "sm50.FrontBrakeLever",
+      "name": "FrontBrakeLever",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontBrakeLever",
+      "dimensionsM": [
+        0.13112,
+        0.035338,
+        0.051349
+      ],
+      "pivotM": [
+        0.244,
+        1.039,
+        -0.336
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Perch": [
+          -0.006,
+          0.009,
+          0.034
+        ]
+      },
+      "materials": [
+        "alloy",
+        "black"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.002098,
+            -0.014657,
+            -0.01398
+          ],
+          "max": [
+            0.113293,
+            0.005432,
+            0.01497
+          ],
+          "size": [
+            0.115391,
+            0.020089,
+            0.02895
+          ]
+        },
+        "black": {
+          "min": [
+            -0.017827,
+            -0.010681,
+            -0.003369
+          ],
+          "max": [
+            0.011827,
+            0.020681,
+            0.037369
+          ],
+          "size": [
+            0.029654,
+            0.031362,
+            0.040738
+          ]
+        }
+      },
+      "triangles": 148,
+      "collision": [],
+      "interaction": "Pivot about local +Y"
+    },
+    {
+      "assetId": "sm50.FrontBrakeMasterCylinder",
+      "name": "FrontBrakeMasterCylinder",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FrontBrakeMasterCylinder",
+      "dimensionsM": [
+        0.049141,
+        0.034725,
+        0.048
+      ],
+      "pivotM": [
+        0.224,
+        1.059,
+        -0.315
+      ],
+      "attachmentLocalM": {
+        "Lever": [
+          0.02,
+          -0.02,
+          -0.021
+        ],
+        "Hose": [
+          -0.011,
+          0,
+          -0.022
+        ]
+      },
+      "materials": [
+        "black",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.03157,
+            -0.011725,
+            -0.025
+          ],
+          "max": [
+            0.01757,
+            0.022708,
+            0.023
+          ],
+          "size": [
+            0.049141,
+            0.034433,
+            0.048
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.028464,
+            0.021,
+            -0.005
+          ],
+          "max": [
+            0.011464,
+            0.023,
+            0.003
+          ],
+          "size": [
+            0.039928,
+            0.002,
+            0.008
+          ]
+        }
+      },
+      "triangles": 240,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.InstrumentCluster",
+      "name": "InstrumentCluster",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "InstrumentCluster",
+      "dimensionsM": [
+        0.096316,
+        0.036759,
+        0.073
+      ],
+      "pivotM": [
+        0,
+        0.99,
+        -0.414
+      ],
+      "attachmentLocalM": {
+        "Bracket": [
+          0,
+          -0.012,
+          0.009
+        ]
+      },
+      "materials": [
+        "black",
+        "reflector"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.048158,
+            -0.010794,
+            -0.034
+          ],
+          "max": [
+            0.048158,
+            0.023759,
+            0.039
+          ],
+          "size": [
+            0.096316,
+            0.034553,
+            0.073
+          ]
+        },
+        "reflector": {
+          "min": [
+            -0.03145,
+            0.018034,
+            -0.014
+          ],
+          "max": [
+            0.03145,
+            0.025966,
+            0.017
+          ],
+          "size": [
+            0.0629,
+            0.007931,
+            0.031
+          ]
+        }
+      },
+      "triangles": 144,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.ControlLines",
+      "name": "ControlLines",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "ControlLines",
+      "dimensionsM": [
+        0.490327,
+        0.609338,
+        0.68309
+      ],
+      "pivotM": [
+        0,
+        0.938,
+        -0.342
+      ],
+      "attachmentLocalM": {
+        "SteeringGuide": [
+          0,
+          0,
+          0
+        ],
+        "Throttle": [
+          0,
+          -0.367,
+          0.441
+        ]
+      },
+      "materials": [
+        "black"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.237745,
+            -0.485725,
+            -0.240994
+          ],
+          "max": [
+            0.252582,
+            0.123614,
+            0.442096
+          ],
+          "size": [
+            0.490327,
+            0.609338,
+            0.68309
+          ]
+        }
+      },
+      "triangles": 304,
+      "collision": [],
+      "interaction": "Remove / install"
+    },
+    {
+      "assetId": "sm50.FootPeg_L",
+      "name": "FootPeg_L",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FootPeg_L",
+      "dimensionsM": [
+        0.093716,
+        0.04696,
+        0.034
+      ],
+      "pivotM": [
+        -0.127,
+        0.365,
+        0.239
+      ],
+      "attachmentLocalM": {
+        "FoldAxis": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.093368,
+            -0.02236,
+            -0.013
+          ],
+          "max": [
+            0.000348,
+            0.0246,
+            0.013
+          ],
+          "size": [
+            0.093716,
+            0.04696,
+            0.026
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.081648,
+            0.0095,
+            -0.017
+          ],
+          "max": [
+            -0.020652,
+            0.0177,
+            0.017
+          ],
+          "size": [
+            0.060996,
+            0.0082,
+            0.034
+          ]
+        }
+      },
+      "triangles": 416,
+      "collision": [],
+      "interaction": "Fold about local Z"
+    },
+    {
+      "assetId": "sm50.FootPeg_R",
+      "name": "FootPeg_R",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "FootPeg_R",
+      "dimensionsM": [
+        0.093716,
+        0.04696,
+        0.034
+      ],
+      "pivotM": [
+        0.127,
+        0.365,
+        0.239
+      ],
+      "attachmentLocalM": {
+        "FoldAxis": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "anodized",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "anodized": {
+          "min": [
+            -0.000348,
+            -0.02236,
+            -0.013
+          ],
+          "max": [
+            0.093368,
+            0.0246,
+            0.013
+          ],
+          "size": [
+            0.093716,
+            0.04696,
+            0.026
+          ]
+        },
+        "alloy": {
+          "min": [
+            0.020652,
+            0.0095,
+            -0.017
+          ],
+          "max": [
+            0.081648,
+            0.0177,
+            0.017
+          ],
+          "size": [
+            0.060996,
+            0.0082,
+            0.034
+          ]
+        }
+      },
+      "triangles": 416,
+      "collision": [],
+      "interaction": "Fold about local Z"
+    },
+    {
+      "assetId": "sm50.SideStand",
+      "name": "SideStand",
+      "category": "Chassis",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "SideStand",
+      "dimensionsM": [
+        0.069757,
+        0.086994,
+        0.356
+      ],
+      "pivotM": [
+        -0.113,
+        0.345,
+        0.267
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "frame",
+        "alloy"
+      ],
+      "materialBoundsM": {
+        "frame": {
+          "min": [
+            -0.061976,
+            -0.076,
+            -0.007772
+          ],
+          "max": [
+            0.00778,
+            0.010994,
+            0.347
+          ],
+          "size": [
+            0.069757,
+            0.086994,
+            0.354772
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.0175,
+            -0.007794,
+            -0.009
+          ],
+          "max": [
+            -0.0105,
+            0.007794,
+            0.009
+          ],
+          "size": [
+            0.007,
+            0.015588,
+            0.018
+          ]
+        }
+      },
+      "triangles": 224,
+      "collision": [],
+      "interaction": "Rotate stand about +X"
+    },
+    {
+      "assetId": "sm50.GearShifter",
+      "name": "GearShifter",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "GearShifter",
+      "dimensionsM": [
+        0.071571,
+        0.050899,
+        0.197
+      ],
+      "pivotM": [
+        -0.111,
+        0.354,
+        0.108
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.034685,
+            -0.038994,
+            -0.180574
+          ],
+          "max": [
+            0.008571,
+            0.009899,
+            0.009
+          ],
+          "size": [
+            0.043256,
+            0.048894,
+            0.189574
+          ]
+        },
+        "rubber": {
+          "min": [
+            -0.063,
+            -0.041,
+            -0.188
+          ],
+          "max": [
+            -0.029,
+            -0.025,
+            -0.172
+          ],
+          "size": [
+            0.034,
+            0.016,
+            0.016
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    },
+    {
+      "assetId": "sm50.RearBrakePedal",
+      "name": "RearBrakePedal",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "RearBrakePedal",
+      "dimensionsM": [
+        0.067266,
+        0.065425,
+        0.286
+      ],
+      "pivotM": [
+        0.116,
+        0.355,
+        0.198
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.009266,
+            -0.055978,
+            -0.269816
+          ],
+          "max": [
+            0.029698,
+            0.009448,
+            0.009
+          ],
+          "size": [
+            0.038963,
+            0.065425,
+            0.278816
+          ]
+        },
+        "rubber": {
+          "min": [
+            0.024,
+            -0.044,
+            -0.277
+          ],
+          "max": [
+            0.058,
+            -0.028,
+            -0.261
+          ],
+          "size": [
+            0.034,
+            0.016,
+            0.016
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    },
+    {
+      "assetId": "sm50.Kickstarter",
+      "name": "Kickstarter",
+      "category": "Controls",
+      "vehicleCompatibility": [
+        "sm50"
+      ],
+      "file": "vehicles/sm50/exports/SM50-distance.glb",
+      "node": "Kickstarter",
+      "dimensionsM": [
+        0.06047,
+        0.144794,
+        0.06299
+      ],
+      "pivotM": [
+        0.123,
+        0.421,
+        0.122
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "alloy",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.00947,
+            -0.007794,
+            -0.009
+          ],
+          "max": [
+            0.022629,
+            0.130768,
+            0.05399
+          ],
+          "size": [
+            0.032099,
+            0.138563,
+            0.06299
+          ]
+        },
+        "rubber": {
+          "min": [
+            0.017,
+            0.121,
+            0.031
+          ],
+          "max": [
+            0.051,
+            0.137,
+            0.047
+          ],
+          "size": [
+            0.034,
+            0.016,
+            0.016
+          ]
+        }
+      },
+      "triangles": 200,
+      "collision": [],
+      "interaction": "Pivot about +X"
+    }
+  ],
+  "stats": {
+    "triangles": 45348,
+    "components": 72,
+    "materialLayers": 155,
+    "maxTrianglesPerComponent": 2320
+  },
+  "omittedServiceParts": [
+    "Piston",
+    "Crankshaft",
+    "ConnectingRod",
+    "ClutchBasket",
+    "ClutchPlateStack",
+    "ClutchPressurePlate",
+    "GearboxInputShaft",
+    "GearboxOutputShaft",
+    "AirFilter"
+  ]
+}

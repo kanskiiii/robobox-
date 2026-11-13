@@ -1,0 +1,72 @@
+{
+  "method": "Sampled component vertices against nominal tire envelope. Static mesh screening.",
+  "limits": "Distances are approximate. Triangle interiors, deformation, dynamic clearances, brake and chain sweep, and gear engagement need separate checks.",
+  "steeringDeg": [
+    -32,
+    32
+  ],
+  "front": [
+    {
+      "compressionMm": 0,
+      "fenderMm": 108,
+      "chassisMm": 105,
+      "closest": "MainFrame",
+      "steeringDeg": 0
+    },
+    {
+      "compressionMm": 50,
+      "fenderMm": 71,
+      "chassisMm": 81,
+      "closest": "MainFrame",
+      "steeringDeg": 0
+    },
+    {
+      "compressionMm": 80,
+      "fenderMm": 47,
+      "chassisMm": 60,
+      "closest": "MainFrame",
+      "steeringDeg": 0
+    },
+    {
+      "compressionMm": 100,
+      "fenderMm": 31,
+      "chassisMm": 46,
+      "closest": "MainFrame",
+      "steeringDeg": 0
+    },
+    {
+      "compressionMm": 120,
+      "fenderMm": 14,
+      "chassisMm": 33,
+      "closest": "MainFrame",
+      "steeringDeg": 0
+    }
+  ],
+  "rear": [
+    {
+      "swingDeg": 0,
+      "verticalTravelMm": 0,
+      "chassisAndBodyMm": 111
+    },
+    {
+      "swingDeg": 5,
+      "verticalTravelMm": 41,
+      "chassisAndBodyMm": 81
+    },
+    {
+      "swingDeg": 10,
+      "verticalTravelMm": 82,
+      "chassisAndBodyMm": 51
+    },
+    {
+      "swingDeg": 15,
+      "verticalTravelMm": 124,
+      "chassisAndBodyMm": 21
+    },
+    {
+      "swingDeg": 20,
+      "verticalTravelMm": 166,
+      "chassisAndBodyMm": -9
+    }
+  ]
+}

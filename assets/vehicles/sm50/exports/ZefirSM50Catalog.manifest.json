@@ -1,0 +1,2810 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sm50-catalog",
+  "name": "ZefirSM50Catalog",
+  "stage": "First production pass",
+  "source": "vehicles/sm50/source/catalog.mjs",
+  "export": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -0.390011,
+      -0.557,
+      -0.995
+    ],
+    "max": [
+      0.390011,
+      0.532,
+      0.957
+    ],
+    "size": [
+      0.780021,
+      1.089,
+      1.952
+    ]
+  },
+  "datumsM": {
+    "Mount_FrontFork": [
+      0,
+      0.236,
+      -0.438
+    ],
+    "Mount_Handlebar": [
+      0,
+      0.45599999999999996,
+      -0.34800000000000003
+    ],
+    "Mount_FrontWheel": [
+      0,
+      -0.25,
+      -0.7
+    ],
+    "Mount_FrontBrake": [
+      0.083,
+      -0.25,
+      -0.7
+    ],
+    "Mount_Swingarm": [
+      0,
+      -0.10200000000000004,
+      0.18999999999999997
+    ],
+    "Mount_RearShock": [
+      0,
+      0.17599999999999993,
+      0.258
+    ],
+    "Mount_RearWheel": [
+      0,
+      -0.25,
+      0.65
+    ],
+    "Mount_RearBrake": [
+      0.103,
+      -0.25,
+      0.65
+    ],
+    "Mount_RearSprocket": [
+      -0.109,
+      -0.25,
+      0.65
+    ],
+    "Mount_EngineBlock": [
+      0,
+      -0.17500000000000004,
+      -0.063
+    ],
+    "Mount_Clutch": [
+      0.071,
+      -0.17900000000000005,
+      0.039
+    ],
+    "Mount_FrontSprocket": [
+      -0.109,
+      -0.14800000000000002,
+      0.15999999999999998
+    ],
+    "Mount_Piston": [
+      0,
+      -0.006424909549565649,
+      -0.09955227080359991
+    ],
+    "Mount_Cylinder": [
+      0,
+      -0.061000000000000054,
+      -0.087
+    ],
+    "Mount_CylinderHead": [
+      0,
+      0.07251406056624121,
+      -0.11770823393023548
+    ],
+    "Mount_SparkPlug": [
+      0,
+      0.10369982653791798,
+      -0.12488096010372114
+    ],
+    "Mount_Carburetor": [
+      0,
+      -0.018000000000000016,
+      0.081
+    ],
+    "Mount_AirFilter": [
+      0,
+      0.08599999999999997,
+      0.306
+    ],
+    "Mount_Exhaust": [
+      0.013,
+      -0.01200000000000001,
+      -0.14700000000000002
+    ],
+    "Mount_Ignition": [
+      -0.08,
+      0.15,
+      0.3
+    ],
+    "Mount_Chain": [
+      -0.109,
+      -0.14800000000000002,
+      0.15999999999999998
+    ],
+    "Mount_Radiator": [
+      0.077,
+      0.1509999999999999,
+      -0.254
+    ],
+    "Mount_FuelTank": [
+      0,
+      0.31499999999999995,
+      -0.084
+    ],
+    "Mount_FuelLine": [
+      -0.058,
+      0.2639999999999999,
+      0.081
+    ],
+    "Mount_Seat": [
+      0,
+      0.29799999999999993,
+      0.33399999999999996
+    ],
+    "ChassisOrigin": [
+      0,
+      0,
+      0
+    ]
+  },
+  "proxies": [],
+  "materials": {
+    "frame": {
+      "name": "Graphite painted steel",
+      "hex": "#363b40",
+      "metallic": 0.55,
+      "roughness": 0.34,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "body": {
+      "name": "Petrol blue injection-moulded plastic",
+      "hex": "#067e89",
+      "metallic": 0.02,
+      "roughness": 0.36,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "trim": {
+      "name": "Warm ivory plastic",
+      "hex": "#f1e7ca",
+      "metallic": 0.02,
+      "roughness": 0.38,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Textured black nylon",
+      "hex": "#20262a",
+      "metallic": 0,
+      "roughness": 0.73,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "seat": {
+      "name": "Grained black vinyl",
+      "hex": "#272a2a",
+      "metallic": 0,
+      "roughness": 0.81,
+      "studioMaterial": "Fabric",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Road tire rubber",
+      "hex": "#27292a",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "tread": {
+      "name": "Recessed tread rubber",
+      "hex": "#131718",
+      "metallic": 0,
+      "roughness": 0.98,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "alloy": {
+      "name": "Machined aluminium",
+      "hex": "#b7c0c4",
+      "metallic": 0.8,
+      "roughness": 0.28,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "cast": {
+      "name": "Cast aluminium",
+      "hex": "#888b84",
+      "metallic": 0.67,
+      "roughness": 0.65,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "rotor": {
+      "name": "Brushed brake steel",
+      "hex": "#a9aead",
+      "metallic": 0.8,
+      "roughness": 0.46,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "chrome": {
+      "name": "Hard chromed fork tube",
+      "hex": "#c7d7df",
+      "metallic": 0.95,
+      "roughness": 0.17,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "anodized": {
+      "name": "Black anodized aluminium",
+      "hex": "#383b3c",
+      "metallic": 0.69,
+      "roughness": 0.38,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "spring": {
+      "name": "Mustard yellow powder coat",
+      "hex": "#e2ad42",
+      "metallic": 0.26,
+      "roughness": 0.34,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "pipe": {
+      "name": "Heat stained stainless steel",
+      "hex": "#896f55",
+      "metallic": 0.76,
+      "roughness": 0.43,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "weld": {
+      "name": "Stainless weld bead",
+      "hex": "#b09979",
+      "metallic": 0.72,
+      "roughness": 0.56,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "grease": {
+      "name": "Greased drive steel",
+      "hex": "#4e4940",
+      "metallic": 0.63,
+      "roughness": 0.65,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "dirty": {
+      "name": "Dusty unpainted polymer",
+      "hex": "#4a4740",
+      "metallic": 0,
+      "roughness": 0.89,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "glass": {
+      "name": "Clear polycarbonate",
+      "hex": "#dce8dd",
+      "metallic": 0,
+      "roughness": 0.12,
+      "studioMaterial": "Glass",
+      "transparency": 0.63
+    },
+    "reflector": {
+      "name": "Headlamp reflector",
+      "hex": "#e3e7d6",
+      "metallic": 0.38,
+      "roughness": 0.24,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Red tail lamp lens",
+      "hex": "#a61a21",
+      "metallic": 0.06,
+      "roughness": 0.19,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "amber": {
+      "name": "Amber reflector",
+      "hex": "#ce6020",
+      "metallic": 0.05,
+      "roughness": 0.24,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "vertex": {
+      "name": "Catalog vertex colours",
+      "hex": "#ffffff",
+      "metallic": 0.18,
+      "roughness": 0.54,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "gold": {
+      "name": "Anodised gold",
+      "hex": "#bc8b38",
+      "metallic": 0.55,
+      "roughness": 0.43,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "raceRed": {
+      "name": "Aftermarket red",
+      "hex": "#a63d35",
+      "metallic": 0.29,
+      "roughness": 0.44,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    }
+  },
+  "components": [
+    {
+      "assetId": "sm50-catalog.Frame",
+      "name": "Frame",
+      "category": "Vehicles",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Frame",
+      "dimensionsM": [
+        0.440736,
+        0.690315,
+        1.259525
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Mount_FrontFork": [
+          0,
+          0.236,
+          -0.438
+        ],
+        "Mount_Handlebar": [
+          0,
+          0.456,
+          -0.348
+        ],
+        "Mount_FrontWheel": [
+          0,
+          -0.25,
+          -0.7
+        ],
+        "Mount_FrontBrake": [
+          0.083,
+          -0.25,
+          -0.7
+        ],
+        "Mount_Swingarm": [
+          0,
+          -0.102,
+          0.19
+        ],
+        "Mount_RearShock": [
+          0,
+          0.176,
+          0.258
+        ],
+        "Mount_RearWheel": [
+          0,
+          -0.25,
+          0.65
+        ],
+        "Mount_RearBrake": [
+          0.103,
+          -0.25,
+          0.65
+        ],
+        "Mount_RearSprocket": [
+          -0.109,
+          -0.25,
+          0.65
+        ],
+        "Mount_EngineBlock": [
+          0,
+          -0.175,
+          -0.063
+        ],
+        "Mount_Clutch": [
+          0.071,
+          -0.179,
+          0.039
+        ],
+        "Mount_FrontSprocket": [
+          -0.109,
+          -0.148,
+          0.16
+        ],
+        "Mount_Piston": [
+          0,
+          -0.006425,
+          -0.099552
+        ],
+        "Mount_Cylinder": [
+          0,
+          -0.061,
+          -0.087
+        ],
+        "Mount_CylinderHead": [
+          0,
+          0.072514,
+          -0.117708
+        ],
+        "Mount_SparkPlug": [
+          0,
+          0.1037,
+          -0.124881
+        ],
+        "Mount_Carburetor": [
+          0,
+          -0.018,
+          0.081
+        ],
+        "Mount_AirFilter": [
+          0,
+          0.086,
+          0.306
+        ],
+        "Mount_Exhaust": [
+          0.013,
+          -0.012,
+          -0.147
+        ],
+        "Mount_Ignition": [
+          -0.08,
+          0.15,
+          0.3
+        ],
+        "Mount_Chain": [
+          -0.109,
+          -0.148,
+          0.16
+        ],
+        "Mount_Radiator": [
+          0.077,
+          0.151,
+          -0.254
+        ],
+        "Mount_FuelTank": [
+          0,
+          0.315,
+          -0.084
+        ],
+        "Mount_FuelLine": [
+          -0.058,
+          0.264,
+          0.081
+        ],
+        "Mount_Seat": [
+          0,
+          0.298,
+          0.334
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.220368,
+            -0.287954,
+            -0.47411
+          ],
+          "max": [
+            0.220368,
+            0.402361,
+            0.785415
+          ],
+          "size": [
+            0.440736,
+            0.690315,
+            1.259525
+          ]
+        }
+      },
+      "triangles": 3360,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_block_am6",
+      "name": "Part_block_am6",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_block_am6",
+      "dimensionsM": [
+        0.2915,
+        0.267,
+        0.433
+      ],
+      "pivotM": [
+        0,
+        -0.175,
+        -0.063
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          -0.021,
+          -0.152
+        ],
+        "Bolt_2": [
+          0,
+          -0.039,
+          0.164
+        ],
+        "Bolt_3": [
+          0,
+          0.064,
+          0.211
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.1175,
+            -0.084,
+            -0.165
+          ],
+          "max": [
+            0.174,
+            0.183,
+            0.268
+          ],
+          "size": [
+            0.2915,
+            0.267,
+            0.433
+          ]
+        }
+      },
+      "triangles": 11984,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_piston_40",
+      "name": "Part_piston_40",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_piston_40",
+      "dimensionsM": [
+        0.0396,
+        0.044464,
+        0.045726
+      ],
+      "pivotM": [
+        0,
+        -0.006425,
+        -0.099552
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.019,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          -0.019,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.0198,
+            -0.021913,
+            -0.022688
+          ],
+          "max": [
+            0.0198,
+            0.022551,
+            0.023038
+          ],
+          "size": [
+            0.0396,
+            0.044464,
+            0.045726
+          ]
+        }
+      },
+      "triangles": 1264,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_cylinder_50",
+      "name": "Part_cylinder_50",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_cylinder_50",
+      "dimensionsM": [
+        0.122,
+        0.150023,
+        0.132393
+      ],
+      "pivotM": [
+        0,
+        -0.061,
+        -0.087
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0.048,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0,
+          0.048
+        ],
+        "Bolt_3": [
+          -0.048,
+          0,
+          0
+        ],
+        "Bolt_4": [
+          0,
+          0,
+          -0.048
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.061,
+            -0.016314,
+            -0.076084
+          ],
+          "max": [
+            0.061,
+            0.133709,
+            0.05631
+          ],
+          "size": [
+            0.122,
+            0.150023,
+            0.132393
+          ]
+        }
+      },
+      "triangles": 2320,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_head_std",
+      "name": "Part_head_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_head_std",
+      "dimensionsM": [
+        0.106,
+        0.056992,
+        0.105915
+      ],
+      "pivotM": [
+        0,
+        0.072514,
+        -0.117708
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0.037,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0,
+          0.037
+        ],
+        "Bolt_3": [
+          -0.037,
+          0,
+          0
+        ],
+        "Bolt_4": [
+          0,
+          0,
+          -0.037
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.053,
+            -0.022834,
+            -0.052246
+          ],
+          "max": [
+            0.053,
+            0.034158,
+            0.053669
+          ],
+          "size": [
+            0.106,
+            0.056992,
+            0.105915
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_plug_std",
+      "name": "Part_plug_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_plug_std",
+      "dimensionsM": [
+        0.012124,
+        0.042949,
+        0.018936
+      ],
+      "pivotM": [
+        0,
+        0.1037,
+        -0.124881
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.006062,
+            -0.004269,
+            -0.011665
+          ],
+          "max": [
+            0.006062,
+            0.03868,
+            0.00727
+          ],
+          "size": [
+            0.012124,
+            0.042949,
+            0.018936
+          ]
+        }
+      },
+      "triangles": 240,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_clutch_std",
+      "name": "Part_clutch_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_clutch_std",
+      "dimensionsM": [
+        0.057184,
+        0.096,
+        0.096
+      ],
+      "pivotM": [
+        0.071,
+        -0.179,
+        0.039
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.022,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0.006798,
+          0.020923
+        ],
+        "Bolt_3": [
+          0,
+          -0.017798,
+          0.012931
+        ],
+        "Bolt_4": [
+          0,
+          -0.017798,
+          -0.012931
+        ],
+        "Bolt_5": [
+          0,
+          0.006798,
+          -0.020923
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.0235,
+            -0.048,
+            -0.048
+          ],
+          "max": [
+            0.033684,
+            0.048,
+            0.048
+          ],
+          "size": [
+            0.057184,
+            0.096,
+            0.096
+          ]
+        }
+      },
+      "triangles": 5692,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_carb_17",
+      "name": "Part_carb_17",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_carb_17",
+      "dimensionsM": [
+        0.064801,
+        0.092191,
+        0.158164
+      ],
+      "pivotM": [
+        0,
+        -0.018,
+        0.081
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.003,
+          -0.038
+        ],
+        "Bolt_2": [
+          0,
+          0.011,
+          0.05
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.026536,
+            -0.053691,
+            -0.102863
+          ],
+          "max": [
+            0.038265,
+            0.0385,
+            0.055301
+          ],
+          "size": [
+            0.064801,
+            0.092191,
+            0.158164
+          ]
+        }
+      },
+      "triangles": 716,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_filter_std",
+      "name": "Part_filter_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_filter_std",
+      "dimensionsM": [
+        0.137403,
+        0.230561,
+        0.337242
+      ],
+      "pivotM": [
+        0,
+        0.086,
+        0.306
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          -0.073,
+          0.055,
+          0.067
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.068702,
+            -0.113748,
+            -0.182242
+          ],
+          "max": [
+            0.068702,
+            0.116813,
+            0.155
+          ],
+          "size": [
+            0.137403,
+            0.230561,
+            0.337242
+          ]
+        }
+      },
+      "triangles": 296,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_exhaust_std",
+      "name": "Part_exhaust_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_exhaust_std",
+      "dimensionsM": [
+        0.217866,
+        0.529038,
+        1.037737
+      ],
+      "pivotM": [
+        0.013,
+        -0.012,
+        -0.147
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0.139,
+          0.02,
+          0.366
+        ],
+        "Bolt_3": [
+          0.117,
+          0.244,
+          0.789
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.018959,
+            -0.241271,
+            -0.138847
+          ],
+          "max": [
+            0.198907,
+            0.287767,
+            0.89889
+          ],
+          "size": [
+            0.217866,
+            0.529038,
+            1.037737
+          ]
+        }
+      },
+      "triangles": 3172,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_fork_std",
+      "name": "Part_fork_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_fork_std",
+      "dimensionsM": [
+        0.274,
+        0.731955,
+        0.608108
+      ],
+      "pivotM": [
+        0,
+        0.236,
+        -0.438
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          -0.121,
+          0.003,
+          -0.042
+        ],
+        "Bolt_2": [
+          0.121,
+          0.003,
+          -0.042
+        ],
+        "Bolt_3": [
+          -0.121,
+          0.177,
+          0.039
+        ],
+        "Bolt_4": [
+          0.121,
+          0.177,
+          0.039
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.137,
+            -0.519,
+            -0.512726
+          ],
+          "max": [
+            0.137,
+            0.212955,
+            0.095382
+          ],
+          "size": [
+            0.274,
+            0.731955,
+            0.608108
+          ]
+        }
+      },
+      "triangles": 5016,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_handlebar_std",
+      "name": "Part_handlebar_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_handlebar_std",
+      "dimensionsM": [
+        0.780021,
+        0.12759,
+        0.199307
+      ],
+      "pivotM": [
+        0,
+        0.456,
+        -0.348
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          -0.044,
+          0.015,
+          0.009
+        ],
+        "Bolt_2": [
+          0.044,
+          0.015,
+          0.009
+        ],
+        "Bolt_3": [
+          -0.044,
+          0.015,
+          -0.016
+        ],
+        "Bolt_4": [
+          0.044,
+          0.015,
+          -0.016
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.390011,
+            -0.05159,
+            -0.114
+          ],
+          "max": [
+            0.390011,
+            0.076,
+            0.085307
+          ],
+          "size": [
+            0.780021,
+            0.12759,
+            0.199307
+          ]
+        }
+      },
+      "triangles": 5112,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_wheel_front_17",
+      "name": "Part_wheel_front_17",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_wheel_front_17",
+      "dimensionsM": [
+        0.138,
+        0.59,
+        0.59
+      ],
+      "pivotM": [
+        0,
+        -0.25,
+        -0.7
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.069,
+            -0.295,
+            -0.295
+          ],
+          "max": [
+            0.069,
+            0.295,
+            0.295
+          ],
+          "size": [
+            0.138,
+            0.59,
+            0.59
+          ]
+        }
+      },
+      "triangles": 7312,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_wheel_rear_17",
+      "name": "Part_wheel_rear_17",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_wheel_rear_17",
+      "dimensionsM": [
+        0.138,
+        0.614,
+        0.614
+      ],
+      "pivotM": [
+        0,
+        -0.25,
+        0.65
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.069,
+            -0.307,
+            -0.307
+          ],
+          "max": [
+            0.069,
+            0.307,
+            0.307
+          ],
+          "size": [
+            0.138,
+            0.614,
+            0.614
+          ]
+        }
+      },
+      "triangles": 7312,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_swingarm_std",
+      "name": "Part_swingarm_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_swingarm_std",
+      "dimensionsM": [
+        0.327684,
+        0.272271,
+        0.538293
+      ],
+      "pivotM": [
+        0,
+        -0.102,
+        0.19
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.163842,
+            -0.23,
+            -0.025293
+          ],
+          "max": [
+            0.163842,
+            0.042271,
+            0.513
+          ],
+          "size": [
+            0.327684,
+            0.272271,
+            0.538293
+          ]
+        }
+      },
+      "triangles": 648,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_shock_std",
+      "name": "Part_shock_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_shock_std",
+      "dimensionsM": [
+        0.098,
+        0.331,
+        0.194
+      ],
+      "pivotM": [
+        0,
+        0.176,
+        0.258
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          -0.297,
+          0.16
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.037,
+            -0.313,
+            -0.018
+          ],
+          "max": [
+            0.061,
+            0.018,
+            0.176
+          ],
+          "size": [
+            0.098,
+            0.331,
+            0.194
+          ]
+        }
+      },
+      "triangles": 2936,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_tank_std",
+      "name": "Part_tank_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_tank_std",
+      "dimensionsM": [
+        0.299713,
+        0.2925,
+        0.539
+      ],
+      "pivotM": [
+        0,
+        0.315,
+        -0.084
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          -0.116,
+          0.017,
+          -0.109
+        ],
+        "Bolt_2": [
+          0.116,
+          0.017,
+          -0.109
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.149857,
+            -0.193,
+            -0.241
+          ],
+          "max": [
+            0.149857,
+            0.0995,
+            0.298
+          ],
+          "size": [
+            0.299713,
+            0.2925,
+            0.539
+          ]
+        }
+      },
+      "triangles": 1976,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_seat_std",
+      "name": "Part_seat_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_seat_std",
+      "dimensionsM": [
+        0.258,
+        0.277079,
+        0.946
+      ],
+      "pivotM": [
+        0,
+        0.298,
+        0.334
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.041,
+          -0.269
+        ],
+        "Bolt_2": [
+          0,
+          -0.01,
+          0.225
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.129,
+            -0.191139,
+            -0.366
+          ],
+          "max": [
+            0.129,
+            0.08594,
+            0.58
+          ],
+          "size": [
+            0.258,
+            0.277079,
+            0.946
+          ]
+        }
+      },
+      "triangles": 2372,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_radiator_std",
+      "name": "Part_radiator_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_radiator_std",
+      "dimensionsM": [
+        0.231413,
+        0.344191,
+        0.167617
+      ],
+      "pivotM": [
+        0.077,
+        0.151,
+        -0.254
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          -0.153,
+          0.05,
+          0.032
+        ],
+        "Bolt_2": [
+          -0.001,
+          0.05,
+          0.032
+        ],
+        "Bolt_3": [
+          -0.042,
+          -0.067,
+          0.136
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.192706,
+            -0.281191,
+            -0.027
+          ],
+          "max": [
+            0.038706,
+            0.063,
+            0.140617
+          ],
+          "size": [
+            0.231413,
+            0.344191,
+            0.167617
+          ]
+        }
+      },
+      "triangles": 1472,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_brake_front_std",
+      "name": "Part_brake_front_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_brake_front_std",
+      "dimensionsM": [
+        0.0455,
+        0.287831,
+        0.279
+      ],
+      "pivotM": [
+        0.083,
+        -0.25,
+        -0.7
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.035,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          -0.035,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.02,
+            -0.1395,
+            -0.1395
+          ],
+          "max": [
+            0.0255,
+            0.148331,
+            0.1395
+          ],
+          "size": [
+            0.0455,
+            0.287831,
+            0.279
+          ]
+        }
+      },
+      "triangles": 2432,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_brake_rear_std",
+      "name": "Part_brake_rear_std",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_brake_rear_std",
+      "dimensionsM": [
+        0.0455,
+        0.232533,
+        0.213
+      ],
+      "pivotM": [
+        0.103,
+        -0.25,
+        0.65
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.035,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          -0.035,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.02,
+            -0.1065,
+            -0.1065
+          ],
+          "max": [
+            0.0255,
+            0.126033,
+            0.1065
+          ],
+          "size": [
+            0.0455,
+            0.232533,
+            0.213
+          ]
+        }
+      },
+      "triangles": 2432,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_f_11",
+      "name": "Part_sprocket_f_11",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_f_11",
+      "dimensionsM": [
+        0.011,
+        0.05807,
+        0.05807
+      ],
+      "pivotM": [
+        -0.109,
+        -0.148,
+        0.16
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.008,
+            -0.028886,
+            -0.029183
+          ],
+          "max": [
+            0.003,
+            0.029183,
+            0.028886
+          ],
+          "size": [
+            0.011,
+            0.05807,
+            0.05807
+          ]
+        }
+      },
+      "triangles": 552,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_f_12",
+      "name": "Part_sprocket_f_12",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_f_12",
+      "dimensionsM": [
+        0.011,
+        0.062659,
+        0.062659
+      ],
+      "pivotM": [
+        -0.109,
+        -0.148,
+        0.16
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.008,
+            -0.03133,
+            -0.03133
+          ],
+          "max": [
+            0.003,
+            0.03133,
+            0.03133
+          ],
+          "size": [
+            0.011,
+            0.062659,
+            0.062659
+          ]
+        }
+      },
+      "triangles": 600,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_f_13",
+      "name": "Part_sprocket_f_13",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_f_13",
+      "dimensionsM": [
+        0.011,
+        0.067785,
+        0.067785
+      ],
+      "pivotM": [
+        -0.109,
+        -0.148,
+        0.16
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.008,
+            -0.034017,
+            -0.034017
+          ],
+          "max": [
+            0.003,
+            0.033769,
+            0.033769
+          ],
+          "size": [
+            0.011,
+            0.067785,
+            0.067785
+          ]
+        }
+      },
+      "triangles": 648,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_f_14",
+      "name": "Part_sprocket_f_14",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_f_14",
+      "dimensionsM": [
+        0.011,
+        0.072867,
+        0.072408
+      ],
+      "pivotM": [
+        -0.109,
+        -0.148,
+        0.16
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.008,
+            -0.036433,
+            -0.036204
+          ],
+          "max": [
+            0.003,
+            0.036433,
+            0.036204
+          ],
+          "size": [
+            0.011,
+            0.072867,
+            0.072408
+          ]
+        }
+      },
+      "triangles": 696,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_r_47",
+      "name": "Part_sprocket_r_47",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_r_47",
+      "dimensionsM": [
+        0.012,
+        0.181399,
+        0.181399
+      ],
+      "pivotM": [
+        -0.109,
+        -0.25,
+        0.65
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.05,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0.025,
+          0.043301
+        ],
+        "Bolt_3": [
+          0,
+          -0.025,
+          0.043301
+        ],
+        "Bolt_4": [
+          0,
+          -0.05,
+          0
+        ],
+        "Bolt_5": [
+          0,
+          -0.025,
+          -0.043301
+        ],
+        "Bolt_6": [
+          0,
+          0.025,
+          -0.043301
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.006,
+            -0.090674,
+            -0.090725
+          ],
+          "max": [
+            0.006,
+            0.090725,
+            0.090674
+          ],
+          "size": [
+            0.012,
+            0.181399,
+            0.181399
+          ]
+        }
+      },
+      "triangles": 2448,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_r_50",
+      "name": "Part_sprocket_r_50",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_r_50",
+      "dimensionsM": [
+        0.012,
+        0.1927,
+        0.192605
+      ],
+      "pivotM": [
+        -0.109,
+        -0.25,
+        0.65
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.05,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0.025,
+          0.043301
+        ],
+        "Bolt_3": [
+          0,
+          -0.025,
+          0.043301
+        ],
+        "Bolt_4": [
+          0,
+          -0.05,
+          0
+        ],
+        "Bolt_5": [
+          0,
+          -0.025,
+          -0.043301
+        ],
+        "Bolt_6": [
+          0,
+          0.025,
+          -0.043301
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.006,
+            -0.09635,
+            -0.096302
+          ],
+          "max": [
+            0.006,
+            0.09635,
+            0.096302
+          ],
+          "size": [
+            0.012,
+            0.1927,
+            0.192605
+          ]
+        }
+      },
+      "triangles": 2592,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_sprocket_r_53",
+      "name": "Part_sprocket_r_53",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_sprocket_r_53",
+      "dimensionsM": [
+        0.012,
+        0.203905,
+        0.203905
+      ],
+      "pivotM": [
+        -0.109,
+        -0.25,
+        0.65
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.05,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0.025,
+          0.043301
+        ],
+        "Bolt_3": [
+          0,
+          -0.025,
+          0.043301
+        ],
+        "Bolt_4": [
+          0,
+          -0.05,
+          0
+        ],
+        "Bolt_5": [
+          0,
+          -0.025,
+          -0.043301
+        ],
+        "Bolt_6": [
+          0,
+          0.025,
+          -0.043301
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.006,
+            -0.101975,
+            -0.101975
+          ],
+          "max": [
+            0.006,
+            0.10193,
+            0.10193
+          ],
+          "size": [
+            0.012,
+            0.203905,
+            0.203905
+          ]
+        }
+      },
+      "triangles": 2736,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_chain_420",
+      "name": "Part_chain_420",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_chain_420",
+      "dimensionsM": [
+        0.0192,
+        0.226399,
+        0.614852
+      ],
+      "pivotM": [
+        -0.109,
+        -0.148,
+        0.16
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.0096,
+            -0.196708,
+            -0.029999
+          ],
+          "max": [
+            0.0096,
+            0.029691,
+            0.584853
+          ],
+          "size": [
+            0.0192,
+            0.226399,
+            0.614852
+          ]
+        }
+      },
+      "triangles": 7040,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_cdi_restricted",
+      "name": "Part_cdi_restricted",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_cdi_restricted",
+      "dimensionsM": [
+        0.109571,
+        0.075664,
+        0.602903
+      ],
+      "pivotM": [
+        -0.08,
+        0.15,
+        0.3
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.025571,
+            -0.01967,
+            -0.625
+          ],
+          "max": [
+            0.084,
+            0.055994,
+            -0.022097
+          ],
+          "size": [
+            0.109571,
+            0.075664,
+            0.602903
+          ]
+        }
+      },
+      "triangles": 136,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_fuel_line",
+      "name": "Part_fuel_line",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_fuel_line",
+      "dimensionsM": [
+        0.103472,
+        0.267,
+        0.024795
+      ],
+      "pivotM": [
+        -0.058,
+        0.264,
+        0.081
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0.058,
+          -0.282,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.004375,
+            -0.265,
+            -0.011396
+          ],
+          "max": [
+            0.099097,
+            0.002,
+            0.013399
+          ],
+          "size": [
+            0.103472,
+            0.267,
+            0.024795
+          ]
+        }
+      },
+      "triangles": 160,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_piston_47",
+      "name": "Part_piston_47",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_piston_47",
+      "dimensionsM": [
+        0.046773,
+        0.052518,
+        0.054009
+      ],
+      "pivotM": [
+        0,
+        -0.006425,
+        -0.099552
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.023,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          -0.023,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.023387,
+            -0.025882,
+            -0.026797
+          ],
+          "max": [
+            0.023387,
+            0.026636,
+            0.027212
+          ],
+          "size": [
+            0.046773,
+            0.052518,
+            0.054009
+          ]
+        }
+      },
+      "triangles": 1200,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_cylinder_70",
+      "name": "Part_cylinder_70",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_cylinder_70",
+      "dimensionsM": [
+        0.1342,
+        0.165025,
+        0.145633
+      ],
+      "pivotM": [
+        0,
+        -0.061,
+        -0.087
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0.051,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0,
+          0.051
+        ],
+        "Bolt_3": [
+          -0.051,
+          0,
+          0
+        ],
+        "Bolt_4": [
+          0,
+          0,
+          -0.051
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.0671,
+            -0.017945,
+            -0.083692
+          ],
+          "max": [
+            0.0671,
+            0.14708,
+            0.061941
+          ],
+          "size": [
+            0.1342,
+            0.165025,
+            0.145633
+          ]
+        }
+      },
+      "triangles": 2320,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_head_hc",
+      "name": "Part_head_hc",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_head_hc",
+      "dimensionsM": [
+        0.106,
+        0.056992,
+        0.105915
+      ],
+      "pivotM": [
+        0,
+        0.072514,
+        -0.117708
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0.037,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0,
+          0.037
+        ],
+        "Bolt_3": [
+          -0.037,
+          0,
+          0
+        ],
+        "Bolt_4": [
+          0,
+          0,
+          -0.037
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.053,
+            -0.022834,
+            -0.052246
+          ],
+          "max": [
+            0.053,
+            0.034158,
+            0.053669
+          ],
+          "size": [
+            0.106,
+            0.056992,
+            0.105915
+          ]
+        }
+      },
+      "triangles": 848,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_clutch_race",
+      "name": "Part_clutch_race",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_clutch_race",
+      "dimensionsM": [
+        0.057184,
+        0.096,
+        0.096
+      ],
+      "pivotM": [
+        0.071,
+        -0.179,
+        0.039
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.022,
+          0
+        ],
+        "Bolt_2": [
+          0,
+          0.006798,
+          0.020923
+        ],
+        "Bolt_3": [
+          0,
+          -0.017798,
+          0.012931
+        ],
+        "Bolt_4": [
+          0,
+          -0.017798,
+          -0.012931
+        ],
+        "Bolt_5": [
+          0,
+          0.006798,
+          -0.020923
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.0235,
+            -0.048,
+            -0.048
+          ],
+          "max": [
+            0.033684,
+            0.048,
+            0.048
+          ],
+          "size": [
+            0.057184,
+            0.096,
+            0.096
+          ]
+        }
+      },
+      "triangles": 5692,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_carb_21",
+      "name": "Part_carb_21",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_carb_21",
+      "dimensionsM": [
+        0.07517,
+        0.106941,
+        0.111585
+      ],
+      "pivotM": [
+        0,
+        -0.018,
+        0.081
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0.003,
+          -0.038
+        ],
+        "Bolt_2": [
+          0,
+          0.011,
+          0.05
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.030782,
+            -0.062281,
+            -0.047436
+          ],
+          "max": [
+            0.044388,
+            0.04466,
+            0.064149
+          ],
+          "size": [
+            0.07517,
+            0.106941,
+            0.111585
+          ]
+        }
+      },
+      "triangles": 608,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_filter_sport",
+      "name": "Part_filter_sport",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_filter_sport",
+      "dimensionsM": [
+        0.094,
+        0.094,
+        0.098
+      ],
+      "pivotM": [
+        0,
+        0.086,
+        0.306
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.047,
+            -0.047,
+            -0.055
+          ],
+          "max": [
+            0.047,
+            0.047,
+            0.043
+          ],
+          "size": [
+            0.094,
+            0.094,
+            0.098
+          ]
+        }
+      },
+      "triangles": 576,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_exhaust_sport",
+      "name": "Part_exhaust_sport",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_exhaust_sport",
+      "dimensionsM": [
+        0.228737,
+        0.529826,
+        0.963737
+      ],
+      "pivotM": [
+        0.013,
+        -0.012,
+        -0.147
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ],
+        "Bolt_2": [
+          0.139,
+          0.02,
+          0.366
+        ],
+        "Bolt_3": [
+          0.117,
+          0.244,
+          0.789
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.018959,
+            -0.242059,
+            -0.138847
+          ],
+          "max": [
+            0.209779,
+            0.287767,
+            0.82489
+          ],
+          "size": [
+            0.228737,
+            0.529826,
+            0.963737
+          ]
+        }
+      },
+      "triangles": 3172,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    },
+    {
+      "assetId": "sm50-catalog.Part_cdi_open",
+      "name": "Part_cdi_open",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50-catalog"
+      ],
+      "file": "vehicles/sm50/exports/ZefirSM50Catalog.glb",
+      "node": "Part_cdi_open",
+      "dimensionsM": [
+        0.109571,
+        0.075664,
+        0.602903
+      ],
+      "pivotM": [
+        -0.08,
+        0.15,
+        0.3
+      ],
+      "attachmentLocalM": {
+        "Bolt_1": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "vertex"
+      ],
+      "materialBoundsM": {
+        "vertex": {
+          "min": [
+            -0.025571,
+            -0.01967,
+            -0.625
+          ],
+          "max": [
+            0.084,
+            0.055994,
+            -0.022097
+          ],
+          "size": [
+            0.109571,
+            0.075664,
+            0.602903
+          ]
+        }
+      },
+      "triangles": 136,
+      "collision": [],
+      "interaction": "Install using the matching frame mount"
+    }
+  ],
+  "stats": {
+    "triangles": 101072,
+    "components": 39,
+    "materialLayers": 39,
+    "maxTrianglesPerComponent": 11984
+  }
+}

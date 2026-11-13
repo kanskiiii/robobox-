@@ -1,0 +1,3787 @@
+{
+  "schemaVersion": 1,
+  "assetId": "starter-garage",
+  "name": "StarterGarage",
+  "stage": "First production pass",
+  "source": "environment/starter-garage/source/garage.mjs",
+  "export": "environment/starter-garage/exports/StarterGarage.glb",
+  "orientation": {
+    "units": "m",
+    "up": "+Y",
+    "forward": "-Z",
+    "riderLeft": "-X",
+    "metresPerStud": 0.28
+  },
+  "boundsM": {
+    "min": [
+      -2.76,
+      -0.184,
+      -5.174534
+    ],
+    "max": [
+      2.76,
+      2.771,
+      3.11
+    ],
+    "size": [
+      5.52,
+      2.955,
+      8.284534
+    ]
+  },
+  "datumsM": {
+    "VehicleStand": [
+      -0.55,
+      0,
+      -0.1
+    ],
+    "DoorHinge": [
+      0,
+      2.39,
+      -2.9
+    ],
+    "WorkbenchTop": [
+      -1.91,
+      0.93,
+      1.2
+    ],
+    "Threshold": [
+      0,
+      0,
+      -2.93
+    ],
+    "GarageCenter": [
+      0,
+      0,
+      0
+    ]
+  },
+  "proxies": [
+    {
+      "name": "Floor",
+      "center": [
+        0,
+        -0.091,
+        0
+      ],
+      "size": [
+        5.22,
+        0.182,
+        5.82
+      ],
+      "target": "ConcreteSlab"
+    },
+    {
+      "name": "LeftWallSolid",
+      "center": [
+        -2.55,
+        1.29,
+        0
+      ],
+      "size": [
+        0.19,
+        2.58,
+        5.64
+      ],
+      "target": "LeftWall"
+    },
+    {
+      "name": "RightWallLower",
+      "center": [
+        2.55,
+        0.655,
+        0
+      ],
+      "size": [
+        0.19,
+        1.31,
+        5.64
+      ],
+      "target": "RightWall"
+    },
+    {
+      "name": "RightWallUpper",
+      "center": [
+        2.55,
+        2.337,
+        0
+      ],
+      "size": [
+        0.19,
+        0.486,
+        5.64
+      ],
+      "target": "RightWall"
+    },
+    {
+      "name": "RightWallBack",
+      "center": [
+        2.55,
+        1.703,
+        1.695
+      ],
+      "size": [
+        0.19,
+        0.786,
+        2.25
+      ],
+      "target": "RightWall"
+    },
+    {
+      "name": "RightWallFront",
+      "center": [
+        2.55,
+        1.703,
+        -1.493
+      ],
+      "size": [
+        0.19,
+        0.786,
+        2.64
+      ],
+      "target": "RightWall"
+    },
+    {
+      "name": "BackWallSolid",
+      "center": [
+        0,
+        1.29,
+        2.83
+      ],
+      "size": [
+        4.92,
+        2.58,
+        0.185
+      ],
+      "target": "BackWall"
+    },
+    {
+      "name": "FrontPierL",
+      "center": [
+        -2.067,
+        1.29,
+        -2.83
+      ],
+      "size": [
+        0.8,
+        2.58,
+        0.185
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "FrontPierR",
+      "center": [
+        2.067,
+        1.29,
+        -2.83
+      ],
+      "size": [
+        0.8,
+        2.58,
+        0.185
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "DoorLintel",
+      "center": [
+        0,
+        2.478,
+        -2.83
+      ],
+      "size": [
+        3.34,
+        0.204,
+        0.185
+      ],
+      "target": "FrontWall"
+    },
+    {
+      "name": "WorkbenchTop",
+      "center": [
+        -1.925,
+        0.882,
+        1.25
+      ],
+      "size": [
+        0.89,
+        0.095,
+        1.88
+      ],
+      "target": "Workbench"
+    },
+    {
+      "name": "StandTop",
+      "center": [
+        -0.55,
+        0.267,
+        -0.1
+      ],
+      "size": [
+        0.313,
+        0.055,
+        0.301
+      ],
+      "target": "MotorcycleStand"
+    }
+  ],
+  "materials": {
+    "concrete": {
+      "name": "Trowelled grey concrete",
+      "hex": "#8d8c81",
+      "metallic": 0,
+      "roughness": 0.96,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "joint": {
+      "name": "Recessed expansion joints",
+      "hex": "#55574f",
+      "metallic": 0,
+      "roughness": 0.95,
+      "studioMaterial": "Concrete",
+      "transparency": 0
+    },
+    "plaster": {
+      "name": "Weathered lime plaster",
+      "hex": "#c6ba9e",
+      "metallic": 0,
+      "roughness": 0.88,
+      "studioMaterial": "Plaster",
+      "transparency": 0
+    },
+    "plinth": {
+      "name": "Green oil-painted plinth",
+      "hex": "#4d6561",
+      "metallic": 0.02,
+      "roughness": 0.65,
+      "studioMaterial": "SmoothPlastic",
+      "transparency": 0
+    },
+    "brick": {
+      "name": "Terracotta block",
+      "hex": "#9b503b",
+      "metallic": 0,
+      "roughness": 0.94,
+      "studioMaterial": "Brick",
+      "transparency": 0
+    },
+    "roof": {
+      "name": "Graphite corrugated steel",
+      "hex": "#4d4e4b",
+      "metallic": 0.45,
+      "roughness": 0.62,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "enamel": {
+      "name": "Green painted steel",
+      "hex": "#405c53",
+      "metallic": 0.3,
+      "roughness": 0.44,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "metal": {
+      "name": "Zinc plated steel",
+      "hex": "#acada0",
+      "metallic": 0.75,
+      "roughness": 0.32,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "black": {
+      "name": "Charcoal steel and molded plastic",
+      "hex": "#262a28",
+      "metallic": 0.3,
+      "roughness": 0.67,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "rubber": {
+      "name": "Used rubber",
+      "hex": "#252621",
+      "metallic": 0,
+      "roughness": 0.92,
+      "studioMaterial": "Rubber",
+      "transparency": 0
+    },
+    "timber": {
+      "name": "Oiled pine",
+      "hex": "#967047",
+      "metallic": 0,
+      "roughness": 0.78,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "plywood": {
+      "name": "End grain and worn timber",
+      "hex": "#745237",
+      "metallic": 0,
+      "roughness": 0.8,
+      "studioMaterial": "Wood",
+      "transparency": 0
+    },
+    "red": {
+      "name": "Oxide red enamel",
+      "hex": "#94372e",
+      "metallic": 0.12,
+      "roughness": 0.53,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "blue": {
+      "name": "Blue tool-case polymer",
+      "hex": "#3a5b72",
+      "metallic": 0,
+      "roughness": 0.65,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "yellow": {
+      "name": "Mustard equipment paint",
+      "hex": "#cb9a45",
+      "metallic": 0.15,
+      "roughness": 0.54,
+      "studioMaterial": "Metal",
+      "transparency": 0
+    },
+    "ivory": {
+      "name": "Opaque light diffuser",
+      "hex": "#f6f0d7",
+      "metallic": 0,
+      "roughness": 0.31,
+      "studioMaterial": "Neon",
+      "transparency": 0
+    },
+    "plastic": {
+      "name": "Cream bottle polymer",
+      "hex": "#c5bba0",
+      "metallic": 0,
+      "roughness": 0.74,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "paper": {
+      "name": "Kraft cardboard",
+      "hex": "#a68a5f",
+      "metallic": 0,
+      "roughness": 0.91,
+      "studioMaterial": "Plastic",
+      "transparency": 0
+    },
+    "glass": {
+      "name": "Dusty window glass",
+      "hex": "#9ab7ae",
+      "metallic": 0,
+      "roughness": 0.31,
+      "studioMaterial": "Glass",
+      "transparency": 0.64
+    }
+  },
+  "components": [
+    {
+      "assetId": "starter-garage.ConcreteSlab",
+      "name": "ConcreteSlab",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "ConcreteSlab",
+      "dimensionsM": [
+        5.225,
+        0.198,
+        5.8395
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Threshold": [
+          0,
+          0,
+          -2.93
+        ],
+        "VehicleStand": [
+          -0.55,
+          0,
+          -0.1
+        ]
+      },
+      "materials": [
+        "concrete",
+        "joint",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "concrete": {
+          "min": [
+            -2.6125,
+            -0.184,
+            -2.914
+          ],
+          "max": [
+            2.6125,
+            0,
+            2.914
+          ],
+          "size": [
+            5.225,
+            0.184,
+            5.828
+          ]
+        },
+        "joint": {
+          "min": [
+            -2.61,
+            -0.141,
+            -2.91
+          ],
+          "max": [
+            2.61,
+            -0.009,
+            2.91
+          ],
+          "size": [
+            5.22,
+            0.132,
+            5.82
+          ]
+        },
+        "metal": {
+          "min": [
+            -1.61,
+            -0.001,
+            -2.9255
+          ],
+          "max": [
+            1.61,
+            0.014,
+            -2.8445
+          ],
+          "size": [
+            3.22,
+            0.015,
+            0.081
+          ]
+        }
+      },
+      "triangles": 1216,
+      "collision": [
+        "Floor"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.LeftWall",
+      "name": "LeftWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "LeftWall",
+      "dimensionsM": [
+        0.229,
+        2.58,
+        5.64
+      ],
+      "pivotM": [
+        -2.53,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Workbench": [
+          0.62,
+          0.93,
+          1.2
+        ]
+      },
+      "materials": [
+        "plaster",
+        "plinth",
+        "brick"
+      ],
+      "materialBoundsM": {
+        "plaster": {
+          "min": [
+            -0.115,
+            0,
+            -2.82
+          ],
+          "max": [
+            0.075,
+            2.58,
+            2.82
+          ],
+          "size": [
+            0.19,
+            2.58,
+            5.64
+          ]
+        },
+        "plinth": {
+          "min": [
+            0.073,
+            0,
+            -2.805
+          ],
+          "max": [
+            0.095,
+            0.6,
+            2.805
+          ],
+          "size": [
+            0.022,
+            0.6,
+            5.61
+          ]
+        },
+        "brick": {
+          "min": [
+            -0.134,
+            0.064,
+            1.4195
+          ],
+          "max": [
+            -0.116,
+            0.464,
+            2.8035
+          ],
+          "size": [
+            0.018,
+            0.4,
+            1.384
+          ]
+        }
+      },
+      "triangles": 2048,
+      "collision": [
+        "LeftWallSolid"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.RightWall",
+      "name": "RightWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "RightWall",
+      "dimensionsM": [
+        0.229,
+        2.58,
+        5.64
+      ],
+      "pivotM": [
+        2.53,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Window": [
+          0.02,
+          1.703,
+          0.2
+        ]
+      },
+      "materials": [
+        "plaster",
+        "plinth",
+        "brick"
+      ],
+      "materialBoundsM": {
+        "plaster": {
+          "min": [
+            -0.075,
+            0,
+            -2.82
+          ],
+          "max": [
+            0.115,
+            2.58,
+            2.82
+          ],
+          "size": [
+            0.19,
+            2.58,
+            5.64
+          ]
+        },
+        "plinth": {
+          "min": [
+            -0.095,
+            0,
+            -2.805
+          ],
+          "max": [
+            -0.073,
+            0.6,
+            2.805
+          ],
+          "size": [
+            0.022,
+            0.6,
+            5.61
+          ]
+        },
+        "brick": {
+          "min": [
+            0.116,
+            0.064,
+            1.4195
+          ],
+          "max": [
+            0.134,
+            0.464,
+            2.8035
+          ],
+          "size": [
+            0.018,
+            0.4,
+            1.384
+          ]
+        }
+      },
+      "triangles": 2240,
+      "collision": [
+        "RightWallLower",
+        "RightWallUpper",
+        "RightWallBack",
+        "RightWallFront"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.BackWall",
+      "name": "BackWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "BackWall",
+      "dimensionsM": [
+        4.92,
+        2.58,
+        0.2215
+      ],
+      "pivotM": [
+        0,
+        0,
+        2.83
+      ],
+      "attachmentLocalM": {
+        "Shelf": [
+          1.6,
+          0.6,
+          -0.103
+        ]
+      },
+      "materials": [
+        "plaster",
+        "plinth",
+        "brick"
+      ],
+      "materialBoundsM": {
+        "plaster": {
+          "min": [
+            -2.46,
+            0,
+            -0.0925
+          ],
+          "max": [
+            2.46,
+            2.58,
+            0.0925
+          ],
+          "size": [
+            4.92,
+            2.58,
+            0.185
+          ]
+        },
+        "plinth": {
+          "min": [
+            -2.46,
+            0,
+            -0.114
+          ],
+          "max": [
+            2.46,
+            0.6,
+            -0.092
+          ],
+          "size": [
+            4.92,
+            0.6,
+            0.022
+          ]
+        },
+        "brick": {
+          "min": [
+            -2.382,
+            0.0765,
+            0.0905
+          ],
+          "max": [
+            -0.569,
+            0.6355,
+            0.1075
+          ],
+          "size": [
+            1.813,
+            0.559,
+            0.017
+          ]
+        }
+      },
+      "triangles": 3712,
+      "collision": [
+        "BackWallSolid"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.FrontWall",
+      "name": "FrontWall",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "FrontWall",
+      "dimensionsM": [
+        4.934,
+        2.58,
+        0.226
+      ],
+      "pivotM": [
+        0,
+        0,
+        -2.83
+      ],
+      "attachmentLocalM": {
+        "DoorHinge": [
+          0,
+          2.39,
+          -0.07
+        ]
+      },
+      "materials": [
+        "plaster",
+        "brick",
+        "plinth"
+      ],
+      "materialBoundsM": {
+        "plaster": {
+          "min": [
+            -2.467,
+            0,
+            -0.0925
+          ],
+          "max": [
+            2.467,
+            2.58,
+            0.0925
+          ],
+          "size": [
+            4.934,
+            2.58,
+            0.185
+          ]
+        },
+        "brick": {
+          "min": [
+            -1.853,
+            0.029,
+            -0.1105
+          ],
+          "max": [
+            1.853,
+            2.299,
+            -0.0855
+          ],
+          "size": [
+            3.706,
+            2.27,
+            0.025
+          ]
+        },
+        "plinth": {
+          "min": [
+            -2.4625,
+            0,
+            0.0945
+          ],
+          "max": [
+            2.4625,
+            0.6,
+            0.1155
+          ],
+          "size": [
+            4.925,
+            0.6,
+            0.021
+          ]
+        }
+      },
+      "triangles": 3648,
+      "collision": [
+        "FrontPierL",
+        "FrontPierR",
+        "DoorLintel"
+      ],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.Window",
+      "name": "Window",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Window",
+      "dimensionsM": [
+        0.29,
+        0.808,
+        0.847
+      ],
+      "pivotM": [
+        2.55,
+        1.7,
+        0.199
+      ],
+      "attachmentLocalM": {
+        "Latch": [
+          -0.077,
+          -0.05,
+          0.021
+        ]
+      },
+      "materials": [
+        "enamel",
+        "glass",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "enamel": {
+          "min": [
+            -0.065,
+            -0.3945,
+            -0.4
+          ],
+          "max": [
+            0.065,
+            0.3955,
+            0.4
+          ],
+          "size": [
+            0.13,
+            0.79,
+            0.8
+          ]
+        },
+        "glass": {
+          "min": [
+            0.0045,
+            -0.3495,
+            -0.35
+          ],
+          "max": [
+            0.0155,
+            0.3495,
+            0.349
+          ],
+          "size": [
+            0.011,
+            0.699,
+            0.699
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.155,
+            -0.4125,
+            -0.4235
+          ],
+          "max": [
+            0.135,
+            -0.3775,
+            0.4235
+          ],
+          "size": [
+            0.29,
+            0.035,
+            0.847
+          ]
+        }
+      },
+      "triangles": 512,
+      "collision": [],
+      "interaction": "Window latch"
+    },
+    {
+      "assetId": "starter-garage.RoofAssembly",
+      "name": "RoofAssembly",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "RoofAssembly",
+      "dimensionsM": [
+        5.52,
+        0.318891,
+        6.22
+      ],
+      "pivotM": [
+        0,
+        2.64,
+        0
+      ],
+      "attachmentLocalM": {
+        "RoofLift": [
+          0,
+          0.035,
+          0
+        ]
+      },
+      "materials": [
+        "roof",
+        "timber",
+        "plaster"
+      ],
+      "materialBoundsM": {
+        "roof": {
+          "min": [
+            -2.76,
+            -0.088,
+            -3.11
+          ],
+          "max": [
+            2.76,
+            0.131,
+            3.11
+          ],
+          "size": [
+            5.52,
+            0.219,
+            6.22
+          ]
+        },
+        "timber": {
+          "min": [
+            -2.623557,
+            -0.187891,
+            -2.578
+          ],
+          "max": [
+            2.623557,
+            0.088891,
+            2.578
+          ],
+          "size": [
+            5.247115,
+            0.276782,
+            5.156
+          ]
+        },
+        "plaster": {
+          "min": [
+            -2.4655,
+            -0.062,
+            -2.9215
+          ],
+          "max": [
+            2.4655,
+            0.104,
+            2.9215
+          ],
+          "size": [
+            4.931,
+            0.166,
+            5.843
+          ]
+        }
+      },
+      "triangles": 4848,
+      "collision": [],
+      "interaction": "Hide roof for interior inspection"
+    },
+    {
+      "assetId": "starter-garage.GarageDoor",
+      "name": "GarageDoor",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "GarageDoor",
+      "dimensionsM": [
+        3.196,
+        0.40228,
+        2.257207
+      ],
+      "pivotM": [
+        0,
+        2.39,
+        -2.9
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ],
+        "Handle": [
+          0,
+          -0.285754,
+          -2.071104
+        ]
+      },
+      "materials": [
+        "enamel",
+        "metal",
+        "black"
+      ],
+      "materialBoundsM": {
+        "enamel": {
+          "min": [
+            -1.517,
+            -0.328627,
+            -2.274534
+          ],
+          "max": [
+            1.517,
+            0.073653,
+            -0.017327
+          ],
+          "size": [
+            3.034,
+            0.40228,
+            2.257207
+          ]
+        },
+        "metal": {
+          "min": [
+            -1.598,
+            -0.257727,
+            -2.257415
+          ],
+          "max": [
+            1.598,
+            0.033017,
+            -0.035886
+          ],
+          "size": [
+            3.196,
+            0.290744,
+            2.221529
+          ]
+        },
+        "black": {
+          "min": [
+            -0.10256,
+            -0.296754,
+            -2.08613
+          ],
+          "max": [
+            0.10256,
+            -0.230096,
+            -2.060104
+          ],
+          "size": [
+            0.205119,
+            0.066658,
+            0.026026
+          ]
+        }
+      },
+      "triangles": 1248,
+      "collision": [],
+      "interaction": "Tilt-up door. Preview is open about +X"
+    },
+    {
+      "assetId": "starter-garage.DoorHardware",
+      "name": "DoorHardware",
+      "category": "Structure",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "DoorHardware",
+      "dimensionsM": [
+        3.35,
+        2.380455,
+        1.553874
+      ],
+      "pivotM": [
+        0,
+        2.39,
+        -2.9
+      ],
+      "attachmentLocalM": {
+        "Hinge": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal",
+        "black"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -1.675,
+            -2.3845,
+            -1.374874
+          ],
+          "max": [
+            1.675,
+            -0.004045,
+            0.1255
+          ],
+          "size": [
+            3.35,
+            2.380455,
+            1.500374
+          ]
+        },
+        "black": {
+          "min": [
+            -1.65807,
+            -0.6,
+            0.141
+          ],
+          "max": [
+            1.65807,
+            -0.28,
+            0.179
+          ],
+          "size": [
+            3.31614,
+            0.32,
+            0.038
+          ]
+        }
+      },
+      "triangles": 608,
+      "collision": [],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.StripLight",
+      "name": "StripLight",
+      "category": "Lighting",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "StripLight",
+      "dimensionsM": [
+        1.34,
+        0.0945,
+        0.124
+      ],
+      "pivotM": [
+        0,
+        2.468,
+        0.29
+      ],
+      "attachmentLocalM": {
+        "LightSource": [
+          0,
+          -0.063,
+          0
+        ]
+      },
+      "materials": [
+        "black",
+        "ivory",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.67,
+            -0.029,
+            -0.062
+          ],
+          "max": [
+            0.67,
+            0.033,
+            0.062
+          ],
+          "size": [
+            1.34,
+            0.062,
+            0.124
+          ]
+        },
+        "ivory": {
+          "min": [
+            -0.596,
+            -0.058,
+            -0.038
+          ],
+          "max": [
+            0.596,
+            -0.03,
+            0.042
+          ],
+          "size": [
+            1.192,
+            0.028,
+            0.08
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.6485,
+            -0.0615,
+            -0.0535
+          ],
+          "max": [
+            0.6485,
+            -0.0125,
+            0.0575
+          ],
+          "size": [
+            1.297,
+            0.049,
+            0.111
+          ]
+        }
+      },
+      "triangles": 288,
+      "collision": [],
+      "interaction": "Attach ceiling light at marker"
+    },
+    {
+      "assetId": "starter-garage.WorkshopWiring",
+      "name": "WorkshopWiring",
+      "category": "Lighting",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "WorkshopWiring",
+      "dimensionsM": [
+        1.813225,
+        1.268997,
+        2.7725
+      ],
+      "pivotM": [
+        -2.4,
+        1.22,
+        -2.49
+      ],
+      "attachmentLocalM": {
+        "Switch": [
+          0.02,
+          0.02,
+          0.03
+        ]
+      },
+      "materials": [
+        "black",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.029,
+            0,
+            0.022
+          ],
+          "max": [
+            1.760225,
+            1.247997,
+            2.768
+          ],
+          "size": [
+            1.789225,
+            1.247997,
+            2.746
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.053,
+            -0.021,
+            -0.0045
+          ],
+          "max": [
+            0.011,
+            0.061,
+            0.0645
+          ],
+          "size": [
+            0.064,
+            0.082,
+            0.069
+          ]
+        }
+      },
+      "triangles": 160,
+      "collision": [],
+      "interaction": "Static scenery"
+    },
+    {
+      "assetId": "starter-garage.Workbench",
+      "name": "Workbench",
+      "category": "Furniture",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Workbench",
+      "dimensionsM": [
+        0.889,
+        0.9265,
+        1.88
+      ],
+      "pivotM": [
+        -1.91,
+        0.93,
+        1.2
+      ],
+      "attachmentLocalM": {
+        "Surface": [
+          0,
+          0,
+          0
+        ],
+        "Vise": [
+          0.33,
+          0.003,
+          0.72
+        ],
+        "ToolSpot": [
+          0.08,
+          0.004,
+          -0.24
+        ]
+      },
+      "materials": [
+        "enamel",
+        "timber",
+        "plywood"
+      ],
+      "materialBoundsM": {
+        "enamel": {
+          "min": [
+            -0.4175,
+            -0.9265,
+            -0.8225
+          ],
+          "max": [
+            0.3875,
+            -0.069,
+            0.9225
+          ],
+          "size": [
+            0.805,
+            0.8575,
+            1.745
+          ]
+        },
+        "timber": {
+          "min": [
+            -0.456,
+            -0.7325,
+            -0.89
+          ],
+          "max": [
+            0.427,
+            0,
+            0.99
+          ],
+          "size": [
+            0.883,
+            0.7325,
+            1.88
+          ]
+        },
+        "plywood": {
+          "min": [
+            0.407,
+            -0.088,
+            -0.88
+          ],
+          "max": [
+            0.433,
+            -0.004,
+            0.98
+          ],
+          "size": [
+            0.026,
+            0.084,
+            1.86
+          ]
+        }
+      },
+      "triangles": 1280,
+      "collision": [
+        "WorkbenchTop"
+      ],
+      "interaction": "Work surface and tool staging"
+    },
+    {
+      "assetId": "starter-garage.ToolBoard",
+      "name": "ToolBoard",
+      "category": "Furniture",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "ToolBoard",
+      "dimensionsM": [
+        0.079,
+        0.63,
+        1.79
+      ],
+      "pivotM": [
+        -2.397,
+        1.365,
+        1.26
+      ],
+      "attachmentLocalM": {
+        "PegRow": [
+          0.017,
+          0.145,
+          0
+        ]
+      },
+      "materials": [
+        "plywood",
+        "black",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "plywood": {
+          "min": [
+            -0.027,
+            -0.3,
+            -0.895
+          ],
+          "max": [
+            0.007,
+            0.33,
+            0.895
+          ],
+          "size": [
+            0.034,
+            0.63,
+            1.79
+          ]
+        },
+        "black": {
+          "min": [
+            0.0091,
+            -0.229464,
+            -0.817
+          ],
+          "max": [
+            0.0109,
+            0.249464,
+            0.844
+          ],
+          "size": [
+            0.0018,
+            0.478928,
+            1.661
+          ]
+        },
+        "metal": {
+          "min": [
+            0.005,
+            0.1405,
+            -0.7845
+          ],
+          "max": [
+            0.052,
+            0.1495,
+            0.8345
+          ],
+          "size": [
+            0.047,
+            0.009,
+            1.619
+          ]
+        }
+      },
+      "triangles": 7488,
+      "collision": [],
+      "interaction": "Tool storage"
+    },
+    {
+      "assetId": "starter-garage.ShelfUnit",
+      "name": "ShelfUnit",
+      "category": "Furniture",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "ShelfUnit",
+      "dimensionsM": [
+        1.273,
+        1.84,
+        0.5975
+      ],
+      "pivotM": [
+        1.52,
+        0,
+        2.38
+      ],
+      "attachmentLocalM": {
+        "Lower": [
+          0,
+          0.286,
+          -0.03
+        ],
+        "Middle": [
+          0,
+          0.736,
+          -0.03
+        ],
+        "Upper": [
+          0,
+          1.186,
+          -0.03
+        ]
+      },
+      "materials": [
+        "enamel",
+        "plywood",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "enamel": {
+          "min": [
+            -0.6415,
+            0.004,
+            -0.3115
+          ],
+          "max": [
+            0.6315,
+            1.844,
+            0.2615
+          ],
+          "size": [
+            1.273,
+            1.84,
+            0.573
+          ]
+        },
+        "plywood": {
+          "min": [
+            -0.64,
+            0.263,
+            -0.302
+          ],
+          "max": [
+            0.63,
+            1.637,
+            0.252
+          ],
+          "size": [
+            1.27,
+            1.374,
+            0.554
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.630314,
+            0.210533,
+            0.246
+          ],
+          "max": [
+            0.620314,
+            1.569467,
+            0.286
+          ],
+          "size": [
+            1.250628,
+            1.358934,
+            0.04
+          ]
+        }
+      },
+      "triangles": 1088,
+      "collision": [],
+      "interaction": "Parts storage"
+    },
+    {
+      "assetId": "starter-garage.ToolChest",
+      "name": "ToolChest",
+      "category": "Furniture",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "ToolChest",
+      "dimensionsM": [
+        0.538,
+        0.895,
+        0.57
+      ],
+      "pivotM": [
+        1.77,
+        0.47,
+        -0.75
+      ],
+      "attachmentLocalM": {
+        "DrawerFace": [
+          -0.27,
+          0.06,
+          0
+        ],
+        "Top": [
+          0,
+          0.439,
+          0
+        ]
+      },
+      "materials": [
+        "red",
+        "black",
+        "metal",
+        "joint"
+      ],
+      "materialBoundsM": {
+        "red": {
+          "min": [
+            -0.245,
+            -0.39,
+            -0.275
+          ],
+          "max": [
+            0.245,
+            0.39,
+            0.275
+          ],
+          "size": [
+            0.49,
+            0.78,
+            0.55
+          ]
+        },
+        "black": {
+          "min": [
+            -0.26,
+            -0.457,
+            -0.285
+          ],
+          "max": [
+            0.26,
+            0.438,
+            0.285
+          ],
+          "size": [
+            0.52,
+            0.895,
+            0.57
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.278,
+            -0.231,
+            -0.194
+          ],
+          "max": [
+            -0.256,
+            0.265,
+            0.198
+          ],
+          "size": [
+            0.022,
+            0.496,
+            0.392
+          ]
+        },
+        "joint": {
+          "min": [
+            -0.254,
+            -0.1555,
+            -0.254
+          ],
+          "max": [
+            -0.242,
+            0.3275,
+            0.25
+          ],
+          "size": [
+            0.012,
+            0.483,
+            0.504
+          ]
+        }
+      },
+      "triangles": 1472,
+      "collision": [],
+      "interaction": "Tool drawer storage"
+    },
+    {
+      "assetId": "starter-garage.MotorcycleStand",
+      "name": "MotorcycleStand",
+      "category": "Equipment",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "MotorcycleStand",
+      "dimensionsM": [
+        0.49,
+        0.2945,
+        0.56
+      ],
+      "pivotM": [
+        -0.55,
+        0,
+        -0.1
+      ],
+      "attachmentLocalM": {
+        "VehicleSupport": [
+          0,
+          0.3,
+          0
+        ],
+        "Floor": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "yellow",
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "yellow": {
+          "min": [
+            -0.245,
+            0.006,
+            -0.28
+          ],
+          "max": [
+            0.245,
+            0.282,
+            0.28
+          ],
+          "size": [
+            0.49,
+            0.276,
+            0.56
+          ]
+        },
+        "rubber": {
+          "min": [
+            -0.1515,
+            0.2815,
+            -0.1445
+          ],
+          "max": [
+            0.1515,
+            0.3005,
+            0.1445
+          ],
+          "size": [
+            0.303,
+            0.019,
+            0.289
+          ]
+        }
+      },
+      "triangles": 640,
+      "collision": [
+        "StandTop"
+      ],
+      "interaction": "Support motorcycle during servicing"
+    },
+    {
+      "assetId": "starter-garage.BenchVise",
+      "name": "BenchVise",
+      "category": "Equipment",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "BenchVise",
+      "dimensionsM": [
+        0.252,
+        0.224,
+        0.182
+      ],
+      "pivotM": [
+        -1.58,
+        0.933,
+        1.92
+      ],
+      "attachmentLocalM": {
+        "Base": [
+          0,
+          0,
+          0
+        ],
+        "JawCenter": [
+          0,
+          0.203,
+          0
+        ]
+      },
+      "materials": [
+        "blue",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "blue": {
+          "min": [
+            -0.106,
+            0,
+            -0.091
+          ],
+          "max": [
+            0.106,
+            0.216,
+            0.091
+          ],
+          "size": [
+            0.212,
+            0.216,
+            0.182
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.056,
+            0.023613,
+            -0.069
+          ],
+          "max": [
+            0.146,
+            0.224,
+            0.069
+          ],
+          "size": [
+            0.202,
+            0.200387,
+            0.138
+          ]
+        }
+      },
+      "triangles": 640,
+      "collision": [],
+      "interaction": "Bench clamping"
+    },
+    {
+      "assetId": "starter-garage.PartsBox1",
+      "name": "PartsBox1",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "PartsBox1",
+      "dimensionsM": [
+        0.324,
+        0.2505,
+        0.28
+      ],
+      "pivotM": [
+        1.05,
+        0.287,
+        2.33
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.1573,
+          -0.14
+        ]
+      },
+      "materials": [
+        "paper",
+        "plywood",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "paper": {
+          "min": [
+            -0.155,
+            0,
+            -0.1325
+          ],
+          "max": [
+            0.155,
+            0.242,
+            0.1325
+          ],
+          "size": [
+            0.31,
+            0.242,
+            0.265
+          ]
+        },
+        "plywood": {
+          "min": [
+            -0.162,
+            0.2075,
+            -0.14
+          ],
+          "max": [
+            0.162,
+            0.2505,
+            0.14
+          ],
+          "size": [
+            0.324,
+            0.043,
+            0.28
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.051,
+            0.167,
+            -0.1375
+          ],
+          "max": [
+            0.051,
+            0.207,
+            -0.1305
+          ],
+          "size": [
+            0.102,
+            0.04,
+            0.007
+          ]
+        }
+      },
+      "triangles": 192,
+      "collision": [],
+      "interaction": "Carry parts box"
+    },
+    {
+      "assetId": "starter-garage.PartsBox2",
+      "name": "PartsBox2",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "PartsBox2",
+      "dimensionsM": [
+        0.324,
+        0.2505,
+        0.28
+      ],
+      "pivotM": [
+        1.51,
+        0.287,
+        2.36
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.1573,
+          -0.14
+        ]
+      },
+      "materials": [
+        "paper",
+        "plywood",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "paper": {
+          "min": [
+            -0.155,
+            0,
+            -0.1325
+          ],
+          "max": [
+            0.155,
+            0.242,
+            0.1325
+          ],
+          "size": [
+            0.31,
+            0.242,
+            0.265
+          ]
+        },
+        "plywood": {
+          "min": [
+            -0.162,
+            0.2075,
+            -0.14
+          ],
+          "max": [
+            0.162,
+            0.2505,
+            0.14
+          ],
+          "size": [
+            0.324,
+            0.043,
+            0.28
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.051,
+            0.167,
+            -0.1375
+          ],
+          "max": [
+            0.051,
+            0.207,
+            -0.1305
+          ],
+          "size": [
+            0.102,
+            0.04,
+            0.007
+          ]
+        }
+      },
+      "triangles": 192,
+      "collision": [],
+      "interaction": "Carry parts box"
+    },
+    {
+      "assetId": "starter-garage.PartsBox3",
+      "name": "PartsBox3",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "PartsBox3",
+      "dimensionsM": [
+        0.324,
+        0.2115,
+        0.28
+      ],
+      "pivotM": [
+        1.95,
+        0.736,
+        2.38
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.13195,
+          -0.14
+        ]
+      },
+      "materials": [
+        "paper",
+        "plywood",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "paper": {
+          "min": [
+            -0.155,
+            0,
+            -0.1325
+          ],
+          "max": [
+            0.155,
+            0.203,
+            0.1325
+          ],
+          "size": [
+            0.31,
+            0.203,
+            0.265
+          ]
+        },
+        "plywood": {
+          "min": [
+            -0.162,
+            0.1685,
+            -0.14
+          ],
+          "max": [
+            0.162,
+            0.2115,
+            0.14
+          ],
+          "size": [
+            0.324,
+            0.043,
+            0.28
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.051,
+            0.128,
+            -0.1375
+          ],
+          "max": [
+            0.051,
+            0.168,
+            -0.1305
+          ],
+          "size": [
+            0.102,
+            0.04,
+            0.007
+          ]
+        }
+      },
+      "triangles": 192,
+      "collision": [],
+      "interaction": "Carry parts box"
+    },
+    {
+      "assetId": "starter-garage.PartsBox4",
+      "name": "PartsBox4",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "PartsBox4",
+      "dimensionsM": [
+        0.464,
+        0.2505,
+        0.28
+      ],
+      "pivotM": [
+        1.72,
+        0,
+        1.72
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.1573,
+          -0.14
+        ]
+      },
+      "materials": [
+        "paper",
+        "plywood",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "paper": {
+          "min": [
+            -0.225,
+            0,
+            -0.1325
+          ],
+          "max": [
+            0.225,
+            0.242,
+            0.1325
+          ],
+          "size": [
+            0.45,
+            0.242,
+            0.265
+          ]
+        },
+        "plywood": {
+          "min": [
+            -0.232,
+            0.2075,
+            -0.14
+          ],
+          "max": [
+            0.232,
+            0.2505,
+            0.14
+          ],
+          "size": [
+            0.464,
+            0.043,
+            0.28
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.051,
+            0.167,
+            -0.1375
+          ],
+          "max": [
+            0.051,
+            0.207,
+            -0.1305
+          ],
+          "size": [
+            0.102,
+            0.04,
+            0.007
+          ]
+        }
+      },
+      "triangles": 192,
+      "collision": [],
+      "interaction": "Carry parts box"
+    },
+    {
+      "assetId": "starter-garage.OilBottle1",
+      "name": "OilBottle1",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "OilBottle1",
+      "dimensionsM": [
+        0.090513,
+        0.163304,
+        0.112
+      ],
+      "pivotM": [
+        0.944,
+        0.737,
+        2.35
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.107,
+          0
+        ],
+        "Cap": [
+          -0.019,
+          0.178,
+          0.022
+        ]
+      },
+      "materials": [
+        "black",
+        "red",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.045257,
+            0.012196,
+            -0.053
+          ],
+          "max": [
+            0.045257,
+            0.157804,
+            0.055
+          ],
+          "size": [
+            0.090513,
+            0.145608,
+            0.108
+          ]
+        },
+        "red": {
+          "min": [
+            -0.044,
+            0.1505,
+            -0.003
+          ],
+          "max": [
+            0.006,
+            0.1755,
+            0.047
+          ],
+          "size": [
+            0.05,
+            0.025,
+            0.05
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.032,
+            0.052,
+            -0.057
+          ],
+          "max": [
+            0.032,
+            0.118,
+            -0.049
+          ],
+          "size": [
+            0.064,
+            0.066,
+            0.008
+          ]
+        }
+      },
+      "triangles": 352,
+      "collision": [],
+      "interaction": "Carry oil bottle"
+    },
+    {
+      "assetId": "starter-garage.OilBottle2",
+      "name": "OilBottle2",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "OilBottle2",
+      "dimensionsM": [
+        0.090513,
+        0.163304,
+        0.112
+      ],
+      "pivotM": [
+        1.13,
+        0.737,
+        2.35
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.107,
+          0
+        ],
+        "Cap": [
+          -0.019,
+          0.178,
+          0.022
+        ]
+      },
+      "materials": [
+        "plastic",
+        "yellow"
+      ],
+      "materialBoundsM": {
+        "plastic": {
+          "min": [
+            -0.045257,
+            0.012196,
+            -0.057
+          ],
+          "max": [
+            0.045257,
+            0.157804,
+            0.055
+          ],
+          "size": [
+            0.090513,
+            0.145608,
+            0.112
+          ]
+        },
+        "yellow": {
+          "min": [
+            -0.044,
+            0.1505,
+            -0.003
+          ],
+          "max": [
+            0.006,
+            0.1755,
+            0.047
+          ],
+          "size": [
+            0.05,
+            0.025,
+            0.05
+          ]
+        }
+      },
+      "triangles": 352,
+      "collision": [],
+      "interaction": "Carry oil bottle"
+    },
+    {
+      "assetId": "starter-garage.OilBottle3",
+      "name": "OilBottle3",
+      "category": "Storage",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "OilBottle3",
+      "dimensionsM": [
+        0.090513,
+        0.163304,
+        0.112
+      ],
+      "pivotM": [
+        -2.17,
+        0.933,
+        0.55
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0,
+          0.107,
+          0
+        ],
+        "Cap": [
+          -0.019,
+          0.178,
+          0.022
+        ]
+      },
+      "materials": [
+        "black",
+        "yellow",
+        "plastic"
+      ],
+      "materialBoundsM": {
+        "black": {
+          "min": [
+            -0.045257,
+            0.012196,
+            -0.053
+          ],
+          "max": [
+            0.045257,
+            0.157804,
+            0.055
+          ],
+          "size": [
+            0.090513,
+            0.145608,
+            0.108
+          ]
+        },
+        "yellow": {
+          "min": [
+            -0.044,
+            0.1505,
+            -0.003
+          ],
+          "max": [
+            0.006,
+            0.1755,
+            0.047
+          ],
+          "size": [
+            0.05,
+            0.025,
+            0.05
+          ]
+        },
+        "plastic": {
+          "min": [
+            -0.032,
+            0.052,
+            -0.057
+          ],
+          "max": [
+            0.032,
+            0.118,
+            -0.049
+          ],
+          "size": [
+            0.064,
+            0.066,
+            0.008
+          ]
+        }
+      },
+      "triangles": 352,
+      "collision": [],
+      "interaction": "Carry oil bottle"
+    },
+    {
+      "assetId": "starter-garage.SpareTire1",
+      "name": "SpareTire1",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "SpareTire1",
+      "dimensionsM": [
+        0.106,
+        0.596,
+        0.596
+      ],
+      "pivotM": [
+        1.87,
+        0.299,
+        1.22
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.053,
+            -0.298,
+            -0.298
+          ],
+          "max": [
+            0.053,
+            0.298,
+            0.298
+          ],
+          "size": [
+            0.106,
+            0.596,
+            0.596
+          ]
+        }
+      },
+      "triangles": 960,
+      "collision": [],
+      "interaction": "Carry spare tire"
+    },
+    {
+      "assetId": "starter-garage.SpareTire2",
+      "name": "SpareTire2",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "SpareTire2",
+      "dimensionsM": [
+        0.106,
+        0.58,
+        0.58
+      ],
+      "pivotM": [
+        1.59,
+        0.292,
+        1.19
+      ],
+      "attachmentLocalM": {
+        "Axle": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "rubber"
+      ],
+      "materialBoundsM": {
+        "rubber": {
+          "min": [
+            -0.053,
+            -0.29,
+            -0.29
+          ],
+          "max": [
+            0.053,
+            0.29,
+            0.29
+          ],
+          "size": [
+            0.106,
+            0.58,
+            0.58
+          ]
+        }
+      },
+      "triangles": 960,
+      "collision": [],
+      "interaction": "Carry spare tire"
+    },
+    {
+      "assetId": "starter-garage.CombinationWrench1",
+      "name": "CombinationWrench1",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "CombinationWrench1",
+      "dimensionsM": [
+        0.21577,
+        0.008,
+        0.066979
+      ],
+      "pivotM": [
+        -1.93,
+        0.939,
+        1.42
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.0954,
+          0,
+          -0.01908
+        ],
+        "Fastener": [
+          0.18,
+          0,
+          -0.036
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.01232,
+            -0.004,
+            -0.054659
+          ],
+          "max": [
+            0.20345,
+            0.004,
+            0.01232
+          ],
+          "size": [
+            0.21577,
+            0.008,
+            0.066979
+          ]
+        }
+      },
+      "triangles": 256,
+      "collision": [],
+      "interaction": "Pick up combination wrench"
+    },
+    {
+      "assetId": "starter-garage.CombinationWrench2",
+      "name": "CombinationWrench2",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "CombinationWrench2",
+      "dimensionsM": [
+        0.218469,
+        0.008,
+        0.071773
+      ],
+      "pivotM": [
+        -1.93,
+        0.939,
+        1.34
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.0954,
+          0,
+          -0.01908
+        ],
+        "Fastener": [
+          0.18,
+          0,
+          -0.036
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.01452,
+            -0.004,
+            -0.057253
+          ],
+          "max": [
+            0.203949,
+            0.004,
+            0.01452
+          ],
+          "size": [
+            0.218469,
+            0.008,
+            0.071773
+          ]
+        }
+      },
+      "triangles": 256,
+      "collision": [],
+      "interaction": "Pick up combination wrench"
+    },
+    {
+      "assetId": "starter-garage.CombinationWrench3",
+      "name": "CombinationWrench3",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "CombinationWrench3",
+      "dimensionsM": [
+        0.221164,
+        0.008,
+        0.076567
+      ],
+      "pivotM": [
+        -1.93,
+        0.939,
+        1.24
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.0954,
+          0,
+          -0.01908
+        ],
+        "Fastener": [
+          0.18,
+          0,
+          -0.036
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.01672,
+            -0.004,
+            -0.059847
+          ],
+          "max": [
+            0.204444,
+            0.004,
+            0.01672
+          ],
+          "size": [
+            0.221164,
+            0.008,
+            0.076567
+          ]
+        }
+      },
+      "triangles": 256,
+      "collision": [],
+      "interaction": "Pick up combination wrench"
+    },
+    {
+      "assetId": "starter-garage.FlatScrewdriver",
+      "name": "FlatScrewdriver",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "FlatScrewdriver",
+      "dimensionsM": [
+        0.189754,
+        0.026626,
+        0.036702
+      ],
+      "pivotM": [
+        -1.93,
+        0.954,
+        1.01
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.03572,
+          -0.00057,
+          -0.00399
+        ],
+        "Tip": [
+          0.188,
+          -0.003,
+          -0.021
+        ]
+      },
+      "materials": [
+        "red",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "red": {
+          "min": [
+            -0.001332,
+            -0.013613,
+            -0.019066
+          ],
+          "max": [
+            0.081728,
+            0.013013,
+            0.011926
+          ],
+          "size": [
+            0.08306,
+            0.026626,
+            0.030992
+          ]
+        },
+        "metal": {
+          "min": [
+            0.069138,
+            -0.006614,
+            -0.024777
+          ],
+          "max": [
+            0.188422,
+            0.002504,
+            -0.003993
+          ],
+          "size": [
+            0.119284,
+            0.009117,
+            0.020783
+          ]
+        }
+      },
+      "triangles": 120,
+      "collision": [],
+      "interaction": "Pick up screwdriver"
+    },
+    {
+      "assetId": "starter-garage.PhillipsScrewdriver",
+      "name": "PhillipsScrewdriver",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "PhillipsScrewdriver",
+      "dimensionsM": [
+        0.189754,
+        0.026626,
+        0.036702
+      ],
+      "pivotM": [
+        -1.96,
+        0.954,
+        0.91
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.03572,
+          -0.00057,
+          -0.00399
+        ],
+        "Tip": [
+          0.188,
+          -0.003,
+          -0.021
+        ]
+      },
+      "materials": [
+        "yellow",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "yellow": {
+          "min": [
+            -0.001332,
+            -0.013613,
+            -0.019066
+          ],
+          "max": [
+            0.081728,
+            0.013013,
+            0.011926
+          ],
+          "size": [
+            0.08306,
+            0.026626,
+            0.030992
+          ]
+        },
+        "metal": {
+          "min": [
+            0.069138,
+            -0.006614,
+            -0.024777
+          ],
+          "max": [
+            0.188422,
+            0.002504,
+            -0.003993
+          ],
+          "size": [
+            0.119284,
+            0.009117,
+            0.020783
+          ]
+        }
+      },
+      "triangles": 120,
+      "collision": [],
+      "interaction": "Pick up screwdriver"
+    },
+    {
+      "assetId": "starter-garage.TorqueWrench",
+      "name": "TorqueWrench",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "TorqueWrench",
+      "dimensionsM": [
+        0.45553,
+        0.028,
+        0.141548
+      ],
+      "pivotM": [
+        -2.09,
+        0.95,
+        0.78
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          0.058,
+          -0.002,
+          -0.017
+        ],
+        "Socket": [
+          0.43,
+          0,
+          -0.11
+        ]
+      },
+      "materials": [
+        "metal",
+        "black"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.001983,
+            -0.01,
+            -0.129
+          ],
+          "max": [
+            0.449,
+            0.0075,
+            0.00775
+          ],
+          "size": [
+            0.450983,
+            0.0175,
+            0.13675
+          ]
+        },
+        "black": {
+          "min": [
+            -0.00653,
+            -0.016,
+            -0.051548
+          ],
+          "max": [
+            0.14253,
+            0.012,
+            0.012548
+          ],
+          "size": [
+            0.14906,
+            0.028,
+            0.064095
+          ]
+        }
+      },
+      "triangles": 336,
+      "collision": [],
+      "interaction": "Pick up torque wrench"
+    },
+    {
+      "assetId": "starter-garage.Pliers",
+      "name": "Pliers",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Pliers",
+      "dimensionsM": [
+        0.159197,
+        0.018724,
+        0.075237
+      ],
+      "pivotM": [
+        -1.89,
+        0.948,
+        0.58
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          -0.046,
+          0,
+          0
+        ],
+        "Jaw": [
+          0.063,
+          -0.001,
+          0
+        ]
+      },
+      "materials": [
+        "red",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "red": {
+          "min": [
+            -0.096453,
+            -0.009862,
+            -0.037882
+          ],
+          "max": [
+            0.019502,
+            0.008862,
+            0.037355
+          ],
+          "size": [
+            0.115956,
+            0.018724,
+            0.075237
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.00947,
+            -0.006,
+            -0.020986
+          ],
+          "max": [
+            0.062744,
+            0.004,
+            0.020986
+          ],
+          "size": [
+            0.072213,
+            0.01,
+            0.041972
+          ]
+        }
+      },
+      "triangles": 204,
+      "collision": [],
+      "interaction": "Pick up pliers"
+    },
+    {
+      "assetId": "starter-garage.SocketTray",
+      "name": "SocketTray",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "SocketTray",
+      "dimensionsM": [
+        0.23,
+        0.037,
+        0.124
+      ],
+      "pivotM": [
+        -2.13,
+        0.932,
+        1.66
+      ],
+      "attachmentLocalM": {
+        "Tray": [
+          0,
+          0.039,
+          0
+        ]
+      },
+      "materials": [
+        "blue"
+      ],
+      "materialBoundsM": {
+        "blue": {
+          "min": [
+            -0.115,
+            -0.0005,
+            -0.062
+          ],
+          "max": [
+            0.115,
+            0.0365,
+            0.062
+          ],
+          "size": [
+            0.23,
+            0.037,
+            0.124
+          ]
+        }
+      },
+      "triangles": 64,
+      "collision": [],
+      "interaction": "Carry tray"
+    },
+    {
+      "assetId": "starter-garage.Socket8",
+      "name": "Socket8",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket8",
+      "dimensionsM": [
+        0.019696,
+        0.026,
+        0.02
+      ],
+      "pivotM": [
+        -2.218,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.009848,
+            -0.013,
+            -0.01
+          ],
+          "max": [
+            0.009848,
+            0.013,
+            0.01
+          ],
+          "size": [
+            0.019696,
+            0.026,
+            0.02
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.Socket10",
+      "name": "Socket10",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket10",
+      "dimensionsM": [
+        0.021863,
+        0.026,
+        0.0222
+      ],
+      "pivotM": [
+        -2.184,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.010931,
+            -0.013,
+            -0.0111
+          ],
+          "max": [
+            0.010931,
+            0.013,
+            0.0111
+          ],
+          "size": [
+            0.021863,
+            0.026,
+            0.0222
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.Socket12",
+      "name": "Socket12",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket12",
+      "dimensionsM": [
+        0.024029,
+        0.026,
+        0.0244
+      ],
+      "pivotM": [
+        -2.15,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.012015,
+            -0.013,
+            -0.0122
+          ],
+          "max": [
+            0.012015,
+            0.013,
+            0.0122
+          ],
+          "size": [
+            0.024029,
+            0.026,
+            0.0244
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.Socket14",
+      "name": "Socket14",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket14",
+      "dimensionsM": [
+        0.026196,
+        0.026,
+        0.0266
+      ],
+      "pivotM": [
+        -2.116,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.013098,
+            -0.013,
+            -0.0133
+          ],
+          "max": [
+            0.013098,
+            0.013,
+            0.0133
+          ],
+          "size": [
+            0.026196,
+            0.026,
+            0.0266
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.Socket16",
+      "name": "Socket16",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket16",
+      "dimensionsM": [
+        0.028362,
+        0.026,
+        0.0288
+      ],
+      "pivotM": [
+        -2.082,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.014181,
+            -0.013,
+            -0.0144
+          ],
+          "max": [
+            0.014181,
+            0.013,
+            0.0144
+          ],
+          "size": [
+            0.028362,
+            0.026,
+            0.0288
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.Socket18",
+      "name": "Socket18",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "Socket18",
+      "dimensionsM": [
+        0.030529,
+        0.026,
+        0.031
+      ],
+      "pivotM": [
+        -2.048,
+        0.984,
+        1.655
+      ],
+      "attachmentLocalM": {
+        "Drive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.015265,
+            -0.013,
+            -0.0155
+          ],
+          "max": [
+            0.015265,
+            0.013,
+            0.0155
+          ],
+          "size": [
+            0.030529,
+            0.026,
+            0.031
+          ]
+        }
+      },
+      "triangles": 216,
+      "collision": [],
+      "interaction": "Pick up individual socket"
+    },
+    {
+      "assetId": "starter-garage.SparkPlugWrench",
+      "name": "SparkPlugWrench",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "SparkPlugWrench",
+      "dimensionsM": [
+        0.098,
+        0.024,
+        0.1
+      ],
+      "pivotM": [
+        -1.82,
+        0.951,
+        1.1
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          -0.037,
+          0.002,
+          0
+        ],
+        "Socket": [
+          0.049,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.049,
+            -0.012,
+            -0.049
+          ],
+          "max": [
+            0.049,
+            0.012,
+            0.051
+          ],
+          "size": [
+            0.098,
+            0.024,
+            0.1
+          ]
+        }
+      },
+      "triangles": 128,
+      "collision": [],
+      "interaction": "Pick up spark plug wrench"
+    },
+    {
+      "assetId": "starter-garage.TireLever",
+      "name": "TireLever",
+      "category": "Tools",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "TireLever",
+      "dimensionsM": [
+        0.381237,
+        0.024519,
+        0.041858
+      ],
+      "pivotM": [
+        -2.07,
+        0.951,
+        2.04
+      ],
+      "attachmentLocalM": {
+        "Grip": [
+          -0.022,
+          0,
+          0
+        ],
+        "Spoon": [
+          0.163,
+          0.014,
+          -0.012
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.216203,
+            -0.007846,
+            -0.022858
+          ],
+          "max": [
+            0.165034,
+            0.016673,
+            0.019
+          ],
+          "size": [
+            0.381237,
+            0.024519,
+            0.041858
+          ]
+        }
+      },
+      "triangles": 80,
+      "collision": [],
+      "interaction": "Pick up tire lever"
+    },
+    {
+      "assetId": "starter-garage.EngineStand",
+      "name": "EngineStand",
+      "category": "Equipment",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "EngineStand",
+      "dimensionsM": [
+        0.572,
+        0.647,
+        0.52
+      ],
+      "pivotM": [
+        0.24,
+        0,
+        1.98
+      ],
+      "attachmentLocalM": {
+        "EngineAxis": [
+          0,
+          0.626,
+          -0.005
+        ],
+        "Floor": [
+          0,
+          0,
+          0
+        ]
+      },
+      "materials": [
+        "red",
+        "metal"
+      ],
+      "materialBoundsM": {
+        "red": {
+          "min": [
+            -0.286,
+            0.023,
+            -0.245
+          ],
+          "max": [
+            0.286,
+            0.67,
+            0.275
+          ],
+          "size": [
+            0.572,
+            0.647,
+            0.52
+          ]
+        },
+        "metal": {
+          "min": [
+            -0.131242,
+            0.560009,
+            -0.055991
+          ],
+          "max": [
+            0.131242,
+            0.65,
+            0.225
+          ],
+          "size": [
+            0.262484,
+            0.089991,
+            0.280991
+          ]
+        }
+      },
+      "triangles": 280,
+      "collision": [],
+      "interaction": "Support loose engine"
+    },
+    {
+      "assetId": "starter-garage.LooseCylinder",
+      "name": "LooseCylinder",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "LooseCylinder",
+      "dimensionsM": [
+        0.114,
+        0.115,
+        0.114
+      ],
+      "pivotM": [
+        1.47,
+        1.186,
+        2.26
+      ],
+      "attachmentLocalM": {
+        "Bore": [
+          0,
+          0.059,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.057,
+            0.001,
+            -0.057
+          ],
+          "max": [
+            0.057,
+            0.116,
+            0.057
+          ],
+          "size": [
+            0.114,
+            0.115,
+            0.114
+          ]
+        }
+      },
+      "triangles": 1376,
+      "collision": [],
+      "interaction": "Carry spare cylinder"
+    },
+    {
+      "assetId": "starter-garage.LoosePiston",
+      "name": "LoosePiston",
+      "category": "Parts",
+      "vehicleCompatibility": [
+        "sm50",
+        "commuter-scooter"
+      ],
+      "file": "environment/starter-garage/exports/StarterGarage.glb",
+      "node": "LoosePiston",
+      "dimensionsM": [
+        0.042,
+        0.043,
+        0.042
+      ],
+      "pivotM": [
+        1.68,
+        1.188,
+        2.25
+      ],
+      "attachmentLocalM": {
+        "WristPin": [
+          0,
+          0.009,
+          0
+        ]
+      },
+      "materials": [
+        "metal"
+      ],
+      "materialBoundsM": {
+        "metal": {
+          "min": [
+            -0.021,
+            0,
+            -0.021
+          ],
+          "max": [
+            0.021,
+            0.043,
+            0.021
+          ],
+          "size": [
+            0.042,
+            0.043,
+            0.042
+          ]
+        }
+      },
+      "triangles": 576,
+      "collision": [],
+      "interaction": "Carry spare piston"
+    }
+  ],
+  "stats": {
+    "triangles": 42228,
+    "components": 45,
+    "materialLayers": 94,
+    "maxTrianglesPerComponent": 7488
+  }
+}

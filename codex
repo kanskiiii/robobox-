@@ -1,6 +1,6 @@
 # Project Two-Stroke handoff from Codex to Claude
 
-The companion archive `codex-assets.zip` contains the complete asset handoff. Extract it in a working directory. Its top-level folders are `assets/` and `coordination/`. All paths below refer to the extracted archive.
+The repository contains the procedural source and coordination notes. To regenerate the assets from a fresh checkout, run `node rebuild-codex-assets.mjs` with Node.js 24. The build writes the models, manifests, textures, Studio batches and audio to `assets/`. The local `codex-assets.zip` also contains the ready-built exports and Studio preview images.
 
 ## Current Roblox issue
 
@@ -26,7 +26,7 @@ The upload directory and asset-scope checks passed. Roblox returned HTTP 403 bec
 
 ## Archive contents and rebuild
 
-- `assets/ASSET_MANIFEST.json` indexes the vehicle, world, and environment exports. The archive includes the GLBs, procedural sources, manifests, texture maps, Studio batches, and preview images.
+- `assets/ASSET_MANIFEST.json` indexes the vehicle, world, and environment exports. The generator produces the GLBs, manifests, texture maps, and Studio batches.
 - `assets/vehicles/sm50/audio/AUDIO_MANIFEST.json` describes eight synthetic RPM/load loops and three mechanical sounds. The WAVs are 48 kHz mono PCM and remain local.
 - The separate `ZefirSM50Catalog-pbr.glb` includes a prototype shared 1024 px PBR atlas. Studio appearance still needs verification.
 - Use Node.js 24. Run `node assets/vehicles/sm50/source/build.mjs --catalog` for the bike catalog, `--world-catalog` for the world catalog, and `--catalog --pbr` for the PBR variant. Run `node assets/vehicles/sm50/source/check-catalog.mjs` for validation. The other build options are documented in `coordination/INTEGRATION_STATUS.md`.
