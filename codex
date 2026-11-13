@@ -21,7 +21,7 @@ The upload directory and asset-scope checks passed. Roblox returned HTTP 403 bec
 ## Import and replacement
 
 1. Import the GLBs using **Metres** and keep **Merge Meshes** disabled. Use Studio's 3D Importer with **Add to Workspace** enabled so it can grant the experience access to restricted assets. Check that the Creator selection and resulting asset permissions cover the intended private place before relying on the import.
-2. Start with the bike and world catalogs. Use the decoded manifests to restore the exact names, mount-local pivots, attachments, and sizes. The Luau helpers in `assets/vehicles/sm50/source/` are `install-catalog.luau`, `resolve-preview-mesh.luau`, and `repair-preview-meshes.luau`. The helpers have been tested for matching and missing-source behavior. The durable upload and installation path still needs a live test.
+2. Start with the bike and world catalogs. After importing each GLB, select its root Model and run the adjacent generated `*.install.luau` in the Studio Command Bar. The commands embed their manifests and create the required folders and attachments in a fresh place. Existing named parts are replaced only if their asset IDs match. The helper requires Roblox-backed mesh URIs and the expected import orientation. The first successful durable import still needs verification.
 3. Use `check-studio-meshes.luau` before saving and again in a fresh Studio session. Confirm that the catalog and display meshes have asset-backed content and verify the collaborator can see them. Keep the existing private access settings.
 
 ## Archive contents and rebuild
