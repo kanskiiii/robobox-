@@ -70,9 +70,18 @@ local function buildResolver(imports)
         local ownId = part:GetAttribute("AssetId")
         if ownId and catalog and part:IsDescendantOf(workspace) then
             if ownId:sub(1, 13) == "sm50-catalog." then
-                local source = ownId == "sm50-catalog.Frame" and catalog.Vehicles.sm50.Frame
-                    or catalog.Parts:FindFirstChild(part.Name)
-                if source then return source, source.Size end
+                local vehicles = catalog:FindFirstChild("Vehicles")
+                local model = vehicles and vehicles:FindFirstChild("sm50")
+                local parts = catalog:FindFirstChild("Parts")
+                local source
+                if ownId == "sm50-catalog.Frame" then
+                    source = model and model:FindFirstChild("Frame")
+                else
+                    source = parts and parts:FindFirstChild(part.Name)
+                end
+                if source and source:IsA("MeshPart") and source:GetAttribute("AssetId") == ownId then
+                    return source, source.Size
+                end
             end
         end
         local component = part.Parent
