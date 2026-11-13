@@ -42,7 +42,12 @@ local function attach(player, character, humanoid, seat, chassis, bar)
         local sign = side == "Left" and -1 or 1
         local target = Instance.new("Attachment")
         target.Name = "Rider" .. side .. "Grip"
-        target.CFrame = bar.PivotOffset * CFrame.new(sign * gripX, gripY + .06, gripZ)
+        local marker = bar:FindFirstChild(if side == "Left" then "GripL" else "GripR")
+        if marker and marker:IsA("Attachment") then
+            target.Position = marker.Position + bar.PivotOffset.UpVector * .06
+        else
+            target.CFrame = bar.PivotOffset * CFrame.new(sign * gripX, gripY + .06, gripZ)
+        end
         target.Parent = bar
         table.insert(pose.created, target)
 

@@ -126,9 +126,12 @@ const rearFit=p=>{
 };
 assembled('fork_std','FrontFork',['SteeringAssembly','ForkUpper_L','ForkUpper_R','ForkLower_L','ForkLower_R','FrontFender','HeadlightMask','Headlight'],
   {map:frontFit,bolts:realBolts(v(-.121,.789,.466),v(.121,.789,.466),v(-.121,.963,.385),v(.121,.963,.385))});
+const fitHandlebar=p=>shift([p[0]*1.051,p[1],p[2]]);
+const gripMarkers=parts.get('Handlebar').attachments;
 assembled('handlebar_std','Handlebar',['Handlebar','LeftGrip','ThrottleGrip','ClutchLever','FrontBrakeLever',
-  'FrontBrakeMasterCylinder','InstrumentCluster'],{map:p=>shift([p[0]*1.051,p[1],p[2]]),
-  bolts:realBolts(v(-.044,1.021,.325),v(.044,1.021,.325),v(-.044,1.021,.350),v(.044,1.021,.350))});
+  'FrontBrakeMasterCylinder','InstrumentCluster'],{map:fitHandlebar,
+  bolts:{...realBolts(v(-.044,1.021,.325),v(.044,1.021,.325),v(-.044,1.021,.350),v(.044,1.021,.350)),
+    GripL:fitHandlebar(gripMarkers.GripL),GripR:fitHandlebar(gripMarkers.GripR)}});
 for(const [label,r,target] of [['Front',.295,front],['Rear',.307,rear]]){
   const original=point(label+'Tire');
   const r0=label==='Front'?.301:.299;
