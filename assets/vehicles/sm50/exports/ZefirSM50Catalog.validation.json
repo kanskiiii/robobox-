@@ -635,6 +635,419 @@
         "gapMm": -19
       }
     ],
+    "gameplayVisualSweep": {
+      "front": {
+        "limitMm": 120,
+        "worst": {
+          "offsetMm": 120,
+          "gapMm": 104
+        },
+        "range": [
+          {
+            "offsetMm": -40,
+            "gapMm": 134
+          },
+          {
+            "offsetMm": -35,
+            "gapMm": 133
+          },
+          {
+            "offsetMm": -30,
+            "gapMm": 131
+          },
+          {
+            "offsetMm": -25,
+            "gapMm": 130
+          },
+          {
+            "offsetMm": -20,
+            "gapMm": 129
+          },
+          {
+            "offsetMm": -15,
+            "gapMm": 128
+          },
+          {
+            "offsetMm": -10,
+            "gapMm": 127
+          },
+          {
+            "offsetMm": -5,
+            "gapMm": 126
+          },
+          {
+            "offsetMm": 0,
+            "gapMm": 125
+          },
+          {
+            "offsetMm": 5,
+            "gapMm": 124
+          },
+          {
+            "offsetMm": 10,
+            "gapMm": 124
+          },
+          {
+            "offsetMm": 15,
+            "gapMm": 123
+          },
+          {
+            "offsetMm": 20,
+            "gapMm": 122
+          },
+          {
+            "offsetMm": 25,
+            "gapMm": 122
+          },
+          {
+            "offsetMm": 30,
+            "gapMm": 121
+          },
+          {
+            "offsetMm": 35,
+            "gapMm": 121
+          },
+          {
+            "offsetMm": 40,
+            "gapMm": 120
+          },
+          {
+            "offsetMm": 45,
+            "gapMm": 120
+          },
+          {
+            "offsetMm": 50,
+            "gapMm": 120
+          },
+          {
+            "offsetMm": 55,
+            "gapMm": 119
+          },
+          {
+            "offsetMm": 60,
+            "gapMm": 119
+          },
+          {
+            "offsetMm": 65,
+            "gapMm": 119
+          },
+          {
+            "offsetMm": 70,
+            "gapMm": 118
+          },
+          {
+            "offsetMm": 75,
+            "gapMm": 116
+          },
+          {
+            "offsetMm": 80,
+            "gapMm": 115
+          },
+          {
+            "offsetMm": 85,
+            "gapMm": 113
+          },
+          {
+            "offsetMm": 90,
+            "gapMm": 112
+          },
+          {
+            "offsetMm": 95,
+            "gapMm": 110
+          },
+          {
+            "offsetMm": 100,
+            "gapMm": 109
+          },
+          {
+            "offsetMm": 105,
+            "gapMm": 108
+          },
+          {
+            "offsetMm": 110,
+            "gapMm": 107
+          },
+          {
+            "offsetMm": 115,
+            "gapMm": 105
+          },
+          {
+            "offsetMm": 120,
+            "gapMm": 104
+          },
+          {
+            "offsetMm": 125,
+            "gapMm": 103
+          },
+          {
+            "offsetMm": 130,
+            "gapMm": 102
+          },
+          {
+            "offsetMm": 135,
+            "gapMm": 99
+          },
+          {
+            "offsetMm": 140,
+            "gapMm": 96
+          },
+          {
+            "offsetMm": 145,
+            "gapMm": 93
+          },
+          {
+            "offsetMm": 150,
+            "gapMm": 89
+          },
+          {
+            "offsetMm": 155,
+            "gapMm": 86
+          },
+          {
+            "offsetMm": 160,
+            "gapMm": 83
+          },
+          {
+            "offsetMm": 165,
+            "gapMm": 80
+          },
+          {
+            "offsetMm": 170,
+            "gapMm": 77
+          },
+          {
+            "offsetMm": 175,
+            "gapMm": 75
+          },
+          {
+            "offsetMm": 180,
+            "gapMm": 72
+          },
+          {
+            "offsetMm": 185,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 190,
+            "gapMm": 66
+          },
+          {
+            "offsetMm": 195,
+            "gapMm": 64
+          },
+          {
+            "offsetMm": 200,
+            "gapMm": 61
+          }
+        ]
+      },
+      "rear": {
+        "limitMm": 110,
+        "worst": {
+          "offsetMm": 110,
+          "gapMm": 7
+        },
+        "range": [
+          {
+            "offsetMm": -40,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -35,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -30,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -25,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -20,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -15,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -10,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": -5,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 0,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 5,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 10,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 15,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 20,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 25,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 30,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 35,
+            "gapMm": 69
+          },
+          {
+            "offsetMm": 40,
+            "gapMm": 65
+          },
+          {
+            "offsetMm": 45,
+            "gapMm": 61
+          },
+          {
+            "offsetMm": 50,
+            "gapMm": 57
+          },
+          {
+            "offsetMm": 55,
+            "gapMm": 53
+          },
+          {
+            "offsetMm": 60,
+            "gapMm": 48
+          },
+          {
+            "offsetMm": 65,
+            "gapMm": 44
+          },
+          {
+            "offsetMm": 70,
+            "gapMm": 40
+          },
+          {
+            "offsetMm": 75,
+            "gapMm": 36
+          },
+          {
+            "offsetMm": 80,
+            "gapMm": 31
+          },
+          {
+            "offsetMm": 85,
+            "gapMm": 27
+          },
+          {
+            "offsetMm": 90,
+            "gapMm": 23
+          },
+          {
+            "offsetMm": 95,
+            "gapMm": 19
+          },
+          {
+            "offsetMm": 100,
+            "gapMm": 15
+          },
+          {
+            "offsetMm": 105,
+            "gapMm": 11
+          },
+          {
+            "offsetMm": 110,
+            "gapMm": 7
+          },
+          {
+            "offsetMm": 115,
+            "gapMm": 3
+          },
+          {
+            "offsetMm": 120,
+            "gapMm": -1
+          },
+          {
+            "offsetMm": 125,
+            "gapMm": -5
+          },
+          {
+            "offsetMm": 130,
+            "gapMm": -9
+          },
+          {
+            "offsetMm": 135,
+            "gapMm": -13
+          },
+          {
+            "offsetMm": 140,
+            "gapMm": -16
+          },
+          {
+            "offsetMm": 145,
+            "gapMm": -20
+          },
+          {
+            "offsetMm": 150,
+            "gapMm": -24
+          },
+          {
+            "offsetMm": 155,
+            "gapMm": -28
+          },
+          {
+            "offsetMm": 160,
+            "gapMm": -31
+          },
+          {
+            "offsetMm": 165,
+            "gapMm": -35
+          },
+          {
+            "offsetMm": 170,
+            "gapMm": -38
+          },
+          {
+            "offsetMm": 175,
+            "gapMm": -42
+          },
+          {
+            "offsetMm": 180,
+            "gapMm": -45
+          },
+          {
+            "offsetMm": 185,
+            "gapMm": -48
+          },
+          {
+            "offsetMm": 190,
+            "gapMm": -48
+          },
+          {
+            "offsetMm": 195,
+            "gapMm": -48
+          },
+          {
+            "offsetMm": 200,
+            "gapMm": -48
+          }
+        ]
+      },
+      "method": "Samples fixed component vertices against the wheel envelope every 5 mm. Offsets are relative to the catalog axle. The game raises the visual wheel by compression minus sag. This screen covers the existing vertical visual path at zero steering, not continuous collision or a moving swingarm."
+    },
     "method": "Conservative cylindrical tire envelope tested against sampled vertices of fixed assemblies. Positive values are sampled gaps. Negative values indicate a vertex enters the cylinder, which can include empty wheel space. Recheck with continuous mesh or physics sweeps before authoring travel limits."
   }
 }

@@ -28,22 +28,35 @@ local entries = game:GetService("HttpService"):JSONDecode([==[${JSON.stringify(r
 local assets = game.ReplicatedStorage:FindFirstChild("Assets")
 assert(assets, "Install the catalogs first")
 local staged = {}
+local worldPalette = {}
 for _, entry in entries do
     local group = entry.category == "Vehicles" and assets.Vehicles.sm50 or assets[entry.category]
     local part = group:FindFirstChild(entry.name)
     assert(part and part:IsA("MeshPart") and part:GetAttribute("AssetId") == entry.assetId,
         "Missing catalog entry " .. entry.name)
     assert(part.MeshContent.SourceType == Enum.ContentSourceType.Uri, "Temporary mesh: " .. entry.name)
-    table.insert(staged, {part=part, color=Color3.fromHex(entry.hex), material=Enum.Material[entry.material],
-        previousColor=part.Color, previousMaterial=part.Material})
+    local style = {color=Color3.fromHex(entry.hex), material=Enum.Material[entry.material]}
+    table.insert(staged, {part=part, style=style, previousColor=part.Color, previousMaterial=part.Material})
+    if entry.category == "World" then worldPalette[entry.assetId] = style end
+end
+local map = workspace:FindFirstChild("Map")
+if map then
+    for _, part in map:GetDescendants() do
+        if part:IsA("MeshPart") and part.MeshContent.SourceType == Enum.ContentSourceType.Uri then
+            local style = worldPalette[part:GetAttribute("AssetId")]
+            if style then
+                table.insert(staged, {part=part, style=style, previousColor=part.Color, previousMaterial=part.Material})
+            end
+        end
+    end
 end
 local history = game:GetService("ChangeHistoryService")
 local token = history:TryBeginRecording("Apply Two-Stroke catalog colors")
 local ok, err = pcall(function()
     for _, entry in staged do
         local part = entry.part
-        part.Color = entry.color
-        part.Material = entry.material
+        part.Color = entry.style.color
+        part.Material = entry.style.material
     end
 end)
 if token then

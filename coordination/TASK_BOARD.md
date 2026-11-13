@@ -18,4 +18,6 @@
 | Rural road kit | First modular pack exported and staged in Studio |
 | Rural house and roadside props | First production pass exported and staged |
 | Dual-motor performance scooter | First production pass exported and staged |
-| Durable Roblox uploads | Awaiting upload-directory allowlist |
+| Durable gameplay catalogs | 48 catalog MeshParts uploaded and colored in Studio |
+| Placed world props | Fuel pump and parts counter match the uploaded catalog palette |
+| Suspension travel | Current vertical wheel path screened. Coordinate tuning and road verification with Claude |

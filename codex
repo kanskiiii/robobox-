@@ -22,7 +22,7 @@ Install `RiderPose.client.luau` as a LocalScript named `RiderPose` under `Starte
 
 ## Import and replacement
 
-The active gameplay catalogs are now backed by Roblox asset URIs. Run the generated `TwoStrokeCatalog.colors.luau` to apply the source palette to all 48 catalog meshes. It uses one dominant material per part and preserves asset references, pivots, sizes, attachments, and any existing texture maps.
+The active gameplay catalogs are backed by Roblox asset URIs. Run the generated `TwoStrokeCatalog.colors.luau` to apply the source palette to the 48 catalog meshes and their identified world prop copies under `Workspace.Map`. It uses one dominant material per part and preserves asset references, pivots, sizes, attachments, and any existing texture maps.
 
 1. Import the GLBs using **Metres** and keep **Merge Meshes** disabled. Use Studio's 3D Importer with **Add to Workspace** enabled so it can grant the experience access to restricted assets. Check that the Creator selection and resulting asset permissions cover the intended private place before relying on the import.
 2. Start with the bike and world catalogs. After importing each GLB, select its root Model and run the adjacent generated `*.install.luau` in the Studio Command Bar. The commands embed their manifests and create the required folders and attachments in a fresh place. Existing named parts are replaced only if their asset IDs match. The helper requires Roblox-backed mesh URIs and the expected import orientation. The first successful durable import still needs verification.

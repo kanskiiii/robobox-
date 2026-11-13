@@ -92,12 +92,31 @@ const rearSweep=[0,5,10,15,20].map(angle=>{
   return {swingDeg:angle,travelMm:mm(center[1]-datums.Mount_RearWheel[1]),
     gapMm:mm(radialGap(fixedRear,center,.307,.066))};
 });
+// BikeController moves both wheel visuals vertically from the catalog axle.
+// Its maximum upward offset is travel minus sag. Test the full proposed travel
+// as an upper bound, since sag can change with spring rate and vehicle load.
+const gameplayLimitsMm={front:120,rear:110};
+function screenVertical(points, axle, radius, halfWidth, limitMm) {
+  const range = [];
+  for (let offsetMm = -40; offsetMm <= 200; offsetMm += 5) {
+    const hub = add(axle,[0,offsetMm/1000,0]);
+    range.push({offsetMm,gapMm:mm(radialGap(points,hub,radius,halfWidth))});
+  }
+  const supported = range.filter(sample=>sample.offsetMm<=limitMm);
+  const worst = supported.reduce((a,b)=>a.gapMm<=b.gapMm?a:b);
+  return {limitMm,worst,range};
+}
+const gameplayVisualSweep={
+  front:screenVertical(fixedFront,datums.Mount_FrontWheel,.295,.054,gameplayLimitsMm.front),
+  rear:screenVertical(fixedRear,datums.Mount_RearWheel,.307,.066,gameplayLimitsMm.rear),
+  method:'Samples fixed component vertices against the wheel envelope every 5 mm. Offsets are relative to the catalog axle. The game raises the visual wheel by compression minus sag. This screen covers the existing vertical visual path at zero steering, not continuous collision or a moving swingarm.',
+};
 const result={
   wheelbaseM,frontRadiusM,rearRadiusM,mountCount,entries:manifest.components.length,
   catalogTriangles:manifest.stats.triangles,envelopeDeviationsOver20Percent:oversize,
   note:'Claude’s dimensions for part envelopes are placeholders. Deviations include combined functional geometry such as exhaust, radiator hoses, forks, and brake calipers.',
   tireEnvelopeScreen:{
-    frontSweep,rearSweep,
+    frontSweep,rearSweep,gameplayVisualSweep,
     method:'Conservative cylindrical tire envelope tested against sampled vertices of fixed assemblies. Positive values are sampled gaps. Negative values indicate a vertex enters the cylinder, which can include empty wheel space. Recheck with continuous mesh or physics sweeps before authoring travel limits.',
   },
 };
