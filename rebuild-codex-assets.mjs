@@ -15,3 +15,5 @@ for(const flags of [[],['--distance'],['--garage'],['--scooter'],['--performance
 for(const script of ['check-clearance.mjs','check-catalog.mjs','build-audio.mjs']) run(script);
 const installer=spawnSync(process.execPath,['prepare-studio-install.mjs'],{cwd:root,stdio:'inherit'});
 if(installer.status!==0) throw installer.error ?? new Error('Studio installer generation failed');
+const colors=spawnSync(process.execPath,['prepare-catalog-colors.mjs'],{cwd:root,stdio:'inherit'});
+if(colors.status!==0) throw colors.error ?? new Error('Studio color command generation failed');
