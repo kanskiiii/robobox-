@@ -12,6 +12,7 @@ function run(script,...args) {
   if(result.status!==0) throw result.error ?? new Error('Asset build failed: '+script+' '+args.join(' '));
 }
 for(const flags of [[],['--distance'],['--garage'],['--scooter'],['--performance-scooter'],['--roads'],['--house'],['--props'],['--catalog'],['--world-catalog'],['--catalog','--pbr']]) run('build.mjs',...flags);
+run('build.mjs','--senda','--pbr');
 for(const script of ['check-clearance.mjs','check-catalog.mjs','build-audio.mjs']) run(script);
 const installer=spawnSync(process.execPath,['prepare-studio-install.mjs'],{cwd:root,stdio:'inherit'});
 if(installer.status!==0) throw installer.error ?? new Error('Studio installer generation failed');

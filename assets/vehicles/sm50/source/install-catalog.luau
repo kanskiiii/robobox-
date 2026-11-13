@@ -2,7 +2,9 @@
 local function install(imported, manifest)
     assert(typeof(imported) == "Instance" and imported:IsA("Model"), "Select the imported catalog Model")
     local catalogId = manifest.assetId
-    assert(catalogId == "sm50-catalog" or catalogId == "world-catalog", "Unsupported catalog")
+    assert(catalogId == "sm50-catalog" or catalogId == "senda-catalog" or catalogId == "world-catalog",
+        "Unsupported catalog")
+    local vehicleId = catalogId == "senda-catalog" and "senda" or "sm50"
     assert(manifest.orientation.metresPerStud == 0.28, "Unexpected catalog scale")
 
     local history = game:GetService("ChangeHistoryService")
@@ -27,7 +29,7 @@ local function install(imported, manifest)
     local function groupFor(category, create)
         local assets = folder(storage, "Assets", create)
         local group = folder(assets, category, create)
-        if category == "Vehicles" then return folder(group, "sm50", create) end
+        if category == "Vehicles" then return folder(group, vehicleId, create) end
         return group
     end
     local function findMesh(entry)

@@ -8,6 +8,7 @@ const repair = read('assets/vehicles/sm50/source/repair-preview-meshes.luau');
 const paths = {
   'ZefirSM50Catalog': 'assets/vehicles/sm50/exports/ZefirSM50Catalog.manifest.json',
   'TwoStrokeWorldCatalog': 'assets/environment/starter-garage/exports/TwoStrokeWorldCatalog.manifest.json',
+  'SendaSM50Catalog': 'assets/vehicles/sm50/exports/SendaSM50Catalog-pbr.manifest.json',
 };
 
 for (const [name, path] of Object.entries(paths)) {

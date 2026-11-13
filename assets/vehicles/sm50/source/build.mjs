@@ -17,6 +17,8 @@ const asset = process.argv.includes('--garage') ? {
   id:'roadside-props', folder:'environment/roadside-props', source:'props.mjs', name:'RoadsideProps',
 } : process.argv.includes('--catalog') ? {
   id:'sm50-catalog', folder:'vehicles/sm50', source:'catalog.mjs', name:'ZefirSM50Catalog',
+} : process.argv.includes('--senda') ? {
+  id:'senda-catalog', folder:'vehicles/sm50', source:'senda.mjs', name:'SendaSM50Catalog',
 } : process.argv.includes('--world-catalog') ? {
   id:'world-catalog', folder:'environment/starter-garage', source:'world-catalog.mjs', name:'TwoStrokeWorldCatalog',
 } : {
@@ -26,8 +28,9 @@ const distance = process.argv.includes('--distance');
 const textured = process.argv.includes('--pbr');
 const sm50 = asset.id === 'sm50';
 if(!sm50 && distance) throw Error('The selected asset has one detail level');
-if(textured && asset.id!=='sm50-catalog') throw Error('PBR mode requires --catalog');
+if(textured && !['sm50-catalog','senda-catalog'].includes(asset.id)) throw Error('PBR mode requires a bike catalog');
 const {id:vehicle,folder,name:baseName,source} = asset;
+const texturePrefix = vehicle === 'senda-catalog' ? 'SendaSM50' : 'ZefirSM50';
 const {components, datums, materials, proxies} = await import('../../../'+folder+'/source/'+source);
 const output = '../../../'+folder+'/exports/';
 const suffix = distance ? '-distance' : textured ? '-pbr' : '';
@@ -64,12 +67,12 @@ if(atlas){
   glb.textures=glb.images.map((_,source)=>({source,sampler:0}));
   glb.samplers=[{magFilter:9729,minFilter:9987,wrapS:33071,wrapT:33071}];
   glb.materials[palette.indexOf('vertex')]={
-    name:'Zefir service material atlas',
+    name:baseName+' material atlas',
     pbrMetallicRoughness:{baseColorTexture:{index:0},metallicRoughnessTexture:{index:1},
       metallicFactor:1,roughnessFactor:1},normalTexture:{index:2,scale:.62},
   };
   for(const key of ['baseColor','normal','roughness','metalness']){
-    writeFileSync(file(output+'ZefirSM50-'+key+'.png'),atlas.images[key]);
+    writeFileSync(file(output+texturePrefix+'-'+key+'.png'),atlas.images[key]);
   }
 }
 function bounds(points) {
@@ -244,7 +247,7 @@ const manifest={
 };
 if(atlas) manifest.textureAtlas={resolution:1024,uvSet:0,projection:'Bounded diagonal projection per material. Shared across all parts.',
   files:Object.keys(atlas.images).filter(k=>k!=='orm')
-  .map(key=>folder+'/exports/ZefirSM50-'+key+'.png')};
+  .map(key=>folder+'/exports/'+texturePrefix+'-'+key+'.png')};
 if(distance){
   manifest.stage='Distance model';
   const detailed=JSON.parse(readFileSync(file('../../../ASSET_MANIFEST.json')));
