@@ -6,6 +6,8 @@ The cube placeholders reproduce when Studio saves temporary EditableMesh geometr
 
 The connected Two-Stroke edit session has 163 URI-backed Workspace meshes and 48 URI-backed catalog meshes. A fresh Studio client checked 233 meshes and reported 260 successful asset fetches with zero failures. This covers the current map, stock bikes and scooter display. The Senda catalog still needs its own import. The intended friend's published-game session is pending verification.
 
+The Senda yard path passed an isolated Studio Play test using temporary URI-backed fixtures and the generated catalog registration. The Senda spawned beside the Zefir with all 38 removable slots, accepted the normal ride action, idled at 1,950 rpm and moved 47 studs in first gear. Edit-mode scripts and assets were checked after cleanup to confirm the fixtures were gone. Repeat the ride and inspect paint, fit and clearance after the real Senda mesh import.
+
 ## Approved uploads
 
 The destination is the owner account 7970593771 for the private place 112877997436632. User approval covers the files below. The Zefir request passed the directory gate and reached Roblox. Roblox returned HTTP 403 because the connected Studio is signed in as 1002063622, which cannot create an asset as 7970593771. Reconnect Studio as the place owner, with the export directories and asset scopes enabled in that session.
