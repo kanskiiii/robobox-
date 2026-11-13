@@ -22,13 +22,15 @@ for (const [name, path] of Object.entries(paths)) {
     })),
   });
   const command = `-- Select the imported ${name} model, then run this in Studio's Command Bar.
+-- Set false when the raw mesh already faces -Z. The tested Roblox import faces +Z.
+local meshFacesPositiveZ = true
 local install = (function()
 ${installer}
 end)()
 local selection = game:GetService("Selection"):Get()
 assert(#selection == 1, "Select exactly one imported catalog Model")
 local manifest = game:GetService("HttpService"):JSONDecode([==[${metadata}]==])
-local count = install(selection[1], manifest)
+local count = install(selection[1], manifest, meshFacesPositiveZ)
 print("Installed " .. count .. " Two-Stroke catalog entries")
 `;
   writeFileSync(new URL(path.replace('.manifest.json', '.install.luau'), root), command);

@@ -1,11 +1,14 @@
 -- Installs a Roblox-imported assembly or world catalog using manifest geometry.
-local function install(imported, manifest)
+local function install(imported, manifest, meshFacesPositiveZ)
     assert(typeof(imported) == "Instance" and imported:IsA("Model"), "Select the imported catalog Model")
     local catalogId = manifest.assetId
     assert(catalogId == "sm50-catalog" or catalogId == "senda-catalog" or catalogId == "world-catalog",
         "Unsupported catalog")
     local vehicleId = catalogId == "senda-catalog" and "senda" or "sm50"
     assert(manifest.orientation.metresPerStud == 0.28, "Unexpected catalog scale")
+    -- Roblox can bake the imported mesh's forward direction into its vertices.
+    -- Restore the catalog basis around the mesh centre, keeping mount pivots canonical.
+    local meshBasis = if meshFacesPositiveZ then CFrame.Angles(0, math.pi, 0) else CFrame.identity
 
     local history = game:GetService("ChangeHistoryService")
     local storage = game:GetService("ReplicatedStorage")
@@ -82,8 +85,8 @@ local function install(imported, manifest)
         boxMesh:Destroy()
         part.Name = entry.name
         part.Size = size
-        part.CFrame = CFrame.new(center)
-        part.PivotOffset = CFrame.new(-center)
+        part.CFrame = CFrame.new(center) * meshBasis
+        part.PivotOffset = part.CFrame:Inverse()
         part.Anchored = false
         part.CanCollide = false
         part.CanTouch = false
@@ -99,23 +102,34 @@ local function install(imported, manifest)
                 marker.Name = name
                 marker.Parent = part
             end
-            marker.Position = studs(value) - center
+            marker.Position = part.CFrame:PointToObjectSpace(studs(value))
         end
         assert(part.MeshContent.SourceType == Enum.ContentSourceType.Uri, entry.node .. " lost its asset URI")
         table.insert(staged, {part=part, previous=previous, category=entry.category})
     end
 
-    local recording = assert(history:TryBeginRecording("Install Two-Stroke durable catalog"))
+    local recording = history:TryBeginRecording("Install Two-Stroke durable catalog")
     local ok, err = pcall(function()
         for _, record in staged do
             local group = groupFor(record.category, true)
             assert(group:FindFirstChild(record.part.Name) == record.previous, "Catalog changed during import")
+            record.destination = group
             if record.previous then record.previous.Parent = nil end
             record.part.Parent = group
         end
     end)
-    history:FinishRecording(recording, ok and Enum.FinishRecordingOperation.Commit or Enum.FinishRecordingOperation.Cancel)
-    if not ok then error(err) end
+    if recording then
+        history:FinishRecording(recording, ok and Enum.FinishRecordingOperation.Commit or Enum.FinishRecordingOperation.Cancel)
+    end
+    if not ok then
+        for _, record in staged do
+            record.part:Destroy()
+            if record.destination and record.previous and not record.previous.Parent then
+                record.previous.Parent = record.destination
+            end
+        end
+        error(err)
+    end
     return #staged
 end
 
