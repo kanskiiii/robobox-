@@ -156,13 +156,13 @@ shape(flywheel,'gold',m=>m.lathe(v(-.094,-.148,.028),[1,0,0],[[-.007,.021],[-.00
 const coil=piece('ignition_coil','IgnitionCoil',v(.075,.174,.25),{Bolt_1:v(.075,.174,.25)});
 shape(coil,'anodized',m=>m.shell([[.203,.174,.022,.023,.075],[.275,.174,.022,.023,.075]],12));
 shape(coil,'rubber',m=>m.tube([v(.075,.174,.203),v(.088,.139,.175),datums.Mount_SparkPlug],[.005,.005,.005],8));
-const oilTank=piece('oil_tank','OilTank',v(.075,.138,-.37),{Bolt_1:v(.075,.138,-.37)});
-shape(oilTank,'trim',m=>m.shell([[-.47,.134,.031,.045,.075],[-.37,.136,.039,.062,.075],[-.27,.123,.027,.044,.075]],12));
-shape(oilTank,'anodized',m=>m.rod(v(.074,.190,-.37),v(.074,.208,-.37),.023,12));
+const oilTank=piece('oil_tank','OilTank',v(.090,.153,-.33),{Bolt_1:v(.090,.153,-.33)});
+shape(oilTank,'trim',m=>m.shell([[-.42,.149,.029,.043,.090],[-.33,.151,.037,.057,.090],[-.25,.138,.026,.043,.090]],12));
+shape(oilTank,'anodized',m=>m.rod(v(.090,.201,-.33),v(.090,.219,-.33),.023,12));
 const pump=piece('oil_pump','OilPump',v(.112,-.102,.075),{Bolt_1:v(.112,-.102,.075)});
 shape(pump,'alloy',m=>m.rod(v(.102,-.102,.075),v(.137,-.102,.075),.026,16));
-const line=piece('oil_line','OilLine',v(.092,.087,-.36),{Bolt_1:v(.092,.087,-.36)});
-shape(line,'rubber',m=>m.tube([v(.092,.087,-.36),v(.119,.039,-.25),v(.129,-.083,-.08),v(.137,-.102,.075)],[.004,.004,.004,.004],8));
+const line=piece('oil_line','OilLine',v(.102,.095,-.33),{Bolt_1:v(.102,.095,-.33)});
+shape(line,'rubber',m=>m.tube([v(.102,.095,-.33),v(.119,.039,-.25),v(.129,-.083,-.08),v(.137,-.102,.075)],[.004,.004,.004,.004],8));
 
 for(const [name,point] of Object.entries(datums)) if(name.startsWith('Mount_') && name!=='Mount_Frame'){
   components[0].attachments[name]=point;
