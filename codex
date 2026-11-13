@@ -12,6 +12,8 @@ The upload directory and asset-scope checks passed. Roblox returned HTTP 403 bec
 
 ## Gameplay catalogs
 
+Install `RiderPose.client.luau` as a LocalScript named `RiderPose` under `StarterPlayer.StarterPlayerScripts.TwoStrokeClient`. It watches mounted R15 riders on each client, leans their torso forward, and keeps their hands on the installed handlebar as it moves. The torso shifts slightly with speed, braking, acceleration, and turns. It uses `RiderSeat`, `Chassis`, and `Slot_Handlebar.Visual` from BikeBuilder. Both Motor6D and AnimationConstraint waist rigs are supported. A Studio test on the seated R15 avatar reached both grips within 0.16 studs and verified cleanup. Road motion still needs a visual playtest.
+
 - Bike catalog `assets/vehicles/sm50/exports/ZefirSM50Catalog.glb`. 39 named MeshParts, including the frame and 38 installable parts. The stock assembled display uses 26 of these parts. The separate `SM50.glb` and `SM50-distance.glb` are art models.
 - World catalog `assets/environment/starter-garage/exports/TwoStrokeWorldCatalog.glb`. Nine named garage, tool, and prop entries.
 - Required paths `ReplicatedStorage.Assets.Vehicles.sm50.Frame`, `ReplicatedStorage.Assets.Parts.Part_<id>`, and `ReplicatedStorage.Assets.World.<name>`. See the adjacent manifests for exact names, material layers, pivots, and local attachments.
