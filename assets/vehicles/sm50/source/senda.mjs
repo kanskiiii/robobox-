@@ -38,9 +38,9 @@ function shape(target,key,draw) {
   draw(mesh);
   append(target,mesh,p=>p,key);
 }
-function copy(id,slot,source,offset=[0,0,0],paint) {
+function copy(id,slot,source,offset=[0,0,0],paint,transform=p=>p) {
   const part=existing.get('Part_'+source);
-  const map=p=>add(p,offset);
+  const map=p=>add(transform(p),offset);
   const mesh=piece(id,slot,map(part.pivot),Object.fromEntries(Object.entries(part.attachments).map(([k,p])=>[k,map(p)])));
   append(mesh,part.layers.vertex,map,paint);
 }
@@ -78,7 +78,12 @@ function wheel(id,slot,axle,radius,width) {
   shape(mesh,'rubber',m=>m.lathe(axle,axis,[
     [-half*.76,rim],[-half,radius*.91],[-half*.80,radius*.975],[-half*.41,radius],
     [half*.41,radius],[half*.80,radius*.975],[half,radius*.91],[half*.76,rim],
-  ],72));
+  ],96,(i,j)=>{
+    // Offset the channels across the shoulder and tread rows to form a chevron.
+    if(j<1 || j>6) return 0;
+    const rowPhase=[0,3,2,0,0,2,3,0][j];
+    return (i+rowPhase)%8===3 ? -.003 : 0;
+  }));
   shape(mesh,'anodized',m=>{
     m.lathe(axle,axis,[[-half*.78,rim-.018],[-half*.78,rim+.009],[half*.78,rim+.009],[half*.78,rim-.018]],64);
     m.lathe(axle,axis,[[-half,.012],[-half,.047],[half,.047],[half,.012]],32);
@@ -99,7 +104,7 @@ wheel('wheel_front_17','FrontWheel',front,.296,.100);
 wheel('wheel_rear_17','RearWheel',rear,.307,.130);
 copy('brake_front_std','FrontBrake','brake_front_std');
 copy('brake_rear_std','RearBrake','brake_rear_std',[0,0,.015]);
-copy('handlebar_std','Handlebar','handlebar_std');
+copy('handlebar_std','Handlebar','handlebar_std',[0,0,0],undefined,([x,y,z])=>[x*.83/.780021,y,z]);
 const axleDelta=sub(front,bodyShift(originals.get('FrontTire').pivot));
 const forkFit=p=>add(bodyShift(p),mul(axleDelta,Math.min(1,Math.max(0,(.81-p[1])/.51))));
 separate('fork_std','FrontFork',['SteeringAssembly','ForkUpper_L','ForkUpper_R','ForkLower_L','ForkLower_R'],forkFit);
@@ -107,10 +112,10 @@ copy('swingarm_std','Swingarm','swingarm_std');
 copy('shock_std','RearShock','shock_std');
 const seat=piece('seat_std','Seat',v(0,.27,-.26),{Bolt_1:v(0,.27,-.26)});
 shape(seat,'seat',m=>m.shell([
-  [-.69,.292,.061,.024],[-.52,.271,.099,.034],[-.29,.230,.093,.032],[-.07,.247,.076,.030],[.11,.293,.049,.022],
+  [-.69,.310,.061,.024],[-.52,.301,.099,.034],[-.29,.278,.093,.032],[-.07,.290,.076,.030],[.11,.309,.049,.022],
 ],16));
 const frontFender=piece('front_fender','FrontFender',v(0,.29,.50),{Bolt_1:v(0,.29,.50)});
-shape(frontFender,'body',m=>m.shell([[.35,.265,.048,.014],[.52,.291,.089,.022],[.69,.285,.079,.017],[.88,.251,.051,.010],[1.00,.214,.022,.006]],12));
+shape(frontFender,'body',m=>m.shell([[.35,.265,.048,.014],[.52,.291,.089,.022],[.69,.285,.079,.017],[.88,.251,.051,.010],[1.048,.214,.022,.006]],12));
 shape(frontFender,'trim',m=>m.shell([[.55,.313,.024,.004],[.74,.298,.025,.004],[.91,.252,.009,.003]],10));
 const mask=piece('headlight_mask','HeadlightMask',v(0,.43,.56),{Bolt_1:v(0,.43,.56)});
 shape(mask,'body',m=>m.shell([[.48,.437,.076,.119],[.54,.435,.086,.125],[.59,.413,.077,.092]],14));
@@ -163,4 +168,18 @@ for(const [name,point] of Object.entries(datums)) if(name.startsWith('Mount_') &
   components[0].attachments[name]=point;
 }
 delete datums.Mount_Frame;
-if(components.length!==39) throw Error('Senda must contain its frame and 38 removable parts');
+if(components.length!==39 || Object.keys(components[0].attachments).length!==38){
+  throw Error('Senda requires a frame, 38 removable parts and 38 frame mounts');
+}
+for(const [id,radius] of [['front',.296],['rear',.307]]){
+  const wheel=components.find(p=>p.name==='Part_sd_wheel_'+id+'_17');
+  const measured=Math.max(...wheel.layers.vertex.vertices.map(p=>Math.hypot(p[1]-wheel.pivot[1],p[2]-wheel.pivot[2])));
+  if(Math.abs(measured-radius)>1e-8) throw Error('Senda '+id+' tyre radius changed');
+}
+const allVertices=components.flatMap(p=>p.layers.vertex.vertices);
+for(const [axis,expected] of [[0,.83],[2,2.02]]){
+  const values=allVertices.map(p=>p[axis]);
+  if(Math.abs(Math.max(...values)-Math.min(...values)-expected)>1e-5){
+    throw Error('Senda overall dimensions changed');
+  }
+}
