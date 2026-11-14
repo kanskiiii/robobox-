@@ -75,3 +75,11 @@ The stock exhaust blocks all three straight-on pump fastener rays. Require remov
 
 These models use welded Studio geometry and built-in materials. They are available in the place for wiring. PBR maps, catalog wiring, and gameplay removal are pending.
 [Studio installer](studio/am6-service-models.install.luau)
+
+## West practice loop and SM50 riding controls
+
+Map.WestPracticeLoop adds a paved circuit west of the garage with a yard connection, 34-stud-radius turns, a marked braking straight and a roadside shelter. In Play, 282 centreline and entrance raycasts found continuous paving at yard height. The original road, yard spawn and delivery marker remain in place.
+[Map installer](studio/west-practice-loop.install.luau)
+
+Shift operates the clutch and Ctrl sets the wheelie input. S operates the front brake. The new stock SM50 handlebar's brake and clutch levers follow the smoothed inputs on the rider client. Tested key input and lever movement in Play on a temporary assembled stock bike. Rider finger motion remains open.
+[Controls installer](studio/sm50-riding-controls.install.luau)
