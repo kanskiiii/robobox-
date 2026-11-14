@@ -50,3 +50,11 @@ The active gameplay catalogs are backed by Roblox asset URIs. Run the generated 
 The axle and stud installer moves the Zefir and Senda axle service nuts past the fork and swingarm and gives the cylinder and head studs upward loosening axes. The Studio bolt builder verified 24 fasteners across nine parts. Existing bolt counts are preserved. Assembled reachability and covered fasteners still need verification.
 
 [Axle and stud installer](axle-and-stud-markers.install.luau)
+
+## SM50 cockpit and front end
+
+The stock handlebar_std and fork_std on the garage project bike now have new geometry. The cockpit has tapered alloy bars, ribbed grips, clutch and brake levers, cable runs, switchgear and a digital dash housing. The fork assembly has separate stanchions, guards, an angular blue and white number-plate headlight and a high supermoto fender. Both assets preserve their BasePart interface, pivots, existing Bolt_* and grip markers. New Lever_Brake_Pivot and Lever_Clutch_Pivot attachments mark the lever hinges. The existing headlight action uses the preset RidingHeadlight attachment at the lens.
+
+Studio Play verified the normal garage spawn, zero decorative colliders, 34-degree rotation following the mount welds, and 17.8 mm vertical fender clearance above the front tire at 120 mm compression. The fork and bar use welded Studio geometry and built-in materials. First-person visual QA, lever motion, rider animation, the rest of the bike and PBR maps remain open.
+
+[Studio installer](studio/sm50-front-end.install.luau)
