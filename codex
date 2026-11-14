@@ -62,3 +62,16 @@ Studio Play verified the normal garage spawn, zero decorative colliders, 34-degr
 ## SM50 exhaust, tail and plate
 
 The [rear asset folder](assets/vehicles/sm50/rear-upgrade/README.md) contains a Blender source, Roblox-ready tail and plate meshes, an exhaust mesh with its matching PBR maps, and the Studio installer. The owner-side Roblox upload is pending.
+
+## AM6 water pump and flywheel ignition
+
+AM6 WATER PUMP AND FLYWHEEL IGNITION
+
+Parts staged in ReplicatedStorage.Assets.Parts: Part_waterpump_am6 (Mount_WaterPump), Part_ignition_am6 (Mount_IgnitionStator) and AM6_IgnitionCover (same mount). The late ignition part called Ignition is the CDI and stays separate. Use the cover as a removable visual/dependency covering the ignition service targets. The legacy engine block still contains its original baked ignition cover, so remove that baked cover from the block art when integrating the service cover.
+
+Water pump Bolt_1..3 use 8 mm sockets and face right. CoolantInlet and CoolantOutlet are hose datums. Ignition Bolt_1 is the 17 mm rotor nut; Bolt_2..3 are Phillips stator screws. They face left and WiringExit marks the loom. The markers supply FastenerAxis, RequiredTool and HeadSizeMM where applicable. The current BikeBuilder uses one tool/size per part, so Claude needs per-fastener tool lookup for ignition.
+
+The stock exhaust blocks all three straight-on pump fastener rays. Require removing the exhaust for pump access. All three ignition rays clear the stock bike with the cover absent. The clutch mount moved outward roughly 30 mm; its five pressure-plate bolts faced out and cleared the block and swingarm in the assembled fixture. The front sprocket was already on the gearbox-output and rear chain plane; its nut marker moved to the outer end of the shaft without moving the sprocket teeth. Broader engine fastener audit remains open.
+
+These models use welded Studio geometry and built-in materials. They are available in the place for wiring. PBR maps, catalog wiring, and gameplay removal are pending.
+[Studio installer](studio/am6-service-models.install.luau)
