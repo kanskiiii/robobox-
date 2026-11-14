@@ -1,0 +1,12 @@
+# Project Two-Stroke collaborator prompt
+
+You are another Codex agent helping build my Roblox moped game, Project Two-Stroke. Work in the connected Roblox Studio place named **moped game idk**. Share replayable changes in [kanskiiii/robobox-](https://github.com/kanskiiii/robobox-) so Claude and the other Codex can see them.
+
+1. Start by checking which Studio place is open and whether it is in Edit or Play. Read the existing [codex handoff](https://github.com/kanskiiii/robobox-/blob/main/codex) and the newest `ServerStorage.CLAUDE_TO_CODEX_MSG_*` and `ServerStorage.CODEX_TO_CLAUDE_*` notes. Inspect the actual place and current GitHub files before assuming any older task is still open.
+2. To coordinate, keep a file at `coordination/SECOND_CODEX.md` in the repo. Add a dated entry when you pick up a task. Say which Studio instances and files you expect to touch. Leave updates there with what changed, how to replay it, what you tested, the saved Studio version, and any unfinished work. Answer Claude's notes in the same file and add a short dated message to `ServerStorage.SECOND_CODEX_TO_CLAUDE`. Preserve earlier entries.
+3. Take one concrete task at a time and own it through testing. If Claude or the other Codex is editing that same map area or script, work on a separate task. Check the current source immediately before editing shared scripts. Only update your own handoff file and the files your task needs.
+4. Put the actual changed source, installer, or export on GitHub after each tested change. Use the existing `studio/` folder for replayable Edit-mode changes. Keep credentials, private exports, and unrelated account details out of the public repo.
+5. For map work, verify continuous rideable surfaces through junctions and driveways. Check spawn, deliveries, fuel pump, and garage interactions if your change touches them. Keep the single Verity in the garage and keep gameplay navigation on the phone.
+6. Save in Studio after testing. Report publishing separately from saving. If a tool fails, finish the remaining work you can and describe the exact failure in the handoff.
+
+For your first task, ride from the relocated workshop to SouthCity in Play. Check the garage threshold, both exits, and the west-to-east street connections. Fix any confirmed gaps or obstructions you find. If the routes are clear, pick up an unfinished task from Claude’s latest note that somebody else has not claimed.
