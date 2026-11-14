@@ -58,3 +58,7 @@ The stock handlebar_std and fork_std on the garage project bike now have new geo
 Studio Play verified the normal garage spawn, zero decorative colliders, 34-degree rotation following the mount welds, and 17.8 mm vertical fender clearance above the front tire at 120 mm compression. The fork and bar use welded Studio geometry and built-in materials. First-person visual QA, lever motion, rider animation, the rest of the bike and PBR maps remain open.
 
 [Studio installer](studio/sm50-front-end.install.luau)
+
+## SM50 exhaust, tail and plate
+
+The [rear asset folder](assets/vehicles/sm50/rear-upgrade/README.md) contains a Blender source, Roblox-ready tail and plate meshes, an exhaust mesh with its matching PBR maps, and the Studio installer. The owner-side Roblox upload is pending.
