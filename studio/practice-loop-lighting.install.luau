@@ -46,13 +46,13 @@ local function lamp(x, z, facing)
 	light.Parent = lens
 end
 
-lamp(west+158,north+27,0)
-lamp(west+92,north+11,0)
+lamp(west+158,north+29,0)
+lamp(west+82,north+11,0)
 lamp(west+17,north+11,0)
-lamp(west-44,north-34,-math.pi/2)
+lamp(west-47,north-34,-math.pi/2)
 lamp(west+30,north-79,math.pi)
 lamp(west+89,north-79,math.pi)
-lamp(west+151,north-35,math.pi/2)
+lamp(west+154,north-35,math.pi/2)
 assert(#loop.Paving:GetChildren() > 0)
 local previous = map:FindFirstChild(rig.Name)
 assert(not previous or previous:GetAttribute("TwoStrokeMapVersion"), "Unrelated lighting model already uses that name")
