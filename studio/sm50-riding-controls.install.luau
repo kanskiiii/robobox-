@@ -38,13 +38,11 @@ if not string.find(client.BikeController.Source, publishInputs, 1, true) then
 end
 
 local cockpit = [==[
--- LocalScript in StarterPlayerScripts.TwoStrokeClient.
-local RunService = game:GetService("RunService")
-local Controller = require(script.Parent.BikeController)
+local CockpitControls = {}
 local mountedBar
 local controls = {}
 
-local function clear()
+function CockpitControls.clear()
 	for _, control in ipairs(controls) do
 		for weld, rest in pairs(control.rest) do
 			if weld.Parent then weld.C0 = rest end
@@ -74,31 +72,34 @@ local function bind(bar)
 	end
 end
 
-local render = RunService.PreSimulation:Connect(function(dt)
-	local chassis = Controller.getRoot()
-	local slot = chassis and chassis.Parent:FindFirstChild("Slot_Handlebar")
-	local visual = Controller.active and slot and slot:FindFirstChild("Visual")
+function CockpitControls.step(chassis, hud, dt)
+	local slot = chassis.Parent:FindFirstChild("Slot_Handlebar")
+	local visual = slot and slot:FindFirstChild("Visual")
 	if visual ~= mountedBar then
-		clear()
+		CockpitControls.clear()
 		if visual and visual:IsA("BasePart") then bind(visual) end
 	end
 	for _, control in ipairs(controls) do
-		local amount = Controller.hud[control.input] or 0
+		local amount = hud[control.input] or 0
 		control.amount += (amount - control.amount) * (1 - math.exp(-dt * 20))
 		local angle = math.rad(-14) * control.side * control.amount
 		local rotation = CFrame.new(control.pivot) * CFrame.fromAxisAngle(control.axis, angle)
 			* CFrame.new(-control.pivot)
 		for weld, rest in pairs(control.rest) do weld.C0 = rotation * rest end
 	end
-end)
-script.Destroying:Connect(function()
-	render:Disconnect()
-	clear()
-end)
+end
+
+return CockpitControls
 ]==]
 
-local scriptObject = client:FindFirstChild("CockpitControls") or Instance.new("LocalScript")
-assert(scriptObject:IsA("LocalScript"))
+if not client.BikeController.Source:find("CockpitControls.step(r, hud, dt)", 1, true) then
+	replace("BikeController", "local Controller = {}", 'local CockpitControls = require(script.Parent.CockpitControls)\nlocal Controller = {}')
+	replace("BikeController", publishInputs, publishInputs .. "\n\tCockpitControls.step(r, hud, dt)")
+	replace("BikeController", "function Controller.stop()\n", "function Controller.stop()\n\tCockpitControls.clear()\n")
+end
+local previous = client:FindFirstChild("CockpitControls")
+local scriptObject = if previous and previous:IsA("ModuleScript") then previous else Instance.new("ModuleScript")
+if previous and previous ~= scriptObject then previous:Destroy() end
 for object, source in pairs(edits) do object.Source = source end
 for _, p in ipairs(bar:GetChildren()) do
 	if p:IsA("BasePart") then
