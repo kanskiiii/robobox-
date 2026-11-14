@@ -27,4 +27,26 @@ source = source:gsub("local dim,round,coin", "local dim,round")
 assert(not source:find("QuickMenu", 1, true) and not source:find("dock", 1, true))
 shop.Source = source
 main.Source = main.Source:gsub("\n\tShop%.setMoney%(state%.money%)", "")
-return "Floating menu removed; M opens the shop and P opens the phone"
+local phone = client.Phone
+local phoneSource = phone.Source
+if not phoneSource:find("Phone.openShop", 1, true) then
+	local at = assert(phoneSource:find('\ttext("P put away', 1, true))
+	phoneSource = phoneSource:sub(1,at-1) .. [==[
+	local shopButton = button("Garage Shop", Color3.fromRGB(133, 77, 233), {
+		Name = "GarageShop", Position = UDim2.fromOffset(16, 443), Size = UDim2.new(1, -32, 0, 33), Parent = screen,
+	})
+	shopButton.Activated:Connect(function()
+		if Phone.openShop and Phone.openShop() then setOpen(false) end
+	end)
+]==] .. phoneSource:sub(at)
+	phoneSource = phoneSource:gsub("local Phone = {}", "local Phone: { [string]: any } = {}")
+	phone.Source = phoneSource
+end
+if not shop.Source:find("Phone.openShop = open", 1, true) then
+	local current = shop.Source
+	local at = assert(current:find("\tbuy.Activated:Connect", 1, true))
+	current = current:sub(1,at-1) .. "\tPhone.openShop = open\n" .. current:sub(at)
+	current = current:gsub("\t\tfetchPrice%(%)\n\tend", "\t\tfetchPrice()\n\t\treturn true\n\tend")
+	shop.Source = current
+end
+return "Removed floating menu. Open Garage Shop from the phone or with M."
