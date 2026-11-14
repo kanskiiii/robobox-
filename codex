@@ -89,3 +89,9 @@ Shift operates the clutch and Ctrl sets the wheelie input. S operates the front 
 Map.EastFarmLane adds a gravel turnoff on the far side of the main road, 390 studs east of its centre, beyond the sprint. The lane bends past a pump shed toward a farmhouse with fences, cultivated furrows and driveways. The buildings are scenery. A Play test checked 450 wheel-path samples across the turnoff and lane, with continuous surfaces at main-road height.
 
 [Studio installer](studio/east-farm-lane.install.luau)
+
+## Signed delivery destinations
+
+Map.DeliveryDrops now includes ul. Polna 12 on the farmhouse drive and three paved roadside pull-offs at ul. Lipowa 28, ul. Kolejowa 6 and ul. Ogrodowa 17. Each has an address sign and mailbox. Existing delivery code selects the address and targets. An isolated Play run with the production delivery module observed all four addresses in offers and completed one pickup, drop and cash payout in a temporary test session.
+
+[Studio installer](studio/signed-delivery-bays.install.luau)
