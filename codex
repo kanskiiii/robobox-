@@ -83,3 +83,9 @@ Map.WestPracticeLoop adds a paved circuit west of the garage with a yard connect
 
 Shift operates the clutch and Ctrl sets the wheelie input. S operates the front brake. The new stock SM50 handlebar's brake and clutch levers follow the smoothed inputs on the rider client. Tested key input and lever movement in Play on a temporary assembled stock bike. Rider finger motion remains open.
 [Controls installer](studio/sm50-riding-controls.install.luau)
+
+## East Farm Lane
+
+Map.EastFarmLane adds a gravel turnoff on the far side of the main road, 390 studs east of its centre, beyond the sprint. The lane bends past a pump shed toward a farmhouse with fences, cultivated furrows and driveways. The buildings are scenery. A Play test checked 450 wheel-path samples across the turnoff and lane, with continuous surfaces at main-road height.
+
+[Studio installer](studio/east-farm-lane.install.luau)
