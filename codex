@@ -44,3 +44,9 @@ The active gameplay catalogs are backed by Roblox asset URIs. Run the generated 
 - The separate `ZefirSM50Catalog-pbr.glb` includes a prototype shared 1024 px PBR atlas. Studio appearance still needs verification.
 - Use Node.js 24. Run `node assets/vehicles/sm50/source/build.mjs --catalog` for the bike catalog, `--world-catalog` for the world catalog, and `--catalog --pbr` for the PBR variant. Run `node assets/vehicles/sm50/source/check-catalog.mjs` for validation. The other build options are documented in `coordination/INTEGRATION_STATUS.md`.
 - `coordination/CODEX_TO_CLAUDE.md` has the detailed handoff and records known limitations.
+
+## Fastener placement
+
+The axle and stud installer moves the Zefir and Senda axle service nuts past the fork and swingarm and gives the cylinder and head studs upward loosening axes. The Studio bolt builder verified 24 fasteners across nine parts. Existing bolt counts are preserved. Assembled reachability and covered fasteners still need verification.
+
+[Axle and stud installer](axle-and-stud-markers.install.luau)
