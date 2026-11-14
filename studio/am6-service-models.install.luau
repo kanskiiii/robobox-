@@ -80,7 +80,7 @@ local function bolt(body, index, position, side, tool, mm)
 	attachment(body, "Bolt_" .. index, CFrame.fromMatrix(position * scale, V(0, 0, side), out), tool, mm)
 end
 
-local pump = root("Part_waterpump_am6", V(.061, .080, .105), V(.028, .002, -.002))
+local pump = root("Part_waterpump_am6", V(.061, .088, .114), V(.026, .003, -.006))
 disc(pump, "Cast impeller housing", .000, .032, 0, 0, .065, cast)
 disc(pump, "Paper gasket seam", .021, .025, 0, 0, .063, dark, rubber)
 disc(pump, "Beveled die-cast cover lip", .025, .034, 0, 0, .061, zinc)
@@ -102,7 +102,7 @@ end
 spigot("CoolantInlet", V(.018, -.007, -.020), V(.025, -.004, -.040), V(.029, -.004, -.055))
 spigot("CoolantOutlet", V(.012, .016, .015), V(.021, .029, .029), V(.029, .042, .036))
 
-local ignition = root("Part_ignition_am6", V(.062, .126, .135), V(-.024, 0, .005))
+local ignition = root("Part_ignition_am6", V(.064, .140, .161), V(-.023, .009, .020))
 disc(ignition, "Stator backplate", -.008, .001, 0, 0, .119, cast)
 disc(ignition, "Inner rotor flange", -.021, -.007, 0, 0, .084, dark)
 for i = 0, 7 do
@@ -122,8 +122,8 @@ disc(ignition, "Crank hub", -.044, -.035, 0, 0, .031, cast)
 bolt(ignition, 1, V(-.046, 0, 0), -1, "socket", 17)
 for i, z in ipairs({-.046, .046}) do
 	local y = -.028
-	disc(ignition, "Stator screw landing", -.015, -.006, y, z, .016, zinc)
-	bolt(ignition, i + 1, V(-.018, y, z), -1, "phillips")
+	disc(ignition, "Stator screw landing", -.034, -.006, y, z, .016, zinc)
+	bolt(ignition, i + 1, V(-.036, y, z), -1, "phillips")
 end
 piece(ignition, "Pickup sensor", CFrame.new(-.009, .024, .056), V(.018, .020, .021), dark, rubber)
 local loom = {V(-.008, .03, .057), V(-.009, .044, .070), V(-.006, .057, .082), V(.008, .068, .096)}
