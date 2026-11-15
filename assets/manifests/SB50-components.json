@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "units": "m",
+  "components": [
+    {
+      "assetId": "SB50-seat-stock",
+      "name": "SB50-seat-stock",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-seat-stock.glb",
+      "node": "SB50-seat-stock",
+      "dimensionsM": [
+        0.164893,
+        0.0912,
+        0.782
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "FrontTongue": [
+          0,
+          0.041,
+          -0.269
+        ],
+        "Latch": [
+          0,
+          -0.01,
+          0.225
+        ]
+      },
+      "materials": [
+        "Grained black vinyl",
+        "Textured black nylon",
+        "Black anodized aluminium"
+      ],
+      "materialBoundsM": {
+        "seat": {
+          "min": [
+            -0.082447,
+            -0.00484,
+            -0.366
+          ],
+          "max": [
+            0.082447,
+            0.08594,
+            0.416
+          ],
+          "size": [
+            0.164893,
+            0.09078,
+            0.782
+          ]
+        },
+        "black": {
+          "min": [
+            -0.077036,
+            -0.00526,
+            -0.322
+          ],
+          "max": [
+            0.077036,
+            0.0561,
+            0.416
+          ],
+          "size": [
+            0.154071,
+            0.06136,
+            0.738
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.080217,
+            0.010941,
+            -0.322342
+          ],
+          "max": [
+            0.080217,
+            0.057696,
+            0.362173
+          ],
+          "size": [
+            0.160434,
+            0.046754,
+            0.684514
+          ]
+        }
+      },
+      "triangles": 660,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "seat.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0,
+        0.848,
+        0.348
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    },
+    {
+      "assetId": "SB50-seat-umber",
+      "name": "SB50-seat-umber",
+      "category": "Bodywork",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-seat-umber.glb",
+      "node": "SB50-seat-umber",
+      "dimensionsM": [
+        0.164893,
+        0.0912,
+        0.782
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "FrontTongue": [
+          0,
+          0.041,
+          -0.269
+        ],
+        "Latch": [
+          0,
+          -0.01,
+          0.225
+        ]
+      },
+      "materials": [
+        "SB50-seat-umber finish",
+        "Textured black nylon",
+        "Black anodized aluminium"
+      ],
+      "materialBoundsM": {
+        "seat": {
+          "min": [
+            -0.082447,
+            -0.00484,
+            -0.366
+          ],
+          "max": [
+            0.082447,
+            0.08594,
+            0.416
+          ],
+          "size": [
+            0.164893,
+            0.09078,
+            0.782
+          ]
+        },
+        "black": {
+          "min": [
+            -0.077036,
+            -0.00526,
+            -0.322
+          ],
+          "max": [
+            0.077036,
+            0.0561,
+            0.416
+          ],
+          "size": [
+            0.154071,
+            0.06136,
+            0.738
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.080217,
+            0.010941,
+            -0.322342
+          ],
+          "max": [
+            0.080217,
+            0.057696,
+            0.362173
+          ],
+          "size": [
+            0.160434,
+            0.046754,
+            0.684514
+          ]
+        }
+      },
+      "triangles": 660,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "seat.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0,
+        0.848,
+        0.348
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    },
+    {
+      "assetId": "SB50-cylinder-stock",
+      "name": "SB50-cylinder-stock",
+      "category": "Engine",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-cylinder-stock.glb",
+      "node": "SB50-cylinder-stock",
+      "dimensionsM": [
+        0.122,
+        0.150023,
+        0.132393
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "BoreBase": [
+          0,
+          0,
+          0
+        ],
+        "BoreTop": [
+          0,
+          0.124743,
+          -0.028691
+        ],
+        "Intake": [
+          0,
+          0.036,
+          0.069
+        ],
+        "Exhaust": [
+          0.013,
+          0.049,
+          -0.06
+        ]
+      },
+      "materials": [
+        "Cast aluminium",
+        "Machined aluminium"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.061,
+            -0.016314,
+            -0.076084
+          ],
+          "max": [
+            0.061,
+            0.133709,
+            0.05631
+          ],
+          "size": [
+            0.122,
+            0.150023,
+            0.132393
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.01647,
+            0.025072,
+            -0.064766
+          ],
+          "max": [
+            0.02947,
+            0.065834,
+            -0.004872
+          ],
+          "size": [
+            0.045941,
+            0.040762,
+            0.059895
+          ]
+        }
+      },
+      "triangles": 2320,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "cylinder.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0,
+        0.489,
+        -0.073
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    },
+    {
+      "assetId": "SB50-carburetor-stock",
+      "name": "SB50-carburetor-stock",
+      "category": "Intake",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-carburetor-stock.glb",
+      "node": "SB50-carburetor-stock",
+      "dimensionsM": [
+        0.064801,
+        0.092191,
+        0.096194
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Intake": [
+          0,
+          0.011,
+          0.05
+        ],
+        "Outlet": [
+          0,
+          0.003,
+          -0.036
+        ],
+        "ThrottleCable": [
+          0,
+          0.039,
+          0.004
+        ]
+      },
+      "materials": [
+        "Cast aluminium",
+        "Machined aluminium",
+        "Stainless weld bead"
+      ],
+      "materialBoundsM": {
+        "cast": {
+          "min": [
+            -0.026536,
+            -0.053691,
+            -0.040894
+          ],
+          "max": [
+            0.026536,
+            0.03132,
+            0.055301
+          ],
+          "size": [
+            0.053072,
+            0.085011,
+            0.096194
+          ]
+        },
+        "alloy": {
+          "min": [
+            -0.015,
+            0.0215,
+            -0.011
+          ],
+          "max": [
+            0.015,
+            0.0385,
+            0.019
+          ],
+          "size": [
+            0.03,
+            0.017,
+            0.03
+          ]
+        },
+        "weld": {
+          "min": [
+            0.015735,
+            -0.013464,
+            -0.006898
+          ],
+          "max": [
+            0.038265,
+            0.024256,
+            0.021
+          ],
+          "size": [
+            0.022531,
+            0.03772,
+            0.027898
+          ]
+        }
+      },
+      "triangles": 608,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "intake.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0,
+        0.532,
+        0.095
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    },
+    {
+      "assetId": "SB50-silencer-stock",
+      "name": "SB50-silencer-stock",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-silencer-stock.glb",
+      "node": "SB50-silencer-stock",
+      "dimensionsM": [
+        0.087873,
+        0.181336,
+        0.435893
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Inlet": [
+          0,
+          0,
+          0
+        ],
+        "Outlet": [
+          -0.023,
+          0.158,
+          0.426
+        ],
+        "Mount": [
+          -0.021,
+          0.133,
+          0.319
+        ]
+      },
+      "materials": [
+        "Machined aluminium",
+        "Heat stained stainless steel",
+        "Black anodized aluminium"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.056936,
+            0.053033,
+            0.131846
+          ],
+          "max": [
+            0.030937,
+            0.168031,
+            0.392521
+          ],
+          "size": [
+            0.087873,
+            0.114998,
+            0.260675
+          ]
+        },
+        "pipe": {
+          "min": [
+            -0.036527,
+            -0.009744,
+            -0.007004
+          ],
+          "max": [
+            0.011976,
+            0.171592,
+            0.42889
+          ],
+          "size": [
+            0.048503,
+            0.181336,
+            0.435893
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.055907,
+            0.056459,
+            0.126026
+          ],
+          "max": [
+            0.029,
+            0.167503,
+            0.403686
+          ],
+          "size": [
+            0.084907,
+            0.111044,
+            0.27766
+          ]
+        }
+      },
+      "triangles": 636,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "silencer.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0.151,
+        0.649,
+        0.337
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    },
+    {
+      "assetId": "SB50-silencer-black",
+      "name": "SB50-silencer-black",
+      "category": "Exhaust",
+      "vehicleCompatibility": [
+        "sb50"
+      ],
+      "file": "assets/export/components/SB50-silencer-black.glb",
+      "node": "SB50-silencer-black",
+      "dimensionsM": [
+        0.087873,
+        0.181336,
+        0.435893
+      ],
+      "pivotM": [
+        0,
+        0,
+        0
+      ],
+      "attachmentLocalM": {
+        "Inlet": [
+          0,
+          0,
+          0
+        ],
+        "Outlet": [
+          -0.023,
+          0.158,
+          0.426
+        ],
+        "Mount": [
+          -0.021,
+          0.133,
+          0.319
+        ]
+      },
+      "materials": [
+        "SB50-silencer-black finish",
+        "Heat stained stainless steel",
+        "Black anodized aluminium"
+      ],
+      "materialBoundsM": {
+        "alloy": {
+          "min": [
+            -0.056936,
+            0.053033,
+            0.131846
+          ],
+          "max": [
+            0.030937,
+            0.168031,
+            0.392521
+          ],
+          "size": [
+            0.087873,
+            0.114998,
+            0.260675
+          ]
+        },
+        "pipe": {
+          "min": [
+            -0.036527,
+            -0.009744,
+            -0.007004
+          ],
+          "max": [
+            0.011976,
+            0.171592,
+            0.42889
+          ],
+          "size": [
+            0.048503,
+            0.181336,
+            0.435893
+          ]
+        },
+        "anodized": {
+          "min": [
+            -0.055907,
+            0.056459,
+            0.126026
+          ],
+          "max": [
+            0.029,
+            0.167503,
+            0.403686
+          ],
+          "size": [
+            0.084907,
+            0.111044,
+            0.27766
+          ]
+        }
+      },
+      "triangles": 636,
+      "collision": [],
+      "interaction": "Remove / install",
+      "mountingInterface": "silencer.sb50.v1",
+      "mountsOnVehicleAtM": [
+        0.151,
+        0.649,
+        0.337
+      ],
+      "exportStatus": "exported",
+      "validationStatus": "matches stock mesh and local mounting coordinates"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+* text=auto
+*.json text eol=lf
+*.luau text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.blend binary
+*.glb binary
+*.png binary
+*.jpg binary
