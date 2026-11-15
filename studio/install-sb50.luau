@@ -183,21 +183,148 @@ local function ownerFor(name)
 	return bike.Body, bike.Chassis
 end
 
+local function startComponent(component, category)
+	local instance = model(nil, component.name == "Seat" and "SeatPad" or component.name)
+	instance:SetAttribute("AssetId", "sb50." .. component.name)
+	instance:SetAttribute("ComponentCategory", category)
+	return instance
+end
+
+local function setMeshLayer(part, instance, root, surface, key, triangles, pivot, center)
+	part.Name = key
+	part.Material = Enum.Material[surface.studioMaterial]
+	part.Color = Color3.fromHex(surface.hex)
+	part.Transparency = surface.transparency
+	part.CastShadow = surface.transparency == 0
+	part.Anchored = false
+	part.CanCollide = false
+	part.CanTouch = false
+	part.CanQuery = false
+	part.Massless = true
+	part.CFrame = CFrame.new(pivot + center)
+	part.PivotOffset = CFrame.new(-center)
+	part:SetAttribute("TriangleCount", triangles)
+	part.Parent = instance
+	if not instance.PrimaryPart then instance.PrimaryPart = part end
+	weld(part, root)
+end
+
+local function finishComponent(instance, parent, pivot, attachments)
+	for name, point in attachments do
+		marker(instance.PrimaryPart, name, pivot + studs(point))
+	end
+	local previous = parent:FindFirstChild(instance.Name)
+	if previous then previous:Destroy() end
+	instance.Parent = parent
+end
+
+local function hasAssetUri(content)
+	if content.SourceType ~= Enum.ContentSourceType.Uri then return false end
+	local uri = content.Uri or ""
+	return uri:match("^rbxassetid://%d+$") ~= nil
+		or uri:match("^https?://www%.roblox%.com/asset/%?id=%d+") ~= nil
+end
+
+local function hasPublishedFinish(appearance)
+	if not appearance or not appearance:IsA("SurfaceAppearance") then return false end
+	local allMaps = true
+	for _, property in mapProperties do
+		allMaps = allMaps and hasAssetUri(appearance[property])
+	end
+	if allMaps then return true end
+	local readable, packed = pcall(function() return appearance.TexturePackContent end)
+	return readable and hasAssetUri(packed)
+end
+
+if request.mode == "bindImport" then
+	local source = request.source
+	assert(typeof(source) == "Instance" and source:IsA("Model") and source:IsDescendantOf(workspace),
+		"Choose the imported SB50 Model in Workspace")
+	local layout = HttpService:JSONDecode(request.layout)
+	assert(layout.schemaVersion == 1 and layout.metresPerStud == .28, "Wrong SB50 import layout")
+	assert(#layout.parts == 74 and layout.stats.materialLayers == 163 and layout.stats.triangles == 43920,
+		"Wrong SB50 import revision")
+
+	local expected = {}
+	for _, component in layout.parts do
+		for _, layer in component.layers do expected[layer.name] = true end
+	end
+	local imported = {}
+	for _, part in source:GetDescendants() do
+		if part:IsA("MeshPart") then
+			local node, label = part, nil
+			while node ~= source do
+				local name = node.Name:gsub("_Node$", ""):gsub("_Geometry$", "")
+				if expected[name] then
+					label = name
+					break
+				end
+				node = node.Parent
+			end
+			assert(label, "Unrecognized imported layer: " .. part:GetFullName())
+			assert(not imported[label], "Duplicate imported layer: " .. label)
+			imported[label] = part
+		end
+	end
+	local counts = {meshes = 0, triangles = 0}
+	for _, component in layout.parts do
+		for _, layer in component.layers do
+			local part = assert(imported[layer.name], "Missing imported layer: " .. layer.name)
+			assert(hasAssetUri(part.MeshContent), "Layer needs a published Roblox mesh: " .. layer.name)
+			local finish = part:FindFirstChildWhichIsA("SurfaceAppearance")
+			local surface = layout.palette[layer.material]
+			assert(surface and (surface.transparency > 0 or hasPublishedFinish(finish)),
+				"Layer needs a published PBR appearance: " .. layer.name)
+			local ratio = part.MeshSize / studs(layer.size)
+			local greatest = math.max(ratio.X,ratio.Y,ratio.Z)
+			local least = math.min(ratio.X,ratio.Y,ratio.Z)
+			assert(least > 0 and greatest / least < 1.10, "Import axes or extents differ: " .. layer.name)
+			counts.meshes += 1
+			counts.triangles += layer.triangles
+		end
+	end
+	local meshCount = 0
+	for _ in imported do meshCount += 1 end
+	assert(counts.meshes == meshCount and meshCount == layout.stats.materialLayers
+		and counts.triangles == layout.stats.triangles, "Unexpected imported mesh or triangle count")
+
+	for _, component in layout.parts do
+		local parent, root = ownerFor(component.name)
+		local instance = startComponent(component, component.category)
+		local pivot = studs(component.pivot)
+		for _, layer in component.layers do
+			local input = imported[layer.name]
+			local part = input:Clone()
+			part:ClearAllChildren()
+			local surface = layout.palette[layer.material]
+			if surface.transparency == 0 then
+				local finish = input:FindFirstChildWhichIsA("SurfaceAppearance"):Clone()
+				finish.Name = "SB50Finish"
+				finish.Parent = part
+			end
+			part.Size = studs(layer.size)
+			setMeshLayer(part, instance, root, surface, layer.material, layer.triangles, pivot, studs(layer.center))
+		end
+		finishComponent(instance, parent, pivot, component.attachments)
+	end
+	bike:SetAttribute("PublishedImport", true)
+	return string.format("Bound %d imported layers. Run finish to validate and install.", counts.meshes)
+end
+
 if request.mode == "batch" then
 	local bytes = EncodingService:DecompressBuffer(
 		EncodingService:Base64Decode(buffer.fromstring(request.payload)), Enum.CompressionAlgorithm.Zstd)
 	local headerSize = buffer.readu32(bytes, 0)
 	local spec = HttpService:JSONDecode(buffer.readstring(bytes, 4, headerSize))
 	assert(spec.format == 2, "Expected SB50 PBR mesh payload")
+	assert(not bike:GetAttribute("PublishedImport"), "Run begin to switch installation mode")
 	local appearance = assert(bike:FindFirstChild("_PBRTemplate"), "Build the atlas first")
 	local cursor = 4 + headerSize
 	local triangles = 0
 	for _, component in spec.parts do
 		local parent, root = ownerFor(component.name)
-		local instance = model(nil, component.name == "Seat" and "SeatPad" or component.name)
+		local instance = startComponent(component, spec.category)
 		local pivot = studs(component.pivot)
-		instance:SetAttribute("AssetId", "sb50." .. component.name)
-		instance:SetAttribute("ComponentCategory", spec.category)
 		for _, layer in component.layers do
 			local verts, ids, normals, bank = {}, {}, {}, {}
 			local low = Vector3.new(math.huge, math.huge, math.huge)
@@ -250,49 +377,39 @@ if request.mode == "batch" then
 			editable:Destroy()
 			assert(part.MeshContent.SourceType == Enum.ContentSourceType.Opaque, "Mesh was not embedded")
 			local surface = spec.palette[layer.key]
-			part.Name = layer.key
 			if surface.transparency == 0 then
 				local pbr = appearance:Clone()
 				pbr.Name = "SB50Finish"
 				pbr.Parent = part
 			end
-			part.Material = Enum.Material[surface.studioMaterial]
-			part.Color = Color3.fromHex(surface.hex)
-			part.Transparency = surface.transparency
-			part.CastShadow = surface.transparency == 0
-			part.CanCollide = false
-			part.CanTouch = false
-			part.CanQuery = false
-			part.Massless = true
-			part.CFrame = CFrame.new(pivot + center)
-			part.PivotOffset = CFrame.new(-center)
-			part:SetAttribute("TriangleCount", layer.f)
-			part.Parent = instance
-			if not instance.PrimaryPart then instance.PrimaryPart = part end
-			weld(part, root)
+			setMeshLayer(part, instance, root, surface, layer.key, layer.f, pivot, center)
 			triangles += layer.f
 		end
-		for name, point in component.attachments do
-			marker(instance.PrimaryPart, name, pivot + studs(point))
-		end
-		local previous = parent:FindFirstChild(instance.Name)
-		if previous then previous:Destroy() end
-		instance.Parent = parent
+		finishComponent(instance, parent, pivot, component.attachments)
 	end
 	assert(cursor == buffer.len(bytes), "Payload length mismatch")
 	return string.format("%s: %d components, %d triangles", spec.category, #spec.parts, triangles)
 end
 
 assert(request.mode == "finish", "Unknown install mode")
+local published = bike:GetAttribute("PublishedImport") == true
 local meshCount, triangles, components = 0, 0, 0
 for _, instance in bike:GetDescendants() do
 	if instance:IsA("MeshPart") then
-		assert(instance.MeshContent.SourceType == Enum.ContentSourceType.Opaque, "Missing embedded mesh")
+		if published then
+			assert(hasAssetUri(instance.MeshContent), "Missing published mesh")
+		else
+			assert(instance.MeshContent.SourceType == Enum.ContentSourceType.Opaque, "Missing embedded mesh")
+		end
 		local finish = instance:FindFirstChild("SB50Finish")
 		if instance.Transparency == 0 then
 			assert(finish and finish:IsA("SurfaceAppearance"), "Missing surface finish: " .. instance:GetFullName())
-			for _, property in mapProperties do
-				assert(finish[property].SourceType == Enum.ContentSourceType.Opaque, "Missing opaque PBR map")
+			if published then
+				assert(hasPublishedFinish(finish), "Missing published PBR appearance")
+			else
+				for _, property in mapProperties do
+					assert(finish[property].SourceType == Enum.ContentSourceType.Opaque, "Missing opaque PBR map")
+				end
 			end
 		end
 		meshCount += 1
@@ -317,9 +434,10 @@ assert(not previous or previous:GetAttribute("StreetbornAsset") == "SB50", "Exis
 History:SetWaypoint("Before SB50 installation")
 if previous then previous:Destroy() end
 bike.Name = "SB50"
-bike._PBRTemplate:Destroy()
-bike:SetAttribute("SurfaceRevision", "PBR-2")
-bike:SetAttribute("EmbeddedMeshCount", meshCount)
+local atlasTemplate = bike:FindFirstChild("_PBRTemplate")
+if atlasTemplate then atlasTemplate:Destroy() end
+bike:SetAttribute("SurfaceRevision", published and "PBR-Published" or "PBR-2")
+if not published then bike:SetAttribute("EmbeddedMeshCount", meshCount) end
 bike:SetAttribute("TriangleCount", triangles)
 History:SetWaypoint("Install STREETBORN SB50")
 return string.format("AssetContract v%d passed: %d components, %d meshes, %d triangles",
