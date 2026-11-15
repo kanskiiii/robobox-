@@ -9,10 +9,28 @@ ASSETS = ROOT / "assets"
 MANIFESTS = ASSETS / "manifests"
 OUTPUT = ASSETS / "export/components"
 
+def linear_rgb(hex_color):
+    values = [int(hex_color[index:index+2], 16) / 255 for index in (1, 3, 5)]
+    return [v / 12.92 if v <= .04045 else ((v + .055) / 1.055) ** 2.4 for v in values]
+
+def set_portable_materials(palette):
+    for spec in palette.values():
+        material = bpy.data.materials.get(spec["name"])
+        if not material:
+            continue
+        shader = material.node_tree.nodes.get("Principled BSDF")
+        for name in ("Base Color", "Metallic", "Roughness", "Normal"):
+            for link in list(shader.inputs[name].links):
+                material.node_tree.links.remove(link)
+        shader.inputs["Base Color"].default_value = (*linear_rgb(spec["hex"]), 1)
+        shader.inputs["Metallic"].default_value = spec["metallic"]
+        shader.inputs["Roughness"].default_value = spec["roughness"]
+
 def main():
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.gltf(filepath=str(ASSETS / "export/vehicles/SB50-game.glb"))
     model = json.loads((MANIFESTS / "SB50-game.json").read_text(encoding="utf-8"))
+    set_portable_materials(model["materials"])
     records = {entry["name"]: entry for entry in model["components"]}
     variants = [
         ("SB50-seat-stock", "Seat", "seat.sb50.v1", None),

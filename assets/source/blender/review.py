@@ -26,7 +26,9 @@ def area(name, location, target, energy, size, color):
 
 def main():
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.import_scene.gltf(filepath=str(ASSETS / "export/vehicles/SB50-inspection.glb"))
+    game_mesh = "--game" in sys.argv
+    mesh = "SB50-game.glb" if game_mesh else "SB50-inspection.glb"
+    bpy.ops.import_scene.gltf(filepath=str(ASSETS / "export/vehicles" / mesh))
     scene = bpy.context.scene
     scene.unit_settings.system = "METRIC"
     scene.unit_settings.length_unit = "METERS"
@@ -81,13 +83,15 @@ def main():
         ("07-engine", (-2.1,.55,.65), (0,.01,.50), .88),
         ("08-rider-perspective", (-1.35,-2.7,1.65), (0,.12,.58), None),
     ]
+    if game_mesh:
+        views = [view for view in views if view[0].startswith(("03", "04", "05", "06"))]
     for filename, location, target, width in views:
         camera.location = location
         aim(camera, target)
         camera.data.type = "ORTHO" if width else "PERSP"
         camera.data.ortho_scale = width or 2.4
         camera.data.lens = 42
-        scene.render.filepath = str(PREVIEWS / (filename + ".jpg"))
+        scene.render.filepath = str(PREVIEWS / (("game-" if game_mesh else "") + filename + ".jpg"))
         bpy.ops.render.render(write_still=True)
 
 if __name__ == "__main__":

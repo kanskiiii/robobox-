@@ -49,7 +49,7 @@ const appearance={
   tread:{grain:.13,relief:.66}, seat:{grain:.16,relief:.62},
   black:{grain:.10,relief:.44}, gold:{grain:.075,brush:.04,relief:.35},
 };
-export function buildAtlas(materials,size=1024){
+export function buildAtlas(materials,size=1024,normalScale=1){
   const keys=Object.keys(materials).filter(k=>k!=='vertex'), grid=Math.ceil(Math.sqrt(keys.length));
   const tile=Math.floor(size/grid), edge=4;
   const maps=Object.fromEntries(['baseColor','orm','normal','roughness','metalness']
@@ -77,8 +77,8 @@ export function buildAtlas(materials,size=1024){
         maps.metalness[p+c]=metalness;
       }
       maps.orm.set([255,roughness,metalness],p);
-      const dx=(height(x-1,y)-height(x+1,y))*relief;
-      const dy=(height(x,y-1)-height(x,y+1))*relief;
+      const dx=(height(x-1,y)-height(x+1,y))*relief*normalScale;
+      const dy=(height(x,y-1)-height(x,y+1))*relief*normalScale;
       const normal=Math.hypot(dx,dy,1);
       maps.normal.set([byte(127.5+127.5*dx/normal),byte(127.5+127.5*dy/normal),byte(127.5+127.5/normal)],p);
     }
@@ -91,5 +91,5 @@ export function buildAtlas(materials,size=1024){
     const v=.5+.47*Math.tanh((point[1]+point[0]*.29)*10);
     return [(x0+edge+u*span)/size,(y0+edge+v*span)/size];
   }
-  return {uv,images:Object.fromEntries(Object.entries(maps).map(([k,data])=>[k,png(data,size)]))};
+  return {uv,pixels:maps,images:Object.fromEntries(Object.entries(maps).map(([k,data])=>[k,png(data,size)]))};
 }

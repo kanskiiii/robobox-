@@ -4,7 +4,7 @@ import {cross, length, sub} from './geometry.mjs';
 import {buildAtlas} from './material-atlas.mjs';
 
 const distance = process.argv.includes('--distance');
-const textured = !distance;
+const atlasSize = distance ? 384 : 1024;
 const vehicle = 'sb50';
 const baseName = 'SB50';
 const source = 'assets/source/geometry/motorcycle.mjs';
@@ -25,7 +25,7 @@ const rounded = p => p.map(round);
 const color = hex => hex.slice(1).match(/../g).map(s=>parseInt(s,16)/255);
 const linear = n => n<=.04045?n/12.92:((n+.055)/1.055)**2.4;
 const palette = Object.keys(materials);
-const atlas = textured ? buildAtlas(materials) : null;
+const atlas = buildAtlas(materials, atlasSize, distance ? .45 : 1);
 for(const [name,hex,metallicFactor,roughnessFactor,,transparency=0] of Object.values(materials)) {
   const material={name,pbrMetallicRoughness:{baseColorFactor:[...color(hex).map(linear),1-transparency],
     metallicFactor,roughnessFactor}};
@@ -39,7 +39,7 @@ function bufferView(buffer,target){
   byteLength+=bytes.length;
   return glb.bufferViews.length-1;
 }
-if(atlas){
+{
   glb.images=['baseColor','orm','normal'].map(key=>({name:key,mimeType:'image/png',bufferView:bufferView(atlas.images[key])}));
   glb.textures=glb.images.map((_,source)=>({source,sampler:0}));
   glb.samplers=[{magFilter:9729,minFilter:9987,wrapS:33071,wrapT:33071}];
@@ -49,9 +49,9 @@ if(atlas){
       baseColorTexture: {index:0}, metallicRoughnessTexture: {index:1},
       metallicFactor: 1, roughnessFactor: 1,
     };
-    material.normalTexture = {index:2, scale:.40};
+    material.normalTexture = {index:2, scale:distance ? 1 : .40};
   }
-  for (const key of ['baseColor','normal','roughness','metalness']) {
+  if (!distance) for (const key of ['baseColor','normal','roughness','metalness']) {
     writeFileSync(file('../../textures/SB50-' + key + '.png'),atlas.images[key]);
   }
 }
@@ -197,8 +197,8 @@ for(const mesh of index.meshes) for(const p of mesh.primitives){
 for(const img of index.images??[]){
   const view=index.bufferViews[img.bufferView];
   const offset=28+jsonLength+view.byteOffset;
-  if(saved.readUInt32BE(offset)!==0x89504e47 || saved.readUInt32BE(offset+16)!==1024
-    || saved.readUInt32BE(offset+20)!==1024) throw Error('Invalid embedded atlas image');
+  if(saved.readUInt32BE(offset)!==0x89504e47 || saved.readUInt32BE(offset+16)!==atlasSize
+    || saved.readUInt32BE(offset+20)!==atlasSize) throw Error('Invalid embedded atlas image');
 }
 
 const manifest={
@@ -214,8 +214,8 @@ const manifest={
     maxTrianglesPerComponent:Math.max(...parts.map(p=>p.triangles))},
 };
 if (atlas) manifest.textureAtlas = {
-  resolution:1024, uvSet:0, projection:'Bounded diagonal projection per material',
-  files:['baseColor','metalness','roughness','normal'].map(key=>'assets/textures/SB50-'+key+'.png'),
+  resolution:atlasSize, uvSet:0, projection:'Bounded diagonal projection per material',
+  files:distance ? ['studio/SB50-payload.json'] : ['baseColor','metalness','roughness','normal'].map(key=>'assets/textures/SB50-'+key+'.png'),
 };
 writeFileSync(file('../../manifests/'+baseName+suffix+'.json'), JSON.stringify(manifest,null,2)+'\n');
 
@@ -230,11 +230,12 @@ for(const [category, group] of studioGroups){
       const position=Float32Array.from(vertices.flat());
       const normal=Int8Array.from(normals.flat(),n=>Math.round(n*127));
       const index=Uint16Array.from(faces.flat());
-      chunks.push(Buffer.from(position.buffer),Buffer.from(normal.buffer),Buffer.from(index.buffer));
+      const uv=Uint16Array.from(vertices.flatMap(p=>atlas.uv(p,key)), n=>Math.round(n*65535));
+      chunks.push(Buffer.from(position.buffer),Buffer.from(normal.buffer),Buffer.from(uv.buffer),Buffer.from(index.buffer));
       if(colors) chunks.push(Buffer.from(colors.map(k=>palette.indexOf(k))));
       return {key,v:vertices.length,f:faces.length,hasColors:!!colors};
     })}));
-    const json=Buffer.from(JSON.stringify({category,parts:meta,palette:studioPalette,colorKeys:palette}));
+    const json=Buffer.from(JSON.stringify({category,format:2,parts:meta,palette:studioPalette,colorKeys:palette}));
     const length=Buffer.alloc(4);
     length.writeUInt32LE(json.length);
     return zstdCompressSync(Buffer.concat([length,json,...chunks])).toString('base64');
@@ -242,7 +243,7 @@ for(const [category, group] of studioGroups){
   // Bound the size of individual Studio calls, including the larger wheel meshes.
   let batch=[], i=1;
   for(const part of group){
-    if(batch.length && pack([...batch,part]).length>24000){
+    if(batch.length && pack([...batch,part]).length>42000){
       batches[category+i++]=pack(batch);
       batch=[];
     }
@@ -250,5 +251,19 @@ for(const [category, group] of studioGroups){
   }
   if(batch.length) batches[category+i]=pack(batch);
 }
-if(distance) writeFileSync(file('../../../studio/SB50-payload.json'),JSON.stringify({proxies,batches}));
+if (distance) {
+  const maps = {};
+  for (const key of ['baseColor','metalness','roughness','normal']) {
+    const rgb = atlas.pixels[key];
+    const rgba = Buffer.alloc(atlasSize * atlasSize * 4, 255);
+    for(let i=0,j=0;i<rgb.length;i+=3,j+=4) {
+      rgba[j]=rgb[i];
+      rgba[j+1]=rgb[i+1];
+      rgba[j+2]=rgb[i+2];
+    }
+    const compressed = zstdCompressSync(rgba).toString('base64');
+    maps[key] = compressed.match(/.{1,42000}/g);
+  }
+  writeFileSync(file('../../../studio/SB50-payload.json'),JSON.stringify({proxies,batches,atlas:{size:atlasSize,maps}}));
+}
 console.log(JSON.stringify({stats:manifest.stats,bounds:manifest.boundsM,batches:Object.keys(batches)},null,2));

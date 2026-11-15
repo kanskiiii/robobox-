@@ -1,6 +1,16 @@
 import {Mesh, v, tau, mix, add, sub, mul, unit} from './geometry.mjs';
 
 const distance = process.argv.includes('--distance');
+// Small turned and tubular features keep their silhouettes at gameplay distance.
+// Wheel and brake topology is chosen explicitly to preserve its circular profile.
+class GameDetailMesh extends Mesh {
+  tube(centers,radii,sides=12,hint) {
+    super.tube(centers,radii,Math.min(sides,10),hint);
+  }
+  lathe(center,axis,profile,sides=48,tooth) {
+    super.lathe(center,axis,profile,Math.min(sides,22),tooth);
+  }
+}
 const serviceParts = new Set(['Piston','Crankshaft','ConnectingRod','ClutchBasket','ClutchPlateStack',
   'ClutchPressurePlate','GearboxInputShaft','GearboxOutputShaft','AirFilter']);
 
@@ -42,7 +52,8 @@ function part(category, name, pivot, material, draw, attachments = {}, interacti
   const component = {category, name, pivot, attachments, interaction, layers: {}};
   components.push(component);
   const layer = (key, build) => {
-    const mesh = component.layers[key] ??= new Mesh();
+    const simplified = distance && category !== 'Wheels' && category !== 'Brakes';
+    const mesh = component.layers[key] ??= simplified ? new GameDetailMesh() : new Mesh();
     build(mesh);
   };
   layer(material, mesh => draw(mesh, layer));
@@ -155,11 +166,12 @@ part('Suspension','ShockShaft',lowerShock,'chrome',(m,l)=>{
   l('alloy',b=>segment(b,mix(upperShock,lowerShock,.77),mix(upperShock,lowerShock,.81),.035,24));
 },{ShockLower:lowerShock,SpringSeat:mix(upperShock,lowerShock,.79)},'Translate along shock axis');
 part('Suspension','ShockSpring',upperShock,'spring',m=>{
-  const centers=Array.from({length:117},(_,i)=>{
-    const t=i/116,a=t*6.5*tau;
+  const turns = distance ? 78 : 116;
+  const centers=Array.from({length:turns+1},(_,i)=>{
+    const t=i/turns,a=t*6.5*tau;
     return add(mix(upperShock,lowerShock,.28+.49*t),[.029*Math.cos(a),.014*Math.sin(a),-.025*Math.sin(a)]);
   });
-  m.tube(centers,centers.map(()=>.0046),8);
+  m.tube(centers,centers.map(()=>.0046),distance ? 6 : 8);
 },{SpringUpper:mix(upperShock,lowerShock,.28),SpringLower:mix(upperShock,lowerShock,.77)},'Compress along shock axis');
 
 for(const [label,p,w,r] of [['Front',front,.100,.296],['Rear',rear,.130,.307]]) {
@@ -167,17 +179,20 @@ for(const [label,p,w,r] of [['Front',front,.100,.296],['Rear',rear,.130,.307]]) 
   const rim = .226;
   const brakeX = label==='Front'?.083:.103;
   const disc = label==='Front'?.139:.106;
-  const ring = (m,profile,sides=72) => m.lathe(p,X,profile,distance ? Math.min(32,sides) : sides);
+  const ring = (m,profile,sides=72,gameSides=32) => m.lathe(p,X,profile,distance ? Math.min(gameSides,sides) : sides);
   part('Wheels',label+'Tire',p,'rubber',(m,l)=>{
     ring(m,[[-w*.34,.217],[-w*.45,.234],[-w*.50,r-.043],[-w*.44,r-.022],
       [-w*.32,r-.009],[-w*.16,r-.002],[0,r],[w*.16,r-.002],[w*.32,r-.009],
-      [w*.44,r-.022],[w*.50,r-.043],[w*.45,.234],[w*.34,.217],[w*.25,.218],[-w*.25,.218]],96);
-    if(!distance) l('tread',b=>{
-      for(let i=0;i<32;i++) for(const s of [-1,1]) {
-        const a=tau*(i+(s>0?.50:0))/32;
-        const centers=[[.12,.022,.0004],[.23,0,.0044],[.35,-.026,.0119],[.44,-.055,.0218]]
+      [w*.44,r-.022],[w*.50,r-.043],[w*.45,.234],[w*.34,.217],[w*.25,.218],[-w*.25,.218]],96,48);
+    l('tread',b=>{
+      const count = distance ? 24 : 32;
+      const cut = distance ? [[.11,.022,.0007],[.27,-.007,.0054],[.43,-.058,.019]]
+        : [[.12,.022,.0004],[.23,0,.0044],[.35,-.026,.0119],[.44,-.055,.0218]];
+      for(let i=0;i<count;i++) for(const s of [-1,1]) {
+        const a=tau*(i+(s>0?.50:0))/count;
+        const centers=cut
           .map(([x,offset,drop])=>polar(p,s*x*w,r-drop,a+offset));
-        b.tube(centers,centers.map((_,j)=>[.0014,.0029-j*.00023]),6,X);
+        b.tube(centers,centers.map((_,j)=>distance ? [.0013,.00275-j*.00028] : [.0014,.0029-j*.00023]),distance ? 3 : 6,X);
       }
     });
   },axle,'Rotate with wheel around +X');
@@ -196,9 +211,9 @@ for(const [label,p,w,r] of [['Front',front,.100,.296],['Rear',rear,.130,.307]]) 
   },axle,'Rotate with wheel around +X');
   part('Wheels',label+'Hub',p,'cast',(m,l)=>{
     ring(m,[[-.068,.013],[-.068,.032],[-.053,.035],[-.043,.048],[-.033,.048],
-      [-.024,.030],[.023,.028],[.036,.048],[.045,.048],[.053,.037],[.066,.032],[.066,.013]],36);
+      [-.024,.030],[.023,.028],[.036,.048],[.045,.048],[.053,.037],[.066,.032],[.066,.013]],36,20);
     l('anodized',b=>{for(const s of [-1,1]) b.lathe(near(p,s*.065),X,
-      [[-.004,.011],[-.004,.025],[.004,.025],[.004,.011]],32);});
+      [[-.004,.011],[-.004,.025],[.004,.025],[.004,.011]],distance ? 16 : 32);});
   },axle,'Rotate with wheel around +X');
   part('Wheels',label+'SpokeSet',p,'alloy',m=>{
     for(let i=0;i<36;i++){
@@ -211,7 +226,7 @@ for(const [label,p,w,r] of [['Front',front,.100,.296],['Rear',rear,.130,.307]]) 
     m.lathe(center,X,[[-.002,disc*.72],[-.002,disc-.001],[.002,disc-.001],[.002,disc*.72]],
       distance?32:72,(i,j)=> !distance && (j===1||j===2) ? .0015*Math.cos(tau*i/9) : 0);
     l('anodized',b=>{
-      b.lathe(near(p,brakeX-.003),X,[[-.003,.021],[-.003,.049],[.003,.049],[.003,.021]],48);
+      b.lathe(near(p,brakeX-.003),X,[[-.003,.021],[-.003,.049],[.003,.049],[.003,.021]],distance ? 24 : 48);
       for(let i=0;i<6;i++){
         const a=i*tau/6;
         b.tube([polar(p,brakeX-.004,.043,a),polar(p,brakeX-.004,disc*.61,a+.17),
@@ -220,12 +235,17 @@ for(const [label,p,w,r] of [['Front',front,.100,.296],['Rear',rear,.130,.307]]) 
       }
     });
     l('alloy',b=>{for(let i=0;i<6;i++) bolt(b,polar(p,brakeX+.004,.037,i*tau/6),X,.005,.004);});
-    if(!distance) l('tread',b=>{
-      for(let i=0;i<21;i++){
-        const a=tau*i/21;
+    l('tread',b=>{
+      const count = distance ? 14 : 21;
+      for(let i=0;i<count;i++){
+        const a=tau*i/count;
         for(const [r,offset] of [[.805,0],[.906,.055]]){
           // Flush dark recess detail on both faces of the rotor.
-          for(const s of [-1,1]) profile(b,polar(p,brakeX+s*.0022,disc*r,a+offset),X,.00055,.0027,.00014,7);
+          for(const s of [-1,1]) {
+            const center = polar(p,brakeX+s*.0022,disc*r,a+offset);
+            if (distance) segment(b,near(center,-.00035),near(center,.00035),.00275,5);
+            else profile(b,center,X,.00055,.0027,.00014,7);
+          }
         }
       }
     });

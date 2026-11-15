@@ -109,6 +109,59 @@ end
 local bike = assert(assets:FindFirstChild(candidateName), "Run begin first")
 assert(bike:GetAttribute("StreetbornAsset") == "SB50", "Unexpected staging object")
 
+local mapProperties = {
+	baseColor = "ColorMapContent",
+	metalness = "MetalnessMapContent",
+	roughness = "RoughnessMapContent",
+	normal = "NormalMapContent",
+}
+
+if request.mode == "mapChunk" then
+	assert(mapProperties[request.map], "Unknown PBR map")
+	assert(typeof(request.index) == "number" and request.index >= 1 and request.index % 1 == 0)
+	local name = string.format("_PBR_%s_%d", request.map, request.index)
+	local record = bike:FindFirstChild(name) or Instance.new("StringValue")
+	record.Name = name
+	record.Value = request.payload
+	record.Parent = bike
+	return name
+end
+
+if request.mode == "finishAtlas" then
+	assert(request.size == 384, "Unexpected SB50 game atlas resolution")
+	local maps = {}
+	local chunks = {}
+	local size = Vector2.new(request.size, request.size)
+	for map in mapProperties do
+		local pieces = {}
+		for i = 1, request.counts[map] do
+			local record = assert(bike:FindFirstChild(string.format("_PBR_%s_%d", map, i)), "Missing PBR chunk")
+			table.insert(pieces, record.Value)
+			table.insert(chunks, record)
+		end
+		local pixels = EncodingService:DecompressBuffer(
+			EncodingService:Base64Decode(buffer.fromstring(table.concat(pieces))), Enum.CompressionAlgorithm.Zstd)
+		assert(buffer.len(pixels) == size.X * size.Y * 4, "Invalid PBR image buffer")
+		local editable = assert(AssetService:CreateEditableImage({Size = size}), "EditableImage allocation failed")
+		editable:WritePixelsBuffer(Vector2.zero, size, pixels)
+		local result, content = AssetService:CreateDataModelContentAsync(Content.fromObject(editable))
+		editable:Destroy()
+		assert(result == Enum.CreateContentResult.Success, map .. ": " .. tostring(result))
+		maps[map] = content
+	end
+	local appearance = Instance.new("SurfaceAppearance")
+	appearance.Name = "_PBRTemplate"
+	for map, property in mapProperties do
+		appearance[property] = maps[map]
+		assert(appearance[property].SourceType == Enum.ContentSourceType.Opaque, "PBR map was not embedded")
+	end
+	local previous = bike:FindFirstChild(appearance.Name)
+	if previous then previous:Destroy() end
+	appearance.Parent = bike
+	for _, record in chunks do record:Destroy() end
+	return "Four SB50 PBR maps embedded"
+end
+
 local function ownerFor(name)
 	if name:match("^Front") and (name:match("Tire$") or name:match("Rim$") or name:match("Hub$")
 		or name:match("SpokeSet$") or name == "FrontBrakeDisc") then
@@ -135,6 +188,8 @@ if request.mode == "batch" then
 		EncodingService:Base64Decode(buffer.fromstring(request.payload)), Enum.CompressionAlgorithm.Zstd)
 	local headerSize = buffer.readu32(bytes, 0)
 	local spec = HttpService:JSONDecode(buffer.readstring(bytes, 4, headerSize))
+	assert(spec.format == 2, "Expected SB50 PBR mesh payload")
+	local appearance = assert(bike:FindFirstChild("_PBRTemplate"), "Build the atlas first")
 	local cursor = 4 + headerSize
 	local triangles = 0
 	for _, component in spec.parts do
@@ -166,12 +221,18 @@ if request.mode == "batch" then
 			end
 			local center = (low + high) / 2
 			local editable = assert(AssetService:CreateEditableMesh(), "EditableMesh allocation failed")
-			local normalIds = {}
+			local normalIds, uvIds = {}, {}
 			for key, normal in bank do
 				normalIds[key] = editable:AddNormal(normal)
 			end
 			for i, vertex in verts do
 				ids[i] = editable:AddVertex(vertex - center)
+			end
+			for i = 1, layer.v do
+				local u = buffer.readu16(bytes,cursor) / 65535
+				local v = buffer.readu16(bytes,cursor+2) / 65535
+				cursor += 4
+				uvIds[i] = editable:AddUV(Vector2.new(u, v))
 			end
 			assert(not layer.hasColors, "Expected one material per layer")
 			for _ = 1, layer.f do
@@ -181,6 +242,7 @@ if request.mode == "batch" then
 				cursor += 6
 				local face = editable:AddTriangle(ids[a], ids[b], ids[c])
 				editable:SetFaceNormals(face, {normalIds[normals[a]], normalIds[normals[b]], normalIds[normals[c]]})
+				editable:SetFaceUVs(face, {uvIds[a],uvIds[b],uvIds[c]})
 			end
 			local result, content = AssetService:CreateDataModelContentAsync(Content.fromObject(editable))
 			assert(result == Enum.CreateContentResult.Success, component.name .. ": " .. tostring(result))
@@ -189,6 +251,11 @@ if request.mode == "batch" then
 			assert(part.MeshContent.SourceType == Enum.ContentSourceType.Opaque, "Mesh was not embedded")
 			local surface = spec.palette[layer.key]
 			part.Name = layer.key
+			if surface.transparency == 0 then
+				local pbr = appearance:Clone()
+				pbr.Name = "SB50Finish"
+				pbr.Parent = part
+			end
 			part.Material = Enum.Material[surface.studioMaterial]
 			part.Color = Color3.fromHex(surface.hex)
 			part.Transparency = surface.transparency
@@ -221,6 +288,13 @@ local meshCount, triangles, components = 0, 0, 0
 for _, instance in bike:GetDescendants() do
 	if instance:IsA("MeshPart") then
 		assert(instance.MeshContent.SourceType == Enum.ContentSourceType.Opaque, "Missing embedded mesh")
+		local finish = instance:FindFirstChild("SB50Finish")
+		if instance.Transparency == 0 then
+			assert(finish and finish:IsA("SurfaceAppearance"), "Missing surface finish: " .. instance:GetFullName())
+			for _, property in mapProperties do
+				assert(finish[property].SourceType == Enum.ContentSourceType.Opaque, "Missing opaque PBR map")
+			end
+		end
 		meshCount += 1
 		triangles += instance:GetAttribute("TriangleCount")
 	elseif instance:IsA("Model") and instance:GetAttribute("AssetId") then
@@ -243,6 +317,8 @@ assert(not previous or previous:GetAttribute("StreetbornAsset") == "SB50", "Exis
 History:SetWaypoint("Before SB50 installation")
 if previous then previous:Destroy() end
 bike.Name = "SB50"
+bike._PBRTemplate:Destroy()
+bike:SetAttribute("SurfaceRevision", "PBR-2")
 bike:SetAttribute("EmbeddedMeshCount", meshCount)
 bike:SetAttribute("TriangleCount", triangles)
 History:SetWaypoint("Install STREETBORN SB50")

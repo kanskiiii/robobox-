@@ -10,8 +10,8 @@ The model origin is the chassis COM at 0.72 m above the nominal tire contact pla
 
 See the [component manifest](../assets/manifests/SB50-components.json) for pivot-local replacement exports and interface IDs. The alternate seat and silencer finishes use the same geometry and bolt positions as stock. Use the exact stock pivot and attachment transforms for replacements.
 
-The current game mesh is 46,460 triangles against the contract’s advisory 40,000-triangle target. Use the game export for in-game profiling before deciding where to simplify further. The teardown mesh is 113,612 triangles. It is intended for close-up inspection. The Blender and inspection GLB carry PBR textures. The installed Studio model uses native materials.
+The revised game mesh is 43,920 triangles against the contract’s advisory 40,000-triangle target. It adds road tread and brake rotor details while reducing subdivisions on smaller turned and tubular parts. Use the game export for profiling. The Studio model and game GLB use the shared 384 × 384 PBR atlas. The 113,612-triangle teardown and Blender source keep the 1024 × 1024 inspection atlas.
 
 The original inbound files named in the brief were unavailable here. The live `ServerStorage.Coordination.README_FOR_CODEX` and `ReplicatedStorage.Shared.Vehicle.AssetContract` provided the integration requirements.
 
-Studio playtest spawned the asset in `Workspace.Vehicles.SB50` on both server and client, with all 159 embedded meshes and a measured 1.380 m axle separation. Saved to Roblox as place version 6.
+Studio playtest spawned the revision in `Workspace.Vehicles.SB50` on both server and client with 163 meshes, 162 four-map PBR surfaces, and a 1.380 m axle separation. The place was saved as version 11. The mesh and image references are DataModel-scoped. The Roblox Open Cloud connection returned 403 for Creator-owned asset upload, so a cold start with persistent mesh and texture IDs still needs verification after import. The Studio capture returned a blank 3D layer even for a primitive control, so the new game-mesh review images are Blender renders.
