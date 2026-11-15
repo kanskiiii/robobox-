@@ -3,18 +3,24 @@ import {zstdCompressSync} from 'node:zlib';
 import {cross, length, sub} from './geometry.mjs';
 import {buildAtlas} from './material-atlas.mjs';
 
-const distance = process.argv.includes('--distance');
-const atlasSize = distance ? 384 : 1024;
-const vehicle = 'sb50';
-const baseName = 'SB50';
-const source = 'assets/source/geometry/motorcycle.mjs';
-const {components, datums, materials, proxies} = await import('./motorcycle.mjs');
+const commuter = process.argv.includes('--commuter');
+const commuterGame = commuter && process.argv.includes('--game');
+const distance = !commuter && process.argv.includes('--distance');
+const atlasSize = distance ? 384 : commuter ? 512 : 1024;
+const vehicle = commuter ? 'stride-c10' : 'sb50';
+const baseName = commuter ? 'StrideC10' : 'SB50';
+const sourceFile = commuter ? 'commuter-scooter.mjs' : 'motorcycle.mjs';
+const source = 'assets/source/geometry/' + sourceFile;
+const data = await import('./' + sourceFile);
+const {datums, materials, proxies} = data;
+const enclosed = new Set(['BatteryCells','BatteryManagementBoard','ControllerBoard','MotorStator']);
+const components = commuterGame ? data.components.filter(part=>!enclosed.has(part.name)) : data.components;
 const output = '../../export/vehicles/';
-const suffix = distance ? '-game' : '-inspection';
+const suffix = distance || commuterGame ? '-game' : commuter ? '' : '-inspection';
 const exportName = baseName + suffix + '.glb';
 const file = path => new URL(path, import.meta.url);
 const glb = {
-  asset:{version:'2.0',generator:'STREETBORN SB50 asset generator'},
+  asset:{version:'2.0',generator:'STREETBORN '+baseName+' asset generator'},
   scene:0, scenes:[{nodes:[0]}], nodes:[{name:baseName,children:[]}],
   buffers:[{}], bufferViews:[], accessors:[], materials:[], meshes:[],
 };
@@ -51,8 +57,8 @@ function bufferView(buffer,target){
     };
     material.normalTexture = {index:2, scale:distance ? 1 : .40};
   }
-  if (!distance) for (const key of ['baseColor','normal','roughness','metalness']) {
-    writeFileSync(file('../../textures/SB50-' + key + '.png'),atlas.images[key]);
+  if (!distance && !commuterGame) for (const key of ['baseColor','normal','roughness','metalness']) {
+    writeFileSync(file('../../textures/' + baseName + '-' + key + '.png'),atlas.images[key]);
   }
 }
 function bounds(points) {
@@ -202,11 +208,18 @@ for(const img of index.images??[]){
 }
 
 const manifest={
-  schemaVersion:1,assetId:vehicle,name:baseName,stage:distance?'Roblox integration candidate':'Inspection candidate',source,
+  schemaVersion:1,assetId:vehicle,name:baseName,stage:distance||commuterGame?'Roblox integration candidate':'Inspection candidate',source,
   export:'assets/export/vehicles/'+exportName,orientation:{units:'m',up:'+Y',forward:'-Z',riderLeft:'-X',metresPerStud:.28},
-  boundsM:bounds(allPoints),wheelbaseM:1.38,nominalSeatHeightM:.891,
-  tireOutsideDiameterM:{front:.592,rear:.614},rimBeadSeatDiameterM:.4318,
-  assetContract:{version:1,chassisOriginM:[0,.72,0],steeringRakeDegrees:25,collision:'Chassis only'},
+  boundsM:bounds(allPoints),
+  ...(commuter ? {
+    wheelbaseM:.938, tireOutsideDiameterM:{front:.250,rear:.250},
+    deckHeightM:.184, nominalHandlebarHeightM:1.037, drive:'single rear hub motor',
+    foldRotationDegrees:85.5, ...(commuterGame?{inspectionExport:'assets/export/vehicles/StrideC10.glb', excludedEnclosedParts:[...enclosed]}:{}),
+  } : {
+    wheelbaseM:1.38,nominalSeatHeightM:.891,tireOutsideDiameterM:{front:.592,rear:.614},
+    rimBeadSeatDiameterM:.4318,
+    assetContract:{version:1,chassisOriginM:[0,.72,0],steeringRakeDegrees:25,collision:'Chassis only'},
+  }),
   datumsM:datums,proxies,materials:Object.fromEntries(Object.entries(materials).map(([key,[name,hex,metallic,roughness,studioMaterial,transparency=0]])=>
     [key,{name,hex,metallic,roughness,studioMaterial,transparency}])),components:parts,
   stats:{triangles:parts.reduce((n,p)=>n+p.triangles,0),components:parts.length,
@@ -215,7 +228,7 @@ const manifest={
 };
 if (atlas) manifest.textureAtlas = {
   resolution:atlasSize, uvSet:0, projection:'Bounded diagonal projection per material',
-  files:distance ? ['studio/SB50-payload.json'] : ['baseColor','metalness','roughness','normal'].map(key=>'assets/textures/SB50-'+key+'.png'),
+  files:distance ? ['studio/SB50-payload.json'] : ['baseColor','metalness','roughness','normal'].map(key=>'assets/textures/'+baseName+'-'+key+'.png'),
 };
 writeFileSync(file('../../manifests/'+baseName+suffix+'.json'), JSON.stringify(manifest,null,2)+'\n');
 
@@ -223,7 +236,7 @@ writeFileSync(file('../../manifests/'+baseName+suffix+'.json'), JSON.stringify(m
 // Each batch is an independent compressed buffer for the Studio edit tool.
 const batches={};
 const studioPalette=Object.fromEntries(Object.entries(manifest.materials));
-for(const [category, group] of studioGroups){
+if (distance) for(const [category, group] of studioGroups){
   const pack = batch => {
     const chunks=[];
     const meta=batch.map(({name,pivot,attachments,layers})=>({name,pivot,attachments,layers:layers.map(({key,vertices,normals,faces,colors})=>{

@@ -10,4 +10,5 @@
 | Studio contract and game spawn | AssetContract v1 passed in Studio, 163 meshes and 162 PBR surfaces present on server and client, saved as version 11 |
 | Visual review in Roblox and durable import | Prepared the persistent GLB and tested the binder against 163 layer transforms and 153 attachments. Owner-authorized upload and fresh-session rendering are pending |
 | Animation, tire-to-body clearance through suspension travel, and production profiling | Open for integration review |
-| Further vehicle families | Queued after the SB50 review |
+| Stride C10 commuter scooter | Source, PBR exports, game model, mounting manifests and nine review views delivered to GitHub |
+| Further vehicle families | Performance and off-road scooters queued |

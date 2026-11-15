@@ -12,7 +12,20 @@ SB50 is the starter 50 cc two-stroke supermoto for Roblox place 83653077672976. 
 | Studio handoff | [Codex 1 to Claude](coordination/CODEX1_TO_CLAUDE.md) |
 | Eight review views | [Review sheet](assets/previews/SB50-review.png) |
 
-## Rebuild
+## Stride C10 commuter scooter
+
+The Stride C10 is a folding electric commuter scooter with 250 mm tires, a 0.938 m wheelbase, and a single rear hub motor.
+
+| Deliverable | Path |
+| --- | --- |
+| Editable source | [StrideC10.blend](assets/source/blender/StrideC10.blend) |
+| Game mesh | [StrideC10-game.glb](assets/export/vehicles/StrideC10-game.glb) · [manifest](assets/manifests/StrideC10-game.json) |
+| Inspection mesh and service parts | [StrideC10.glb](assets/export/vehicles/StrideC10.glb) · [manifest](assets/manifests/StrideC10.json) |
+| Review views | [Exterior](assets/previews/StrideC10-05-front-quarter.jpg) · [Service bay](assets/previews/StrideC10-08-service-bay.jpg) · [Folded](assets/previews/StrideC10-09-folded.jpg) |
+
+Rebuild with `node assets/source/geometry/export-sb50.mjs --commuter` and repeat with `--game` appended for the lower-triangle model. Run `blender -b --python-exit-code 1 -P assets/source/blender/review-scooter.py -- --source-only` for the editable file. Run it again without `-- --source-only` for the nine review renders.
+
+## Rebuild SB50
 
 Run from the repository root with Node.js 24 and Blender 4.5. Blender writes the packed source file and the inspection and game-mesh review renders.
 
